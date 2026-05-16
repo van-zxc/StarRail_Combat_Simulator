@@ -1,0 +1,1705 @@
+{
+  "id": "1504",
+  "name": "不死途",
+  "tag": "ashveil",
+  "rarity": 5,
+  "path": "巡猎",
+  "path_key": "Rogue",
+  "path_en": "The Hunt",
+  "element": "雷",
+  "element_key": "Thunder",
+  "max_sp": 150,
+  "preview": "image/character_preview/1504.png",
+  "portrait": "image/character_portrait/1504.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 116.16,
+        "hp_step": 5.808,
+        "atk": 105.6,
+        "atk_step": 5.28,
+        "def_": 52.8,
+        "def_step": 2.64,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 162.624,
+        "hp_step": 5.808,
+        "atk": 147.84,
+        "atk_step": 5.28,
+        "def_": 73.92,
+        "def_step": 2.64,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 209.088,
+        "hp_step": 5.808,
+        "atk": 190.08,
+        "atk_step": 5.28,
+        "def_": 95.04,
+        "def_step": 2.64,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 255.552,
+        "hp_step": 5.808,
+        "atk": 232.32,
+        "atk_step": 5.28,
+        "def_": 116.16,
+        "def_step": 2.64,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 302.016,
+        "hp_step": 5.808,
+        "atk": 274.56,
+        "atk_step": 5.28,
+        "def_": 137.28,
+        "def_step": 2.64,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 348.48,
+        "hp_step": 5.808,
+        "atk": 316.8,
+        "atk_step": 5.28,
+        "def_": 158.4,
+        "def_step": 2.64,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 394.944,
+        "hp_step": 5.808,
+        "atk": 359.04,
+        "atk_step": 5.28,
+        "def_": 179.52,
+        "def_step": 2.64,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "116001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "116001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "116002",
+          "num": 6
+        },
+        {
+          "id": "110434",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "116002",
+          "num": 9
+        },
+        {
+          "id": "110434",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "116003",
+          "num": 6
+        },
+        {
+          "id": "110434",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "116003",
+          "num": 9
+        },
+        {
+          "id": "110434",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "150401",
+      "name": "利爪，授以礼仪",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Thunder",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于不死途#1[i]%攻击力的雷属性伤害。"
+    },
+    {
+      "id": "150402",
+      "name": "鞭哨，逐尽恶兽",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          1,
+          1,
+          0.5,
+          0.2,
+          1
+        ],
+        [
+          1.1,
+          1,
+          0.55,
+          0.22,
+          1
+        ],
+        [
+          1.2,
+          1,
+          0.6,
+          0.24,
+          1
+        ],
+        [
+          1.3,
+          1,
+          0.65,
+          0.26,
+          1
+        ],
+        [
+          1.4,
+          1,
+          0.7,
+          0.28,
+          1
+        ],
+        [
+          1.5,
+          1,
+          0.75,
+          0.3,
+          1
+        ],
+        [
+          1.625,
+          1,
+          0.8125,
+          0.325,
+          1
+        ],
+        [
+          1.75,
+          1,
+          0.875,
+          0.35,
+          1
+        ],
+        [
+          1.875,
+          1,
+          0.9375,
+          0.375,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          0.4,
+          1
+        ],
+        [
+          2.1,
+          1,
+          1.05,
+          0.42,
+          1
+        ],
+        [
+          2.2,
+          1,
+          1.1,
+          0.44,
+          1
+        ],
+        [
+          2.3,
+          1,
+          1.15,
+          0.46,
+          1
+        ],
+        [
+          2.4,
+          1,
+          1.2,
+          0.48,
+          1
+        ],
+        [
+          2.5,
+          1,
+          1.25,
+          0.5,
+          1
+        ]
+      ],
+      "desc": "使指定敌方单体成为【饲饵】，对其造成等同于不死途#1[i]%攻击力的雷属性伤害。若该目标为【饲饵】，则额外对其造成等同于不死途#3[i]%攻击力的雷属性伤害，并恢复#5[i]点战技点。场上存在【饲饵】时，敌方全体防御力降低#4[i]%。\n场上不存在【饲饵】时，不死途立即使当前场上生命值最低的敌方单体目标成为【饲饵】，【饲饵】状态仅对最新被施加的目标生效。"
+    },
+    {
+      "id": "150403",
+      "name": "飨宴，自始无终",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          2,
+          3,
+          4,
+          1
+        ],
+        [
+          2.2,
+          3,
+          4,
+          1.1
+        ],
+        [
+          2.4,
+          3,
+          4,
+          1.2
+        ],
+        [
+          2.6,
+          3,
+          4,
+          1.3
+        ],
+        [
+          2.8,
+          3,
+          4,
+          1.4
+        ],
+        [
+          3,
+          3,
+          4,
+          1.5
+        ],
+        [
+          3.25,
+          3,
+          4,
+          1.625
+        ],
+        [
+          3.5,
+          3,
+          4,
+          1.75
+        ],
+        [
+          3.75,
+          3,
+          4,
+          1.875
+        ],
+        [
+          4,
+          3,
+          4,
+          2
+        ],
+        [
+          4.2,
+          3,
+          4,
+          2.1
+        ],
+        [
+          4.4,
+          3,
+          4,
+          2.2
+        ],
+        [
+          4.6,
+          3,
+          4,
+          2.3
+        ],
+        [
+          4.8,
+          3,
+          4,
+          2.4
+        ],
+        [
+          5,
+          3,
+          4,
+          2.5
+        ]
+      ],
+      "desc": "使指定敌方单体成为【饲饵】，对其造成等同于不死途#1[i]%攻击力的雷属性伤害，随后立即对【饲饵】发动1次获得强化的天赋追加攻击，且不死途获得#2[i]点充能。\n强化天赋追加攻击不消耗充能，拥有【婪酣】时，每消耗#3[i]层【婪酣】可额外造成1次等同于不死途#4[i]%攻击力的雷属性伤害，且本次追加攻击过程中对目标造成致命攻击时，会继续对新的【饲饵】造成伤害，直至【婪酣】小于#3[i]层。若当前场上的所有敌方目标都受到致命攻击后强化天赋追加攻击会立即结束。"
+    },
+    {
+      "id": "150404",
+      "name": "宿怨，切齿奉还",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          2,
+          3,
+          1,
+          1,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          1.1,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          1.2,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          1.3,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          1.4,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          1.5,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          1.625,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          1.75,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          1.875,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          2,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          2.1,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          2.2,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          2.3,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          2.4,
+          2,
+          12,
+          8
+        ],
+        [
+          2,
+          3,
+          1,
+          2.5,
+          2,
+          12,
+          8
+        ]
+      ],
+      "desc": "不死途初始拥有#1[i]点充能，最多拥有#2[i]点充能。【饲饵】受到我方其他目标攻击后，不死途固定恢复#7[i]点能量，随后消耗#3[i]点充能对【饲饵】发动追加攻击，造成等同于不死途#4[i]%攻击力的雷属性伤害，随后获得#5[i]层【婪酣】，最多叠加#6[i]层。"
+    },
+    {
+      "id": "150406",
+      "name": "利爪，授以礼仪",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Thunder",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "150407",
+      "name": "吃吧，可憎的手",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Impair",
+      "effect_text": "妨害",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          10,
+          1,
+          1
+        ]
+      ],
+      "desc": "使用秘技后使一定区域内的敌人陷入#1[i]秒的晕眩状态，晕眩状态下敌人不会主动攻击我方目标。\n若主动攻击陷入晕眩状态的敌人，进入战斗时，对敌方全体造成等同于不死途攻击力#2[i]%的雷属性伤害，且不死途获得#3[i]点充能。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1504001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "150401",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110271",
+                "num": 3
+              },
+              {
+                "id": "116001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110272",
+                "num": 3
+              },
+              {
+                "id": "116002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110272",
+                "num": 5
+              },
+              {
+                "id": "116002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110273",
+                "num": 3
+              },
+              {
+                "id": "116003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110273",
+                "num": 8
+              },
+              {
+                "id": "116003",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1504002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "150402",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "116001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110271",
+                "num": 3
+              },
+              {
+                "id": "116001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110272",
+                "num": 3
+              },
+              {
+                "id": "116002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110272",
+                "num": 5
+              },
+              {
+                "id": "116002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110272",
+                "num": 7
+              },
+              {
+                "id": "116002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110273",
+                "num": 3
+              },
+              {
+                "id": "116003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110273",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "116003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110273",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110273",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1504003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "150403",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "116001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110271",
+                "num": 3
+              },
+              {
+                "id": "116001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110272",
+                "num": 3
+              },
+              {
+                "id": "116002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110272",
+                "num": 5
+              },
+              {
+                "id": "116002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110272",
+                "num": 7
+              },
+              {
+                "id": "116002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110273",
+                "num": 3
+              },
+              {
+                "id": "116003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110273",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "116003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110273",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110273",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1504004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "150404",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "116001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110271",
+                "num": 3
+              },
+              {
+                "id": "116001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110272",
+                "num": 3
+              },
+              {
+                "id": "116002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110272",
+                "num": 5
+              },
+              {
+                "id": "116002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110272",
+                "num": 7
+              },
+              {
+                "id": "116002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110273",
+                "num": 3
+              },
+              {
+                "id": "116003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110273",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "116003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110273",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110273",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1504007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "150407",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1504101",
+        "name": "罪途",
+        "desc": "不死途施放战技/终结技时，获得#1[i]/#2[i]层【婪酣】。不死途追加攻击过程中每有#3[i]个敌人受到致命攻击时，不死途获得#4[i]层【婪酣】。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110271",
+                "num": 3
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1504102",
+        "name": "影肢",
+        "desc": "不死途追加攻击造成的伤害提高#1[i]%，且每有#2[i]层【婪酣】，追加攻击造成的伤害额外提高#3[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110272",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1504103",
+        "name": "头狼",
+        "desc": "不死途在场时，我方目标造成的暴击伤害提高#1[i]%，我方目标追加攻击造成的暴击伤害额外提高#2[i]%。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110273",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1504201",
+        "name": "暴击伤害强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1504202",
+        "name": "伤害强化•雷",
+        "anchor": "Point10",
+        "pre_points": [
+          "1504101"
+        ],
+        "properties": [
+          {
+            "type": "ThunderAddedRatio",
+            "name": "雷属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1504203",
+        "name": "暴击伤害强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1504202"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1504204",
+        "name": "攻击强化",
+        "anchor": "Point12",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1504205",
+        "name": "暴击伤害强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1504102"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1504206",
+        "name": "伤害强化•雷",
+        "anchor": "Point14",
+        "pre_points": [
+          "1504205"
+        ],
+        "properties": [
+          {
+            "type": "ThunderAddedRatio",
+            "name": "雷属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1504207",
+        "name": "暴击伤害强化",
+        "anchor": "Point15",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1504208",
+        "name": "攻击强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1504103"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1504209",
+        "name": "伤害强化•雷",
+        "anchor": "Point17",
+        "pre_points": [
+          "1504208"
+        ],
+        "properties": [
+          {
+            "type": "ThunderAddedRatio",
+            "name": "雷属性伤害提高",
+            "value": 0.064
+          }
+        ]
+      },
+      {
+        "id": "1504210",
+        "name": "暴击伤害强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1504208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.107
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "150401",
+      "name": "小心，满月不可外出",
+      "rank": 1,
+      "desc": "不死途在场时，敌方全体受到的伤害提高24%。当敌方目标当前生命值百分比小于等于50%时，其受到的伤害提高至36%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "150402",
+      "name": "敲门，屋内空余窃笑",
+      "rank": 2,
+      "desc": "【婪酣】叠加上限提高至18层，每当不死途发动强化天赋追加攻击后，返还所移除【婪酣】层数的35%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "150403",
+      "name": "沉默，老友各怀心事",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "150403",
+          "num": 2
+        },
+        {
+          "id": "150401",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "150404",
+      "name": "切记，不必咀嚼真相",
+      "rank": 4,
+      "desc": "不死途施放终结技时，攻击力提高40%，持续3回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "150405",
+      "name": "提醒，侦探亦是凶手",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "150402",
+          "num": 2
+        },
+        {
+          "id": "150404",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "150406",
+      "name": "结局，或许无人生还",
+      "rank": 6,
+      "desc": "当场上存在【饲饵】时，敌方全体的全属性抗性降低20%。不死途每获得过1层【婪酣】，造成的伤害提高4%，该效果最多叠加30层。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

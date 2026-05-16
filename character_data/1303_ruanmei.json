@@ -1,0 +1,1620 @@
+{
+  "id": "1303",
+  "name": "阮•梅",
+  "tag": "ruanmei",
+  "rarity": 5,
+  "path": "同谐",
+  "path_key": "Shaman",
+  "path_en": "Harmony",
+  "element": "冰",
+  "element_key": "Ice",
+  "max_sp": 130,
+  "preview": "image/character_preview/1303.png",
+  "portrait": "image/character_portrait/1303.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 147.84,
+        "hp_step": 7.392,
+        "atk": 89.76,
+        "atk_step": 4.488,
+        "def_": 66,
+        "def_step": 3.3,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 206.976,
+        "hp_step": 7.392,
+        "atk": 125.664,
+        "atk_step": 4.488,
+        "def_": 92.4,
+        "def_step": 3.3,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 266.112,
+        "hp_step": 7.392,
+        "atk": 161.568,
+        "atk_step": 4.488,
+        "def_": 118.8,
+        "def_step": 3.3,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 325.248,
+        "hp_step": 7.392,
+        "atk": 197.472,
+        "atk_step": 4.488,
+        "def_": 145.2,
+        "def_step": 3.3,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 384.384,
+        "hp_step": 7.392,
+        "atk": 233.376,
+        "atk_step": 4.488,
+        "def_": 171.6,
+        "def_step": 3.3,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 443.52,
+        "hp_step": 7.392,
+        "atk": 269.28,
+        "atk_step": 4.488,
+        "def_": 198,
+        "def_step": 3.3,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 502.656,
+        "hp_step": 7.392,
+        "atk": 305.184,
+        "atk_step": 4.488,
+        "def_": 224.4,
+        "def_step": 3.3,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "113001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "113001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "113002",
+          "num": 6
+        },
+        {
+          "id": "110413",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "113002",
+          "num": 9
+        },
+        {
+          "id": "110413",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "113003",
+          "num": 6
+        },
+        {
+          "id": "110413",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "113003",
+          "num": 9
+        },
+        {
+          "id": "110413",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "130301",
+      "name": "一针幽兰",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Ice",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于阮•梅#1[i]%攻击力的冰属性伤害。"
+    },
+    {
+      "id": "130302",
+      "name": "慢捻抹复挑",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.16,
+          0.5,
+          3
+        ],
+        [
+          0.176,
+          0.5,
+          3
+        ],
+        [
+          0.192,
+          0.5,
+          3
+        ],
+        [
+          0.208,
+          0.5,
+          3
+        ],
+        [
+          0.224,
+          0.5,
+          3
+        ],
+        [
+          0.24,
+          0.5,
+          3
+        ],
+        [
+          0.26,
+          0.5,
+          3
+        ],
+        [
+          0.28,
+          0.5,
+          3
+        ],
+        [
+          0.3,
+          0.5,
+          3
+        ],
+        [
+          0.32,
+          0.5,
+          3
+        ],
+        [
+          0.336,
+          0.5,
+          3
+        ],
+        [
+          0.352,
+          0.5,
+          3
+        ],
+        [
+          0.368,
+          0.5,
+          3
+        ],
+        [
+          0.384,
+          0.5,
+          3
+        ],
+        [
+          0.4,
+          0.5,
+          3
+        ]
+      ],
+      "desc": "施放战技后阮•梅获得【弦外音】，持续#3[i]回合，阮•梅每回合开始时持续回合数减1。当阮•梅拥有【弦外音】时，我方全体伤害提高#1[f1]%，弱点击破效率提高#2[i]%。"
+    },
+    {
+      "id": "130303",
+      "name": "摇花缎水，沾衣不摘",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.15,
+          2,
+          0.2,
+          0.1,
+          0.3
+        ],
+        [
+          0.16,
+          2,
+          0.2,
+          0.1,
+          0.32
+        ],
+        [
+          0.17,
+          2,
+          0.2,
+          0.1,
+          0.34
+        ],
+        [
+          0.18,
+          2,
+          0.2,
+          0.1,
+          0.36
+        ],
+        [
+          0.19,
+          2,
+          0.2,
+          0.1,
+          0.38
+        ],
+        [
+          0.2,
+          2,
+          0.2,
+          0.1,
+          0.4
+        ],
+        [
+          0.2125,
+          2,
+          0.2,
+          0.1,
+          0.425
+        ],
+        [
+          0.225,
+          2,
+          0.2,
+          0.1,
+          0.45
+        ],
+        [
+          0.2375,
+          2,
+          0.2,
+          0.1,
+          0.475
+        ],
+        [
+          0.25,
+          2,
+          0.2,
+          0.1,
+          0.5
+        ],
+        [
+          0.26,
+          2,
+          0.2,
+          0.1,
+          0.52
+        ],
+        [
+          0.27,
+          2,
+          0.2,
+          0.1,
+          0.54
+        ],
+        [
+          0.28,
+          2,
+          0.2,
+          0.1,
+          0.56
+        ],
+        [
+          0.29,
+          2,
+          0.2,
+          0.1,
+          0.58
+        ],
+        [
+          0.3,
+          2,
+          0.2,
+          0.1,
+          0.6
+        ]
+      ],
+      "desc": "阮•梅展开结界，持续#2[i]回合，自身每回合开始时结界持续回合数减1。\n处于结界中时我方全体全属性抗性穿透提高#1[f1]%，且攻击后会对敌方目标施加【残梅绽】。\n【残梅绽】会在敌方目标尝试从弱点击破状态恢复时触发，延长目标的弱点击破状态并使其行动延后，延后数值等同于阮•梅#3[i]%的击破特攻+#4[i]%，并对其造成等同于阮•梅#5[i]%冰属性击破伤害的击破伤害。\n敌方目标从弱点击破状态恢复前不可被再次附加【残梅绽】。"
+    },
+    {
+      "id": "130304",
+      "name": "分型的螺旋",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.08,
+          0.6
+        ],
+        [
+          0.082,
+          0.66
+        ],
+        [
+          0.084,
+          0.72
+        ],
+        [
+          0.086,
+          0.78
+        ],
+        [
+          0.088,
+          0.84
+        ],
+        [
+          0.09,
+          0.9
+        ],
+        [
+          0.0925,
+          0.975
+        ],
+        [
+          0.095,
+          1.05
+        ],
+        [
+          0.0975,
+          1.125
+        ],
+        [
+          0.1,
+          1.2
+        ],
+        [
+          0.102,
+          1.26
+        ],
+        [
+          0.104,
+          1.32
+        ],
+        [
+          0.106,
+          1.38
+        ],
+        [
+          0.108,
+          1.44
+        ],
+        [
+          0.11,
+          1.5
+        ]
+      ],
+      "desc": "使除自身以外的队友速度提高#1[f1]%。我方全体击破敌方目标弱点时，阮•梅对其造成等同于自身#2[f1]%冰属性击破伤害的击破伤害。"
+    },
+    {
+      "id": "130306",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Ice",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "130307",
+      "name": "拭琴抚罗袂",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          1,
+          1,
+          1,
+          20
+        ]
+      ],
+      "desc": "使用秘技后，获得【拭琴抚罗袂】，使下一次战斗开始时自动触发#1[i]次战技，此次触发不消耗战技点。\n在模拟宇宙、差分宇宙中，当阮•梅拥有【拭琴抚罗袂】时，我方主动攻击敌人时总会视为利用弱点进入战斗，且本次攻击可以无视弱点属性削减敌方全体的韧性。击破弱点时，触发攻击者自身属性的弱点击破效果。每拥有1个祝福，本次攻击的削韧值额外提高#2[i]%，且击破敌方目标弱点后对其额外造成等同于阮•梅#3[i]%冰属性击破伤害的击破伤害，最多计入#4[i]个祝福。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1303001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "130301",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110161",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110162",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110162",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110163",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110163",
+                "num": 8
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1303002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "130302",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110161",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110162",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110162",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110162",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110163",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110163",
+                "num": 5
+              },
+              {
+                "id": "110504",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110163",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110163",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1303003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "130303",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110161",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110162",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110162",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110162",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110163",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110163",
+                "num": 5
+              },
+              {
+                "id": "110504",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110163",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110163",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1303004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "130304",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110161",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110162",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110162",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110162",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110163",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110163",
+                "num": 5
+              },
+              {
+                "id": "110504",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110163",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110163",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1303007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "130307",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1303101",
+        "name": "物体呼吸中",
+        "desc": "我方全体击破特攻提高#1[i]%。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110161",
+                "num": 3
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1303102",
+        "name": "日消遐思长",
+        "desc": "阮•梅的回合开始时，自身恢复#1[i]点能量。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110162",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1303103",
+        "name": "落烛照水燃",
+        "desc": "战斗中阮•梅的击破特攻大于#1[i]%时，每超过#2[i]%，则战技使我方全体伤害提高的效果额外提高#3[i]%，最高不超过#4[i]%。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110163",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110504",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1303201",
+        "name": "击破强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1303202",
+        "name": "防御强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1303101"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "id": "1303203",
+        "name": "击破强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1303202"
+        ],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1303204",
+        "name": "速度强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1303201"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "1303205",
+        "name": "击破强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1303102"
+        ],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1303206",
+        "name": "防御强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1303205"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.075
+          }
+        ]
+      },
+      {
+        "id": "1303207",
+        "name": "击破强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "1303201"
+        ],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1303208",
+        "name": "速度强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1303103"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "1303209",
+        "name": "防御强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1303208"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.1
+          }
+        ]
+      },
+      {
+        "id": "1303210",
+        "name": "击破强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1303208"
+        ],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.107
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "130301",
+      "name": "神经仿绣图",
+      "rank": 1,
+      "desc": "终结技展开结界期间，我方全体造成伤害时无视目标20%的防御力。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "130302",
+      "name": "芦前漫步",
+      "rank": 2,
+      "desc": "阮•梅在场时，我方全体对处于弱点击破状态的敌方目标造成伤害时，攻击力提高40%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "130303",
+      "name": "彩缎烟衫绿婆娑",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "130303",
+          "num": 2
+        },
+        {
+          "id": "130304",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "130304",
+      "name": "寻神铜镜前",
+      "rank": 4,
+      "desc": "当敌方目标的弱点被击破时，阮•梅自身击破特攻提高100%，持续3回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "130305",
+      "name": "手弄慵鬟玲珑钗",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "130302",
+          "num": 2
+        },
+        {
+          "id": "130301",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "130306",
+      "name": "半脱纱巾落团扇",
+      "rank": 6,
+      "desc": "终结技展开的结界持续时间延长1回合。天赋造成的击破伤害倍率额外提高200%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

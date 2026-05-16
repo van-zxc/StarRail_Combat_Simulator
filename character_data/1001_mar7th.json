@@ -1,0 +1,1622 @@
+{
+  "id": "1001",
+  "name": "三月七",
+  "tag": "mar7th",
+  "rarity": 4,
+  "path": "存护",
+  "path_key": "Knight",
+  "path_en": "Preservation",
+  "element": "冰",
+  "element_key": "Ice",
+  "max_sp": 120,
+  "preview": "image/character_preview/1001.png",
+  "portrait": "image/character_portrait/1001.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 144,
+        "hp_step": 7.2,
+        "atk": 69.6,
+        "atk_step": 3.48,
+        "def_": 78,
+        "def_step": 3.9,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 150,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 201.6,
+        "hp_step": 7.2,
+        "atk": 97.44,
+        "atk_step": 3.48,
+        "def_": 109.2,
+        "def_step": 3.9,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 150,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 259.2,
+        "hp_step": 7.2,
+        "atk": 125.28,
+        "atk_step": 3.48,
+        "def_": 140.4,
+        "def_step": 3.9,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 150,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 316.8,
+        "hp_step": 7.2,
+        "atk": 153.12,
+        "atk_step": 3.48,
+        "def_": 171.6,
+        "def_step": 3.9,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 150,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 374.4,
+        "hp_step": 7.2,
+        "atk": 180.96,
+        "atk_step": 3.48,
+        "def_": 202.8,
+        "def_step": 3.9,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 150,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 432,
+        "hp_step": 7.2,
+        "atk": 208.8,
+        "atk_step": 3.48,
+        "def_": 234,
+        "def_step": 3.9,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 150,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 489.6,
+        "hp_step": 7.2,
+        "atk": 236.64,
+        "atk_step": 3.48,
+        "def_": 265.2,
+        "def_step": 3.9,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 150,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3200
+        },
+        {
+          "id": "111011",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6400
+        },
+        {
+          "id": "111011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12800
+        },
+        {
+          "id": "111012",
+          "num": 5
+        },
+        {
+          "id": "110403",
+          "num": 2
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 32000
+        },
+        {
+          "id": "111012",
+          "num": 8
+        },
+        {
+          "id": "110403",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 64000
+        },
+        {
+          "id": "111013",
+          "num": 5
+        },
+        {
+          "id": "110403",
+          "num": 15
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 128000
+        },
+        {
+          "id": "111013",
+          "num": 7
+        },
+        {
+          "id": "110403",
+          "num": 28
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "100101",
+      "name": "极寒的弓矢",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Ice",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于三月七#1[i]%攻击力的冰属性伤害。"
+    },
+    {
+      "id": "100102",
+      "name": "可爱即是正义",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Defence",
+      "effect_text": "防御",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.38,
+          3,
+          0.3,
+          190,
+          5
+        ],
+        [
+          0.4037,
+          3,
+          0.3,
+          304,
+          5
+        ],
+        [
+          0.4275,
+          3,
+          0.3,
+          389.5,
+          5
+        ],
+        [
+          0.4512,
+          3,
+          0.3,
+          475,
+          5
+        ],
+        [
+          0.475,
+          3,
+          0.3,
+          532,
+          5
+        ],
+        [
+          0.494,
+          3,
+          0.3,
+          589,
+          5
+        ],
+        [
+          0.513,
+          3,
+          0.3,
+          631.75,
+          5
+        ],
+        [
+          0.532,
+          3,
+          0.3,
+          674.5,
+          5
+        ],
+        [
+          0.551,
+          3,
+          0.3,
+          717.25,
+          5
+        ],
+        [
+          0.57,
+          3,
+          0.3,
+          760,
+          5
+        ],
+        [
+          0.589,
+          3,
+          0.3,
+          802.75,
+          5
+        ],
+        [
+          0.608,
+          3,
+          0.3,
+          845.5,
+          5
+        ],
+        [
+          0.627,
+          3,
+          0.3,
+          888.25,
+          5
+        ],
+        [
+          0.646,
+          3,
+          0.3,
+          931,
+          5
+        ],
+        [
+          0.665,
+          3,
+          0.3,
+          973.75,
+          5
+        ]
+      ],
+      "desc": "为指定我方单体提供能够抵消等同于三月七#1[i]%防御力+#4[i]伤害的护盾，持续#2[i]回合。\n若该目标当前生命值百分比大于等于#3[i]%，被敌方攻击的概率大幅提高。"
+    },
+    {
+      "id": "100103",
+      "name": "冰刻箭雨之时",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Ice",
+      "params": [
+        [
+          0.9,
+          0.5,
+          1,
+          0.3
+        ],
+        [
+          0.96,
+          0.5,
+          1,
+          0.33
+        ],
+        [
+          1.02,
+          0.5,
+          1,
+          0.36
+        ],
+        [
+          1.08,
+          0.5,
+          1,
+          0.39
+        ],
+        [
+          1.14,
+          0.5,
+          1,
+          0.42
+        ],
+        [
+          1.2,
+          0.5,
+          1,
+          0.45
+        ],
+        [
+          1.275,
+          0.5,
+          1,
+          0.4875
+        ],
+        [
+          1.35,
+          0.5,
+          1,
+          0.525
+        ],
+        [
+          1.425,
+          0.5,
+          1,
+          0.5625
+        ],
+        [
+          1.5,
+          0.5,
+          1,
+          0.6
+        ],
+        [
+          1.56,
+          0.5,
+          1,
+          0.63
+        ],
+        [
+          1.62,
+          0.5,
+          1,
+          0.66
+        ],
+        [
+          1.68,
+          0.5,
+          1,
+          0.69
+        ],
+        [
+          1.74,
+          0.5,
+          1,
+          0.72
+        ],
+        [
+          1.8,
+          0.5,
+          1,
+          0.75
+        ]
+      ],
+      "desc": "对敌方全体造成等同于三月七#1[i]%攻击力的冰属性伤害。受到攻击的敌方目标有#2[i]%基础概率陷入冻结状态，持续#3[i]回合。\n冻结状态下，敌方目标不能行动同时每回合开始时受到等同于三月七#4[i]%攻击力的冰属性附加伤害。"
+    },
+    {
+      "id": "100104",
+      "name": "少女的特权",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Ice",
+      "params": [
+        [
+          0.5,
+          2
+        ],
+        [
+          0.55,
+          2
+        ],
+        [
+          0.6,
+          2
+        ],
+        [
+          0.65,
+          2
+        ],
+        [
+          0.7,
+          2
+        ],
+        [
+          0.75,
+          2
+        ],
+        [
+          0.8125,
+          2
+        ],
+        [
+          0.875,
+          2
+        ],
+        [
+          0.9375,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1.05,
+          2
+        ],
+        [
+          1.1,
+          2
+        ],
+        [
+          1.15,
+          2
+        ],
+        [
+          1.2,
+          2
+        ],
+        [
+          1.25,
+          2
+        ]
+      ],
+      "desc": "当持有护盾的我方目标受到敌方目标攻击后，三月七立即向攻击者发起反击，对其造成等同于三月七#1[i]%攻击力的冰属性伤害，该效果每回合可触发#2[i]次。"
+    },
+    {
+      "id": "100106",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Ice",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "100107",
+      "name": "冻人的瞬间",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Ice",
+      "params": [
+        [
+          1,
+          1,
+          0.5
+        ]
+      ],
+      "desc": "立即攻击敌人，进入战斗后有#1[i]%的基础概率使随机敌方单体陷入冻结状态，持续#2[i]回合。\n冻结状态下，敌方目标不能行动同时每回合开始时受到等同于三月七#3[i]%攻击力的冰属性附加伤害。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1001001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100101",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110141",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110142",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110142",
+                "num": 4
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110143",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110143",
+                "num": 6
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1001002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100102",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111011",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110141",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110142",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110142",
+                "num": 4
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110142",
+                "num": 6
+              },
+              {
+                "id": "111012",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110143",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110143",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110143",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110143",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1001003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100103",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111011",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110141",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110142",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110142",
+                "num": 4
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110142",
+                "num": 6
+              },
+              {
+                "id": "111012",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110143",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110143",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110143",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110143",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1001004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100104",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111011",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110141",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110142",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110142",
+                "num": 4
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110142",
+                "num": 6
+              },
+              {
+                "id": "111012",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110143",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110143",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110143",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110143",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1001007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100107",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1001101",
+        "name": "纯洁",
+        "desc": "施放战技时，解除指定我方单体的1个负面效果。",
+        "anchor": "Point06",
+        "pre_points": [
+          "1001201"
+        ],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110141",
+                "num": 2
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1001102",
+        "name": "加护",
+        "desc": "战技提供的护盾持续时间增加#1[i]回合。",
+        "anchor": "Point07",
+        "pre_points": [
+          "1001201"
+        ],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110142",
+                "num": 4
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1001103",
+        "name": "冰咒",
+        "desc": "施放终结技时，冻结敌方目标的基础概率提高#1[i]%。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110143",
+                "num": 6
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1001201",
+        "name": "伤害强化•冰",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "IceAddedRatio",
+            "name": "冰属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1001202",
+        "name": "防御强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1001101"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "id": "1001203",
+        "name": "伤害强化•冰",
+        "anchor": "Point11",
+        "pre_points": [
+          "1001202"
+        ],
+        "properties": [
+          {
+            "type": "IceAddedRatio",
+            "name": "冰属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1001204",
+        "name": "效果抵抗强化",
+        "anchor": "Point12",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1001205",
+        "name": "伤害强化•冰",
+        "anchor": "Point13",
+        "pre_points": [
+          "1001102"
+        ],
+        "properties": [
+          {
+            "type": "IceAddedRatio",
+            "name": "冰属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1001206",
+        "name": "效果抵抗强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1001205"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1001207",
+        "name": "防御强化",
+        "anchor": "Point15",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.075
+          }
+        ]
+      },
+      {
+        "id": "1001208",
+        "name": "伤害强化•冰",
+        "anchor": "Point16",
+        "pre_points": [
+          "1001103"
+        ],
+        "properties": [
+          {
+            "type": "IceAddedRatio",
+            "name": "冰属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1001209",
+        "name": "伤害强化•冰",
+        "anchor": "Point17",
+        "pre_points": [
+          "1001208"
+        ],
+        "properties": [
+          {
+            "type": "IceAddedRatio",
+            "name": "冰属性伤害提高",
+            "value": 0.064
+          }
+        ]
+      },
+      {
+        "id": "1001210",
+        "name": "防御强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1001208"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.1
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "100101",
+      "name": "记忆中的你",
+      "rank": 1,
+      "desc": "终结技每冻结1个目标，为三月七恢复6点能量。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "100102",
+      "name": "记忆中的它",
+      "rank": 2,
+      "desc": "进入战斗时，为当前生命值百分比最低的我方目标提供等同于三月七24%防御力+320的护盾，持续3回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "100103",
+      "name": "记忆中的一切",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "100103",
+          "num": 2
+        },
+        {
+          "id": "100101",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "100104",
+      "name": "不愿再失去",
+      "rank": 4,
+      "desc": "天赋的反击效果每回合可触发的次数增加1次。使反击造成的伤害值提高，提高数值等同于三月七防御力的30%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "100105",
+      "name": "不想再忘却",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "100102",
+          "num": 2
+        },
+        {
+          "id": "100104",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "100106",
+      "name": "就这样，一直…",
+      "rank": 6,
+      "desc": "在战技提供的护盾保护下的我方目标，每回合开始时回复等同于各自4%生命上限+106的生命值。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

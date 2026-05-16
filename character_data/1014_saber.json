@@ -1,0 +1,1775 @@
+{
+  "id": "1014",
+  "name": "Saber",
+  "tag": "saber",
+  "rarity": 5,
+  "path": "毁灭",
+  "path_key": "Warrior",
+  "path_en": "Destruction",
+  "element": "风",
+  "element_key": "Wind",
+  "max_sp": 360,
+  "preview": "image/character_preview/1014.png",
+  "portrait": "image/character_portrait/1014.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 168.96,
+        "hp_step": 8.448,
+        "atk": 81.84,
+        "atk_step": 4.092,
+        "def_": 89.1,
+        "def_step": 4.455,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 236.544,
+        "hp_step": 8.448,
+        "atk": 114.576,
+        "atk_step": 4.092,
+        "def_": 124.74,
+        "def_step": 4.455,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 304.128,
+        "hp_step": 8.448,
+        "atk": 147.312,
+        "atk_step": 4.092,
+        "def_": 160.38,
+        "def_step": 4.455,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 371.712,
+        "hp_step": 8.448,
+        "atk": 180.048,
+        "atk_step": 4.092,
+        "def_": 196.02,
+        "def_step": 4.455,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 439.296,
+        "hp_step": 8.448,
+        "atk": 212.784,
+        "atk_step": 4.092,
+        "def_": 231.66,
+        "def_step": 4.455,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 506.88,
+        "hp_step": 8.448,
+        "atk": 245.52,
+        "atk_step": 4.092,
+        "def_": 267.3,
+        "def_step": 4.455,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 574.464,
+        "hp_step": 8.448,
+        "atk": 278.256,
+        "atk_step": 4.092,
+        "def_": 302.94,
+        "def_step": 4.455,
+        "spd": 101,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "111011",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "111011",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "111012",
+          "num": 6
+        },
+        {
+          "id": "110425",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "111012",
+          "num": 9
+        },
+        {
+          "id": "110425",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "111013",
+          "num": 6
+        },
+        {
+          "id": "110425",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "111013",
+          "num": 9
+        },
+        {
+          "id": "110425",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "101401",
+      "name": "风王结界",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Wind",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于Saber#1[i]%攻击力的风属性伤害。"
+    },
+    {
+      "id": "101402",
+      "name": "风王铁槌",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 15,
+      "element": "Wind",
+      "params": [
+        [
+          0.75,
+          0.375,
+          3,
+          0.07
+        ],
+        [
+          0.825,
+          0.4125,
+          3,
+          0.077
+        ],
+        [
+          0.9,
+          0.45,
+          3,
+          0.084
+        ],
+        [
+          0.975,
+          0.4875,
+          3,
+          0.091
+        ],
+        [
+          1.05,
+          0.525,
+          3,
+          0.098
+        ],
+        [
+          1.125,
+          0.5625,
+          3,
+          0.105
+        ],
+        [
+          1.2188,
+          0.6094,
+          3,
+          0.1138
+        ],
+        [
+          1.3125,
+          0.6562,
+          3,
+          0.1225
+        ],
+        [
+          1.4062,
+          0.7031,
+          3,
+          0.1313
+        ],
+        [
+          1.5,
+          0.75,
+          3,
+          0.14
+        ],
+        [
+          1.575,
+          0.7875,
+          3,
+          0.147
+        ],
+        [
+          1.65,
+          0.825,
+          3,
+          0.154
+        ],
+        [
+          1.725,
+          0.8625,
+          3,
+          0.161
+        ],
+        [
+          1.8,
+          0.9,
+          3,
+          0.168
+        ],
+        [
+          1.875,
+          0.9375,
+          3,
+          0.175
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于Saber#1[i]%攻击力的风属性伤害，对相邻目标造成等同于Saber#2[i]%攻击力的风属性伤害。若当前持有【炉心共鸣】，且本次战技攻击后消耗【炉心共鸣】可为Saber恢复满能量，则使本次战技倍率提高，每有1点【炉心共鸣】使本次战技的伤害倍率提高#4[f1]%，并在攻击后消耗所有【炉心共鸣】为Saber恢复能量，否则立即获得#3[i]点【炉心共鸣】。"
+    },
+    {
+      "id": "101403",
+      "name": "誓约胜利之剑",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Wind",
+      "params": [
+        [
+          1.4,
+          0.55,
+          10
+        ],
+        [
+          1.54,
+          0.605,
+          10
+        ],
+        [
+          1.68,
+          0.66,
+          10
+        ],
+        [
+          1.82,
+          0.715,
+          10
+        ],
+        [
+          1.96,
+          0.77,
+          10
+        ],
+        [
+          2.1,
+          0.825,
+          10
+        ],
+        [
+          2.275,
+          0.8938,
+          10
+        ],
+        [
+          2.45,
+          0.9625,
+          10
+        ],
+        [
+          2.625,
+          1.0312,
+          10
+        ],
+        [
+          2.8,
+          1.1,
+          10
+        ],
+        [
+          2.94,
+          1.155,
+          10
+        ],
+        [
+          3.08,
+          1.21,
+          10
+        ],
+        [
+          3.22,
+          1.265,
+          10
+        ],
+        [
+          3.36,
+          1.32,
+          10
+        ],
+        [
+          3.5,
+          1.375,
+          10
+        ]
+      ],
+      "desc": "对敌方全体造成等同于Saber#1[i]%攻击力的风属性伤害。并额外造成#3[i]次伤害，每次伤害对随机敌方单体造成等同于Saber#2[i]%攻击力的风属性伤害。施放终结技后下次普攻会被替换为【解放的金色王权】且仅能施放【解放的金色王权】。"
+    },
+    {
+      "id": "101404",
+      "name": "龙之炉心",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          3,
+          25,
+          0.3,
+          2,
+          8,
+          0.05,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.33,
+          2,
+          8,
+          0.055,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.36,
+          2,
+          8,
+          0.06,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.39,
+          2,
+          8,
+          0.065,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.42,
+          2,
+          8,
+          0.07,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.45,
+          2,
+          8,
+          0.075,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.4875,
+          2,
+          8,
+          0.0813,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.525,
+          2,
+          8,
+          0.0875,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.5625,
+          2,
+          8,
+          0.0938,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.6,
+          2,
+          8,
+          0.1,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.63,
+          2,
+          8,
+          0.105,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.66,
+          2,
+          8,
+          0.11,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.69,
+          2,
+          8,
+          0.115,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.72,
+          2,
+          8,
+          0.12,
+          99,
+          1
+        ],
+        [
+          3,
+          25,
+          0.75,
+          2,
+          8,
+          0.125,
+          99,
+          1
+        ]
+      ],
+      "desc": "进入战斗时，获得#8[i]点【炉心共鸣】。我方任意目标施放终结技时，Saber造成的伤害提高#3[i]%，持续#4[i]回合，并获得#1[i]点【炉心共鸣】。每消耗1点【炉心共鸣】为Saber固定恢复#5[f1]点能量。"
+    },
+    {
+      "id": "101406",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Wind",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "101407",
+      "name": "骑士王的登场",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          0.35,
+          2,
+          2
+        ]
+      ],
+      "desc": "使用秘技后，下一次战斗开始时Saber攻击力提高#1[i]%，持续#2[i]回合，并获得#3[i]点【炉心共鸣】。"
+    },
+    {
+      "id": "101408",
+      "name": "解放的金色王权",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 10,
+      "element": "Wind",
+      "params": [
+        [
+          0.75,
+          2,
+          0.75,
+          1.1
+        ],
+        [
+          0.9,
+          2,
+          0.9,
+          1.32
+        ],
+        [
+          1.05,
+          2,
+          1.05,
+          1.54
+        ],
+        [
+          1.2,
+          2,
+          1.2,
+          1.76
+        ],
+        [
+          1.35,
+          2,
+          1.35,
+          1.98
+        ],
+        [
+          1.5,
+          2,
+          1.5,
+          2.2
+        ],
+        [
+          1.65,
+          2,
+          1.65,
+          2.42
+        ],
+        [
+          1.8,
+          2,
+          1.8,
+          2.64
+        ],
+        [
+          1.95,
+          2,
+          1.95,
+          2.86
+        ],
+        [
+          2.1,
+          2,
+          2.1,
+          3.08
+        ]
+      ],
+      "desc": "获得#2[i]点【炉心共鸣】，并对敌方全体造成等同于Saber#1[i]%攻击力的风属性伤害，若施放时敌方目标数量为2/1，额外对敌方全体造成等同于Saber#3[i]%/#4[i]%攻击力的风属性伤害。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1014001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "101401",
+            "num": 1
+          },
+          {
+            "id": "101408",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110181",
+                "num": 3
+              },
+              {
+                "id": "111011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110182",
+                "num": 3
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110182",
+                "num": 5
+              },
+              {
+                "id": "111012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110183",
+                "num": 3
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110183",
+                "num": 8
+              },
+              {
+                "id": "111013",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1014002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "101402",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "111011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110181",
+                "num": 3
+              },
+              {
+                "id": "111011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110182",
+                "num": 3
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110182",
+                "num": 5
+              },
+              {
+                "id": "111012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110182",
+                "num": 7
+              },
+              {
+                "id": "111012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110183",
+                "num": 3
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110183",
+                "num": 5
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110183",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110183",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1014003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "101403",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "111011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110181",
+                "num": 3
+              },
+              {
+                "id": "111011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110182",
+                "num": 3
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110182",
+                "num": 5
+              },
+              {
+                "id": "111012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110182",
+                "num": 7
+              },
+              {
+                "id": "111012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110183",
+                "num": 3
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110183",
+                "num": 5
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110183",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110183",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1014004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "101404",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "111011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110181",
+                "num": 3
+              },
+              {
+                "id": "111011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110182",
+                "num": 3
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110182",
+                "num": 5
+              },
+              {
+                "id": "111012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110182",
+                "num": 7
+              },
+              {
+                "id": "111012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110183",
+                "num": 3
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110183",
+                "num": 5
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110183",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110183",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1014007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "101407",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1014101",
+        "name": "龙之骑士",
+        "desc": "Saber的暴击率提高#1[i]%。进入战斗和施放强化普攻时，获得【魔力放出】效果，该效果下，若Saber持有【炉心共鸣】，且施放战技并消耗【炉心共鸣】可为Saber恢复满能量，则消耗【魔力放出】为我方恢复1个战技点并使Saber立即行动。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110181",
+                "num": 3
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1014102",
+        "name": "湖之祝福",
+        "desc": "Saber可积攒最多#1[i]点溢出能量，施放终结技后清空并恢复相应的能量值。战斗开始时若能量不足#3[i]%则使其恢复至#2[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110182",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1014103",
+        "name": "星之冠冕",
+        "desc": "施放战技时，使Saber的暴击伤害提高#1[i]%，持续#2[i]回合。本场战斗中每获得1点【炉心共鸣】，使Saber的暴击伤害提高#3[i]%，该效果最多叠加#4[i]层。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110183",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1014201",
+        "name": "伤害强化•风",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "WindAddedRatio",
+            "name": "风属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1014202",
+        "name": "暴击率强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1014101"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.027
+          }
+        ]
+      },
+      {
+        "id": "1014203",
+        "name": "伤害强化•风",
+        "anchor": "Point11",
+        "pre_points": [
+          "1014202"
+        ],
+        "properties": [
+          {
+            "type": "WindAddedRatio",
+            "name": "风属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1014204",
+        "name": "生命强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1014203"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1014205",
+        "name": "伤害强化•风",
+        "anchor": "Point13",
+        "pre_points": [
+          "1014102"
+        ],
+        "properties": [
+          {
+            "type": "WindAddedRatio",
+            "name": "风属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1014206",
+        "name": "暴击率强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1014205"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1014207",
+        "name": "伤害强化•风",
+        "anchor": "Point15",
+        "pre_points": [
+          "1014206"
+        ],
+        "properties": [
+          {
+            "type": "WindAddedRatio",
+            "name": "风属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1014208",
+        "name": "生命强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1014103"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1014209",
+        "name": "暴击率强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1014208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1014210",
+        "name": "伤害强化•风",
+        "anchor": "Point18",
+        "pre_points": [
+          "1014208"
+        ],
+        "properties": [
+          {
+            "type": "WindAddedRatio",
+            "name": "风属性伤害提高",
+            "value": 0.064
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "101401",
+      "name": "失落的白垩坚城",
+      "rank": 1,
+      "desc": "Saber造成的终结技伤害提高60%。Saber施放普攻或战技后，获得1点【炉心共鸣】。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "101402",
+      "name": "尘封的圆桌誓言",
+      "rank": 2,
+      "desc": "本场战斗中每获得1点【炉心共鸣】，使Saber造成的伤害无视目标1.0%的防御力，该效果最多叠加15层。触发【炉心共鸣】提高战技倍率的效果时，每点【炉心共鸣】额外使本次战技的伤害倍率提高7%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "101403",
+      "name": "十五个世纪的追寻",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "101403",
+          "num": 2
+        },
+        {
+          "id": "101401",
+          "num": 1
+        },
+        {
+          "id": "101408",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "101404",
+      "name": "十六个冬日的奇遇",
+      "rank": 4,
+      "desc": "Saber的风属性抗性穿透提高8%。施放终结技后，Saber的风属性抗性穿透提高4%，该效果最多叠加3层。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "101405",
+      "name": "于抵达理想的黎明",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "101402",
+          "num": 2
+        },
+        {
+          "id": "101404",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "101406",
+      "name": "守护命运长夜",
+      "rank": 6,
+      "desc": "Saber造成的终结技伤害的风属性抗性穿透提高20%，行迹【湖之祝福】可积攒的溢出能量提高到200点。进入战斗首次施放终结技后，为Saber固定恢复300点能量，该效果每再施放3次终结技可触发1次。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

@@ -1,0 +1,1582 @@
+{
+  "id": "1403",
+  "name": "缇宝",
+  "tag": "tribbie",
+  "rarity": 5,
+  "path": "同谐",
+  "path_key": "Shaman",
+  "path_en": "Harmony",
+  "element": "量子",
+  "element_key": "Quantum",
+  "max_sp": 120,
+  "preview": "image/character_preview/1403.png",
+  "portrait": "image/character_portrait/1403.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 142.56,
+        "hp_step": 7.128,
+        "atk": 71.28,
+        "atk_step": 3.564,
+        "def_": 99,
+        "def_step": 4.95,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 199.584,
+        "hp_step": 7.128,
+        "atk": 99.792,
+        "atk_step": 3.564,
+        "def_": 138.6,
+        "def_step": 4.95,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 256.608,
+        "hp_step": 7.128,
+        "atk": 128.304,
+        "atk_step": 3.564,
+        "def_": 178.2,
+        "def_step": 4.95,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 313.632,
+        "hp_step": 7.128,
+        "atk": 156.816,
+        "atk_step": 3.564,
+        "def_": 217.8,
+        "def_step": 4.95,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 370.656,
+        "hp_step": 7.128,
+        "atk": 185.328,
+        "atk_step": 3.564,
+        "def_": 257.4,
+        "def_step": 4.95,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 427.68,
+        "hp_step": 7.128,
+        "atk": 213.84,
+        "atk_step": 3.564,
+        "def_": 297,
+        "def_step": 4.95,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 484.704,
+        "hp_step": 7.128,
+        "atk": 242.352,
+        "atk_step": 3.564,
+        "def_": 336.6,
+        "def_step": 4.95,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "115001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "115001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "115002",
+          "num": 6
+        },
+        {
+          "id": "110436",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "115002",
+          "num": 9
+        },
+        {
+          "id": "110436",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "115003",
+          "num": 6
+        },
+        {
+          "id": "110436",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "115003",
+          "num": 9
+        },
+        {
+          "id": "110436",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "140301",
+      "name": "一百层的小火箭",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 10,
+      "element": "Quantum",
+      "params": [
+        [
+          0.15,
+          0.075
+        ],
+        [
+          0.18,
+          0.09
+        ],
+        [
+          0.21,
+          0.105
+        ],
+        [
+          0.24,
+          0.12
+        ],
+        [
+          0.27,
+          0.135
+        ],
+        [
+          0.3,
+          0.15
+        ],
+        [
+          0.33,
+          0.165
+        ],
+        [
+          0.36,
+          0.18
+        ],
+        [
+          0.39,
+          0.195
+        ],
+        [
+          0.42,
+          0.21
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于缇宝#1[i]%生命上限的量子属性伤害，对相邻目标造成等同于缇宝#2[i]%生命上限的量子属性伤害。"
+    },
+    {
+      "id": "140302",
+      "name": "礼物都去哪儿了",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.12,
+          3
+        ],
+        [
+          0.132,
+          3
+        ],
+        [
+          0.144,
+          3
+        ],
+        [
+          0.156,
+          3
+        ],
+        [
+          0.168,
+          3
+        ],
+        [
+          0.18,
+          3
+        ],
+        [
+          0.195,
+          3
+        ],
+        [
+          0.21,
+          3
+        ],
+        [
+          0.225,
+          3
+        ],
+        [
+          0.24,
+          3
+        ],
+        [
+          0.252,
+          3
+        ],
+        [
+          0.264,
+          3
+        ],
+        [
+          0.276,
+          3
+        ],
+        [
+          0.288,
+          3
+        ],
+        [
+          0.3,
+          3
+        ]
+      ],
+      "desc": "获得【神启】，持续#2[i]回合，自身每回合开始时持续回合数减1。当缇宝拥有【神启】时，我方全体目标全属性抗性穿透提高#1[f1]%。"
+    },
+    {
+      "id": "140303",
+      "name": "猜猜这里住着谁",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Quantum",
+      "params": [
+        [
+          0.15,
+          0.15,
+          0.06,
+          2
+        ],
+        [
+          0.165,
+          0.165,
+          0.066,
+          2
+        ],
+        [
+          0.18,
+          0.18,
+          0.072,
+          2
+        ],
+        [
+          0.195,
+          0.195,
+          0.078,
+          2
+        ],
+        [
+          0.21,
+          0.21,
+          0.084,
+          2
+        ],
+        [
+          0.225,
+          0.225,
+          0.09,
+          2
+        ],
+        [
+          0.2437,
+          0.2437,
+          0.0975,
+          2
+        ],
+        [
+          0.2625,
+          0.2625,
+          0.105,
+          2
+        ],
+        [
+          0.2812,
+          0.2812,
+          0.1125,
+          2
+        ],
+        [
+          0.3,
+          0.3,
+          0.12,
+          2
+        ],
+        [
+          0.315,
+          0.315,
+          0.126,
+          2
+        ],
+        [
+          0.33,
+          0.33,
+          0.132,
+          2
+        ],
+        [
+          0.345,
+          0.345,
+          0.138,
+          2
+        ],
+        [
+          0.36,
+          0.36,
+          0.144,
+          2
+        ],
+        [
+          0.375,
+          0.375,
+          0.15,
+          2
+        ]
+      ],
+      "desc": "开启结界，并对敌方全体造成等同于缇宝#1[i]%生命上限的量子属性伤害。\n结界持续期间，敌方目标受到的伤害提高#2[f1]%。受到我方目标攻击后，每有1名目标受到攻击，会对被攻击目标中当前生命值最高的目标造成1次等同于缇宝#3[f1]%生命上限的量子属性附加伤害。\n结界持续#4[i]回合，自身每回合开始时结界持续回合数减1。"
+    },
+    {
+      "id": "140304",
+      "name": "好忙好忙的缇宝",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Quantum",
+      "params": [
+        [
+          0.09
+        ],
+        [
+          0.099
+        ],
+        [
+          0.108
+        ],
+        [
+          0.117
+        ],
+        [
+          0.126
+        ],
+        [
+          0.135
+        ],
+        [
+          0.1462
+        ],
+        [
+          0.1575
+        ],
+        [
+          0.1688
+        ],
+        [
+          0.18
+        ],
+        [
+          0.189
+        ],
+        [
+          0.198
+        ],
+        [
+          0.207
+        ],
+        [
+          0.216
+        ],
+        [
+          0.225
+        ]
+      ],
+      "desc": "我方其他角色施放终结技后，缇宝发动追加攻击，对敌方全体造成等同于缇宝#1[f1]%生命上限的量子属性伤害。该效果每个角色最多触发1次，缇宝施放终结技时重置我方其他角色可触发次数。若追加攻击施放前目标被消灭则对新入场的敌方目标发动追加攻击。"
+    },
+    {
+      "id": "140306",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Quantum",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "140307",
+      "name": "开心你就拍拍手",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          3
+        ]
+      ],
+      "desc": "使用秘技后，进入战斗时获得【神启】，持续#1[i]回合。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1403001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140301",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110231",
+                "num": 3
+              },
+              {
+                "id": "115001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110232",
+                "num": 3
+              },
+              {
+                "id": "115002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110232",
+                "num": 5
+              },
+              {
+                "id": "115002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110233",
+                "num": 3
+              },
+              {
+                "id": "115003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110233",
+                "num": 8
+              },
+              {
+                "id": "115003",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1403002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140302",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "115001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110231",
+                "num": 3
+              },
+              {
+                "id": "115001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110232",
+                "num": 3
+              },
+              {
+                "id": "115002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110232",
+                "num": 5
+              },
+              {
+                "id": "115002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110232",
+                "num": 7
+              },
+              {
+                "id": "115002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110233",
+                "num": 3
+              },
+              {
+                "id": "115003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110233",
+                "num": 5
+              },
+              {
+                "id": "110505",
+                "num": 1
+              },
+              {
+                "id": "115003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110233",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110233",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1403003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140303",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "115001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110231",
+                "num": 3
+              },
+              {
+                "id": "115001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110232",
+                "num": 3
+              },
+              {
+                "id": "115002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110232",
+                "num": 5
+              },
+              {
+                "id": "115002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110232",
+                "num": 7
+              },
+              {
+                "id": "115002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110233",
+                "num": 3
+              },
+              {
+                "id": "115003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110233",
+                "num": 5
+              },
+              {
+                "id": "110505",
+                "num": 1
+              },
+              {
+                "id": "115003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110233",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110233",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1403004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140304",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "115001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110231",
+                "num": 3
+              },
+              {
+                "id": "115001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110232",
+                "num": 3
+              },
+              {
+                "id": "115002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110232",
+                "num": 5
+              },
+              {
+                "id": "115002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110232",
+                "num": 7
+              },
+              {
+                "id": "115002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110233",
+                "num": 3
+              },
+              {
+                "id": "115003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110233",
+                "num": 5
+              },
+              {
+                "id": "110505",
+                "num": 1
+              },
+              {
+                "id": "115003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110233",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110233",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1403007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140307",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1403101",
+        "name": "城墙外的羊羔儿…",
+        "desc": "施放天赋的追加攻击后，缇宝造成的伤害提高#1[i]%，该效果最多叠加#2[i]层，持续#3[i]回合。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110231",
+                "num": 3
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1403102",
+        "name": "长翅膀的玻璃球！",
+        "desc": "结界持续期间，缇宝的生命上限提高，提高数值等同于我方全体角色生命上限之和的#1[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110232",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1403103",
+        "name": "岔路旁的小石子？",
+        "desc": "战斗开始时，缇宝恢复#1[i]点能量。我方其他目标攻击后，每击中1个目标使缇宝恢复#2[f1]点能量。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110233",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1403201",
+        "name": "暴击伤害强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1403202",
+        "name": "暴击率强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1403101"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.027
+          }
+        ]
+      },
+      {
+        "id": "1403203",
+        "name": "暴击伤害强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1403202"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1403204",
+        "name": "生命强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1403201"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1403205",
+        "name": "暴击伤害强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1403102"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1403206",
+        "name": "暴击率强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1403205"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1403207",
+        "name": "暴击伤害强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "1403201"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1403208",
+        "name": "生命强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1403103"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1403209",
+        "name": "暴击率强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1403208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1403210",
+        "name": "暴击伤害强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1403208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.107
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "140301",
+      "name": "拾起砂糖的祭典",
+      "rank": 1,
+      "desc": "结界持续期间，我方目标攻击敌人后，对结界造成附加伤害的目标额外造成等同于本次攻击总伤害值24%的真实伤害。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "140302",
+      "name": "探访佳梦的向导",
+      "rank": 2,
+      "desc": "结界造成的附加伤害提高至原伤害的120%。结界造成附加伤害时，会额外造成1次附加伤害。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "140303",
+      "name": "盛满晨曦的宝藏",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "140303",
+          "num": 2
+        },
+        {
+          "id": "140301",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "140304",
+      "name": "心意相契的安宁",
+      "rank": 4,
+      "desc": "【神启】持续期间，我方全体造成伤害时无视目标18%的防御力。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "140305",
+      "name": "开启奇迹的时钟",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "140302",
+          "num": 2
+        },
+        {
+          "id": "140304",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "140306",
+      "name": "星月满天的明日",
+      "rank": 6,
+      "desc": "缇宝施放终结技后，对敌方全体发动天赋的追加攻击。天赋的追加攻击造成的伤害提高729%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

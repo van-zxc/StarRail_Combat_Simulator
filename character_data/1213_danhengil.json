@@ -1,0 +1,1774 @@
+{
+  "id": "1213",
+  "name": "丹恒•饮月",
+  "tag": "danhengil",
+  "rarity": 5,
+  "path": "毁灭",
+  "path_key": "Warrior",
+  "path_en": "Destruction",
+  "element": "虚数",
+  "element_key": "Imaginary",
+  "max_sp": 140,
+  "preview": "image/character_preview/1213.png",
+  "portrait": "image/character_portrait/1213.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 168.96,
+        "hp_step": 8.448,
+        "atk": 95.04,
+        "atk_step": 4.752,
+        "def_": 49.5,
+        "def_step": 2.475,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 236.544,
+        "hp_step": 8.448,
+        "atk": 133.056,
+        "atk_step": 4.752,
+        "def_": 69.3,
+        "def_step": 2.475,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 304.128,
+        "hp_step": 8.448,
+        "atk": 171.072,
+        "atk_step": 4.752,
+        "def_": 89.1,
+        "def_step": 2.475,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 371.712,
+        "hp_step": 8.448,
+        "atk": 209.088,
+        "atk_step": 4.752,
+        "def_": 108.9,
+        "def_step": 2.475,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 439.296,
+        "hp_step": 8.448,
+        "atk": 247.104,
+        "atk_step": 4.752,
+        "def_": 128.7,
+        "def_step": 2.475,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 506.88,
+        "hp_step": 8.448,
+        "atk": 285.12,
+        "atk_step": 4.752,
+        "def_": 148.5,
+        "def_step": 2.475,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 574.464,
+        "hp_step": 8.448,
+        "atk": 323.136,
+        "atk_step": 4.752,
+        "def_": 168.3,
+        "def_step": 2.475,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "113001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "113001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "113002",
+          "num": 6
+        },
+        {
+          "id": "110417",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "113002",
+          "num": 9
+        },
+        {
+          "id": "110417",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "113003",
+          "num": 6
+        },
+        {
+          "id": "110417",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "113003",
+          "num": 9
+        },
+        {
+          "id": "110417",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "121301",
+      "name": "泽芝",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Imaginary",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "施放2段攻击对指定敌方单体造成等同于丹恒•饮月#1[i]%攻击力的虚数属性伤害。"
+    },
+    {
+      "id": "121302",
+      "name": "龙力自在",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.06,
+          4
+        ],
+        [
+          0.066,
+          4
+        ],
+        [
+          0.072,
+          4
+        ],
+        [
+          0.078,
+          4
+        ],
+        [
+          0.084,
+          4
+        ],
+        [
+          0.09,
+          4
+        ],
+        [
+          0.0975,
+          4
+        ],
+        [
+          0.105,
+          4
+        ],
+        [
+          0.1125,
+          4
+        ],
+        [
+          0.12,
+          4
+        ],
+        [
+          0.126,
+          4
+        ],
+        [
+          0.132,
+          4
+        ],
+        [
+          0.138,
+          4
+        ],
+        [
+          0.144,
+          4
+        ],
+        [
+          0.15,
+          4
+        ]
+      ],
+      "desc": "使普攻的效果得到强化，最多可连续强化3次，施放本技能不消耗战技点且不视为使用战技。\n强化1次，【泽芝】变为【瞬华】。\n强化2次，【泽芝】变为【天矢阴】。\n强化3次，【泽芝】变为【盘拏耀跃】。\n施放【天矢阴】或【盘拏耀跃】时，从第4段攻击开始每段攻击前获得1层【叱咤】，使丹恒•饮月的暴击伤害提高#1[f1]%，该效果最多叠加#2[i]层，持续至自身回合结束。"
+    },
+    {
+      "id": "121303",
+      "name": "苍龙傲睨，劫水濯世",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 15,
+      "element": "Imaginary",
+      "params": [
+        [
+          1.8,
+          0.84,
+          2,
+          3
+        ],
+        [
+          1.92,
+          0.896,
+          2,
+          3
+        ],
+        [
+          2.04,
+          0.952,
+          2,
+          3
+        ],
+        [
+          2.16,
+          1.008,
+          2,
+          3
+        ],
+        [
+          2.28,
+          1.064,
+          2,
+          3
+        ],
+        [
+          2.4,
+          1.12,
+          2,
+          3
+        ],
+        [
+          2.55,
+          1.19,
+          2,
+          3
+        ],
+        [
+          2.7,
+          1.26,
+          2,
+          3
+        ],
+        [
+          2.85,
+          1.33,
+          2,
+          3
+        ],
+        [
+          3,
+          1.4,
+          2,
+          3
+        ],
+        [
+          3.12,
+          1.456,
+          2,
+          3
+        ],
+        [
+          3.24,
+          1.512,
+          2,
+          3
+        ],
+        [
+          3.36,
+          1.568,
+          2,
+          3
+        ],
+        [
+          3.48,
+          1.624,
+          2,
+          3
+        ],
+        [
+          3.6,
+          1.68,
+          2,
+          3
+        ]
+      ],
+      "desc": "施放3段攻击对指定敌方单体造成等同于丹恒•饮月#1[i]%攻击力的虚数属性伤害，同时对其相邻目标造成等同于丹恒•饮月#2[i]%攻击力的虚数属性伤害。并使自身获得#3[i]个【逆鳞】。\n【逆鳞】最多持有#4[i]个，可用来抵扣丹恒•饮月的战技点消耗。消耗【逆鳞】视为消耗战技点。"
+    },
+    {
+      "id": "121304",
+      "name": "亢心",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.05,
+          6
+        ],
+        [
+          0.055,
+          6
+        ],
+        [
+          0.06,
+          6
+        ],
+        [
+          0.065,
+          6
+        ],
+        [
+          0.07,
+          6
+        ],
+        [
+          0.075,
+          6
+        ],
+        [
+          0.0813,
+          6
+        ],
+        [
+          0.0875,
+          6
+        ],
+        [
+          0.0938,
+          6
+        ],
+        [
+          0.1,
+          6
+        ],
+        [
+          0.105,
+          6
+        ],
+        [
+          0.11,
+          6
+        ],
+        [
+          0.115,
+          6
+        ],
+        [
+          0.12,
+          6
+        ],
+        [
+          0.125,
+          6
+        ]
+      ],
+      "desc": "丹恒•饮月施放每段攻击后获得1层【亢心】，使自身造成的伤害提高#1[f1]%，该效果可以叠加#2[i]层，持续至自身回合结束。"
+    },
+    {
+      "id": "121306",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Imaginary",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "121307",
+      "name": "掣空如虹",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          1,
+          20,
+          1.2
+        ]
+      ],
+      "desc": "使用秘技后进入持续#2[i]秒的【蟠跃】状态。【蟠跃】状态下使用攻击会快速向前移动一段距离并攻击接触到的敌人，在快速移动的过程中可抵挡敌人的所有攻击。【蟠跃】状态下主动攻击敌人进入战斗后，对敌方全体造成等同于丹恒•饮月#3[i]%攻击力的虚数属性伤害，并使自身获得#1[i]个【逆鳞】。"
+    },
+    {
+      "id": "121308",
+      "name": "瞬华",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Imaginary",
+      "params": [
+        [
+          1.3
+        ],
+        [
+          1.56
+        ],
+        [
+          1.82
+        ],
+        [
+          2.08
+        ],
+        [
+          2.34
+        ],
+        [
+          2.6
+        ],
+        [
+          2.86
+        ],
+        [
+          3.12
+        ],
+        [
+          3.38
+        ],
+        [
+          3.64
+        ]
+      ],
+      "desc": "施放3段攻击对指定敌方单体造成等同于丹恒•饮月#1[i]%攻击力的虚数属性伤害。"
+    },
+    {
+      "id": "121309",
+      "name": "取消",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Enhance",
+      "effect_text": "取消",
+      "max_level": 1,
+      "element": "",
+      "params": [],
+      "desc": "取消强化。"
+    },
+    {
+      "id": "121310",
+      "name": "天矢阴",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 10,
+      "element": "Imaginary",
+      "params": [
+        [
+          1.9,
+          0.3
+        ],
+        [
+          2.28,
+          0.36
+        ],
+        [
+          2.66,
+          0.42
+        ],
+        [
+          3.04,
+          0.48
+        ],
+        [
+          3.42,
+          0.54
+        ],
+        [
+          3.8,
+          0.6
+        ],
+        [
+          4.18,
+          0.66
+        ],
+        [
+          4.56,
+          0.72
+        ],
+        [
+          4.94,
+          0.78
+        ],
+        [
+          5.32,
+          0.84
+        ]
+      ],
+      "desc": "施放5段攻击对指定敌方单体造成等同于丹恒•饮月#1[i]%攻击力的虚数属性伤害。从第4段攻击开始同时对其相邻目标造成等同于丹恒•饮月#2[i]%攻击力的虚数属性伤害。"
+    },
+    {
+      "id": "121312",
+      "name": "盘拏耀跃",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 10,
+      "element": "Imaginary",
+      "params": [
+        [
+          2.5,
+          0.9
+        ],
+        [
+          3,
+          1.08
+        ],
+        [
+          3.5,
+          1.26
+        ],
+        [
+          4,
+          1.44
+        ],
+        [
+          4.5,
+          1.62
+        ],
+        [
+          5,
+          1.8
+        ],
+        [
+          5.5,
+          1.98
+        ],
+        [
+          6,
+          2.16
+        ],
+        [
+          6.5,
+          2.34
+        ],
+        [
+          7,
+          2.52
+        ]
+      ],
+      "desc": "施放7段攻击对指定敌方单体造成等同于丹恒•饮月#1[i]%攻击力的虚数属性伤害。从第4段攻击开始同时对其相邻目标造成等同于丹恒•饮月#2[i]%攻击力的虚数属性伤害。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1213001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121301",
+            "num": 1
+          },
+          {
+            "id": "121308",
+            "num": 1
+          },
+          {
+            "id": "121310",
+            "num": 1
+          },
+          {
+            "id": "121312",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110111",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110112",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110112",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110113",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110113",
+                "num": 8
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1213002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121302",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110111",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110112",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110112",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110112",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110113",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110113",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110113",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110113",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1213003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121303",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110111",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110112",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110112",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110112",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110113",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110113",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110113",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110113",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1213004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121304",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110111",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110112",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110112",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110112",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110113",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110113",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110113",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110113",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1213007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121307",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1213101",
+        "name": "伏辰",
+        "desc": "战斗开始时，立即恢复#1[i]点能量。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110111",
+                "num": 3
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1213102",
+        "name": "修禹",
+        "desc": "抵抗控制类负面状态的概率提高#1[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110112",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1213103",
+        "name": "起蛰",
+        "desc": "对拥有虚数属性弱点的敌方目标造成伤害时，暴击伤害提高#1[i]%。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110113",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1213201",
+        "name": "伤害强化•虚数",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "ImaginaryAddedRatio",
+            "name": "虚数属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1213202",
+        "name": "暴击率强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1213101"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.027
+          }
+        ]
+      },
+      {
+        "id": "1213203",
+        "name": "伤害强化•虚数",
+        "anchor": "Point11",
+        "pre_points": [
+          "1213202"
+        ],
+        "properties": [
+          {
+            "type": "ImaginaryAddedRatio",
+            "name": "虚数属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1213204",
+        "name": "生命强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1213203"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1213205",
+        "name": "伤害强化•虚数",
+        "anchor": "Point13",
+        "pre_points": [
+          "1213102"
+        ],
+        "properties": [
+          {
+            "type": "ImaginaryAddedRatio",
+            "name": "虚数属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1213206",
+        "name": "暴击率强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1213205"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1213207",
+        "name": "伤害强化•虚数",
+        "anchor": "Point15",
+        "pre_points": [
+          "1213206"
+        ],
+        "properties": [
+          {
+            "type": "ImaginaryAddedRatio",
+            "name": "虚数属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1213208",
+        "name": "生命强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1213103"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1213209",
+        "name": "暴击率强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1213208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1213210",
+        "name": "伤害强化•虚数",
+        "anchor": "Point18",
+        "pre_points": [
+          "1213208"
+        ],
+        "properties": [
+          {
+            "type": "ImaginaryAddedRatio",
+            "name": "虚数属性伤害提高",
+            "value": 0.064
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "121301",
+      "name": "萦天",
+      "rank": 1,
+      "desc": "使【亢心】的可叠加层数增加4层。且每段攻击额外获得1层【亢心】。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "121302",
+      "name": "九斿",
+      "rank": 2,
+      "desc": "施放终结技后丹恒•饮月行动提前100%，并且会额外获得1个【逆鳞】。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "121303",
+      "name": "云旂",
+      "rank": 3,
+      "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "121302",
+          "num": 2
+        },
+        {
+          "id": "121301",
+          "num": 1
+        },
+        {
+          "id": "121308",
+          "num": 1
+        },
+        {
+          "id": "121310",
+          "num": 1
+        },
+        {
+          "id": "121312",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "121304",
+      "name": "嘲风",
+      "rank": 4,
+      "desc": "【叱咤】的增益效果会持续到下一个自身回合结束。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "121305",
+      "name": "偃蹇",
+      "rank": 5,
+      "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "121303",
+          "num": 2
+        },
+        {
+          "id": "121304",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "121306",
+      "name": "见谯",
+      "rank": 6,
+      "desc": "我方其他角色施放终结技后，丹恒•饮月下一次施放【盘拏耀跃】时虚数属性抗性穿透提高20%，该效果最多叠加3层。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

@@ -1,0 +1,1599 @@
+{
+  "id": "1112",
+  "name": "托帕&账账",
+  "tag": "topaz",
+  "rarity": 5,
+  "path": "巡猎",
+  "path_key": "Rogue",
+  "path_en": "The Hunt",
+  "element": "火",
+  "element_key": "Fire",
+  "max_sp": 130,
+  "preview": "image/character_preview/1112.png",
+  "portrait": "image/character_portrait/1112.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 126.72,
+        "hp_step": 6.336,
+        "atk": 84.48,
+        "atk_step": 4.224,
+        "def_": 56.1,
+        "def_step": 2.805,
+        "spd": 110,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 177.408,
+        "hp_step": 6.336,
+        "atk": 118.272,
+        "atk_step": 4.224,
+        "def_": 78.54,
+        "def_step": 2.805,
+        "spd": 110,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 228.096,
+        "hp_step": 6.336,
+        "atk": 152.064,
+        "atk_step": 4.224,
+        "def_": 100.98,
+        "def_step": 2.805,
+        "spd": 110,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 278.784,
+        "hp_step": 6.336,
+        "atk": 185.856,
+        "atk_step": 4.224,
+        "def_": 123.42,
+        "def_step": 2.805,
+        "spd": 110,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 329.472,
+        "hp_step": 6.336,
+        "atk": 219.648,
+        "atk_step": 4.224,
+        "def_": 145.86,
+        "def_step": 2.805,
+        "spd": 110,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 380.16,
+        "hp_step": 6.336,
+        "atk": 253.44,
+        "atk_step": 4.224,
+        "def_": 168.3,
+        "def_step": 2.805,
+        "spd": 110,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 430.848,
+        "hp_step": 6.336,
+        "atk": 287.232,
+        "atk_step": 4.224,
+        "def_": 190.74,
+        "def_step": 2.805,
+        "spd": 110,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "112001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "112001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "112002",
+          "num": 6
+        },
+        {
+          "id": "110412",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "112002",
+          "num": 9
+        },
+        {
+          "id": "110412",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "112003",
+          "num": 6
+        },
+        {
+          "id": "110412",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "112003",
+          "num": 9
+        },
+        {
+          "id": "110412",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "111201",
+      "name": "赤字…",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Fire",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于托帕#1[i]%攻击力的火属性伤害。"
+    },
+    {
+      "id": "111202",
+      "name": "支付困难？",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Fire",
+      "params": [
+        [
+          0.75,
+          0.25
+        ],
+        [
+          0.825,
+          0.275
+        ],
+        [
+          0.9,
+          0.3
+        ],
+        [
+          0.975,
+          0.325
+        ],
+        [
+          1.05,
+          0.35
+        ],
+        [
+          1.125,
+          0.375
+        ],
+        [
+          1.2188,
+          0.4062
+        ],
+        [
+          1.3125,
+          0.4375
+        ],
+        [
+          1.4062,
+          0.4688
+        ],
+        [
+          1.5,
+          0.5
+        ],
+        [
+          1.575,
+          0.525
+        ],
+        [
+          1.65,
+          0.55
+        ],
+        [
+          1.725,
+          0.575
+        ],
+        [
+          1.8,
+          0.6
+        ],
+        [
+          1.875,
+          0.625
+        ]
+      ],
+      "desc": "使指定敌方单体陷入【负债证明】状态，使其受到的追加攻击伤害提高#2[i]%。【负债证明】仅对最新被施加的目标生效，我方目标回合开始或行动时，若场上不存在陷入【负债证明】状态的敌方目标，托帕使随机敌方目标陷入【负债证明】状态。\n使账账对该目标造成等同于托帕#1[i]%攻击力的火属性伤害。施放此战技造成伤害时，被视为发动了追加攻击。"
+    },
+    {
+      "id": "111203",
+      "name": "扭亏为盈！",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.75,
+          0.125,
+          0.5,
+          2
+        ],
+        [
+          0.825,
+          0.1375,
+          0.5,
+          2
+        ],
+        [
+          0.9,
+          0.15,
+          0.5,
+          2
+        ],
+        [
+          0.975,
+          0.1625,
+          0.5,
+          2
+        ],
+        [
+          1.05,
+          0.175,
+          0.5,
+          2
+        ],
+        [
+          1.125,
+          0.1875,
+          0.5,
+          2
+        ],
+        [
+          1.2188,
+          0.2031,
+          0.5,
+          2
+        ],
+        [
+          1.3125,
+          0.2188,
+          0.5,
+          2
+        ],
+        [
+          1.4062,
+          0.2344,
+          0.5,
+          2
+        ],
+        [
+          1.5,
+          0.25,
+          0.5,
+          2
+        ],
+        [
+          1.575,
+          0.2625,
+          0.5,
+          2
+        ],
+        [
+          1.65,
+          0.275,
+          0.5,
+          2
+        ],
+        [
+          1.725,
+          0.2875,
+          0.5,
+          2
+        ],
+        [
+          1.8,
+          0.3,
+          0.5,
+          2
+        ],
+        [
+          1.875,
+          0.3125,
+          0.5,
+          2
+        ]
+      ],
+      "desc": "使账账进入【涨幅惊人！】状态，伤害倍率提高#1[i]%，暴击伤害提高#2[i]%，且当陷入【负债证明】状态下的敌方目标受到我方的普攻、战技或终结技的攻击时，账账行动提前#3[i]%。账账施放#4[i]次攻击后退出【涨幅惊人！】状态。"
+    },
+    {
+      "id": "111204",
+      "name": "猪市？！",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Fire",
+      "params": [
+        [
+          80,
+          0.75,
+          0.5
+        ],
+        [
+          80,
+          0.825,
+          0.5
+        ],
+        [
+          80,
+          0.9,
+          0.5
+        ],
+        [
+          80,
+          0.975,
+          0.5
+        ],
+        [
+          80,
+          1.05,
+          0.5
+        ],
+        [
+          80,
+          1.125,
+          0.5
+        ],
+        [
+          80,
+          1.2188,
+          0.5
+        ],
+        [
+          80,
+          1.3125,
+          0.5
+        ],
+        [
+          80,
+          1.4062,
+          0.5
+        ],
+        [
+          80,
+          1.5,
+          0.5
+        ],
+        [
+          80,
+          1.575,
+          0.5
+        ],
+        [
+          80,
+          1.65,
+          0.5
+        ],
+        [
+          80,
+          1.725,
+          0.5
+        ],
+        [
+          80,
+          1.8,
+          0.5
+        ],
+        [
+          80,
+          1.875,
+          0.5
+        ]
+      ],
+      "desc": "战斗开始时召唤账账。账账初始拥有#1[i]点速度，行动时发动追加攻击，对陷入【负债证明】状态下的敌方单体造成等同于托帕#2[i]%攻击力的火属性伤害。\n陷入【负债证明】状态下的敌方目标受到我方的追加攻击时，账账行动提前#3[i]%。在账账自身回合内，无法触发行动提前效果。\n当托帕陷入无法战斗状态时账账消失。"
+    },
+    {
+      "id": "111206",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Fire",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "111207",
+      "name": "明补",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          60,
+          10000
+        ]
+      ],
+      "desc": "托帕入场时召唤账账，账账会自动搜寻一定范围内的普通战利品与扑满。\n主动施放秘技使下一场战斗中账账施放首次攻击后，托帕恢复#1[i]点能量。\n主动施放秘技与大地图内的敌人战斗胜利后，若托帕仍在队伍中，则在获取信用点时额外获取少量信用点，每个地球日内最多额外获取#2[i]点。\n主动施放秘技与模拟宇宙、差分宇宙内的敌人战斗胜利后，额外获取少量宇宙碎片并有小概率获得1个随机奇物。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1112001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "111201",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110121",
+                "num": 3
+              },
+              {
+                "id": "112001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110122",
+                "num": 3
+              },
+              {
+                "id": "112002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110122",
+                "num": 5
+              },
+              {
+                "id": "112002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110123",
+                "num": 3
+              },
+              {
+                "id": "112003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110123",
+                "num": 8
+              },
+              {
+                "id": "112003",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1112002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "111202",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "112001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110121",
+                "num": 3
+              },
+              {
+                "id": "112001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110122",
+                "num": 3
+              },
+              {
+                "id": "112002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110122",
+                "num": 5
+              },
+              {
+                "id": "112002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110122",
+                "num": 7
+              },
+              {
+                "id": "112002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110123",
+                "num": 3
+              },
+              {
+                "id": "112003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110123",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "112003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110123",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110123",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1112003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "111203",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "112001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110121",
+                "num": 3
+              },
+              {
+                "id": "112001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110122",
+                "num": 3
+              },
+              {
+                "id": "112002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110122",
+                "num": 5
+              },
+              {
+                "id": "112002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110122",
+                "num": 7
+              },
+              {
+                "id": "112002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110123",
+                "num": 3
+              },
+              {
+                "id": "112003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110123",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "112003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110123",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110123",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1112004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "111204",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "112001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110121",
+                "num": 3
+              },
+              {
+                "id": "112001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110122",
+                "num": 3
+              },
+              {
+                "id": "112002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110122",
+                "num": 5
+              },
+              {
+                "id": "112002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110122",
+                "num": 7
+              },
+              {
+                "id": "112002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110123",
+                "num": 3
+              },
+              {
+                "id": "112003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110123",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "112003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110123",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110123",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1112007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "111207",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1112101",
+        "name": "透支",
+        "desc": "托帕施放普攻造成伤害时，被视为发动了追加攻击。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110121",
+                "num": 3
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1112102",
+        "name": "金融动荡",
+        "desc": "托帕和账账对拥有火属性弱点的敌方目标造成的伤害提高#1[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110122",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1112103",
+        "name": "技术性调整",
+        "desc": "当账账处于【涨幅惊人！】状态施放攻击后，额外使托帕恢复#1[i]点能量。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110123",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1112201",
+        "name": "伤害强化•火",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "FireAddedRatio",
+            "name": "火属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1112202",
+        "name": "暴击率强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1112101"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.027
+          }
+        ]
+      },
+      {
+        "id": "1112203",
+        "name": "伤害强化•火",
+        "anchor": "Point11",
+        "pre_points": [
+          "1112202"
+        ],
+        "properties": [
+          {
+            "type": "FireAddedRatio",
+            "name": "火属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1112204",
+        "name": "生命强化",
+        "anchor": "Point12",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1112205",
+        "name": "伤害强化•火",
+        "anchor": "Point13",
+        "pre_points": [
+          "1112102"
+        ],
+        "properties": [
+          {
+            "type": "FireAddedRatio",
+            "name": "火属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1112206",
+        "name": "暴击率强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1112205"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1112207",
+        "name": "伤害强化•火",
+        "anchor": "Point15",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "FireAddedRatio",
+            "name": "火属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1112208",
+        "name": "生命强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1112103"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1112209",
+        "name": "暴击率强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1112208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1112210",
+        "name": "伤害强化•火",
+        "anchor": "Point18",
+        "pre_points": [
+          "1112208"
+        ],
+        "properties": [
+          {
+            "type": "FireAddedRatio",
+            "name": "火属性伤害提高",
+            "value": 0.064
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "111201",
+      "name": "未来市场",
+      "rank": 1,
+      "desc": "陷入【负债证明】状态下的敌方目标受到追加攻击时，将会陷入【被执行】状态，单次攻击内最多生效1次。\n【被执行】使敌方目标受到的追加攻击的暴击伤害提高25%，最多叠加2层。【负债证明】被移除时，【被执行】也会被移除。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "111202",
+      "name": "善意收购",
+      "rank": 2,
+      "desc": "账账自身行动并发动攻击后，托帕恢复5点能量。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "111203",
+      "name": "抓大放小",
+      "rank": 3,
+      "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "111202",
+          "num": 2
+        },
+        {
+          "id": "111201",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "111204",
+      "name": "敏捷处理",
+      "rank": 4,
+      "desc": "账账自身回合开始时，托帕的行动提前20%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "111205",
+      "name": "需求膨胀",
+      "rank": 5,
+      "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "111203",
+          "num": 2
+        },
+        {
+          "id": "111204",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "111206",
+      "name": "激励机制",
+      "rank": 6,
+      "desc": "账账处于【涨幅惊人！】状态的攻击次数增加1次，且攻击时火属性抗性穿透提高10%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

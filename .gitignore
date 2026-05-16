@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Agent memory / logs
+.agent_memory
+AGENT_LOG.md
+AGENTS
+
+# Tests
+test_starrail_combat.py
+test_elation.py
+
+# Raw data / docs
+original_data/
+docs/
+
+# OS
+Thumbs.db

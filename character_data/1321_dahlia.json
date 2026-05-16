@@ -1,0 +1,1633 @@
+{
+  "id": "1321",
+  "name": "大丽花",
+  "tag": "dahlia",
+  "rarity": 5,
+  "path": "虚无",
+  "path_key": "Warlock",
+  "path_en": "Nihility",
+  "element": "火",
+  "element_key": "Fire",
+  "max_sp": 130,
+  "preview": "image/character_preview/1321.png",
+  "portrait": "image/character_portrait/1321.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 147.84,
+        "hp_step": 7.392,
+        "atk": 92.4,
+        "atk_step": 4.62,
+        "def_": 82.5,
+        "def_step": 4.125,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 206.976,
+        "hp_step": 7.392,
+        "atk": 129.36,
+        "atk_step": 4.62,
+        "def_": 115.5,
+        "def_step": 4.125,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 266.112,
+        "hp_step": 7.392,
+        "atk": 166.32,
+        "atk_step": 4.62,
+        "def_": 148.5,
+        "def_step": 4.125,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 325.248,
+        "hp_step": 7.392,
+        "atk": 203.28,
+        "atk_step": 4.62,
+        "def_": 181.5,
+        "def_step": 4.125,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 384.384,
+        "hp_step": 7.392,
+        "atk": 240.24,
+        "atk_step": 4.62,
+        "def_": 214.5,
+        "def_step": 4.125,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 443.52,
+        "hp_step": 7.392,
+        "atk": 277.2,
+        "atk_step": 4.62,
+        "def_": 247.5,
+        "def_step": 4.125,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 502.656,
+        "hp_step": 7.392,
+        "atk": 314.16,
+        "atk_step": 4.62,
+        "def_": 280.5,
+        "def_step": 4.125,
+        "spd": 96,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "114011",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "114011",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "114012",
+          "num": 6
+        },
+        {
+          "id": "110432",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "114012",
+          "num": 9
+        },
+        {
+          "id": "110432",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "114013",
+          "num": 6
+        },
+        {
+          "id": "110432",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "114013",
+          "num": 9
+        },
+        {
+          "id": "110432",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "132101",
+      "name": "拨弄…记忆绽开裂隙",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Fire",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于大丽花#1[i]%攻击力的火属性伤害。"
+    },
+    {
+      "id": "132102",
+      "name": "舔舐…背叛伸出火舌",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 15,
+      "element": "Fire",
+      "params": [
+        [
+          0.8,
+          3,
+          0.5
+        ],
+        [
+          0.88,
+          3,
+          0.5
+        ],
+        [
+          0.96,
+          3,
+          0.5
+        ],
+        [
+          1.04,
+          3,
+          0.5
+        ],
+        [
+          1.12,
+          3,
+          0.5
+        ],
+        [
+          1.2,
+          3,
+          0.5
+        ],
+        [
+          1.3,
+          3,
+          0.5
+        ],
+        [
+          1.4,
+          3,
+          0.5
+        ],
+        [
+          1.5,
+          3,
+          0.5
+        ],
+        [
+          1.6,
+          3,
+          0.5
+        ],
+        [
+          1.68,
+          3,
+          0.5
+        ],
+        [
+          1.76,
+          3,
+          0.5
+        ],
+        [
+          1.84,
+          3,
+          0.5
+        ],
+        [
+          1.92,
+          3,
+          0.5
+        ],
+        [
+          2,
+          3,
+          0.5
+        ]
+      ],
+      "desc": "开启结界，持续#2[i]回合，大丽花回合开始时持续回合数减1。随后对指定敌方单体及其相邻目标造成等同于大丽花#1[i]%攻击力的火属性伤害。\n结界持续期间，我方全体的弱点击破效率提高#3[i]%，敌方目标未处于弱点击破状态时承受的削韧值也能够转化为超击破伤害。"
+    },
+    {
+      "id": "132103",
+      "name": "沉溺…飞灰邀入墓床",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Fire",
+      "params": [
+        [
+          1.8,
+          4,
+          0.08
+        ],
+        [
+          1.92,
+          4,
+          0.09
+        ],
+        [
+          2.04,
+          4,
+          0.1
+        ],
+        [
+          2.16,
+          4,
+          0.11
+        ],
+        [
+          2.28,
+          4,
+          0.12
+        ],
+        [
+          2.4,
+          4,
+          0.13
+        ],
+        [
+          2.55,
+          4,
+          0.1425
+        ],
+        [
+          2.7,
+          4,
+          0.155
+        ],
+        [
+          2.85,
+          4,
+          0.1675
+        ],
+        [
+          3,
+          4,
+          0.18
+        ],
+        [
+          3.12,
+          4,
+          0.19
+        ],
+        [
+          3.24,
+          4,
+          0.2
+        ],
+        [
+          3.36,
+          4,
+          0.21
+        ],
+        [
+          3.48,
+          4,
+          0.22
+        ],
+        [
+          3.6,
+          4,
+          0.23
+        ]
+      ],
+      "desc": "使敌方全体陷入【败谢】状态，持续#2[i]回合。随后造成等同于大丽花#1[i]%攻击力的火属性伤害，由敌方全体均分。\n【败谢】状态下，敌方目标防御力降低#3[f1]%，并且会被添加所有【共舞者】属性的弱点。"
+    },
+    {
+      "id": "132104",
+      "name": "谁在害怕康士坦丝？",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Bounce",
+      "effect_text": "弹射",
+      "max_level": 15,
+      "element": "Fire",
+      "params": [
+        [
+          0.15,
+          5,
+          1,
+          35,
+          0.3
+        ],
+        [
+          0.165,
+          5,
+          1.1,
+          35,
+          0.33
+        ],
+        [
+          0.18,
+          5,
+          1.2,
+          35,
+          0.36
+        ],
+        [
+          0.195,
+          5,
+          1.3,
+          35,
+          0.39
+        ],
+        [
+          0.21,
+          5,
+          1.4,
+          35,
+          0.42
+        ],
+        [
+          0.225,
+          5,
+          1.5,
+          35,
+          0.45
+        ],
+        [
+          0.2437,
+          5,
+          1.625,
+          35,
+          0.4875
+        ],
+        [
+          0.2625,
+          5,
+          1.75,
+          35,
+          0.525
+        ],
+        [
+          0.2812,
+          5,
+          1.875,
+          35,
+          0.5625
+        ],
+        [
+          0.3,
+          5,
+          2,
+          35,
+          0.6
+        ],
+        [
+          0.315,
+          5,
+          2.1,
+          35,
+          0.63
+        ],
+        [
+          0.33,
+          5,
+          2.2,
+          35,
+          0.66
+        ],
+        [
+          0.345,
+          5,
+          2.3,
+          35,
+          0.69
+        ],
+        [
+          0.36,
+          5,
+          2.4,
+          35,
+          0.72
+        ],
+        [
+          0.375,
+          5,
+          2.5,
+          35,
+          0.75
+        ]
+      ],
+      "desc": "进入战斗时，大丽花恢复#4[i]点能量，并使自身和另一位开战的队友共同成为【共舞者】。每当场上不存在另一位【共舞者】时，使自身和击破特攻最高的队友共同成为【共舞者】。【共舞者】攻击处于弱点击破状态的敌方目标后，会将本次攻击的削韧值转化为1次#5[i]%的超击破伤害。\n敌方目标受到另一位【共舞者】攻击后，大丽花发动追加攻击，造成#2[i]次伤害，每次对敌方随机单体造成等同于大丽花#1[i]%攻击力的火属性伤害。每次对处于弱点击破状态的敌方目标造成伤害后，会将本次伤害的削韧值转化为1次#3[i]%的超击破伤害。\n该效果每回合最多触发1次，若追加攻击施放前目标被消灭则对敌方随机单体发动。"
+    },
+    {
+      "id": "132106",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Fire",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "132107",
+      "name": "心，是最好的坟茔",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Impair",
+      "effect_text": "妨害",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          20,
+          0.6
+        ]
+      ],
+      "desc": "使用秘技后，制造1片持续#1[i]秒的特殊领域。处于特殊领域内的敌人不会主动攻击我方目标。与处于特殊领域内的敌人进入战斗后，大丽花立即开启战技的结界，并且对处于弱点击破状态的敌方目标，会将开战削韧值转化为1次#2[i]%的超击破伤害。\n我方制造的领域效果最多存在1个。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1321001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "132101",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "114011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "114012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "114012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "114013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "114013",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1321002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "132102",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "114011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "114011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "114012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "114012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "114012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "114013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "114013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1321003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "132103",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "114011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "114011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "114012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "114012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "114012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "114013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "114013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1321004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "132104",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "114011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "114011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "114012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "114012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "114012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "114013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "114013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1321007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "132107",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1321101",
+        "name": "又一场葬礼",
+        "desc": "进入战斗时，使其他角色的击破特攻提高，提高数值等同于#1[i]%大丽花的击破特攻+#3[i]%，持续#2[i]回合。当大丽花受到队友提供的治疗效果或护盾时，再次触发该效果，持续#4[i]回合，单个回合内不可重复触发。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1321102",
+        "name": "致哀，故人",
+        "desc": "施放天赋的追加攻击时，为我方恢复1个战技点，该效果每施放#1[i]次天赋的追加攻击可触发1次。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1321103",
+        "name": "弃旧，恋新",
+        "desc": "我方目标为敌方目标添加弱点时，速度提高#3[i]%，持续#4[i]回合。若我方火属性角色施放攻击期间添加过弱点，则攻击后对每个添加弱点的目标额外造成#5[i]点火属性固定削韧，并恢复#2[i]%能量上限的能量，最多通过此效果恢复至能量上限的#1[i]%。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1321201",
+        "name": "击破强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1321202",
+        "name": "效果抵抗强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1321101"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1321203",
+        "name": "击破强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1321202"
+        ],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1321204",
+        "name": "速度强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1321203"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "1321205",
+        "name": "击破强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1321102"
+        ],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1321206",
+        "name": "效果抵抗强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1321205"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1321207",
+        "name": "击破强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "1321206"
+        ],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1321208",
+        "name": "速度强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1321103"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "1321209",
+        "name": "效果抵抗强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1321103"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1321210",
+        "name": "击破强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1321201"
+        ],
+        "properties": [
+          {
+            "type": "BreakDamageAddedRatioBase",
+            "name": "击破特攻",
+            "value": 0.107
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "132101",
+      "name": "当一朵花含苞待放",
+      "rank": 1,
+      "desc": "天赋为【共舞者】提供的超击破伤害倍率对我方全体角色生效，其中【共舞者】的倍率额外提高40%。【共舞者】施放攻击后，对受到攻击的敌方目标额外造成等同于其韧性上限25%的固定削韧（至少10点，至多300点）。该效果每个敌方目标只能触发1次，敌方目标受到致命攻击后重置该目标的可触发次数。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "132102",
+      "name": "新生，鲜灵，爱怜",
+      "rank": 2,
+      "desc": "大丽花在场时，敌方全体全属性抗性降低20%。敌方目标入场时，立即陷入【败谢】状态，持续3回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "132103",
+      "name": "可惜花瓣薄如蝉翼",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "132103",
+          "num": 2
+        },
+        {
+          "id": "132101",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "132104",
+      "name": "可惜花蕊为虫剥蚀",
+      "rank": 4,
+      "desc": "天赋的追加攻击的伤害次数增加5次，施放时使敌方全体目标受到的伤害提高12%，持续2回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "132105",
+      "name": "凋落，腐烂，憎恨",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "132102",
+          "num": 2
+        },
+        {
+          "id": "132104",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "132106",
+      "name": "然而它总是，致命美丽",
+      "rank": 6,
+      "desc": "【共舞者】的击破特攻提高150%。施放天赋的追加攻击时，使所有【共舞者】下一次行动提前20%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

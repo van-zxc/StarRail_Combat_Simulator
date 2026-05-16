@@ -1,0 +1,1906 @@
+{
+  "id": "1220",
+  "name": "飞霄",
+  "tag": "feixiao",
+  "rarity": 5,
+  "path": "巡猎",
+  "path_key": "Rogue",
+  "path_en": "The Hunt",
+  "element": "风",
+  "element_key": "Wind",
+  "max_sp": 12,
+  "preview": "image/character_preview/1220.png",
+  "portrait": "image/character_portrait/1220.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 142.56,
+        "hp_step": 7.128,
+        "atk": 81.84,
+        "atk_step": 4.092,
+        "def_": 52.8,
+        "def_step": 2.64,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 199.584,
+        "hp_step": 7.128,
+        "atk": 114.576,
+        "atk_step": 4.092,
+        "def_": 73.92,
+        "def_step": 2.64,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 256.608,
+        "hp_step": 7.128,
+        "atk": 147.312,
+        "atk_step": 4.092,
+        "def_": 95.04,
+        "def_step": 2.64,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 313.632,
+        "hp_step": 7.128,
+        "atk": 180.048,
+        "atk_step": 4.092,
+        "def_": 116.16,
+        "def_step": 2.64,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 370.656,
+        "hp_step": 7.128,
+        "atk": 212.784,
+        "atk_step": 4.092,
+        "def_": 137.28,
+        "def_step": 2.64,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 427.68,
+        "hp_step": 7.128,
+        "atk": 245.52,
+        "atk_step": 4.092,
+        "def_": 158.4,
+        "def_step": 2.64,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 484.704,
+        "hp_step": 7.128,
+        "atk": 278.256,
+        "atk_step": 4.092,
+        "def_": 179.52,
+        "def_step": 2.64,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "113011",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "113011",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "113012",
+          "num": 6
+        },
+        {
+          "id": "110425",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "113012",
+          "num": 9
+        },
+        {
+          "id": "110425",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "113013",
+          "num": 6
+        },
+        {
+          "id": "110425",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "113013",
+          "num": 9
+        },
+        {
+          "id": "110425",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "122001",
+      "name": "闪裂",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Wind",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于飞霄#1[i]%攻击力的风属性伤害。"
+    },
+    {
+      "id": "122002",
+      "name": "钺贯",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Wind",
+      "params": [
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ],
+        [
+          1.5
+        ],
+        [
+          1.625
+        ],
+        [
+          1.75
+        ],
+        [
+          1.875
+        ],
+        [
+          2
+        ],
+        [
+          2.1
+        ],
+        [
+          2.2
+        ],
+        [
+          2.3
+        ],
+        [
+          2.4
+        ],
+        [
+          2.5
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于飞霄#1[i]%攻击力的风属性伤害，随后立即对该目标额外发动1次天赋的追加攻击。"
+    },
+    {
+      "id": "122003",
+      "name": "凿破大荒",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Wind",
+      "params": [
+        [
+          0.96,
+          1,
+          6,
+          4.02
+        ],
+        [
+          1.024,
+          1,
+          6,
+          4.318
+        ],
+        [
+          1.088,
+          1,
+          6,
+          4.616
+        ],
+        [
+          1.152,
+          1,
+          6,
+          4.914
+        ],
+        [
+          1.216,
+          1,
+          6,
+          5.212
+        ],
+        [
+          1.28,
+          1,
+          6,
+          5.51
+        ],
+        [
+          1.36,
+          1,
+          6,
+          5.8825
+        ],
+        [
+          1.44,
+          1,
+          6,
+          6.255
+        ],
+        [
+          1.52,
+          1,
+          6,
+          6.6275
+        ],
+        [
+          1.6,
+          1,
+          6,
+          7
+        ],
+        [
+          1.664,
+          1,
+          6,
+          7.298
+        ],
+        [
+          1.728,
+          1,
+          6,
+          7.596
+        ],
+        [
+          1.792,
+          1,
+          6,
+          7.894
+        ],
+        [
+          1.856,
+          1,
+          6,
+          8.192
+        ],
+        [
+          1.92,
+          1,
+          6,
+          8.49
+        ]
+      ],
+      "desc": "对指定敌方单体造成最多等同于飞霄#4[i]%攻击力的风属性伤害，期间可无视弱点属性削减目标韧性，目标未处于弱点击破状态时飞霄的弱点击破效率提高#2[i]%。\n其中，飞霄先对该目标发动【闪裂刃舞】或【钺贯天冲】，总计#3[i]次。最后对该目标造成等同于飞霄#1[i]%攻击力的风属性伤害。"
+    },
+    {
+      "id": "122004",
+      "name": "雷狩",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Wind",
+      "params": [
+        [
+          0.55,
+          2,
+          6,
+          12,
+          0.3,
+          2
+        ],
+        [
+          0.605,
+          2,
+          6,
+          12,
+          0.33,
+          2
+        ],
+        [
+          0.66,
+          2,
+          6,
+          12,
+          0.36,
+          2
+        ],
+        [
+          0.715,
+          2,
+          6,
+          12,
+          0.39,
+          2
+        ],
+        [
+          0.77,
+          2,
+          6,
+          12,
+          0.42,
+          2
+        ],
+        [
+          0.825,
+          2,
+          6,
+          12,
+          0.45,
+          2
+        ],
+        [
+          0.8938,
+          2,
+          6,
+          12,
+          0.4875,
+          2
+        ],
+        [
+          0.9625,
+          2,
+          6,
+          12,
+          0.525,
+          2
+        ],
+        [
+          1.0312,
+          2,
+          6,
+          12,
+          0.5625,
+          2
+        ],
+        [
+          1.1,
+          2,
+          6,
+          12,
+          0.6,
+          2
+        ],
+        [
+          1.155,
+          2,
+          6,
+          12,
+          0.63,
+          2
+        ],
+        [
+          1.21,
+          2,
+          6,
+          12,
+          0.66,
+          2
+        ],
+        [
+          1.265,
+          2,
+          6,
+          12,
+          0.69,
+          2
+        ],
+        [
+          1.32,
+          2,
+          6,
+          12,
+          0.72,
+          2
+        ],
+        [
+          1.375,
+          2,
+          6,
+          12,
+          0.75,
+          2
+        ]
+      ],
+      "desc": "【飞黄】达到#3[i]点时可激活终结技，最多累计#4[i]点。我方目标每施放#2[i]次攻击，飞霄获得1点【飞黄】，飞霄的终结技攻击不计入次数。\n当飞霄的队友对敌方目标施放攻击后，飞霄立即对主目标发动追加攻击，造成等同于飞霄#1[i]%攻击力的风属性伤害。若不存在可攻击的主目标，则攻击敌方随机单体。该效果每回合最多触发1次，飞霄回合开始时重置可触发次数。发动此攻击时使自身造成的伤害提高#5[i]%，持续#6[i]回合。"
+    },
+    {
+      "id": "122006",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Wind",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "122007",
+      "name": "岚身",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          20,
+          0.5,
+          2,
+          1,
+          1,
+          10
+        ]
+      ],
+      "desc": "使用秘技后进入持续#1[i]秒的【陷锋】状态。【陷锋】状态下会牵引一定范围内的敌人，并且自身移动速度提高#2[i]%，进入战斗后获得#4[i]点【飞黄】。\n【陷锋】状态下主动攻击会使所有牵引的敌人进入战斗。进入战斗后，每个波次开始时对敌方全体造成等同于飞霄#3[i]%攻击力的风属性伤害，该伤害必定造成暴击。若牵引了超过1个敌人，每超过1个敌人，该伤害的倍率提高#5[i]%，最多提高至#6[i]%。"
+    },
+    {
+      "id": "122008",
+      "name": "闪裂刃舞",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Wind",
+      "params": [
+        [
+          0.36,
+          0.15
+        ],
+        [
+          0.384,
+          0.165
+        ],
+        [
+          0.408,
+          0.18
+        ],
+        [
+          0.432,
+          0.195
+        ],
+        [
+          0.456,
+          0.21
+        ],
+        [
+          0.48,
+          0.225
+        ],
+        [
+          0.51,
+          0.2437
+        ],
+        [
+          0.54,
+          0.2625
+        ],
+        [
+          0.57,
+          0.2812
+        ],
+        [
+          0.6,
+          0.3
+        ],
+        [
+          0.624,
+          0.315
+        ],
+        [
+          0.648,
+          0.33
+        ],
+        [
+          0.672,
+          0.345
+        ],
+        [
+          0.696,
+          0.36
+        ],
+        [
+          0.72,
+          0.375
+        ]
+      ],
+      "desc": "对所选目标造成等同于飞霄#1[i]%攻击力的风属性伤害。若目标处于弱点击破状态，伤害倍率提高#2[i]%。"
+    },
+    {
+      "id": "122009",
+      "name": "钺贯天冲",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Wind",
+      "params": [
+        [
+          0.36,
+          0.15
+        ],
+        [
+          0.384,
+          0.165
+        ],
+        [
+          0.408,
+          0.18
+        ],
+        [
+          0.432,
+          0.195
+        ],
+        [
+          0.456,
+          0.21
+        ],
+        [
+          0.48,
+          0.225
+        ],
+        [
+          0.51,
+          0.2437
+        ],
+        [
+          0.54,
+          0.2625
+        ],
+        [
+          0.57,
+          0.2812
+        ],
+        [
+          0.6,
+          0.3
+        ],
+        [
+          0.624,
+          0.315
+        ],
+        [
+          0.648,
+          0.33
+        ],
+        [
+          0.672,
+          0.345
+        ],
+        [
+          0.696,
+          0.36
+        ],
+        [
+          0.72,
+          0.375
+        ]
+      ],
+      "desc": "对所选目标造成等同于飞霄#1[i]%攻击力的风属性伤害。若目标未处于弱点击破状态，伤害倍率提高#2[i]%。"
+    },
+    {
+      "id": "122014",
+      "name": "凿破大荒",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Wind",
+      "params": [
+        [
+          0.96,
+          1,
+          6,
+          4.02
+        ],
+        [
+          1.024,
+          1,
+          6,
+          4.318
+        ],
+        [
+          1.088,
+          1,
+          6,
+          4.616
+        ],
+        [
+          1.152,
+          1,
+          6,
+          4.914
+        ],
+        [
+          1.216,
+          1,
+          6,
+          5.212
+        ],
+        [
+          1.28,
+          1,
+          6,
+          5.51
+        ],
+        [
+          1.36,
+          1,
+          6,
+          5.8825
+        ],
+        [
+          1.44,
+          1,
+          6,
+          6.255
+        ],
+        [
+          1.52,
+          1,
+          6,
+          6.6275
+        ],
+        [
+          1.6,
+          1,
+          6,
+          7
+        ],
+        [
+          1.664,
+          1,
+          6,
+          7.298
+        ],
+        [
+          1.728,
+          1,
+          6,
+          7.596
+        ],
+        [
+          1.792,
+          1,
+          6,
+          7.894
+        ],
+        [
+          1.856,
+          1,
+          6,
+          8.192
+        ],
+        [
+          1.92,
+          1,
+          6,
+          8.49
+        ]
+      ],
+      "desc": "终结技期间可无视弱点属性削减敌方韧性，目标未被击破时飞霄弱点击破效率提高。\n对敌方单体发动#3[i]次【闪裂刃舞】或【钺贯天冲】，最后造成风属性伤害。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1220001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122001",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110191",
+                "num": 3
+              },
+              {
+                "id": "113011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110192",
+                "num": 3
+              },
+              {
+                "id": "113012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110192",
+                "num": 5
+              },
+              {
+                "id": "113012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110193",
+                "num": 3
+              },
+              {
+                "id": "113013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110193",
+                "num": 8
+              },
+              {
+                "id": "113013",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1220002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122002",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110191",
+                "num": 3
+              },
+              {
+                "id": "113011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110192",
+                "num": 3
+              },
+              {
+                "id": "113012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110192",
+                "num": 5
+              },
+              {
+                "id": "113012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110192",
+                "num": 7
+              },
+              {
+                "id": "113012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110193",
+                "num": 3
+              },
+              {
+                "id": "113013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110193",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110193",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110193",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1220003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122003",
+            "num": 1
+          },
+          {
+            "id": "122008",
+            "num": 1
+          },
+          {
+            "id": "122009",
+            "num": 1
+          },
+          {
+            "id": "122014",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110191",
+                "num": 3
+              },
+              {
+                "id": "113011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110192",
+                "num": 3
+              },
+              {
+                "id": "113012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110192",
+                "num": 5
+              },
+              {
+                "id": "113012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110192",
+                "num": 7
+              },
+              {
+                "id": "113012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110193",
+                "num": 3
+              },
+              {
+                "id": "113013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110193",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110193",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110193",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1220004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122004",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110191",
+                "num": 3
+              },
+              {
+                "id": "113011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110192",
+                "num": 3
+              },
+              {
+                "id": "113012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110192",
+                "num": 5
+              },
+              {
+                "id": "113012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110192",
+                "num": 7
+              },
+              {
+                "id": "113012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110193",
+                "num": 3
+              },
+              {
+                "id": "113013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110193",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110193",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110193",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1220007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122007",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1220101",
+        "name": "天通",
+        "desc": "战斗开始时，获得#1[i]点【飞黄】。\n回合开始时，若上回合未通过天赋发动追加攻击，计入1次获得【飞黄】所需的攻击次数。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110191",
+                "num": 3
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1220102",
+        "name": "解形",
+        "desc": "施放终结技对敌方目标造成伤害时，被视为发动了追加攻击。追加攻击的暴击伤害提高#1[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110192",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1220103",
+        "name": "电举",
+        "desc": "施放战技时，攻击力提高#1[i]%，持续#2[i]回合。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110193",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1220201",
+        "name": "攻击强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1220202",
+        "name": "暴击率强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1220101"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.027
+          }
+        ]
+      },
+      {
+        "id": "1220203",
+        "name": "攻击强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1220202"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1220204",
+        "name": "防御强化",
+        "anchor": "Point12",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "id": "1220205",
+        "name": "攻击强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1220102"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1220206",
+        "name": "暴击率强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1220205"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1220207",
+        "name": "攻击强化",
+        "anchor": "Point15",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1220208",
+        "name": "防御强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1220103"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.075
+          }
+        ]
+      },
+      {
+        "id": "1220209",
+        "name": "暴击率强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1220208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1220210",
+        "name": "攻击强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1220208"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.08
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "122001",
+      "name": "镇绥天钧",
+      "rank": 1,
+      "desc": "发动【闪裂刃舞】或【钺贯天冲】后，使飞霄造成的终结技伤害额外提高，提高数值等同于原伤害的10%，最多叠加5层，持续至终结技行动结束。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "122002",
+      "name": "礼辰祷月",
+      "rank": 2,
+      "desc": "天赋效果中，我方目标每施放1次追加攻击即可使飞霄获得1点【飞黄】。该效果每回合最多触发6次。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "122003",
+      "name": "景星出宿",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "122003",
+          "num": 2
+        },
+        {
+          "id": "122001",
+          "num": 1
+        },
+        {
+          "id": "122008",
+          "num": 2
+        },
+        {
+          "id": "122009",
+          "num": 2
+        },
+        {
+          "id": "122014",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "122004",
+      "name": "驱飓听冰",
+      "rank": 4,
+      "desc": "天赋的追加攻击的削韧值提高100%，并且发动时使自身速度提高8%，持续2回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "122005",
+      "name": "擢登霄汉",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "122002",
+          "num": 2
+        },
+        {
+          "id": "122004",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "122006",
+      "name": "惟首正丘",
+      "rank": 6,
+      "desc": "飞霄造成的终结技伤害的全属性抗性穿透提高20%。天赋的追加攻击伤害同时视为终结技伤害，并且伤害倍率提高140%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

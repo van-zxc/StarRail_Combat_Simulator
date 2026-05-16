@@ -1,0 +1,1680 @@
+{
+  "id": "1406",
+  "name": "赛飞儿",
+  "tag": "cipher",
+  "rarity": 5,
+  "path": "虚无",
+  "path_key": "Warlock",
+  "path_en": "Nihility",
+  "element": "量子",
+  "element_key": "Quantum",
+  "max_sp": 130,
+  "preview": "image/character_preview/1406.png",
+  "portrait": "image/character_portrait/1406.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 126.72,
+        "hp_step": 6.336,
+        "atk": 87.12,
+        "atk_step": 4.356,
+        "def_": 69.3,
+        "def_step": 3.465,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 177.408,
+        "hp_step": 6.336,
+        "atk": 121.968,
+        "atk_step": 4.356,
+        "def_": 97.02,
+        "def_step": 3.465,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 228.096,
+        "hp_step": 6.336,
+        "atk": 156.816,
+        "atk_step": 4.356,
+        "def_": 124.74,
+        "def_step": 3.465,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 278.784,
+        "hp_step": 6.336,
+        "atk": 191.664,
+        "atk_step": 4.356,
+        "def_": 152.46,
+        "def_step": 3.465,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 329.472,
+        "hp_step": 6.336,
+        "atk": 226.512,
+        "atk_step": 4.356,
+        "def_": 180.18,
+        "def_step": 3.465,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 380.16,
+        "hp_step": 6.336,
+        "atk": 261.36,
+        "atk_step": 4.356,
+        "def_": 207.9,
+        "def_step": 3.465,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 430.848,
+        "hp_step": 6.336,
+        "atk": 296.208,
+        "atk_step": 4.356,
+        "def_": 235.62,
+        "def_step": 3.465,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "115011",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "115011",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "115012",
+          "num": 6
+        },
+        {
+          "id": "110436",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "115012",
+          "num": 9
+        },
+        {
+          "id": "110436",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "115013",
+          "num": 6
+        },
+        {
+          "id": "110436",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "115013",
+          "num": 9
+        },
+        {
+          "id": "110436",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "140601",
+      "name": "呀，漏网之鱼",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Quantum",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于赛飞儿#1[i]%攻击力的量子属性伤害。"
+    },
+    {
+      "id": "140602",
+      "name": "嘿，空手套白银",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 15,
+      "element": "Quantum",
+      "params": [
+        [
+          1,
+          0.5,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          1.1,
+          0.55,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          1.2,
+          0.6,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          1.3,
+          0.65,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          1.4,
+          0.7,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          1.5,
+          0.75,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          1.625,
+          0.8125,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          1.75,
+          0.875,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          1.875,
+          0.9375,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          2,
+          1,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          2.1,
+          1.05,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          2.2,
+          1.1,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          2.3,
+          1.15,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          2.4,
+          1.2,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ],
+        [
+          2.5,
+          1.25,
+          0.1,
+          2,
+          0.3,
+          1.2
+        ]
+      ],
+      "desc": "有#6[i]%的基础概率使指定敌方单体及其相邻目标陷入虚弱状态，造成的伤害降低#3[i]%，使赛飞儿的攻击力提高#5[i]%，持续#4[i]回合，并对指定敌方单体造成等同于赛飞儿#1[i]%攻击力的量子属性伤害，对相邻目标造成等同于赛飞儿#2[i]%攻击力的量子属性伤害。"
+    },
+    {
+      "id": "140603",
+      "name": "猫咪怪盗，敬上！",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 15,
+      "element": "Quantum",
+      "params": [
+        [
+          0.6,
+          0.25,
+          0.75,
+          0.2
+        ],
+        [
+          0.66,
+          0.25,
+          0.75,
+          0.22
+        ],
+        [
+          0.72,
+          0.25,
+          0.75,
+          0.24
+        ],
+        [
+          0.78,
+          0.25,
+          0.75,
+          0.26
+        ],
+        [
+          0.84,
+          0.25,
+          0.75,
+          0.28
+        ],
+        [
+          0.9,
+          0.25,
+          0.75,
+          0.3
+        ],
+        [
+          0.975,
+          0.25,
+          0.75,
+          0.325
+        ],
+        [
+          1.05,
+          0.25,
+          0.75,
+          0.35
+        ],
+        [
+          1.125,
+          0.25,
+          0.75,
+          0.375
+        ],
+        [
+          1.2,
+          0.25,
+          0.75,
+          0.4
+        ],
+        [
+          1.26,
+          0.25,
+          0.75,
+          0.42
+        ],
+        [
+          1.32,
+          0.25,
+          0.75,
+          0.44
+        ],
+        [
+          1.38,
+          0.25,
+          0.75,
+          0.46
+        ],
+        [
+          1.44,
+          0.25,
+          0.75,
+          0.48
+        ],
+        [
+          1.5,
+          0.25,
+          0.75,
+          0.5
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于赛飞儿#1[i]%攻击力的量子属性伤害。之后，对指定敌方单体造成等同于当前天赋记录值#2[i]%的真实伤害，并对指定敌方单体及其相邻目标造成等同于赛飞儿#4[i]%攻击力的量子属性伤害和总计等同于当前天赋记录值#3[i]%的真实伤害，该真实伤害由所有技能目标均分。"
+    },
+    {
+      "id": "140604",
+      "name": "热情好客的多洛斯人",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Quantum",
+      "params": [
+        [
+          0.75,
+          0.12,
+          1,
+          5
+        ],
+        [
+          0.825,
+          0.12,
+          1,
+          5
+        ],
+        [
+          0.9,
+          0.12,
+          1,
+          5
+        ],
+        [
+          0.975,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.05,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.125,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.2188,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.3125,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.4062,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.5,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.575,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.65,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.725,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.8,
+          0.12,
+          1,
+          5
+        ],
+        [
+          1.875,
+          0.12,
+          1,
+          5
+        ]
+      ],
+      "desc": "场上不存在陷入【老主顾】状态的敌方目标时，赛飞儿立即使当前场上生命上限最高的敌方单体目标成为【老主顾】。施放战技和终结技时，使主目标成为【老主顾】。【老主顾】状态仅对最新被施加的目标生效。\n【老主顾】受到我方其他目标攻击后，赛飞儿立即对【老主顾】发动追加攻击，造成等同于赛飞儿#1[i]%攻击力的量子属性伤害。该效果每回合最多触发#3[i]次，赛飞儿回合开始时重置可触发次数。\n赛飞儿会记录我方目标对【老主顾】造成的非真实伤害的#2[i]%，不记录溢出伤害，施放终结技后清空记录值。"
+    },
+    {
+      "id": "140606",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Quantum",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "140607",
+      "name": "穿靴子的猫",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          15,
+          2,
+          1,
+          50
+        ]
+      ],
+      "desc": "获得【扎格列斯的祝福】，持续#1[i]秒，期间赛飞儿不会被敌人发现，移动速度提高50%，靠近大地图/模拟宇宙/差分宇宙中的敌人时，可以立即获取随机消耗品，每个地球日内最多获取#4[i]次。\n持有【扎格列斯的祝福】期间进入战斗时，对敌方全体造成等同于赛飞儿#3[i]%攻击力的量子属性伤害，赛飞儿因该次伤害获得的记录值提高#2[i]%。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1406001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140601",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "115011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "115012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "115012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "115013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "115013",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1406002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140602",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "115011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "115011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "115012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "115012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "115012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "115013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110507",
+                "num": 1
+              },
+              {
+                "id": "115013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1406003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140603",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "115011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "115011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "115012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "115012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "115012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "115013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110507",
+                "num": 1
+              },
+              {
+                "id": "115013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1406004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140604",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "115011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "115011",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "115012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "115012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "115012",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "115013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110507",
+                "num": 1
+              },
+              {
+                "id": "115013",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1406007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "140607",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1406101",
+        "name": "神行宝鞋",
+        "desc": "赛飞儿的速度大于等于140/170时，暴击率提高#1[i]%/#2[i]%，获得的记录值提高#3[i]%/#4[i]%。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1406102",
+        "name": "三百侠盗",
+        "desc": "赛飞儿会记录我方目标对【老主顾】以外的敌方目标造成的非真实伤害的#1[i]%，不记录溢出伤害。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1406103",
+        "name": "偷天换日",
+        "desc": "天赋的追加攻击造成的暴击伤害提高#2[i]%。赛飞儿在场时，敌方全体目标受到的伤害提高#1[i]%。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110507",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1406201",
+        "name": "速度强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "1406202",
+        "name": "伤害强化•量子",
+        "anchor": "Point10",
+        "pre_points": [
+          "1406101"
+        ],
+        "properties": [
+          {
+            "type": "QuantumAddedRatio",
+            "name": "量子属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1406203",
+        "name": "速度强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1406202"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "1406204",
+        "name": "效果命中强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1406203"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1406205",
+        "name": "速度强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1406102"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "1406206",
+        "name": "伤害强化•量子",
+        "anchor": "Point14",
+        "pre_points": [
+          "1406205"
+        ],
+        "properties": [
+          {
+            "type": "QuantumAddedRatio",
+            "name": "量子属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1406207",
+        "name": "速度强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "1406206"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "1406208",
+        "name": "效果命中强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1406103"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1406209",
+        "name": "伤害强化•量子",
+        "anchor": "Point17",
+        "pre_points": [
+          "1406103"
+        ],
+        "properties": [
+          {
+            "type": "QuantumAddedRatio",
+            "name": "量子属性伤害提高",
+            "value": 0.064
+          }
+        ]
+      },
+      {
+        "id": "1406210",
+        "name": "速度强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1406201"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 4
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "140601",
+      "name": "察言观色看笑脸",
+      "rank": 1,
+      "desc": "赛飞儿记录的伤害值为原记录值的150%。施放天赋的追加攻击时，赛飞儿的攻击力提高80%，持续2回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "140602",
+      "name": "焦头烂额顺手牵",
+      "rank": 2,
+      "desc": "赛飞儿击中敌方目标时，有120%的基础概率使其受到的伤害提高30%，持续2回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "140603",
+      "name": "无中生有难分辨",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "140603",
+          "num": 2
+        },
+        {
+          "id": "140601",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "140604",
+      "name": "东窗事发一溜烟",
+      "rank": 4,
+      "desc": "【老主顾】受到我方目标攻击后，赛飞儿对其造成等同于赛飞儿50%攻击力的量子属性附加伤害。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "140605",
+      "name": "狡兔三窟轻如燕",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "140602",
+          "num": 2
+        },
+        {
+          "id": "140604",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "140606",
+      "name": "大盗无名天地间",
+      "rank": 6,
+      "desc": "赛飞儿天赋的追加攻击造成的伤害提高350%，记录时额外记录该攻击造成的非溢出伤害的16%。施放终结技清空记录值后，返还本次清除记录值的20%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

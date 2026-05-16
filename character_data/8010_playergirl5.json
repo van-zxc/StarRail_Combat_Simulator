@@ -1,0 +1,1906 @@
+{
+  "id": "8010",
+  "name": "{NICKNAME}",
+  "tag": "playergirl5",
+  "rarity": 5,
+  "path": "欢愉",
+  "path_key": "Elation",
+  "path_en": "Elation",
+  "element": "雷",
+  "element_key": "Thunder",
+  "max_sp": 160,
+  "preview": "image/character_preview/8010.png",
+  "portrait": "image/character_portrait/8010.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 147.84,
+        "hp_step": 7.392,
+        "atk": 63.36,
+        "atk_step": 3.168,
+        "def_": 85.8,
+        "def_step": 4.29,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 206.976,
+        "hp_step": 7.392,
+        "atk": 88.704,
+        "atk_step": 3.168,
+        "def_": 120.12,
+        "def_step": 4.29,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 266.112,
+        "hp_step": 7.392,
+        "atk": 114.048,
+        "atk_step": 3.168,
+        "def_": 154.44,
+        "def_step": 4.29,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 325.248,
+        "hp_step": 7.392,
+        "atk": 139.392,
+        "atk_step": 3.168,
+        "def_": 188.76,
+        "def_step": 4.29,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 384.384,
+        "hp_step": 7.392,
+        "atk": 164.736,
+        "atk_step": 3.168,
+        "def_": 223.08,
+        "def_step": 4.29,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 443.52,
+        "hp_step": 7.392,
+        "atk": 190.08,
+        "atk_step": 3.168,
+        "def_": 257.4,
+        "def_step": 4.29,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 502.656,
+        "hp_step": 7.392,
+        "atk": 215.424,
+        "atk_step": 3.168,
+        "def_": 291.72,
+        "def_step": 4.29,
+        "spd": 106,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3200
+        },
+        {
+          "id": "111011",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6400
+        },
+        {
+          "id": "111011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12800
+        },
+        {
+          "id": "111012",
+          "num": 5
+        },
+        {
+          "id": "110400",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 32000
+        },
+        {
+          "id": "111012",
+          "num": 8
+        },
+        {
+          "id": "110400",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 64000
+        },
+        {
+          "id": "111013",
+          "num": 5
+        },
+        {
+          "id": "110400",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 128000
+        },
+        {
+          "id": "111013",
+          "num": 7
+        },
+        {
+          "id": "110400",
+          "num": 10
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "801001",
+      "name": "此即应援",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Thunder",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于开拓者#1[i]%攻击力的雷属性伤害。"
+    },
+    {
+      "id": "801002",
+      "name": "风暴甚是喧嚣",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          0.3,
+          20
+        ],
+        [
+          0.33,
+          20
+        ],
+        [
+          0.36,
+          20
+        ],
+        [
+          0.39,
+          20
+        ],
+        [
+          0.42,
+          20
+        ],
+        [
+          0.45,
+          20
+        ],
+        [
+          0.4875,
+          20
+        ],
+        [
+          0.525,
+          20
+        ],
+        [
+          0.5625,
+          20
+        ],
+        [
+          0.6,
+          20
+        ],
+        [
+          0.63,
+          20
+        ],
+        [
+          0.66,
+          20
+        ],
+        [
+          0.69,
+          20
+        ],
+        [
+          0.72,
+          20
+        ],
+        [
+          0.75,
+          20
+        ]
+      ],
+      "desc": "对敌方全体造成等同于开拓者#1[i]%攻击力的雷属性伤害，获得#2[i]点【好活当赏】。"
+    },
+    {
+      "id": "801003",
+      "name": "放心飞，开拓永相随！",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.3,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.32,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.34,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.36,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.38,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.4,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.425,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.45,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.475,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.5,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.52,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.54,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.56,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.58,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ],
+        [
+          0.6,
+          3,
+          0.5,
+          10,
+          20,
+          5
+        ]
+      ],
+      "desc": "获得#6[i]个笑点，使指定我方单体暴击伤害提高#1[i]%，持续#2[i]回合，并解除该目标的控制类负面状态。\n若目标拥有欢愉技，目标额外获得#4[i]点【好活当赏】，并使其立即施放1次固定计入#5[i]笑点的欢愉技，若欢愉技施放前敌方目标被消灭则对新入场的敌方目标发动欢愉技。\n若目标不拥有欢愉技，使其行动提前#3[i]%。"
+    },
+    {
+      "id": "801004",
+      "name": "英雄一笑，生死难料",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          10,
+          3,
+          0.15
+        ],
+        [
+          10,
+          3,
+          0.165
+        ],
+        [
+          10,
+          3,
+          0.18
+        ],
+        [
+          10,
+          3,
+          0.195
+        ],
+        [
+          10,
+          3,
+          0.21
+        ],
+        [
+          10,
+          3,
+          0.225
+        ],
+        [
+          10,
+          3,
+          0.2437
+        ],
+        [
+          10,
+          3,
+          0.2625
+        ],
+        [
+          10,
+          3,
+          0.2812
+        ],
+        [
+          10,
+          3,
+          0.3
+        ],
+        [
+          10,
+          3,
+          0.315
+        ],
+        [
+          10,
+          3,
+          0.33
+        ],
+        [
+          10,
+          3,
+          0.345
+        ],
+        [
+          10,
+          3,
+          0.36
+        ],
+        [
+          10,
+          3,
+          0.375
+        ]
+      ],
+      "desc": "施放攻击后，固定恢复#1[i]点能量并获得#2[i]个笑点。\n开拓者持有【好活当赏】时，战技对敌方全体额外造成#3[i]%的雷属性欢愉伤害，此伤害使用我方最高的【好活当赏】数值计算。"
+    },
+    {
+      "id": "801006",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Thunder",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "801007",
+      "name": "燃起来了！",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          0.3,
+          0.1,
+          0.2,
+          0.1,
+          3
+        ]
+      ],
+      "desc": "使用秘技后随机获得以下1种效果：\n小概率获得【开怀大笑】：欢愉度提高#1[i]%。\n大概率获得【忍俊不禁】：欢愉度提高#3[i]%。\n下一次战斗开始时，使我方全体提高对应数值的欢愉度，持续#5[i]回合。"
+    },
+    {
+      "id": "801020",
+      "name": "我说欢愉，你耳朵聋吗？",
+      "type": "ElationDamage",
+      "type_text": "欢愉技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          8,
+          0.1,
+          0.3
+        ],
+        [
+          8,
+          0.11,
+          0.33
+        ],
+        [
+          8,
+          0.12,
+          0.36
+        ],
+        [
+          8,
+          0.13,
+          0.39
+        ],
+        [
+          8,
+          0.14,
+          0.42
+        ],
+        [
+          8,
+          0.15,
+          0.45
+        ],
+        [
+          8,
+          0.1625,
+          0.4875
+        ],
+        [
+          8,
+          0.175,
+          0.525
+        ],
+        [
+          8,
+          0.1875,
+          0.5625
+        ],
+        [
+          8,
+          0.2,
+          0.6
+        ],
+        [
+          8,
+          0.21,
+          0.63
+        ],
+        [
+          8,
+          0.22,
+          0.66
+        ],
+        [
+          8,
+          0.23,
+          0.69
+        ],
+        [
+          8,
+          0.24,
+          0.72
+        ],
+        [
+          8,
+          0.25,
+          0.75
+        ]
+      ],
+      "desc": "造成#1[i]次伤害，每次对敌方随机单体造成#2[i]%的雷属性欢愉伤害。最后造成#3[i]%的雷属性欢愉伤害，由敌方全体均分。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "8010001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "801001",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 3200
+              },
+              {
+                "id": "110261",
+                "num": 1
+              },
+              {
+                "id": "111011",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 6400
+              },
+              {
+                "id": "110262",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 12800
+              },
+              {
+                "id": "110262",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 25600
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 96000
+              },
+              {
+                "id": "110263",
+                "num": 5
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8010002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "801002",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 1600
+              },
+              {
+                "id": "111011",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 3200
+              },
+              {
+                "id": "110261",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 6400
+              },
+              {
+                "id": "110262",
+                "num": 1
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 12000
+              },
+              {
+                "id": "110262",
+                "num": 3
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 19200
+              },
+              {
+                "id": "110262",
+                "num": 5
+              },
+              {
+                "id": "111012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 25600
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 52000
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 96000
+              },
+              {
+                "id": "110263",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 200000
+              },
+              {
+                "id": "110263",
+                "num": 9
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8010003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "801003",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 1600
+              },
+              {
+                "id": "111011",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 3200
+              },
+              {
+                "id": "110261",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 6400
+              },
+              {
+                "id": "110262",
+                "num": 1
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 12000
+              },
+              {
+                "id": "110262",
+                "num": 3
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 19200
+              },
+              {
+                "id": "110262",
+                "num": 5
+              },
+              {
+                "id": "111012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 25600
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 52000
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 96000
+              },
+              {
+                "id": "110263",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 200000
+              },
+              {
+                "id": "110263",
+                "num": 9
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8010004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "801004",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 1600
+              },
+              {
+                "id": "111011",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 3200
+              },
+              {
+                "id": "110261",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 6400
+              },
+              {
+                "id": "110262",
+                "num": 1
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 12000
+              },
+              {
+                "id": "110262",
+                "num": 3
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 19200
+              },
+              {
+                "id": "110262",
+                "num": 5
+              },
+              {
+                "id": "111012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 25600
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 52000
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "110508",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 96000
+              },
+              {
+                "id": "110263",
+                "num": 5
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 200000
+              },
+              {
+                "id": "110263",
+                "num": 9
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8010007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "801007",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      },
+      {
+        "id": "8010420",
+        "name": "欢愉技",
+        "desc": "",
+        "anchor": "Point22",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "801020",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 1600
+              },
+              {
+                "id": "111011",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 3200
+              },
+              {
+                "id": "110261",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 6400
+              },
+              {
+                "id": "110262",
+                "num": 1
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 12000
+              },
+              {
+                "id": "110262",
+                "num": 3
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 19200
+              },
+              {
+                "id": "110262",
+                "num": 5
+              },
+              {
+                "id": "111012",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 25600
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 52000
+              },
+              {
+                "id": "110263",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 96000
+              },
+              {
+                "id": "110263",
+                "num": 5
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 200000
+              },
+              {
+                "id": "110263",
+                "num": 9
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "8010101",
+        "name": "快哉快哉",
+        "desc": "若开拓者的攻击力高于#1[i]点，每超过#2[i]点攻击力可使自身欢愉度提高#3[f1]%，最多提高#4[f1]%。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110261",
+                "num": 2
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8010102",
+        "name": "跟你爆了",
+        "desc": "自身暴击率提高#1[i]%。施放终结技后，为我方恢复#2[i]个战技点。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110262",
+                "num": 4
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "8010103",
+        "name": "阿哈咬它！",
+        "desc": "我方目标施放欢愉技后，开拓者下一次施放战技时额外获得#1[i]点【好活当赏】。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 112000
+              },
+              {
+                "id": "110263",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110508",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "8010201",
+        "name": "攻击强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "8010202",
+        "name": "暴击率强化",
+        "anchor": "Point10",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.027
+          }
+        ]
+      },
+      {
+        "id": "8010203",
+        "name": "攻击强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "8010101"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "8010204",
+        "name": "暴击伤害强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "8010101"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "8010205",
+        "name": "攻击强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "8010102"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "8010206",
+        "name": "暴击率强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "8010205"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "8010207",
+        "name": "攻击强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "8010206"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "8010208",
+        "name": "暴击伤害强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "8010103"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "8010209",
+        "name": "暴击率强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "8010208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "8010210",
+        "name": "攻击强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "8010209"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.08
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "801001",
+      "name": "相信光的时间",
+      "rank": 1,
+      "desc": "施放战技后，下一次终结技使我方目标获得的【好活当赏】提高2点，该效果最多叠加3层。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "801002",
+      "name": "名场面酝酿中……",
+      "rank": 2,
+      "desc": "终结技额外使指定我方单体的欢愉度提高12%，持续2回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "801003",
+      "name": "来吧，镜头的焦点",
+      "rank": 3,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级；欢愉技等级+1，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "801002",
+          "num": 2
+        },
+        {
+          "id": "801004",
+          "num": 2
+        },
+        {
+          "id": "801020",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "801004",
+      "name": "拯救世界，无需理由",
+      "rank": 4,
+      "desc": "施放欢愉技时，使敌方目标受到的伤害提高10%，持续2回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "801005",
+      "name": "爱与勇气，永不过时",
+      "rank": 5,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级；欢愉技等级+1，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "801003",
+          "num": 2
+        },
+        {
+          "id": "801001",
+          "num": 1
+        },
+        {
+          "id": "801020",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "801006",
+      "name": "银河传奇，登场！",
+      "rank": 6,
+      "desc": "施放欢愉技时，使自身暴击伤害提高100%，持续3回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

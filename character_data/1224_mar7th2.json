@@ -1,0 +1,1678 @@
+{
+  "id": "1224",
+  "name": "三月七",
+  "tag": "mar7th2",
+  "rarity": 4,
+  "path": "巡猎",
+  "path_key": "Rogue",
+  "path_en": "The Hunt",
+  "element": "虚数",
+  "element_key": "Imaginary",
+  "max_sp": 110,
+  "preview": "image/character_preview/1224.png",
+  "portrait": "image/character_portrait/1224.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 144,
+        "hp_step": 7.2,
+        "atk": 76.8,
+        "atk_step": 3.84,
+        "def_": 60,
+        "def_step": 3,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 201.6,
+        "hp_step": 7.2,
+        "atk": 107.52,
+        "atk_step": 3.84,
+        "def_": 84,
+        "def_step": 3,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 259.2,
+        "hp_step": 7.2,
+        "atk": 138.24,
+        "atk_step": 3.84,
+        "def_": 108,
+        "def_step": 3,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 316.8,
+        "hp_step": 7.2,
+        "atk": 168.96,
+        "atk_step": 3.84,
+        "def_": 132,
+        "def_step": 3,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 374.4,
+        "hp_step": 7.2,
+        "atk": 199.68,
+        "atk_step": 3.84,
+        "def_": 156,
+        "def_step": 3,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 432,
+        "hp_step": 7.2,
+        "atk": 230.4,
+        "atk_step": 3.84,
+        "def_": 180,
+        "def_step": 3,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 489.6,
+        "hp_step": 7.2,
+        "atk": 261.12,
+        "atk_step": 3.84,
+        "def_": 204,
+        "def_step": 3,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3200
+        },
+        {
+          "id": "111011",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6400
+        },
+        {
+          "id": "111011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12800
+        },
+        {
+          "id": "111012",
+          "num": 5
+        },
+        {
+          "id": "110403",
+          "num": 2
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 32000
+        },
+        {
+          "id": "111012",
+          "num": 8
+        },
+        {
+          "id": "110403",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 64000
+        },
+        {
+          "id": "111013",
+          "num": 5
+        },
+        {
+          "id": "110403",
+          "num": 15
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 128000
+        },
+        {
+          "id": "111013",
+          "num": 7
+        },
+        {
+          "id": "110403",
+          "num": 28
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "122401",
+      "name": "荡涤妖邪琉璃剑",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Imaginary",
+      "params": [
+        [
+          0.5,
+          1
+        ],
+        [
+          0.6,
+          1
+        ],
+        [
+          0.7,
+          1
+        ],
+        [
+          0.8,
+          1
+        ],
+        [
+          0.9,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1.1,
+          1
+        ],
+        [
+          1.2,
+          1
+        ],
+        [
+          1.3,
+          1
+        ],
+        [
+          1.4,
+          1
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于三月七#1[i]%攻击力的虚数属性伤害，随后获得#2[i]点充能。"
+    },
+    {
+      "id": "122402",
+      "name": "师父，请喝茶！",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.06,
+          0.1,
+          1
+        ],
+        [
+          0.064,
+          0.11,
+          1
+        ],
+        [
+          0.068,
+          0.12,
+          1
+        ],
+        [
+          0.072,
+          0.13,
+          1
+        ],
+        [
+          0.076,
+          0.14,
+          1
+        ],
+        [
+          0.08,
+          0.15,
+          1
+        ],
+        [
+          0.085,
+          0.1625,
+          1
+        ],
+        [
+          0.09,
+          0.175,
+          1
+        ],
+        [
+          0.095,
+          0.1875,
+          1
+        ],
+        [
+          0.1,
+          0.2,
+          1
+        ],
+        [
+          0.104,
+          0.21,
+          1
+        ],
+        [
+          0.108,
+          0.22,
+          1
+        ],
+        [
+          0.112,
+          0.23,
+          1
+        ],
+        [
+          0.116,
+          0.24,
+          1
+        ],
+        [
+          0.12,
+          0.25,
+          1
+        ]
+      ],
+      "desc": "使除自身以外的我方指定单体成为【师父】，【师父】的速度提高#1[f1]%。仅战技最新的施放目标被视为三月七的【师父】。\n每当施放普攻或造成1段强化普攻的伤害时，若场上存在指定命途的【师父】，则触发对应效果：\n「智识」、「毁灭」、「巡猎」、「记忆」、「欢愉」：额外造成等同于三月七#2[i]%攻击力的基于【师父】属性的附加伤害。\n「同谐」、「虚无」、「存护」、「丰饶」：本次伤害的削韧值提高#3[i]%。"
+    },
+    {
+      "id": "122403",
+      "name": "盖世女侠三月七",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Imaginary",
+      "params": [
+        [
+          1.44,
+          2,
+          0.2
+        ],
+        [
+          1.536,
+          2,
+          0.2
+        ],
+        [
+          1.632,
+          2,
+          0.2
+        ],
+        [
+          1.728,
+          2,
+          0.2
+        ],
+        [
+          1.824,
+          2,
+          0.2
+        ],
+        [
+          1.92,
+          2,
+          0.2
+        ],
+        [
+          2.04,
+          2,
+          0.2
+        ],
+        [
+          2.16,
+          2,
+          0.2
+        ],
+        [
+          2.28,
+          2,
+          0.2
+        ],
+        [
+          2.4,
+          2,
+          0.2
+        ],
+        [
+          2.496,
+          2,
+          0.2
+        ],
+        [
+          2.592,
+          2,
+          0.2
+        ],
+        [
+          2.688,
+          2,
+          0.2
+        ],
+        [
+          2.784,
+          2,
+          0.2
+        ],
+        [
+          2.88,
+          2,
+          0.2
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于三月七#1[i]%攻击力的虚数属性伤害。\n使下一次强化普攻的初始段数增加#2[i]段，额外造成伤害的固定概率提高#3[i]%。"
+    },
+    {
+      "id": "122404",
+      "name": "师父，我悟了！",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          7,
+          0.4,
+          10
+        ],
+        [
+          7,
+          0.44,
+          10
+        ],
+        [
+          7,
+          0.48,
+          10
+        ],
+        [
+          7,
+          0.52,
+          10
+        ],
+        [
+          7,
+          0.56,
+          10
+        ],
+        [
+          7,
+          0.6,
+          10
+        ],
+        [
+          7,
+          0.65,
+          10
+        ],
+        [
+          7,
+          0.7,
+          10
+        ],
+        [
+          7,
+          0.75,
+          10
+        ],
+        [
+          7,
+          0.8,
+          10
+        ],
+        [
+          7,
+          0.84,
+          10
+        ],
+        [
+          7,
+          0.88,
+          10
+        ],
+        [
+          7,
+          0.92,
+          10
+        ],
+        [
+          7,
+          0.96,
+          10
+        ],
+        [
+          7,
+          1,
+          10
+        ]
+      ],
+      "desc": "【师父】施放攻击或终结技后，三月七每次获得最多1点充能。\n充能大于等于#1[i]点时，三月七立即行动，造成的伤害提高#2[i]%，普攻得到强化且无法施放战技。施放强化普攻后，消耗#1[i]点充能。充能上限#3[i]点。"
+    },
+    {
+      "id": "122406",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Imaginary",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "122407",
+      "name": "一气化三餐",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          3,
+          30
+        ]
+      ],
+      "desc": "若三月七在队伍中，每当队友施放1次秘技，下一次战斗开始时三月七获得1点充能，最多获得#1[i]点。\n使用秘技后，下一次战斗开始时三月七恢复#2[i]点能量。"
+    },
+    {
+      "id": "122408",
+      "name": "一扎眉攒，二扎心",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Imaginary",
+      "params": [
+        [
+          0.4,
+          0.6,
+          3,
+          3
+        ],
+        [
+          0.48,
+          0.6,
+          3,
+          3
+        ],
+        [
+          0.56,
+          0.6,
+          3,
+          3
+        ],
+        [
+          0.64,
+          0.6,
+          3,
+          3
+        ],
+        [
+          0.72,
+          0.6,
+          3,
+          3
+        ],
+        [
+          0.8,
+          0.6,
+          3,
+          3
+        ],
+        [
+          0.88,
+          0.6,
+          3,
+          3
+        ],
+        [
+          0.96,
+          0.6,
+          3,
+          3
+        ],
+        [
+          1.04,
+          0.6,
+          3,
+          3
+        ],
+        [
+          1.12,
+          0.6,
+          3,
+          3
+        ]
+      ],
+      "desc": "初始造成#4[i]段伤害，每段对指定敌方单体造成等同于三月七#1[i]%攻击力的虚数属性伤害。每当造成最后1段伤害后，有#2[i]%的固定概率再造成1段伤害，最多额外造成#3[i]段伤害。施放强化普攻恢复的能量不随段数提高而提高。\n强化普攻无法恢复战技点。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1224001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122401",
+            "num": 1
+          },
+          {
+            "id": "122408",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110191",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110192",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110192",
+                "num": 4
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110193",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110193",
+                "num": 6
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1224002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122402",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111011",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110191",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110192",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110192",
+                "num": 4
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110192",
+                "num": 6
+              },
+              {
+                "id": "111012",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110193",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110193",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110193",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110193",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1224003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122403",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111011",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110191",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110192",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110192",
+                "num": 4
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110192",
+                "num": 6
+              },
+              {
+                "id": "111012",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110193",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110193",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110193",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110193",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1224004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122404",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111011",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110191",
+                "num": 2
+              },
+              {
+                "id": "111011",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110192",
+                "num": 2
+              },
+              {
+                "id": "111012",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110192",
+                "num": 4
+              },
+              {
+                "id": "111012",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110192",
+                "num": 6
+              },
+              {
+                "id": "111012",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110193",
+                "num": 2
+              },
+              {
+                "id": "111013",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110193",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111013",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110193",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110193",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1224007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "122407",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1224101",
+        "name": "惊鸿",
+        "desc": "战斗开始时，三月七的行动提前#1[i]%。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110191",
+                "num": 2
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1224102",
+        "name": "玲珑",
+        "desc": "三月七能够削减具有【师父】属性弱点的敌方目标的韧性。击破弱点时，触发虚数属性的弱点击破效果。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110192",
+                "num": 4
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1224103",
+        "name": "斡波",
+        "desc": "施放强化普攻后，使【师父】的暴击伤害提高#1[i]%，击破特攻提高#2[i]%，持续#3[i]回合。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110193",
+                "num": 6
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1224201",
+        "name": "攻击强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1224202",
+        "name": "暴击伤害强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1224101"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.053
+          }
+        ]
+      },
+      {
+        "id": "1224203",
+        "name": "攻击强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1224202"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1224204",
+        "name": "防御强化",
+        "anchor": "Point12",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "id": "1224205",
+        "name": "攻击强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1224102"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1224206",
+        "name": "暴击伤害强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1224205"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1224207",
+        "name": "攻击强化",
+        "anchor": "Point15",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1224208",
+        "name": "防御强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1224103"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.075
+          }
+        ]
+      },
+      {
+        "id": "1224209",
+        "name": "暴击伤害强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1224208"
+        ],
+        "properties": [
+          {
+            "type": "CriticalDamageBase",
+            "name": "暴击伤害",
+            "value": 0.107
+          }
+        ]
+      },
+      {
+        "id": "1224210",
+        "name": "攻击强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1224208"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.08
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "122401",
+      "name": "初花学剑动星芒",
+      "rank": 1,
+      "desc": "场上存在【师父】时，三月七的速度提高10%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "122402",
+      "name": "白刃耀雪舞骇浪",
+      "rank": 2,
+      "desc": "每当【师父】施放普攻或战技攻击敌方目标后，三月七立即发动追加攻击，对本次攻击的主目标造成等同于三月七60%攻击力的虚数属性伤害，并根据【师父】的命途触发对应效果，随后获得1点充能。若不存在可攻击的主目标，则攻击敌方随机单体。该效果每回合最多触发1次。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "122403",
+      "name": "头脑机灵本领强",
+      "rank": 3,
+      "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "122402",
+          "num": 2
+        },
+        {
+          "id": "122401",
+          "num": 1
+        },
+        {
+          "id": "122408",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "122404",
+      "name": "龙飞凤舞不窝囊",
+      "rank": 4,
+      "desc": "回合开始时，恢复5点能量。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "122405",
+      "name": "多练武术少吃糖",
+      "rank": 5,
+      "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "122403",
+          "num": 2
+        },
+        {
+          "id": "122404",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "122406",
+      "name": "天下第一本姑娘",
+      "rank": 6,
+      "desc": "施放终结技后，下一次强化普攻造成的暴击伤害提高50%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

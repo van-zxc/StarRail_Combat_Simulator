@@ -1,0 +1,1679 @@
+{
+  "id": "1218",
+  "name": "椒丘",
+  "tag": "jiaoqiu",
+  "rarity": 5,
+  "path": "虚无",
+  "path_key": "Warlock",
+  "path_en": "Nihility",
+  "element": "火",
+  "element_key": "Fire",
+  "max_sp": 100,
+  "preview": "image/character_preview/1218.png",
+  "portrait": "image/character_portrait/1218.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 184.8,
+        "hp_step": 9.24,
+        "atk": 81.84,
+        "atk_step": 4.092,
+        "def_": 69.3,
+        "def_step": 3.465,
+        "spd": 98,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 258.72,
+        "hp_step": 9.24,
+        "atk": 114.576,
+        "atk_step": 4.092,
+        "def_": 97.02,
+        "def_step": 3.465,
+        "spd": 98,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 332.64,
+        "hp_step": 9.24,
+        "atk": 147.312,
+        "atk_step": 4.092,
+        "def_": 124.74,
+        "def_step": 3.465,
+        "spd": 98,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 406.56,
+        "hp_step": 9.24,
+        "atk": 180.048,
+        "atk_step": 4.092,
+        "def_": 152.46,
+        "def_step": 3.465,
+        "spd": 98,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 480.48,
+        "hp_step": 9.24,
+        "atk": 212.784,
+        "atk_step": 4.092,
+        "def_": 180.18,
+        "def_step": 3.465,
+        "spd": 98,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 554.4,
+        "hp_step": 9.24,
+        "atk": 245.52,
+        "atk_step": 4.092,
+        "def_": 207.9,
+        "def_step": 3.465,
+        "spd": 98,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 628.32,
+        "hp_step": 9.24,
+        "atk": 278.256,
+        "atk_step": 4.092,
+        "def_": 235.62,
+        "def_step": 3.465,
+        "spd": 98,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "113001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "113001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "113002",
+          "num": 6
+        },
+        {
+          "id": "110422",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "113002",
+          "num": 9
+        },
+        {
+          "id": "110422",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "113003",
+          "num": 6
+        },
+        {
+          "id": "110422",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "113003",
+          "num": 9
+        },
+        {
+          "id": "110422",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "121801",
+      "name": "仁火攻心",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Fire",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于椒丘#1[i]%攻击力的火属性伤害。"
+    },
+    {
+      "id": "121802",
+      "name": "燔燎急袭",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 15,
+      "element": "Fire",
+      "params": [
+        [
+          0.75,
+          0.45,
+          1
+        ],
+        [
+          0.825,
+          0.495,
+          1
+        ],
+        [
+          0.9,
+          0.54,
+          1
+        ],
+        [
+          0.975,
+          0.585,
+          1
+        ],
+        [
+          1.05,
+          0.63,
+          1
+        ],
+        [
+          1.125,
+          0.675,
+          1
+        ],
+        [
+          1.2188,
+          0.7312,
+          1
+        ],
+        [
+          1.3125,
+          0.7875,
+          1
+        ],
+        [
+          1.4062,
+          0.8438,
+          1
+        ],
+        [
+          1.5,
+          0.9,
+          1
+        ],
+        [
+          1.575,
+          0.945,
+          1
+        ],
+        [
+          1.65,
+          0.99,
+          1
+        ],
+        [
+          1.725,
+          1.035,
+          1
+        ],
+        [
+          1.8,
+          1.08,
+          1
+        ],
+        [
+          1.875,
+          1.125,
+          1
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于椒丘#1[i]%攻击力的火属性伤害，同时对其相邻目标造成等同于椒丘#2[i]%攻击力的火属性伤害，有#3[i]%的基础概率对主目标施加1层【烬煨】。"
+    },
+    {
+      "id": "121803",
+      "name": "鼎阵妙法，奇正相生",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Fire",
+      "params": [
+        [
+          0.6,
+          0.5,
+          0.09,
+          3,
+          6
+        ],
+        [
+          0.64,
+          0.51,
+          0.096,
+          3,
+          6
+        ],
+        [
+          0.68,
+          0.52,
+          0.102,
+          3,
+          6
+        ],
+        [
+          0.72,
+          0.53,
+          0.108,
+          3,
+          6
+        ],
+        [
+          0.76,
+          0.54,
+          0.114,
+          3,
+          6
+        ],
+        [
+          0.8,
+          0.55,
+          0.12,
+          3,
+          6
+        ],
+        [
+          0.85,
+          0.5625,
+          0.1275,
+          3,
+          6
+        ],
+        [
+          0.9,
+          0.575,
+          0.135,
+          3,
+          6
+        ],
+        [
+          0.95,
+          0.5875,
+          0.1425,
+          3,
+          6
+        ],
+        [
+          1,
+          0.6,
+          0.15,
+          3,
+          6
+        ],
+        [
+          1.04,
+          0.61,
+          0.156,
+          3,
+          6
+        ],
+        [
+          1.08,
+          0.62,
+          0.162,
+          3,
+          6
+        ],
+        [
+          1.12,
+          0.63,
+          0.168,
+          3,
+          6
+        ],
+        [
+          1.16,
+          0.64,
+          0.174,
+          3,
+          6
+        ],
+        [
+          1.2,
+          0.65,
+          0.18,
+          3,
+          6
+        ]
+      ],
+      "desc": "将敌方目标具有的【烬煨】层数统一设置为场上【烬煨】层数的最高值，随后开启结界并对敌方全体造成等同于椒丘#1[i]%攻击力的火属性伤害。\n处于结界中时，敌方目标受到的终结技伤害提高#3[f1]%，且行动时有#2[i]%的基础概率被施加1层【烬煨】，结界存在期间该效果最多触发#5[i]次，且每个敌方目标每回合只能触发1次。椒丘每次施放终结技时重置触发次数。\n结界持续#4[i]回合，自身每回合开始时结界持续回合数减1。当椒丘陷入无法战斗状态时，结界也会被解除。"
+    },
+    {
+      "id": "121804",
+      "name": "四示八权，纤滋精味",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Impair",
+      "effect_text": "妨害",
+      "max_level": 15,
+      "element": "Fire",
+      "params": [
+        [
+          1,
+          0.075,
+          0.025,
+          5,
+          2,
+          0.9
+        ],
+        [
+          1,
+          0.0825,
+          0.0275,
+          5,
+          2,
+          0.99
+        ],
+        [
+          1,
+          0.09,
+          0.03,
+          5,
+          2,
+          1.08
+        ],
+        [
+          1,
+          0.0975,
+          0.0325,
+          5,
+          2,
+          1.17
+        ],
+        [
+          1,
+          0.105,
+          0.035,
+          5,
+          2,
+          1.26
+        ],
+        [
+          1,
+          0.1125,
+          0.0375,
+          5,
+          2,
+          1.35
+        ],
+        [
+          1,
+          0.1219,
+          0.0406,
+          5,
+          2,
+          1.4625
+        ],
+        [
+          1,
+          0.1313,
+          0.0437,
+          5,
+          2,
+          1.575
+        ],
+        [
+          1,
+          0.1406,
+          0.0469,
+          5,
+          2,
+          1.6875
+        ],
+        [
+          1,
+          0.15,
+          0.05,
+          5,
+          2,
+          1.8
+        ],
+        [
+          1,
+          0.1575,
+          0.0525,
+          5,
+          2,
+          1.89
+        ],
+        [
+          1,
+          0.165,
+          0.055,
+          5,
+          2,
+          1.98
+        ],
+        [
+          1,
+          0.1725,
+          0.0575,
+          5,
+          2,
+          2.07
+        ],
+        [
+          1,
+          0.18,
+          0.06,
+          5,
+          2,
+          2.16
+        ],
+        [
+          1,
+          0.1875,
+          0.0625,
+          5,
+          2,
+          2.25
+        ]
+      ],
+      "desc": "椒丘使用普攻、战技、终结技击中敌人时，有#1[i]%的基础概率对其施加1层【烬煨】，1层时使敌人受到的伤害提高#2[f1]%，此后每叠加1层提高#3[f1]%。\n【烬煨】最多叠加#4[i]层，持续#5[i]回合。\n当敌方目标处于【烬煨】状态时，也会被视为同时陷入了灼烧状态，每回合开始时受到等同于椒丘#6[i]%攻击力的火属性持续伤害。"
+    },
+    {
+      "id": "121806",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Fire",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "121807",
+      "name": "旺火却乱",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Impair",
+      "effect_text": "妨害",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          1,
+          15,
+          1
+        ]
+      ],
+      "desc": "使用秘技后，制造1片持续#2[i]秒的特殊领域。与处于特殊领域内的敌人进入战斗后，对敌方全体造成等同于椒丘#1[i]%攻击力的火属性伤害，并有#3[i]%的基础概率施加1层【烬煨】。我方制造的领域效果最多存在1个。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1218001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121801",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1218002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121802",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1218003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121803",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1218004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121804",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "113001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "113001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110222",
+                "num": 3
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "113002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110222",
+                "num": 7
+              },
+              {
+                "id": "113002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110223",
+                "num": 3
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110223",
+                "num": 5
+              },
+              {
+                "id": "110503",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110223",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1218007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "121807",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1218101",
+        "name": "爟火",
+        "desc": "战斗开始时，立即恢复#1[i]点能量。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110221",
+                "num": 3
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1218102",
+        "name": "举炊",
+        "desc": "椒丘效果命中大于#1[i]%时，每超过#2[i]%，则额外提高#3[i]%攻击力，最高不超过#4[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110222",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1218103",
+        "name": "炙香",
+        "desc": "结界存在时，敌方目标进入战斗时，会被施加【烬煨】，层数与结界展开期间【烬煨】层数最高者相同，最低为#1[i]层。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110223",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110503",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1218201",
+        "name": "效果命中强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1218202",
+        "name": "伤害强化•火",
+        "anchor": "Point10",
+        "pre_points": [
+          "1218101"
+        ],
+        "properties": [
+          {
+            "type": "FireAddedRatio",
+            "name": "火属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1218203",
+        "name": "效果命中强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1218202"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1218204",
+        "name": "速度强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1218203"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": "1218205",
+        "name": "效果命中强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1218102"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1218206",
+        "name": "伤害强化•火",
+        "anchor": "Point14",
+        "pre_points": [
+          "1218205"
+        ],
+        "properties": [
+          {
+            "type": "FireAddedRatio",
+            "name": "火属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1218207",
+        "name": "效果命中强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "1218206"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1218208",
+        "name": "速度强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1218103"
+        ],
+        "properties": [
+          {
+            "type": "SpeedDelta",
+            "name": "速度",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "1218209",
+        "name": "伤害强化•火",
+        "anchor": "Point17",
+        "pre_points": [
+          "1218103"
+        ],
+        "properties": [
+          {
+            "type": "FireAddedRatio",
+            "name": "火属性伤害提高",
+            "value": 0.064
+          }
+        ]
+      },
+      {
+        "id": "1218210",
+        "name": "效果命中强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1218201"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.08
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "121801",
+      "name": "五味五走，生熟有定",
+      "rank": 1,
+      "desc": "我方目标对处于【烬煨】状态的敌方目标造成的伤害提高40%。每当触发天赋效果使敌方目标陷入【烬煨】状态时，使本次叠加的【烬煨】层数额外提高1层。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "121802",
+      "name": "爽口作疾，厚味措毒",
+      "rank": 2,
+      "desc": "敌方目标处于【烬煨】状态时，【烬煨】对其造成的火属性持续伤害倍率提高300%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "121803",
+      "name": "和合之妙，敌不及拒",
+      "rank": 3,
+      "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "121802",
+          "num": 2
+        },
+        {
+          "id": "121801",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "121804",
+      "name": "藏腑和平，血气资荣",
+      "rank": 4,
+      "desc": "结界存在时，敌方目标的攻击力降低15%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "121805",
+      "name": "明争天地，暗斗变击",
+      "rank": 5,
+      "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "121803",
+          "num": 2
+        },
+        {
+          "id": "121804",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "121806",
+      "name": "九沸九变，火为之纪",
+      "rank": 6,
+      "desc": "敌方目标被消灭时，其持有的【烬煨】会叠加给场上存活的【烬煨】层数最低的敌人。【烬煨】的层数上限提升至9，每层【烬煨】会使目标的全属性抗性降低3%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

@@ -1,0 +1,1575 @@
+{
+  "id": "1202",
+  "name": "停云",
+  "tag": "tingyun",
+  "rarity": 4,
+  "path": "同谐",
+  "path_key": "Shaman",
+  "path_en": "Harmony",
+  "element": "雷",
+  "element_key": "Thunder",
+  "max_sp": 130,
+  "preview": "image/character_preview/1202.png",
+  "portrait": "image/character_portrait/1202.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 115.2,
+        "hp_step": 5.76,
+        "atk": 72,
+        "atk_step": 3.6,
+        "def_": 54,
+        "def_step": 2.7,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 161.28,
+        "hp_step": 5.76,
+        "atk": 100.8,
+        "atk_step": 3.6,
+        "def_": 75.6,
+        "def_step": 2.7,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 207.36,
+        "hp_step": 5.76,
+        "atk": 129.6,
+        "atk_step": 3.6,
+        "def_": 97.2,
+        "def_step": 2.7,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 253.44,
+        "hp_step": 5.76,
+        "atk": 158.4,
+        "atk_step": 3.6,
+        "def_": 118.8,
+        "def_step": 2.7,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 299.52,
+        "hp_step": 5.76,
+        "atk": 187.2,
+        "atk_step": 3.6,
+        "def_": 140.4,
+        "def_step": 2.7,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 345.6,
+        "hp_step": 5.76,
+        "atk": 216,
+        "atk_step": 3.6,
+        "def_": 162,
+        "def_step": 2.7,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 391.68,
+        "hp_step": 5.76,
+        "atk": 244.8,
+        "atk_step": 3.6,
+        "def_": 183.6,
+        "def_step": 2.7,
+        "spd": 112,
+        "spd_step": 0,
+        "taunt": 100,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3200
+        },
+        {
+          "id": "113001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6400
+        },
+        {
+          "id": "113001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12800
+        },
+        {
+          "id": "113002",
+          "num": 5
+        },
+        {
+          "id": "110404",
+          "num": 2
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 32000
+        },
+        {
+          "id": "113002",
+          "num": 8
+        },
+        {
+          "id": "110404",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 64000
+        },
+        {
+          "id": "113003",
+          "num": 5
+        },
+        {
+          "id": "110404",
+          "num": 15
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 128000
+        },
+        {
+          "id": "113003",
+          "num": 7
+        },
+        {
+          "id": "110404",
+          "num": 28
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "120201",
+      "name": "逐客令",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Thunder",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于停云#1[i]%攻击力的雷属性伤害。"
+    },
+    {
+      "id": "120202",
+      "name": "祥音和韵",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.2,
+          0.25,
+          3,
+          0.15
+        ],
+        [
+          0.22,
+          0.275,
+          3,
+          0.16
+        ],
+        [
+          0.24,
+          0.3,
+          3,
+          0.17
+        ],
+        [
+          0.26,
+          0.325,
+          3,
+          0.18
+        ],
+        [
+          0.28,
+          0.35,
+          3,
+          0.19
+        ],
+        [
+          0.3,
+          0.375,
+          3,
+          0.2
+        ],
+        [
+          0.325,
+          0.4062,
+          3,
+          0.2125
+        ],
+        [
+          0.35,
+          0.4375,
+          3,
+          0.225
+        ],
+        [
+          0.375,
+          0.4688,
+          3,
+          0.2375
+        ],
+        [
+          0.4,
+          0.5,
+          3,
+          0.25
+        ],
+        [
+          0.42,
+          0.525,
+          3,
+          0.26
+        ],
+        [
+          0.44,
+          0.55,
+          3,
+          0.27
+        ],
+        [
+          0.46,
+          0.575,
+          3,
+          0.28
+        ],
+        [
+          0.48,
+          0.6,
+          3,
+          0.29
+        ],
+        [
+          0.5,
+          0.625,
+          3,
+          0.3
+        ]
+      ],
+      "desc": "为指定我方单体提供【赐福】，使其攻击力提高#2[i]%，最高不超过停云当前攻击力的#4[i]%。\n获得【赐福】的目标施放攻击后，会额外造成1次等同于其自身#1[i]%攻击力的雷属性附加伤害。\n【赐福】持续#3[i]回合且仅对停云战技最新的施放目标生效。"
+    },
+    {
+      "id": "120203",
+      "name": "庆云光覆仪祷",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          50,
+          2,
+          0.2
+        ],
+        [
+          50,
+          2,
+          0.23
+        ],
+        [
+          50,
+          2,
+          0.26
+        ],
+        [
+          50,
+          2,
+          0.29
+        ],
+        [
+          50,
+          2,
+          0.32
+        ],
+        [
+          50,
+          2,
+          0.35
+        ],
+        [
+          50,
+          2,
+          0.3875
+        ],
+        [
+          50,
+          2,
+          0.425
+        ],
+        [
+          50,
+          2,
+          0.4625
+        ],
+        [
+          50,
+          2,
+          0.5
+        ],
+        [
+          50,
+          2,
+          0.53
+        ],
+        [
+          50,
+          2,
+          0.56
+        ],
+        [
+          50,
+          2,
+          0.59
+        ],
+        [
+          50,
+          2,
+          0.62
+        ],
+        [
+          50,
+          2,
+          0.65
+        ]
+      ],
+      "desc": "为指定我方单体恢复#1[i]点能量，同时使目标造成的伤害提高#3[i]%，持续#2[i]回合。"
+    },
+    {
+      "id": "120204",
+      "name": "紫电扶摇",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.3
+        ],
+        [
+          0.33
+        ],
+        [
+          0.36
+        ],
+        [
+          0.39
+        ],
+        [
+          0.42
+        ],
+        [
+          0.45
+        ],
+        [
+          0.4875
+        ],
+        [
+          0.525
+        ],
+        [
+          0.5625
+        ],
+        [
+          0.6
+        ],
+        [
+          0.63
+        ],
+        [
+          0.66
+        ],
+        [
+          0.69
+        ],
+        [
+          0.72
+        ],
+        [
+          0.75
+        ]
+      ],
+      "desc": "敌方目标受到停云攻击后，获得【赐福】的目标立即对其造成等同于自身#1[i]%攻击力的雷属性附加伤害。"
+    },
+    {
+      "id": "120206",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Thunder",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "120207",
+      "name": "惠风和畅",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          50
+        ]
+      ],
+      "desc": "使用秘技后立即为自身恢复#1[i]点能量。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1202001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "120201",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110161",
+                "num": 2
+              },
+              {
+                "id": "113001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110162",
+                "num": 2
+              },
+              {
+                "id": "113002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110162",
+                "num": 4
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110163",
+                "num": 2
+              },
+              {
+                "id": "113003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110163",
+                "num": 6
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1202002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "120202",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "113001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110161",
+                "num": 2
+              },
+              {
+                "id": "113001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110162",
+                "num": 2
+              },
+              {
+                "id": "113002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110162",
+                "num": 4
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110162",
+                "num": 6
+              },
+              {
+                "id": "113002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110163",
+                "num": 2
+              },
+              {
+                "id": "113003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110163",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110163",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110163",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1202003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "120203",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "113001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110161",
+                "num": 2
+              },
+              {
+                "id": "113001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110162",
+                "num": 2
+              },
+              {
+                "id": "113002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110162",
+                "num": 4
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110162",
+                "num": 6
+              },
+              {
+                "id": "113002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110163",
+                "num": 2
+              },
+              {
+                "id": "113003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110163",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110163",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110163",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1202004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "120204",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "113001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110161",
+                "num": 2
+              },
+              {
+                "id": "113001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110162",
+                "num": 2
+              },
+              {
+                "id": "113002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110162",
+                "num": 4
+              },
+              {
+                "id": "113002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110162",
+                "num": 6
+              },
+              {
+                "id": "113002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110163",
+                "num": 2
+              },
+              {
+                "id": "113003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110163",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "113003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110163",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110163",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1202007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "120207",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1202101",
+        "name": "驻晴",
+        "desc": "施放战技时，停云自身速度提高#1[i]%，持续1回合。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110161",
+                "num": 2
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1202102",
+        "name": "止厄",
+        "desc": "普攻造成的伤害提高#1[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110162",
+                "num": 4
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1202103",
+        "name": "亨通",
+        "desc": "停云的回合开始时，自身立即恢复#1[i]点能量。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110163",
+                "num": 6
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1202201",
+        "name": "攻击强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1202202",
+        "name": "防御强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1202101"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "id": "1202203",
+        "name": "攻击强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1202202"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1202204",
+        "name": "伤害强化•雷",
+        "anchor": "Point12",
+        "pre_points": [
+          "1202201"
+        ],
+        "properties": [
+          {
+            "type": "ThunderAddedRatio",
+            "name": "雷属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1202205",
+        "name": "攻击强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1202102"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1202206",
+        "name": "防御强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1202205"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.075
+          }
+        ]
+      },
+      {
+        "id": "1202207",
+        "name": "攻击强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "1202201"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1202208",
+        "name": "伤害强化•雷",
+        "anchor": "Point16",
+        "pre_points": [
+          "1202103"
+        ],
+        "properties": [
+          {
+            "type": "ThunderAddedRatio",
+            "name": "雷属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1202209",
+        "name": "防御强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1202208"
+        ],
+        "properties": [
+          {
+            "type": "DefenceAddedRatio",
+            "name": "防御力",
+            "value": 0.1
+          }
+        ]
+      },
+      {
+        "id": "1202210",
+        "name": "攻击强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1202208"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.08
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "120201",
+      "name": "春风得意，时运驰骋",
+      "rank": 1,
+      "desc": "得到【赐福】的我方单体施放终结技后速度提高20%，持续1回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "120202",
+      "name": "君子惠渥，晏笑承之",
+      "rank": 2,
+      "desc": "得到【赐福】的我方单体在消灭敌方目标时恢复5点能量，该效果每回合只能触发1次。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "120203",
+      "name": "青丘遗泽",
+      "rank": 3,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "120203",
+          "num": 2
+        },
+        {
+          "id": "120201",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "120204",
+      "name": "鸣火机变，度时察势",
+      "rank": 4,
+      "desc": "【赐福】附加的伤害倍率提高20%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "120205",
+      "name": "绥绥狐魅",
+      "rank": 5,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "120202",
+          "num": 2
+        },
+        {
+          "id": "120204",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "120206",
+      "name": "和气生财，泽盈四方",
+      "rank": 6,
+      "desc": "终结技为我方目标恢复的能量提高10点。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

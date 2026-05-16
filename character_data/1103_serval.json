@@ -1,0 +1,1576 @@
+{
+  "id": "1103",
+  "name": "希露瓦",
+  "tag": "serval",
+  "rarity": 4,
+  "path": "智识",
+  "path_key": "Mage",
+  "path_en": "Erudition",
+  "element": "雷",
+  "element_key": "Thunder",
+  "max_sp": 100,
+  "preview": "image/character_preview/1103.png",
+  "portrait": "image/character_portrait/1103.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 124.8,
+        "hp_step": 6.24,
+        "atk": 88.8,
+        "atk_step": 4.44,
+        "def_": 51,
+        "def_step": 2.55,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 174.72,
+        "hp_step": 6.24,
+        "atk": 124.32,
+        "atk_step": 4.44,
+        "def_": 71.4,
+        "def_step": 2.55,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 224.64,
+        "hp_step": 6.24,
+        "atk": 159.84,
+        "atk_step": 4.44,
+        "def_": 91.8,
+        "def_step": 2.55,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 274.56,
+        "hp_step": 6.24,
+        "atk": 195.36,
+        "atk_step": 4.44,
+        "def_": 112.2,
+        "def_step": 2.55,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 324.48,
+        "hp_step": 6.24,
+        "atk": 230.88,
+        "atk_step": 4.44,
+        "def_": 132.6,
+        "def_step": 2.55,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 374.4,
+        "hp_step": 6.24,
+        "atk": 266.4,
+        "atk_step": 4.44,
+        "def_": 153,
+        "def_step": 2.55,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 424.32,
+        "hp_step": 6.24,
+        "atk": 301.92,
+        "atk_step": 4.44,
+        "def_": 173.4,
+        "def_step": 2.55,
+        "spd": 104,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3200
+        },
+        {
+          "id": "112001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6400
+        },
+        {
+          "id": "112001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12800
+        },
+        {
+          "id": "112002",
+          "num": 5
+        },
+        {
+          "id": "110404",
+          "num": 2
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 32000
+        },
+        {
+          "id": "112002",
+          "num": 8
+        },
+        {
+          "id": "110404",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 64000
+        },
+        {
+          "id": "112003",
+          "num": 5
+        },
+        {
+          "id": "110404",
+          "num": 15
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 128000
+        },
+        {
+          "id": "112003",
+          "num": 7
+        },
+        {
+          "id": "110404",
+          "num": 28
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "110301",
+      "name": "雷鸣音阶",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Thunder",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于希露瓦#1[i]%攻击力的雷属性伤害。"
+    },
+    {
+      "id": "110302",
+      "name": "电光石火间",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          0.7,
+          0.3,
+          0.8,
+          2,
+          0.4
+        ],
+        [
+          0.77,
+          0.33,
+          0.8,
+          2,
+          0.44
+        ],
+        [
+          0.84,
+          0.36,
+          0.8,
+          2,
+          0.48
+        ],
+        [
+          0.91,
+          0.39,
+          0.8,
+          2,
+          0.52
+        ],
+        [
+          0.98,
+          0.42,
+          0.8,
+          2,
+          0.56
+        ],
+        [
+          1.05,
+          0.45,
+          0.8,
+          2,
+          0.62
+        ],
+        [
+          1.1375,
+          0.4875,
+          0.8,
+          2,
+          0.7
+        ],
+        [
+          1.225,
+          0.525,
+          0.8,
+          2,
+          0.8
+        ],
+        [
+          1.3125,
+          0.5625,
+          0.8,
+          2,
+          0.92
+        ],
+        [
+          1.4,
+          0.6,
+          0.8,
+          2,
+          1.04
+        ],
+        [
+          1.47,
+          0.63,
+          0.8,
+          2,
+          1.092
+        ],
+        [
+          1.54,
+          0.66,
+          0.8,
+          2,
+          1.144
+        ],
+        [
+          1.61,
+          0.69,
+          0.8,
+          2,
+          1.196
+        ],
+        [
+          1.68,
+          0.72,
+          0.8,
+          2,
+          1.248
+        ],
+        [
+          1.75,
+          0.75,
+          0.8,
+          2,
+          1.3
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于希露瓦#1[i]%攻击力的雷属性伤害，同时对其相邻目标造成等同于希露瓦#2[i]%攻击力的雷属性伤害，此外有#3[i]%的基础概率使受到攻击的敌方目标陷入触电状态，持续#4[i]回合。\n触电状态下，敌方目标每回合开始时受到等同于希露瓦#5[i]%攻击力的雷属性持续伤害。"
+    },
+    {
+      "id": "110303",
+      "name": "机械热潮登场！",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          1.08,
+          2
+        ],
+        [
+          1.152,
+          2
+        ],
+        [
+          1.224,
+          2
+        ],
+        [
+          1.296,
+          2
+        ],
+        [
+          1.368,
+          2
+        ],
+        [
+          1.44,
+          2
+        ],
+        [
+          1.53,
+          2
+        ],
+        [
+          1.62,
+          2
+        ],
+        [
+          1.71,
+          2
+        ],
+        [
+          1.8,
+          2
+        ],
+        [
+          1.872,
+          2
+        ],
+        [
+          1.944,
+          2
+        ],
+        [
+          2.016,
+          2
+        ],
+        [
+          2.088,
+          2
+        ],
+        [
+          2.16,
+          2
+        ]
+      ],
+      "desc": "对敌方全体造成等同于希露瓦#1[i]%攻击力的雷属性伤害，并使触电状态下的敌方目标延长#2[i]回合的触电状态。"
+    },
+    {
+      "id": "110304",
+      "name": "燃情和弦",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          0.36
+        ],
+        [
+          0.396
+        ],
+        [
+          0.432
+        ],
+        [
+          0.468
+        ],
+        [
+          0.504
+        ],
+        [
+          0.54
+        ],
+        [
+          0.585
+        ],
+        [
+          0.63
+        ],
+        [
+          0.675
+        ],
+        [
+          0.72
+        ],
+        [
+          0.756
+        ],
+        [
+          0.792
+        ],
+        [
+          0.828
+        ],
+        [
+          0.864
+        ],
+        [
+          0.9
+        ]
+      ],
+      "desc": "施放攻击后，对所有触电状态下的敌方目标造成等同于希露瓦#1[i]%攻击力的雷属性附加伤害。"
+    },
+    {
+      "id": "110306",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Thunder",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "110307",
+      "name": "晚安，贝洛伯格",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Thunder",
+      "params": [
+        [
+          1,
+          0.5,
+          3,
+          0.5
+        ]
+      ],
+      "desc": "立即攻击敌人，进入战斗后对敌方随机单体造成等同于希露瓦#4[i]%攻击力的雷属性伤害，同时有#1[i]%的基础概率使敌方每个单体目标陷入触电状态，持续#3[i]回合。\n触电状态下，敌方目标每回合开始时受到等同于希露瓦#2[i]%攻击力的雷属性持续伤害。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1103001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "110301",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110131",
+                "num": 2
+              },
+              {
+                "id": "112001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110132",
+                "num": 2
+              },
+              {
+                "id": "112002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110132",
+                "num": 4
+              },
+              {
+                "id": "112002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110133",
+                "num": 2
+              },
+              {
+                "id": "112003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110133",
+                "num": 6
+              },
+              {
+                "id": "112003",
+                "num": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1103002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "110302",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "112001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110131",
+                "num": 2
+              },
+              {
+                "id": "112001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110132",
+                "num": 2
+              },
+              {
+                "id": "112002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110132",
+                "num": 4
+              },
+              {
+                "id": "112002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110132",
+                "num": 6
+              },
+              {
+                "id": "112002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110133",
+                "num": 2
+              },
+              {
+                "id": "112003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110133",
+                "num": 4
+              },
+              {
+                "id": "110502",
+                "num": 1
+              },
+              {
+                "id": "112003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110133",
+                "num": 6
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110133",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1103003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "110303",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "112001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110131",
+                "num": 2
+              },
+              {
+                "id": "112001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110132",
+                "num": 2
+              },
+              {
+                "id": "112002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110132",
+                "num": 4
+              },
+              {
+                "id": "112002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110132",
+                "num": 6
+              },
+              {
+                "id": "112002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110133",
+                "num": 2
+              },
+              {
+                "id": "112003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110133",
+                "num": 4
+              },
+              {
+                "id": "110502",
+                "num": 1
+              },
+              {
+                "id": "112003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110133",
+                "num": 6
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110133",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1103004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "110304",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "112001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110131",
+                "num": 2
+              },
+              {
+                "id": "112001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110132",
+                "num": 2
+              },
+              {
+                "id": "112002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110132",
+                "num": 4
+              },
+              {
+                "id": "112002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110132",
+                "num": 6
+              },
+              {
+                "id": "112002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110133",
+                "num": 2
+              },
+              {
+                "id": "112003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110133",
+                "num": 4
+              },
+              {
+                "id": "110502",
+                "num": 1
+              },
+              {
+                "id": "112003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110133",
+                "num": 6
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110133",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1103007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "110307",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1103101",
+        "name": "摇滚",
+        "desc": "施放战技时，使受到攻击的敌方目标陷入触电状态的基础概率提高#1[i]%。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110131",
+                "num": 2
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1103102",
+        "name": "电音",
+        "desc": "战斗开始时，立即恢复#1[i]点能量。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110132",
+                "num": 4
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1103103",
+        "name": "狂热",
+        "desc": "消灭敌方目标后，攻击力提高#1[i]%，持续#2[i]回合。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110133",
+                "num": 6
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110502",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1103201",
+        "name": "暴击率强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.027
+          }
+        ]
+      },
+      {
+        "id": "1103202",
+        "name": "效果命中强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1103101"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1103203",
+        "name": "暴击率强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1103202"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.027
+          }
+        ]
+      },
+      {
+        "id": "1103204",
+        "name": "效果抵抗强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1103202"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1103205",
+        "name": "暴击率强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1103102"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1103206",
+        "name": "效果命中强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1103205"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1103207",
+        "name": "暴击率强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "1103205"
+        ],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1103208",
+        "name": "效果抵抗强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1103103"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1103209",
+        "name": "效果命中强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1103103"
+        ],
+        "properties": [
+          {
+            "type": "StatusProbabilityBase",
+            "name": "效果命中",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1103210",
+        "name": "暴击率强化",
+        "anchor": "Point18",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "CriticalChanceBase",
+            "name": "暴击率",
+            "value": 0.053
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "110301",
+      "name": "余音绕梁",
+      "rank": 1,
+      "desc": "普攻对指定敌方目标的1个随机相邻目标造成等同于普攻伤害60%的雷属性伤害。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "110302",
+      "name": "安可！",
+      "rank": 2,
+      "desc": "每触发1次天赋的附加伤害，希露瓦恢复4点能量。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "110303",
+      "name": "听，齿轮的心跳",
+      "rank": 3,
+      "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "110302",
+          "num": 2
+        },
+        {
+          "id": "110301",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "110304",
+      "name": "制造噪音吧！",
+      "rank": 4,
+      "desc": "施放终结技时，有100%基础概率使非触电状态下的敌方目标状态陷入与战技相同的触电状态。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "110305",
+      "name": "贝洛伯格最强音！",
+      "rank": 5,
+      "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "110303",
+          "num": 2
+        },
+        {
+          "id": "110304",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "110306",
+      "name": "这一曲，贯穿天穹！",
+      "rank": 6,
+      "desc": "希露瓦对触电状态下的敌方目标造成的伤害提高30%。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

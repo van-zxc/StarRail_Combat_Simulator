@@ -1,0 +1,1530 @@
+{
+  "id": "1008",
+  "name": "阿兰",
+  "tag": "arlan",
+  "rarity": 4,
+  "path": "毁灭",
+  "path_key": "Warrior",
+  "path_en": "Destruction",
+  "element": "雷",
+  "element_key": "Thunder",
+  "max_sp": 110,
+  "preview": "image/character_preview/1008.png",
+  "portrait": "image/character_portrait/1008.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 163.2,
+        "hp_step": 8.16,
+        "atk": 81.6,
+        "atk_step": 4.08,
+        "def_": 45,
+        "def_step": 2.25,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 228.48,
+        "hp_step": 8.16,
+        "atk": 114.24,
+        "atk_step": 4.08,
+        "def_": 63,
+        "def_step": 2.25,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 293.76,
+        "hp_step": 8.16,
+        "atk": 146.88,
+        "atk_step": 4.08,
+        "def_": 81,
+        "def_step": 2.25,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 359.04,
+        "hp_step": 8.16,
+        "atk": 179.52,
+        "atk_step": 4.08,
+        "def_": 99,
+        "def_step": 2.25,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 424.32,
+        "hp_step": 8.16,
+        "atk": 212.16,
+        "atk_step": 4.08,
+        "def_": 117,
+        "def_step": 2.25,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 489.6,
+        "hp_step": 8.16,
+        "atk": 244.8,
+        "atk_step": 4.08,
+        "def_": 135,
+        "def_step": 2.25,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 554.88,
+        "hp_step": 8.16,
+        "atk": 277.44,
+        "atk_step": 4.08,
+        "def_": 153,
+        "def_step": 2.25,
+        "spd": 102,
+        "spd_step": 0,
+        "taunt": 125,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3200
+        },
+        {
+          "id": "111001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6400
+        },
+        {
+          "id": "111001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12800
+        },
+        {
+          "id": "111002",
+          "num": 5
+        },
+        {
+          "id": "110404",
+          "num": 2
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 32000
+        },
+        {
+          "id": "111002",
+          "num": 8
+        },
+        {
+          "id": "110404",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 64000
+        },
+        {
+          "id": "111003",
+          "num": 5
+        },
+        {
+          "id": "110404",
+          "num": 15
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 128000
+        },
+        {
+          "id": "111003",
+          "num": 7
+        },
+        {
+          "id": "110404",
+          "num": 28
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "100801",
+      "name": "如雷疾行",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 10,
+      "element": "Thunder",
+      "params": [
+        [
+          0.5
+        ],
+        [
+          0.6
+        ],
+        [
+          0.7
+        ],
+        [
+          0.8
+        ],
+        [
+          0.9
+        ],
+        [
+          1
+        ],
+        [
+          1.1
+        ],
+        [
+          1.2
+        ],
+        [
+          1.3
+        ],
+        [
+          1.4
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于阿兰#1[i]%攻击力的雷属性伤害。"
+    },
+    {
+      "id": "100802",
+      "name": "禁锢解除",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "SingleAttack",
+      "effect_text": "单攻",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          0.15,
+          1.2
+        ],
+        [
+          0.15,
+          1.32
+        ],
+        [
+          0.15,
+          1.44
+        ],
+        [
+          0.15,
+          1.56
+        ],
+        [
+          0.15,
+          1.68
+        ],
+        [
+          0.15,
+          1.8
+        ],
+        [
+          0.15,
+          1.95
+        ],
+        [
+          0.15,
+          2.1
+        ],
+        [
+          0.15,
+          2.25
+        ],
+        [
+          0.15,
+          2.4
+        ],
+        [
+          0.15,
+          2.52
+        ],
+        [
+          0.15,
+          2.64
+        ],
+        [
+          0.15,
+          2.76
+        ],
+        [
+          0.15,
+          2.88
+        ],
+        [
+          0.15,
+          3
+        ]
+      ],
+      "desc": "消耗等同于阿兰生命上限#1[i]%的生命值对指定敌方单体造成等同于阿兰#2[i]%攻击力的雷属性伤害。若当前生命值不足，施放战技时阿兰的当前生命值降至1点。"
+    },
+    {
+      "id": "100803",
+      "name": "狂者制裁",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 15,
+      "element": "Thunder",
+      "params": [
+        [
+          1.92,
+          0.96
+        ],
+        [
+          2.048,
+          1.024
+        ],
+        [
+          2.176,
+          1.088
+        ],
+        [
+          2.304,
+          1.152
+        ],
+        [
+          2.432,
+          1.216
+        ],
+        [
+          2.56,
+          1.28
+        ],
+        [
+          2.72,
+          1.36
+        ],
+        [
+          2.88,
+          1.44
+        ],
+        [
+          3.04,
+          1.52
+        ],
+        [
+          3.2,
+          1.6
+        ],
+        [
+          3.328,
+          1.664
+        ],
+        [
+          3.456,
+          1.728
+        ],
+        [
+          3.584,
+          1.792
+        ],
+        [
+          3.712,
+          1.856
+        ],
+        [
+          3.84,
+          1.92
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于阿兰#1[i]%攻击力的雷属性伤害，同时对其相邻目标造成等同于阿兰#2[i]%攻击力的雷属性伤害。"
+    },
+    {
+      "id": "100804",
+      "name": "至痛至怒",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "Enhance",
+      "effect_text": "强化",
+      "max_level": 15,
+      "element": "",
+      "params": [
+        [
+          0.36
+        ],
+        [
+          0.396
+        ],
+        [
+          0.432
+        ],
+        [
+          0.468
+        ],
+        [
+          0.504
+        ],
+        [
+          0.54
+        ],
+        [
+          0.585
+        ],
+        [
+          0.63
+        ],
+        [
+          0.675
+        ],
+        [
+          0.72
+        ],
+        [
+          0.756
+        ],
+        [
+          0.792
+        ],
+        [
+          0.828
+        ],
+        [
+          0.864
+        ],
+        [
+          0.9
+        ]
+      ],
+      "desc": "根据阿兰当前损失的生命值百分比获得伤害加成，最多使阿兰造成的伤害提高#1[i]%。"
+    },
+    {
+      "id": "100806",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Thunder",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "100807",
+      "name": "极速收割",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Thunder",
+      "params": [
+        [
+          0.8
+        ]
+      ],
+      "desc": "立即攻击敌人，进入战斗后对敌方全体造成等同于阿兰#1[i]%攻击力的雷属性伤害。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1008001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100801",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110111",
+                "num": 2
+              },
+              {
+                "id": "111001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110112",
+                "num": 2
+              },
+              {
+                "id": "111002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110112",
+                "num": 4
+              },
+              {
+                "id": "111002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110113",
+                "num": 2
+              },
+              {
+                "id": "111003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110113",
+                "num": 6
+              },
+              {
+                "id": "111003",
+                "num": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1008002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100802",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110111",
+                "num": 2
+              },
+              {
+                "id": "111001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110112",
+                "num": 2
+              },
+              {
+                "id": "111002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110112",
+                "num": 4
+              },
+              {
+                "id": "111002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110112",
+                "num": 6
+              },
+              {
+                "id": "111002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110113",
+                "num": 2
+              },
+              {
+                "id": "111003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110113",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110113",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110113",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1008003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100803",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110111",
+                "num": 2
+              },
+              {
+                "id": "111001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110112",
+                "num": 2
+              },
+              {
+                "id": "111002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110112",
+                "num": 4
+              },
+              {
+                "id": "111002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110112",
+                "num": 6
+              },
+              {
+                "id": "111002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110113",
+                "num": 2
+              },
+              {
+                "id": "111003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110113",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110113",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110113",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1008004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100804",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2000
+              },
+              {
+                "id": "111001",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110111",
+                "num": 2
+              },
+              {
+                "id": "111001",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 8000
+              },
+              {
+                "id": "110112",
+                "num": 2
+              },
+              {
+                "id": "111002",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110112",
+                "num": 4
+              },
+              {
+                "id": "111002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 24000
+              },
+              {
+                "id": "110112",
+                "num": 6
+              },
+              {
+                "id": "111002",
+                "num": 5
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 36000
+              },
+              {
+                "id": "110113",
+                "num": 2
+              },
+              {
+                "id": "111003",
+                "num": 2
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 64000
+              },
+              {
+                "id": "110113",
+                "num": 4
+              },
+              {
+                "id": "110501",
+                "num": 1
+              },
+              {
+                "id": "111003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110113",
+                "num": 6
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 240000
+              },
+              {
+                "id": "110113",
+                "num": 11
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1008007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "100807",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1008101",
+        "name": "苏生",
+        "desc": "消灭敌方目标时，若当前生命值百分比小于等于#1[i]%，则立即回复等同于自身生命上限#2[i]%的生命值。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 4000
+              },
+              {
+                "id": "110111",
+                "num": 2
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1008102",
+        "name": "坚忍",
+        "desc": "抵抗持续伤害类负面状态的概率提高#1[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 16000
+              },
+              {
+                "id": "110112",
+                "num": 4
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1008103",
+        "name": "抗御",
+        "desc": "进入战斗时，若当前生命值百分比小于等于#1[i]%，阿兰可以抵抗除持续伤害外的所有伤害。当阿兰受到攻击后，该效果解除。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 128000
+              },
+              {
+                "id": "110113",
+                "num": 6
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110501",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1008201",
+        "name": "攻击强化",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1008202",
+        "name": "效果抵抗强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1008101"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1008203",
+        "name": "攻击强化",
+        "anchor": "Point11",
+        "pre_points": [
+          "1008202"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1008204",
+        "name": "生命强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1008203"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1008205",
+        "name": "攻击强化",
+        "anchor": "Point13",
+        "pre_points": [
+          "1008102"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1008206",
+        "name": "效果抵抗强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1008205"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1008207",
+        "name": "攻击强化",
+        "anchor": "Point15",
+        "pre_points": [
+          "1008206"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1008208",
+        "name": "生命强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1008103"
+        ],
+        "properties": [
+          {
+            "type": "HPAddedRatio",
+            "name": "生命值",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1008209",
+        "name": "效果抵抗强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1008208"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1008210",
+        "name": "攻击强化",
+        "anchor": "Point18",
+        "pre_points": [
+          "1008208"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.08
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "100801",
+      "name": "万死不辞",
+      "rank": 1,
+      "desc": "当前生命值百分比小于等于50%时，战技造成的伤害提高10%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "100802",
+      "name": "除制去缚",
+      "rank": 2,
+      "desc": "施放战技、终结技时，解除自身的1个负面效果。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "100803",
+      "name": "重剑强攻",
+      "rank": 3,
+      "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "100802",
+          "num": 2
+        },
+        {
+          "id": "100801",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "100804",
+      "name": "绝处反击",
+      "rank": 4,
+      "desc": "进入战斗后，受到致命攻击时阿兰不会陷入无法战斗状态，并立即回复至自身生命上限的25%。该效果在触发1次后或持续2回合后自动解除。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "100805",
+      "name": "全力倾注",
+      "rank": 5,
+      "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "100803",
+          "num": 2
+        },
+        {
+          "id": "100804",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "100806",
+      "name": "以身作引",
+      "rank": 6,
+      "desc": "当前生命值百分比小于等于50%时，终结技造成的伤害提高20%，且对相邻目标的伤害倍率提高到与主目标相同的伤害倍率。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}

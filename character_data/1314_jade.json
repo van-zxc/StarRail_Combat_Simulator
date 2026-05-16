@@ -1,0 +1,1657 @@
+{
+  "id": "1314",
+  "name": "翡翠",
+  "tag": "jade",
+  "rarity": 5,
+  "path": "智识",
+  "path_key": "Mage",
+  "path_en": "Erudition",
+  "element": "量子",
+  "element_key": "Quantum",
+  "max_sp": 140,
+  "preview": "image/character_preview/1314.png",
+  "portrait": "image/character_portrait/1314.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp": 147.84,
+        "hp_step": 7.392,
+        "atk": 89.76,
+        "atk_step": 4.488,
+        "def_": 69.3,
+        "def_step": 3.465,
+        "spd": 103,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 206.976,
+        "hp_step": 7.392,
+        "atk": 125.664,
+        "atk_step": 4.488,
+        "def_": 97.02,
+        "def_step": 3.465,
+        "spd": 103,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 266.112,
+        "hp_step": 7.392,
+        "atk": 161.568,
+        "atk_step": 4.488,
+        "def_": 124.74,
+        "def_step": 3.465,
+        "spd": 103,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 325.248,
+        "hp_step": 7.392,
+        "atk": 197.472,
+        "atk_step": 4.488,
+        "def_": 152.46,
+        "def_step": 3.465,
+        "spd": 103,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 384.384,
+        "hp_step": 7.392,
+        "atk": 233.376,
+        "atk_step": 4.488,
+        "def_": 180.18,
+        "def_step": 3.465,
+        "spd": 103,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 443.52,
+        "hp_step": 7.392,
+        "atk": 269.28,
+        "atk_step": 4.488,
+        "def_": 207.9,
+        "def_step": 3.465,
+        "spd": 103,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      },
+      {
+        "hp": 502.656,
+        "hp_step": 7.392,
+        "atk": 305.184,
+        "atk_step": 4.488,
+        "def_": 235.62,
+        "def_step": 3.465,
+        "spd": 103,
+        "spd_step": 0,
+        "taunt": 75,
+        "taunt_step": 0,
+        "crit_rate": 0.05,
+        "crit_rate_step": 0,
+        "crit_dmg": 0.5,
+        "crit_dmg_step": 0
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "114001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "114001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "114002",
+          "num": 6
+        },
+        {
+          "id": "110426",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "114002",
+          "num": 9
+        },
+        {
+          "id": "110426",
+          "num": 7
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "114003",
+          "num": 6
+        },
+        {
+          "id": "110426",
+          "num": 20
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "114003",
+          "num": 9
+        },
+        {
+          "id": "110426",
+          "num": 35
+        }
+      ],
+      []
+    ]
+  },
+  "skills": [
+    {
+      "id": "131401",
+      "name": "挞楚抽薪",
+      "type": "Normal",
+      "type_text": "普攻",
+      "effect": "Blast",
+      "effect_text": "扩散",
+      "max_level": 10,
+      "element": "Quantum",
+      "params": [
+        [
+          0.45,
+          0.15
+        ],
+        [
+          0.54,
+          0.18
+        ],
+        [
+          0.63,
+          0.21
+        ],
+        [
+          0.72,
+          0.24
+        ],
+        [
+          0.81,
+          0.27
+        ],
+        [
+          0.9,
+          0.3
+        ],
+        [
+          0.99,
+          0.33
+        ],
+        [
+          1.08,
+          0.36
+        ],
+        [
+          1.17,
+          0.39
+        ],
+        [
+          1.26,
+          0.42
+        ]
+      ],
+      "desc": "对指定敌方单体造成等同于翡翠#1[i]%攻击力的量子属性伤害，同时对其相邻目标造成等同于翡翠#2[i]%攻击力的量子属性伤害。"
+    },
+    {
+      "id": "131402",
+      "name": "恣肆吞併的担保",
+      "type": "BPSkill",
+      "type_text": "战技",
+      "effect": "Support",
+      "effect_text": "辅助",
+      "max_level": 15,
+      "element": "Quantum",
+      "params": [
+        [
+          30,
+          0.02,
+          0.15,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.16,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.17,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.18,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.19,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.2,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.2125,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.225,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.2375,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.25,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.26,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.27,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.28,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.29,
+          3
+        ],
+        [
+          30,
+          0.02,
+          0.3,
+          3
+        ]
+      ],
+      "desc": "指定我方单体成为【收债人】，使其速度提高#1[i]点，持续#4[i]回合。\n【收债人】施放攻击后，对每个击中的敌方目标造成1次等同于翡翠#3[i]%攻击力的量子属性附加伤害，并消耗【收债人】生命上限#2[i]%的生命值，若当前生命值不足，当前生命值降至1点。\n若翡翠成为【收债人】时，无法获得速度提高效果且攻击后不消耗生命值。\n当场上存在【收债人】时，翡翠无法施放战技，翡翠每回合开始时【收债人】状态持续回合数减1。"
+    },
+    {
+      "id": "131403",
+      "name": "堕此欲渊，立此狱契",
+      "type": "Ultra",
+      "type_text": "终结技",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Quantum",
+      "params": [
+        [
+          0.4,
+          2,
+          1.2
+        ],
+        [
+          0.44,
+          2,
+          1.32
+        ],
+        [
+          0.48,
+          2,
+          1.44
+        ],
+        [
+          0.52,
+          2,
+          1.56
+        ],
+        [
+          0.56,
+          2,
+          1.68
+        ],
+        [
+          0.6,
+          2,
+          1.8
+        ],
+        [
+          0.65,
+          2,
+          1.95
+        ],
+        [
+          0.7,
+          2,
+          2.1
+        ],
+        [
+          0.75,
+          2,
+          2.25
+        ],
+        [
+          0.8,
+          2,
+          2.4
+        ],
+        [
+          0.84,
+          2,
+          2.52
+        ],
+        [
+          0.88,
+          2,
+          2.64
+        ],
+        [
+          0.92,
+          2,
+          2.76
+        ],
+        [
+          0.96,
+          2,
+          2.88
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "desc": "对敌方全体造成等同于翡翠#3[i]%攻击力的量子属性伤害。同时使翡翠天赋的追加攻击获得强化，追加攻击造成的伤害倍率提高#1[i]%。强化效果可生效#2[i]次。"
+    },
+    {
+      "id": "131404",
+      "name": "剔烁之牙",
+      "type": "Talent",
+      "type_text": "天赋",
+      "effect": "AoEAttack",
+      "effect_text": "群攻",
+      "max_level": 15,
+      "element": "Quantum",
+      "params": [
+        [
+          0.012,
+          50,
+          8,
+          5,
+          0.6
+        ],
+        [
+          0.0132,
+          50,
+          8,
+          5,
+          0.66
+        ],
+        [
+          0.0144,
+          50,
+          8,
+          5,
+          0.72
+        ],
+        [
+          0.0156,
+          50,
+          8,
+          5,
+          0.78
+        ],
+        [
+          0.0168,
+          50,
+          8,
+          5,
+          0.84
+        ],
+        [
+          0.018,
+          50,
+          8,
+          5,
+          0.9
+        ],
+        [
+          0.0195,
+          50,
+          8,
+          5,
+          0.975
+        ],
+        [
+          0.021,
+          50,
+          8,
+          5,
+          1.05
+        ],
+        [
+          0.0225,
+          50,
+          8,
+          5,
+          1.125
+        ],
+        [
+          0.024,
+          50,
+          8,
+          5,
+          1.2
+        ],
+        [
+          0.0252,
+          50,
+          8,
+          5,
+          1.26
+        ],
+        [
+          0.0264,
+          50,
+          8,
+          5,
+          1.32
+        ],
+        [
+          0.0276,
+          50,
+          8,
+          5,
+          1.38
+        ],
+        [
+          0.0288,
+          50,
+          8,
+          5,
+          1.44
+        ],
+        [
+          0.03,
+          50,
+          8,
+          5,
+          1.5
+        ]
+      ],
+      "desc": "翡翠或成为【收债人】的目标施放攻击后，每击中1名敌方目标均可获得1点充能。当充能到达#3[i]点后，消耗#3[i]点充能，发动1次追加攻击，对敌方全体目标造成等同于翡翠#5[i]%攻击力的量子属性伤害，本次追加攻击无法获得充能。\n翡翠发动天赋的追加攻击时立即获得#4[i]层【当品】，每层【当品】使暴击伤害提高#1[f1]%，最多叠加#2[i]层。"
+    },
+    {
+      "id": "131406",
+      "name": "攻击",
+      "type": "MazeNormal",
+      "type_text": "dev_连携",
+      "effect": "MazeAttack",
+      "effect_text": "",
+      "max_level": 1,
+      "element": "Quantum",
+      "params": [],
+      "desc": "攻击敌人，进入战斗后削弱敌方目标对应属性韧性。"
+    },
+    {
+      "id": "131407",
+      "name": "猎手的视界",
+      "type": "Maze",
+      "type_text": "秘技",
+      "effect": "Impair",
+      "effect_text": "妨害",
+      "max_level": 1,
+      "element": "",
+      "params": [
+        [
+          10,
+          0.5,
+          15
+        ]
+      ],
+      "desc": "使用秘技后使一定区域内的敌人陷入#1[i]秒【盲从】。【盲从】状态下敌人不会主动攻击我方目标。主动攻击陷入【盲从】的敌人进入战斗时，使所有处于【盲从】状态的敌人同时进入战斗。进入战斗后对敌方全体造成等同于翡翠#2[i]%攻击力的量子属性伤害，立即获得#3[i]层【当品】。"
+    }
+  ],
+  "traces": {
+    "skill_upgrades": [
+      {
+        "id": "1314001",
+        "name": "",
+        "desc": "",
+        "anchor": "Point01",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "131401",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110201",
+                "num": 3
+              },
+              {
+                "id": "114001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110202",
+                "num": 3
+              },
+              {
+                "id": "114002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110202",
+                "num": 5
+              },
+              {
+                "id": "114002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110203",
+                "num": 3
+              },
+              {
+                "id": "114003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110203",
+                "num": 8
+              },
+              {
+                "id": "114003",
+                "num": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1314002",
+        "name": "",
+        "desc": "",
+        "anchor": "Point02",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "131402",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "114001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110201",
+                "num": 3
+              },
+              {
+                "id": "114001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110202",
+                "num": 3
+              },
+              {
+                "id": "114002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110202",
+                "num": 5
+              },
+              {
+                "id": "114002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110202",
+                "num": 7
+              },
+              {
+                "id": "114002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110203",
+                "num": 3
+              },
+              {
+                "id": "114003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110203",
+                "num": 5
+              },
+              {
+                "id": "110505",
+                "num": 1
+              },
+              {
+                "id": "114003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110203",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110203",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1314003",
+        "name": "",
+        "desc": "",
+        "anchor": "Point03",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "131403",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "114001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110201",
+                "num": 3
+              },
+              {
+                "id": "114001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110202",
+                "num": 3
+              },
+              {
+                "id": "114002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110202",
+                "num": 5
+              },
+              {
+                "id": "114002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110202",
+                "num": 7
+              },
+              {
+                "id": "114002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110203",
+                "num": 3
+              },
+              {
+                "id": "114003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110203",
+                "num": 5
+              },
+              {
+                "id": "110505",
+                "num": 1
+              },
+              {
+                "id": "114003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110203",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110203",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1314004",
+        "name": "",
+        "desc": "",
+        "anchor": "Point04",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "131404",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          },
+          {
+            "promotion": 1,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 2500
+              },
+              {
+                "id": "114001",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110201",
+                "num": 3
+              },
+              {
+                "id": "114001",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 3,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 10000
+              },
+              {
+                "id": "110202",
+                "num": 3
+              },
+              {
+                "id": "114002",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110202",
+                "num": 5
+              },
+              {
+                "id": "114002",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 30000
+              },
+              {
+                "id": "110202",
+                "num": 7
+              },
+              {
+                "id": "114002",
+                "num": 6
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 45000
+              },
+              {
+                "id": "110203",
+                "num": 3
+              },
+              {
+                "id": "114003",
+                "num": 3
+              }
+            ]
+          },
+          {
+            "promotion": 5,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 80000
+              },
+              {
+                "id": "110203",
+                "num": 5
+              },
+              {
+                "id": "110505",
+                "num": 1
+              },
+              {
+                "id": "114003",
+                "num": 4
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110203",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          },
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 300000
+              },
+              {
+                "id": "110203",
+                "num": 14
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1314007",
+        "name": "",
+        "desc": "",
+        "anchor": "Point05",
+        "pre_points": [],
+        "level_up_skills": [
+          {
+            "id": "131407",
+            "num": 1
+          }
+        ],
+        "levels": [
+          {
+            "promotion": 0,
+            "level": 0,
+            "properties": [],
+            "materials": []
+          }
+        ]
+      }
+    ],
+    "ability_bonuses": [
+      {
+        "id": "1314101",
+        "name": "逆回购",
+        "desc": "在敌方目标进入战斗时，翡翠获得#2[i]层【当品】。处于【收债人】状态的角色回合开始时，额外获得#1[i]层【当品】。",
+        "anchor": "Point06",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 2,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 5000
+              },
+              {
+                "id": "110201",
+                "num": 3
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1314102",
+        "name": "折牙票",
+        "desc": "战斗开始时，翡翠的行动提前#1[i]%。",
+        "anchor": "Point07",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 4,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 20000
+              },
+              {
+                "id": "110202",
+                "num": 5
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "1314103",
+        "name": "绝当品",
+        "desc": "天赋中每层【当品】额外使翡翠的攻击力提高#1[f1]%。",
+        "anchor": "Point08",
+        "pre_points": [],
+        "max_level": 1,
+        "levels": [
+          {
+            "promotion": 6,
+            "level": 0,
+            "properties": [],
+            "materials": [
+              {
+                "id": "2",
+                "num": 160000
+              },
+              {
+                "id": "110203",
+                "num": 8
+              },
+              {
+                "id": "241",
+                "num": 1
+              },
+              {
+                "id": "110505",
+                "num": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stat_bonuses": [
+      {
+        "id": "1314201",
+        "name": "伤害强化•量子",
+        "anchor": "Point09",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "QuantumAddedRatio",
+            "name": "量子属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1314202",
+        "name": "攻击强化",
+        "anchor": "Point10",
+        "pre_points": [
+          "1314101"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1314203",
+        "name": "伤害强化•量子",
+        "anchor": "Point11",
+        "pre_points": [
+          "1314202"
+        ],
+        "properties": [
+          {
+            "type": "QuantumAddedRatio",
+            "name": "量子属性伤害提高",
+            "value": 0.032
+          }
+        ]
+      },
+      {
+        "id": "1314204",
+        "name": "效果抵抗强化",
+        "anchor": "Point12",
+        "pre_points": [
+          "1314202"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "id": "1314205",
+        "name": "伤害强化•量子",
+        "anchor": "Point13",
+        "pre_points": [
+          "1314102"
+        ],
+        "properties": [
+          {
+            "type": "QuantumAddedRatio",
+            "name": "量子属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1314206",
+        "name": "攻击强化",
+        "anchor": "Point14",
+        "pre_points": [
+          "1314205"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1314207",
+        "name": "伤害强化•量子",
+        "anchor": "Point15",
+        "pre_points": [
+          "1314205"
+        ],
+        "properties": [
+          {
+            "type": "QuantumAddedRatio",
+            "name": "量子属性伤害提高",
+            "value": 0.048
+          }
+        ]
+      },
+      {
+        "id": "1314208",
+        "name": "效果抵抗强化",
+        "anchor": "Point16",
+        "pre_points": [
+          "1314103"
+        ],
+        "properties": [
+          {
+            "type": "StatusResistanceBase",
+            "name": "效果抵抗",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "id": "1314209",
+        "name": "攻击强化",
+        "anchor": "Point17",
+        "pre_points": [
+          "1314103"
+        ],
+        "properties": [
+          {
+            "type": "AttackAddedRatio",
+            "name": "攻击力",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "id": "1314210",
+        "name": "伤害强化•量子",
+        "anchor": "Point18",
+        "pre_points": [],
+        "properties": [
+          {
+            "type": "QuantumAddedRatio",
+            "name": "量子属性伤害提高",
+            "value": 0.064
+          }
+        ]
+      }
+    ]
+  },
+  "eidolons": [
+    {
+      "id": "131401",
+      "name": "无私？亦可交割",
+      "rank": 1,
+      "desc": "翡翠天赋的追加攻击伤害提高32%，持有【收债人】状态的角色施放攻击后击中敌方目标数量等于2/1名时，翡翠额外获得1/2点充能。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "131402",
+      "name": "道德？谨此核押",
+      "rank": 2,
+      "desc": "【当品】叠加至15层时，翡翠暴击率提高18%。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "131403",
+      "name": "坦率？只待典当",
+      "rank": 3,
+      "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+      "level_up_skills": [
+        {
+          "id": "131402",
+          "num": 2
+        },
+        {
+          "id": "131404",
+          "num": 2
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "131404",
+      "name": "真诚？唯凭认沽",
+      "rank": 4,
+      "desc": "施放终结技时，使翡翠造成的伤害无视敌方目标12%的防御力，持续3回合。",
+      "level_up_skills": [],
+      "max_level": 1
+    },
+    {
+      "id": "131405",
+      "name": "希冀？已然绝卖",
+      "rank": 5,
+      "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+      "level_up_skills": [
+        {
+          "id": "131403",
+          "num": 2
+        },
+        {
+          "id": "131401",
+          "num": 1
+        }
+      ],
+      "max_level": 1
+    },
+    {
+      "id": "131406",
+      "name": "公平？仍须保荐",
+      "rank": 6,
+      "desc": "场上有【收债人】状态的角色时，翡翠量子属性抗性穿透提高20%，同时翡翠获得【收债人】状态。",
+      "level_up_skills": [],
+      "max_level": 1
+    }
+  ]
+}
