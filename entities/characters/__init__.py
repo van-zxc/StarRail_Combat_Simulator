@@ -9,6 +9,7 @@ from entities.characters.kafka import Kafka
 from entities.characters.silverwolf import SilverWolf
 from entities.characters.arlan import Arlan
 from entities.characters.asta import Asta
+from entities.characters.herta import Herta
 from entities.characters.template_character import (
     EIDOLON_REGISTRY,
     TRACE_REGISTRY,
