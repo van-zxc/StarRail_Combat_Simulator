@@ -37,8 +37,20 @@ entities/
     base.py                  # BaseRelic + RelicSetManager
 docs/
   todo.md                    # 开发路线图 (已完成/缺失/待实测)
-original_data/               # 原始文档与数据源
-test_starrail_combat.py      # pytest: 217 tests
+original_data/                   # 原始文档与数据源
+  enemy/                         # DimbreathBot 完整数据 (4.2.0, 2026-05)
+    excel_output/                # MonsterConfig.json + MonsterSkillConfig.json (2027文件)
+    config_character/            # 怪物技能配置 (541文件)
+    config_ability/              # 怪物能力实现 (688文件)
+    config_ai/                   # 怪物 AI 行为树 (688文件)
+enemy_data/                      # 构建后的单文件数据源
+  _data.json                     # ★ 引擎加载的唯一文件: {<tid>: {弱点/技能/AI}, _ai: {...}, _meta: {...}}
+  override/                      # ★ 用户覆盖目录 — 同名文件按字段覆盖
+scripts/
+  download_enemy_data.ps1        # 下载脚本 (git clone 方式)
+  build_enemy_data.py            # 从原始数据构建 _data.json
+  split_enemy_data.py            # 废弃 (已被build替代)
+test_starrail_combat.py      # pytest: 312 tests
 ```
 
 ## 开发约定

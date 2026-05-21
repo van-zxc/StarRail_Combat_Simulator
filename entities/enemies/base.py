@@ -117,9 +117,9 @@ class BaseEnemy(Fighter):
 
         if data is not None:
             weaknesses = [
-                ElementType[w]
+                ElementType[w.upper()]
                 for w in data.get("weaknesses", [])
-                if w in ElementType.__members__
+                if w.upper() in ElementType.__members__
             ]
             return cls(
                 name=enemy_id,
