@@ -66,8 +66,10 @@
 - [x] 锋镝(20000) 端到端 Pipeline: `Arrows` + `ArrowsEffect` + 12 测试
 - [x] 命途限制校验: `lc.path != char.path` 时跳过特效激活，基础面板仍生效
 - [x] Pipeline 指引文档 `docs/light_cone_pipeline.md`
-- [x] 光锥等级系统: `_PROMOTIONS` 分段线性插值, Lv1-80 整数级精确, 中间插值
-- [ ] 更多光锥特效实现 (Cruising/24001 等)
+- [x] 光锥等级系统: `_PROMOTIONS` 分段线性插值, Lv1-80 整数级精确
+- [x] 一场术后对话(21000/4★/丰饶): ERR 永久 + 终结技治疗加成 (ON_ULTIMATE_INSERTED)
+- [x] 银河铁道之夜(23000/5★/智识): 敌人计数 ATK 叠加 + 弱点击破 DMG (UNIT_DOWNED + ON_WEAKNESS_BREAK)
+- [ ] 更多光锥特效实现
 
 ### 敌人多技能/行动模式 (§16)
 

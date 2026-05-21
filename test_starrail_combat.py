@@ -45,6 +45,8 @@ from core.enums import DEBUFF_RES_MAP
 from core.events import EventType
 from core.targeting import TargetManager
 from entities.light_cones.arrows import Arrows, ArrowsEffect
+from entities.light_cones.post_op import PostOpConversation, PostOpEffect
+from entities.light_cones.night_milky_way import NightOnTheMilkyWay, NightMilkyWayEffect
 from core.damage.multipliers import (
     apply_break_effect,
     crit_multiplier,
@@ -5198,4 +5200,167 @@ class TestLightConeLevelSystem:
         assert lc.base_hp == pytest.approx(300)
         assert lc.base_atk == pytest.approx(50)
         assert lc.base_def == pytest.approx(40)
+
+
+# ============================================================
+#  TestPostOpConversation — 21000 一场术后对话
+# ============================================================
+class TestPostOpConversation:
+    """4★ 丰饶光锥：ERR 永久 + 终结技治疗加成。"""
+
+    def _make_char_priest(self):
+        c = create_test_character("H", hp=500, speed=100, atk=100)
+        c.path = PathType.ABUNDANCE
+        return c
+
+    def _make_setup(self, superimpose: int = 1):
+        char = self._make_char_priest()
+        enemy = Enemy(name="E", hp=10000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return char, enemy, state, engine
+
+    def test_registry(self) -> None:
+        lc = LightCone("21000")
+        assert isinstance(lc, PostOpConversation)
+        assert lc.id == "21000"
+
+    def test_permanent_err_on_equip(self) -> None:
+        char = self._make_char_priest()
+        lc = LightCone("21000", superimpose=1)
+        char.equip_light_cone(lc)
+        total_err = sum(m.value for m in char.stats.active_modifiers
+                        if m.stat_type == StatType.ERR and m.source == "LightCone_21000")
+        assert total_err == pytest.approx(0.08)
+
+    def test_no_heal_bonus_on_equip(self) -> None:
+        char = self._make_char_priest()
+        lc = LightCone("21000", superimpose=1)
+        char.equip_light_cone(lc)
+        heal_mods = [m for m in char.stats.active_modifiers
+                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000"]
+        assert len(heal_mods) == 0
+
+    def test_heal_buff_on_ultimate(self) -> None:
+        char, _, _, engine = self._make_setup()
+        lc = LightCone("21000", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.ON_ULTIMATE_INSERTED, character=char, target=None)
+        heal_mods = [m for m in char.stats.active_modifiers
+                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000"]
+        assert len(heal_mods) == 1
+        assert heal_mods[0].value == pytest.approx(0.12)
+
+    def test_heal_buff_only_for_owner(self) -> None:
+        char, _, _, engine = self._make_setup()
+        other = self._make_char_priest()
+        other.name = "O2"
+        engine.state.characters.append(other)
+        lc = LightCone("21000", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.ON_ULTIMATE_INSERTED, character=other, target=None)
+        heal_mods = [m for m in char.stats.active_modifiers
+                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000"]
+        assert len(heal_mods) == 0
+
+    def test_unequip_cleans_up(self) -> None:
+        char = self._make_char_priest()
+        lc = LightCone("21000", superimpose=1)
+        char.equip_light_cone(lc)
+        assert any(m.source == "LightCone_21000" for m in char.stats.active_modifiers)
+        bare = LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10)
+        char.equip_light_cone(bare)
+        assert not any(m.source == "LightCone_21000" for m in char.stats.active_modifiers)
+
+
+# ============================================================
+#  TestNightOnTheMilkyWay — 23000 银河铁道之夜
+# ============================================================
+class TestNightOnTheMilkyWay:
+    """5★ 智识光锥：敌人计数 ATK 叠加 + 弱点击破 DMG 加成。"""
+
+    def _make_setup(self, n_enemies: int = 3, superimpose: int = 1):
+        char = create_test_character("M", hp=500, speed=100, atk=100, element=ElementType.FIRE)
+        enemies = [Enemy(name=f"E{i}", hp=10000, speed=50, base_damage=0, level=1,
+                         weaknesses=[ElementType.FIRE]) for i in range(n_enemies)]
+        state = GameState(characters=[char], enemies=enemies)
+        engine = CombatEngine(state)
+        return char, enemies, state, engine
+
+    def test_registry(self) -> None:
+        lc = LightCone("23000")
+        assert isinstance(lc, NightOnTheMilkyWay)
+        assert lc.id == "23000"
+
+    def test_atk_stacks_initial_3_enemies(self) -> None:
+        char, _, _, engine = self._make_setup(n_enemies=3)
+        lc = LightCone("23000", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        atk_val = sum(m.value for m in char.stats.active_modifiers
+                      if m.stat_type == StatType.ATK and m.source == "LightCone_23000")
+        assert atk_val == pytest.approx(0.27)
+
+    def test_atk_stacks_capped_at_5(self) -> None:
+        char, _, _, engine = self._make_setup(n_enemies=7)
+        lc = LightCone("23000", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        atk_val = sum(m.value for m in char.stats.active_modifiers
+                      if m.stat_type == StatType.ATK and m.source == "LightCone_23000")
+        assert atk_val == pytest.approx(0.45)
+
+    def test_atk_stacks_zero_when_no_enemies(self) -> None:
+        char = create_test_character("M", hp=500, speed=100, atk=100, element=ElementType.FIRE)
+        state = GameState(characters=[char], enemies=[])
+        engine = CombatEngine(state)
+        lc = LightCone("23000", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        atk_mods = [m for m in char.stats.active_modifiers
+                    if m.stat_type == StatType.ATK and m.source == "LightCone_23000"]
+        assert len(atk_mods) == 0
+
+    def test_atk_stacks_on_death(self) -> None:
+        char, enemies, _, engine = self._make_setup(n_enemies=3)
+        lc = LightCone("23000", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        atk_val = sum(m.value for m in char.stats.active_modifiers
+                      if m.stat_type == StatType.ATK and m.source == "LightCone_23000")
+        assert atk_val == pytest.approx(0.27)
+
+        enemies[0].hp = 0
+        engine.event_bus.emit(EventType.UNIT_DOWNED, unit=enemies[0], source=char)
+
+        atk_val_after = sum(m.value for m in char.stats.active_modifiers
+                            if m.stat_type == StatType.ATK and m.source == "LightCone_23000")
+        assert atk_val_after == pytest.approx(0.18)
+
+    def test_dmg_bonus_on_break(self) -> None:
+        char, _, _, engine = self._make_setup(n_enemies=1)
+        lc = LightCone("23000", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.ON_WEAKNESS_BREAK, source=char, target=char)
+        dmg_mods = [m for m in char.stats.active_modifiers
+                    if m.stat_type == StatType.DMG_BONUS and m.source == "LightCone_23000_DMG"]
+        assert len(dmg_mods) == 1
+        assert dmg_mods[0].value == pytest.approx(0.30)
+        assert dmg_mods[0].duration == 1
+
+    def test_unequip_cleans_up(self) -> None:
+        char, _, _, engine = self._make_setup(n_enemies=3)
+        lc = LightCone("23000", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        assert any(m.source == "LightCone_23000" for m in char.stats.active_modifiers)
+        bare = LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10)
+        char.equip_light_cone(bare)
+        assert not any(m.source == "LightCone_23000" for m in char.stats.active_modifiers)
+        assert not any("LightCone_23000" in m.source
+                       for m in char.stats.active_modifiers if m.source)
 
