@@ -169,8 +169,14 @@ class BaseCharacter(Fighter):
                 old.effect.on_unequip(self)
             self.stats.purge_source(f"LightCone_{old.id}")
         self.light_cone = lc
-        if lc.effect is not None:
+
+        lc._init_path_key_map()
+        lc_path = lc.path
+        if lc_path is not None and lc_path != self.path:
+            print(f"  [提示] {self.name} 命途({self.path.name})与{lc.name}不匹配，光锥特效未激活")
+        elif lc.effect is not None:
             lc.effect.on_equip(self)
+
         self._recalc_max_hp()
 
     def equip_relic(self, relic: "Relic") -> None:

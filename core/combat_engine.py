@@ -47,7 +47,11 @@ class CombatEngine:
         # 注册光锥特效事件监听器
         for char in self.state.alive_characters:
             if char.light_cone is not None and char.light_cone.effect is not None:
-                char.light_cone.effect.on_combat_start(self.state, char)
+                lc = char.light_cone
+                lc._init_path_key_map()
+                if lc.path is not None and lc.path != char.path:
+                    continue
+                lc.effect.on_combat_start(self.state, char)
 
         self.event_bus.emit(EventType.BATTLE_START, engine=self)
         self.state.apply_techniques()
@@ -123,8 +127,8 @@ class CombatEngine:
 
             self._log_team_status()
 
-            # 修饰器削层 (仅 Pri 3 后)
-            self._decrement_modifiers()
+            # 修饰器削层 (仅当前行动者)
+            self._decrement_modifiers(unit=actor)
             self._check_and_enqueue_ultimates()
             self.event_bus.emit(EventType.TURN_END, unit=actor, engine=self)
 
@@ -187,9 +191,9 @@ class CombatEngine:
     # ================================================================
     #  修饰器削层
     # ================================================================
-    def _decrement_modifiers(self) -> None:
-        """回合结束时递减 (向后兼容)。"""
-        self._decrement_modifiers_timing("owner_turn_end")
+    def _decrement_modifiers(self, unit: "Fighter | None" = None) -> None:
+        """回合结束时递减修饰器。unit 不为空时只处理该单位。"""
+        self._decrement_modifiers_timing("owner_turn_end", unit=unit)
 
     def _decrement_modifiers_timing(self, timing: str, unit: "Fighter | None" = None) -> None:
         """按指定 tickTiming 递减修饰器。unit 不为空时只处理该单位。"""
