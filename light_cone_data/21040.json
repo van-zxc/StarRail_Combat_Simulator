@@ -1,0 +1,216 @@
+{
+  "id": "21040",
+  "name": "银河沦陷日",
+  "tag": "21040",
+  "rarity": 4,
+  "path": "智识",
+  "path_key": "Mage",
+  "path_en": "Erudition",
+  "icon": "icon/light_cone/21040.png",
+  "preview": "image/light_cone_preview/21040.png",
+  "portrait": "image/light_cone_portrait/21040.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 15,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 33,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 57,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 81,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 105,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 129,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 153,
+        "def_step": 2.25
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "114001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110131",
+          "num": 3
+        },
+        {
+          "id": "114001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110132",
+          "num": 3
+        },
+        {
+          "id": "114002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110132",
+          "num": 6
+        },
+        {
+          "id": "114002",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110133",
+          "num": 4
+        },
+        {
+          "id": "114003",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110133",
+          "num": 8
+        },
+        {
+          "id": "114003",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "攻略",
+  "skill_desc": "使装备者的攻击力提高#1[i]%。装备者施放攻击后，若有不少于2个被攻击的敌方目标具有对应属性弱点，装备者的暴击伤害提高#2[i]%，持续#3[i]回合。",
+  "params": [
+    [
+      0.16,
+      0.2,
+      2
+    ],
+    [
+      0.18,
+      0.25,
+      2
+    ],
+    [
+      0.2,
+      0.3,
+      2
+    ],
+    [
+      0.22,
+      0.35,
+      2
+    ],
+    [
+      0.24,
+      0.4,
+      2
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.16
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.18
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.22
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.24
+      }
+    ]
+  ]
+}

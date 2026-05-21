@@ -103,6 +103,17 @@ class EntityStats:
             if old_spd != new_spd:
                 self._owner.recalc_av_for_spd(old_spd, new_spd)
 
+    def purge_source(self, source: str) -> None:
+        """移除所有 source 匹配的修饰器 (无视 dispellable，用于卸载装备)。"""
+        old_spd = self.get_total_stat(StatType.SPD) if self._owner else 0.0
+        self.active_modifiers = [
+            m for m in self.active_modifiers if m.source != source
+        ]
+        if self._owner and old_spd > 0:
+            new_spd = self.get_total_stat(StatType.SPD)
+            if old_spd != new_spd:
+                self._owner.recalc_av_for_spd(old_spd, new_spd)
+
     def remove_modifier_by_tag(self, tag: str) -> None:
         """移除所有包含 tag 且可驱散的修饰器。"""
         old_spd = self.get_total_stat(StatType.SPD) if self._owner else 0.0

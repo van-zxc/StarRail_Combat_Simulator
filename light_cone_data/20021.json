@@ -1,0 +1,186 @@
+{
+  "id": "20021",
+  "name": "焚影",
+  "tag": "20021",
+  "rarity": 3,
+  "path": "记忆",
+  "path_key": "Memory",
+  "path_en": "Remembrance",
+  "icon": "icon/light_cone/20021.png",
+  "preview": "image/light_cone_preview/20021.png",
+  "portrait": "image/light_cone_portrait/20021.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 38.4,
+        "hp_step": 5.76,
+        "atk_base": 14.4,
+        "atk_step": 2.16,
+        "def_base": 12,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 84.48,
+        "hp_step": 5.76,
+        "atk_base": 31.68,
+        "atk_step": 2.16,
+        "def_base": 26.4,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 145.92,
+        "hp_step": 5.76,
+        "atk_base": 54.72,
+        "atk_step": 2.16,
+        "def_base": 45.6,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 207.36,
+        "hp_step": 5.76,
+        "atk_base": 77.76,
+        "atk_step": 2.16,
+        "def_base": 64.8,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 268.8,
+        "hp_step": 5.76,
+        "atk_base": 100.8,
+        "atk_step": 2.16,
+        "def_base": 84,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 330.24,
+        "hp_step": 5.76,
+        "atk_base": 123.84,
+        "atk_step": 2.16,
+        "def_base": 103.2,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 391.68,
+        "hp_step": 5.76,
+        "atk_base": 146.88,
+        "atk_step": 2.16,
+        "def_base": 122.4,
+        "def_step": 1.8
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "111001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110251",
+          "num": 2
+        },
+        {
+          "id": "111001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110252",
+          "num": 2
+        },
+        {
+          "id": "111002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110252",
+          "num": 4
+        },
+        {
+          "id": "111002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110253",
+          "num": 3
+        },
+        {
+          "id": "111003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110253",
+          "num": 6
+        },
+        {
+          "id": "111003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "美化",
+  "skill_desc": "装备者首次召唤忆灵时，恢复#1[i]点战技点，并恢复自身#2[i]点能量。",
+  "params": [
+    [
+      1,
+      12
+    ],
+    [
+      1,
+      14
+    ],
+    [
+      1,
+      16
+    ],
+    [
+      1,
+      18
+    ],
+    [
+      1,
+      20
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "id": "23017",
+  "name": "惊魂夜",
+  "tag": "23017",
+  "rarity": 5,
+  "path": "丰饶",
+  "path_key": "Priest",
+  "path_en": "Abundance",
+  "icon": "icon/light_cone/23017.png",
+  "preview": "image/light_cone_preview/23017.png",
+  "portrait": "image/light_cone_portrait/23017.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 52.8,
+        "hp_step": 7.92,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 24,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 116.16,
+        "hp_step": 7.92,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 52.8,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 200.64,
+        "hp_step": 7.92,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 91.2,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 285.12,
+        "hp_step": 7.92,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 129.6,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 369.6,
+        "hp_step": 7.92,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 168,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 454.08,
+        "hp_step": 7.92,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 206.4,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 538.56,
+        "hp_step": 7.92,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 244.8,
+        "def_step": 3.6
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "113001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110171",
+          "num": 4
+        },
+        {
+          "id": "113001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110172",
+          "num": 4
+        },
+        {
+          "id": "113002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110172",
+          "num": 8
+        },
+        {
+          "id": "113002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110173",
+          "num": 5
+        },
+        {
+          "id": "113003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110173",
+          "num": 10
+        },
+        {
+          "id": "113003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "深度深呼吸",
+  "skill_desc": "使装备者的能量恢复效率提高#1[i]%。我方目标施放终结技时，装备者为当前生命值百分比最低的我方目标回复等同于其#2[i]%生命上限的生命值。当装备者为我方目标提供治疗时，使该目标的攻击力提高#3[f1]%，该效果最多叠加#4[i]层，持续#5[i]回合。",
+  "params": [
+    [
+      0.12,
+      0.1,
+      0.024,
+      5,
+      2
+    ],
+    [
+      0.14,
+      0.11,
+      0.028,
+      5,
+      2
+    ],
+    [
+      0.16,
+      0.12,
+      0.032,
+      5,
+      2
+    ],
+    [
+      0.18,
+      0.13,
+      0.036,
+      5,
+      2
+    ],
+    [
+      0.2,
+      0.14,
+      0.04,
+      5,
+      2
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "SPRatioBase",
+        "value": 0.12
+      }
+    ],
+    [
+      {
+        "type": "SPRatioBase",
+        "value": 0.14
+      }
+    ],
+    [
+      {
+        "type": "SPRatioBase",
+        "value": 0.16
+      }
+    ],
+    [
+      {
+        "type": "SPRatioBase",
+        "value": 0.18
+      }
+    ],
+    [
+      {
+        "type": "SPRatioBase",
+        "value": 0.2
+      }
+    ]
+  ]
+}

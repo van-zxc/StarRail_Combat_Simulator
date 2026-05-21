@@ -1,0 +1,221 @@
+{
+  "id": "23008",
+  "name": "棺的回响",
+  "tag": "23008",
+  "rarity": 5,
+  "path": "丰饶",
+  "path_key": "Priest",
+  "path_en": "Abundance",
+  "icon": "icon/light_cone/23008.png",
+  "preview": "image/light_cone_preview/23008.png",
+  "portrait": "image/light_cone_portrait/23008.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 52.8,
+        "hp_step": 7.92,
+        "atk_base": 26.4,
+        "atk_step": 3.96,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 116.16,
+        "hp_step": 7.92,
+        "atk_base": 58.08,
+        "atk_step": 3.96,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 200.64,
+        "hp_step": 7.92,
+        "atk_base": 100.32,
+        "atk_step": 3.96,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 285.12,
+        "hp_step": 7.92,
+        "atk_base": 142.56,
+        "atk_step": 3.96,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 369.6,
+        "hp_step": 7.92,
+        "atk_base": 184.8,
+        "atk_step": 3.96,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 454.08,
+        "hp_step": 7.92,
+        "atk_base": 227.04,
+        "atk_step": 3.96,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 538.56,
+        "hp_step": 7.92,
+        "atk_base": 269.28,
+        "atk_step": 3.96,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "113011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110171",
+          "num": 4
+        },
+        {
+          "id": "113011",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110172",
+          "num": 4
+        },
+        {
+          "id": "113012",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110172",
+          "num": 8
+        },
+        {
+          "id": "113012",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110173",
+          "num": 5
+        },
+        {
+          "id": "113013",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110173",
+          "num": 10
+        },
+        {
+          "id": "113013",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "荆棘",
+  "skill_desc": "使装备者的攻击力提高#1[i]%。当装备者施放攻击后，每击中1名不同的敌方目标，恢复#3[f1]点能量，每次攻击最多通过该方式恢复#4[i]次能量。当装备者施放终结技后，使我方全体速度提高#2[i]点，持续1回合。",
+  "params": [
+    [
+      0.24,
+      12,
+      3,
+      3
+    ],
+    [
+      0.28,
+      14,
+      3.5,
+      3
+    ],
+    [
+      0.32,
+      16,
+      4,
+      3
+    ],
+    [
+      0.36,
+      18,
+      4.5,
+      3
+    ],
+    [
+      0.4,
+      20,
+      5,
+      3
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.28
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.32
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.36
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.4
+      }
+    ]
+  ]
+}

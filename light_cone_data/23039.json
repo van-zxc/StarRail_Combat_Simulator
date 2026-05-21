@@ -1,0 +1,251 @@
+{
+  "id": "23039",
+  "name": "血火啊，燃烧前路",
+  "tag": "23039",
+  "rarity": 5,
+  "path": "毁灭",
+  "path_key": "Warrior",
+  "path_en": "Destruction",
+  "icon": "icon/light_cone/23039.png",
+  "preview": "image/light_cone_preview/23039.png",
+  "portrait": "image/light_cone_portrait/23039.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 62.4,
+        "hp_step": 9.36,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 137.28,
+        "hp_step": 9.36,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 237.12,
+        "hp_step": 9.36,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 336.96,
+        "hp_step": 9.36,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 436.8,
+        "hp_step": 9.36,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 536.64,
+        "hp_step": 9.36,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 636.48,
+        "hp_step": 9.36,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "115001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110181",
+          "num": 4
+        },
+        {
+          "id": "115001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110182",
+          "num": 4
+        },
+        {
+          "id": "115002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110182",
+          "num": 8
+        },
+        {
+          "id": "115002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110183",
+          "num": 5
+        },
+        {
+          "id": "115003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110183",
+          "num": 10
+        },
+        {
+          "id": "115003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "远望",
+  "skill_desc": "使装备者的生命上限提高#1[i]%，受到的治疗量提高#6[i]%，施放战技或终结技时消耗等同于自身#2[f1]%生命上限的生命值，并使本次攻击造成的伤害提高#3[i]%，若该效果消耗的生命值高于#4[i]点，可使伤害额外提高#5[i]%。\n若当前生命值不足，该效果最多使装备者的当前生命值降低至1点。",
+  "params": [
+    [
+      0.18,
+      0.06,
+      0.3,
+      500,
+      0.3,
+      0.2
+    ],
+    [
+      0.21,
+      0.065,
+      0.35,
+      500,
+      0.35,
+      0.25
+    ],
+    [
+      0.24,
+      0.07,
+      0.4,
+      500,
+      0.4,
+      0.3
+    ],
+    [
+      0.27,
+      0.075,
+      0.45,
+      500,
+      0.45,
+      0.35
+    ],
+    [
+      0.3,
+      0.08,
+      0.5,
+      500,
+      0.5,
+      0.4
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.18
+      },
+      {
+        "type": "HealTakenRatio",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.21
+      },
+      {
+        "type": "HealTakenRatio",
+        "value": 0.25
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.24
+      },
+      {
+        "type": "HealTakenRatio",
+        "value": 0.3
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.27
+      },
+      {
+        "type": "HealTakenRatio",
+        "value": 0.35
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.3
+      },
+      {
+        "type": "HealTakenRatio",
+        "value": 0.4
+      }
+    ]
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "id": "23057",
+  "name": "欢迎来到银河城",
+  "tag": "23057",
+  "rarity": 5,
+  "path": "欢愉",
+  "path_key": "Elation",
+  "path_en": "Elation",
+  "icon": "icon/light_cone/23057.png",
+  "preview": "image/light_cone_preview/23057.png",
+  "portrait": "image/light_cone_portrait/23057.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 52.8,
+        "hp_step": 7.92,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 24,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 116.16,
+        "hp_step": 7.92,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 52.8,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 200.64,
+        "hp_step": 7.92,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 91.2,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 285.12,
+        "hp_step": 7.92,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 129.6,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 369.6,
+        "hp_step": 7.92,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 168,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 454.08,
+        "hp_step": 7.92,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 206.4,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 538.56,
+        "hp_step": 7.92,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 244.8,
+        "def_step": 3.6
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "116001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110261",
+          "num": 4
+        },
+        {
+          "id": "116001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110262",
+          "num": 4
+        },
+        {
+          "id": "116002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110262",
+          "num": 8
+        },
+        {
+          "id": "116002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110263",
+          "num": 5
+        },
+        {
+          "id": "116003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110263",
+          "num": 10
+        },
+        {
+          "id": "116003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "稳赢",
+  "skill_desc": "使装备者的速度提高#1[i]%，造成的欢愉伤害无视目标#2[i]%的防御力。当装备者对自身单体施放终结技时，获得#3[i]点【笑点】。该效果最多触发1次，施放#4[i]次普攻后重置可触发次数。",
+  "params": [
+    [
+      0.18,
+      0.2,
+      20,
+      3
+    ],
+    [
+      0.21,
+      0.24,
+      25,
+      3
+    ],
+    [
+      0.24,
+      0.28,
+      30,
+      3
+    ],
+    [
+      0.27,
+      0.32,
+      35,
+      3
+    ],
+    [
+      0.3,
+      0.36,
+      40,
+      3
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.18
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.21
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.27
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.3
+      }
+    ]
+  ]
+}

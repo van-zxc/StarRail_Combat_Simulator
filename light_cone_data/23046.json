@@ -1,0 +1,226 @@
+{
+  "id": "23046",
+  "name": "理想燃烧的地狱",
+  "tag": "23046",
+  "rarity": 5,
+  "path": "巡猎",
+  "path_key": "Rogue",
+  "path_en": "The Hunt",
+  "icon": "icon/light_cone/23046.png",
+  "preview": "image/light_cone_preview/23046.png",
+  "portrait": "image/light_cone_portrait/23046.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 26.4,
+        "atk_step": 3.96,
+        "def_base": 24,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 58.08,
+        "atk_step": 3.96,
+        "def_base": 52.8,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 100.32,
+        "atk_step": 3.96,
+        "def_base": 91.2,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 142.56,
+        "atk_step": 3.96,
+        "def_base": 129.6,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 184.8,
+        "atk_step": 3.96,
+        "def_base": 168,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 227.04,
+        "atk_step": 3.96,
+        "def_base": 206.4,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 269.28,
+        "atk_step": 3.96,
+        "def_base": 244.8,
+        "def_step": 3.6
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "111001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110191",
+          "num": 4
+        },
+        {
+          "id": "111001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110192",
+          "num": 4
+        },
+        {
+          "id": "111002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110192",
+          "num": 8
+        },
+        {
+          "id": "111002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110193",
+          "num": 5
+        },
+        {
+          "id": "111003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110193",
+          "num": 10
+        },
+        {
+          "id": "111003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "赤原猎兵",
+  "skill_desc": "使装备者的暴击率提高#1[i]%。进入战斗时，若我方的战技点上限大于等于#2[i]点，使装备者的攻击力提高#3[i]%。装备者每次施放战技后，使装备者的攻击力提高#4[i]%，最多叠加#5[i]次。",
+  "params": [
+    [
+      0.16,
+      6,
+      0.4,
+      0.1,
+      4
+    ],
+    [
+      0.2,
+      6,
+      0.5,
+      0.125,
+      4
+    ],
+    [
+      0.24,
+      6,
+      0.6,
+      0.15,
+      4
+    ],
+    [
+      0.28,
+      6,
+      0.7,
+      0.175,
+      4
+    ],
+    [
+      0.32,
+      6,
+      0.8,
+      0.2,
+      4
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.16
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.28
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.32
+      }
+    ]
+  ]
+}

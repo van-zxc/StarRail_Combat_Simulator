@@ -161,6 +161,13 @@ class BaseCharacter(Fighter):
     # -- 装备操作 --
 
     def equip_light_cone(self, lc: "LightCone") -> None:
+        if self.light_cone is lc:
+            return
+        if self.light_cone is not None:
+            old = self.light_cone
+            if old.effect is not None:
+                old.effect.on_unequip(self)
+            self.stats.purge_source(f"LightCone_{old.id}")
         self.light_cone = lc
         if lc.effect is not None:
             lc.effect.on_equip(self)

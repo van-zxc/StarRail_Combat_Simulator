@@ -1,0 +1,186 @@
+{
+  "id": "20009",
+  "name": "乐圮",
+  "tag": "20009",
+  "rarity": 3,
+  "path": "毁灭",
+  "path_key": "Warrior",
+  "path_en": "Destruction",
+  "icon": "icon/light_cone/20009.png",
+  "preview": "image/light_cone_preview/20009.png",
+  "portrait": "image/light_cone_portrait/20009.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 38.4,
+        "hp_step": 5.76,
+        "atk_base": 16.8,
+        "atk_step": 2.52,
+        "def_base": 9,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 84.48,
+        "hp_step": 5.76,
+        "atk_base": 36.96,
+        "atk_step": 2.52,
+        "def_base": 19.8,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 145.92,
+        "hp_step": 5.76,
+        "atk_base": 63.84,
+        "atk_step": 2.52,
+        "def_base": 34.2,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 207.36,
+        "hp_step": 5.76,
+        "atk_base": 90.72,
+        "atk_step": 2.52,
+        "def_base": 48.6,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 268.8,
+        "hp_step": 5.76,
+        "atk_base": 117.6,
+        "atk_step": 2.52,
+        "def_base": 63,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 330.24,
+        "hp_step": 5.76,
+        "atk_base": 144.48,
+        "atk_step": 2.52,
+        "def_base": 77.4,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 391.68,
+        "hp_step": 5.76,
+        "atk_base": 171.36,
+        "atk_step": 2.52,
+        "def_base": 91.8,
+        "def_step": 1.35
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "111001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110111",
+          "num": 2
+        },
+        {
+          "id": "111001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110112",
+          "num": 2
+        },
+        {
+          "id": "111002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110112",
+          "num": 4
+        },
+        {
+          "id": "111002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110113",
+          "num": 3
+        },
+        {
+          "id": "111003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110113",
+          "num": 6
+        },
+        {
+          "id": "111003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "诛讨",
+  "skill_desc": "使装备者对当前生命值百分比大于#1[i]%的敌方目标造成的伤害提高#2[i]%。",
+  "params": [
+    [
+      0.5,
+      0.2
+    ],
+    [
+      0.5,
+      0.25
+    ],
+    [
+      0.5,
+      0.3
+    ],
+    [
+      0.5,
+      0.35
+    ],
+    [
+      0.5,
+      0.4
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

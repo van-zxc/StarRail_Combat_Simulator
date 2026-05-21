@@ -1,0 +1,221 @@
+{
+  "id": "23049",
+  "name": "致长夜的星光",
+  "tag": "23049",
+  "rarity": 5,
+  "path": "记忆",
+  "path_key": "Memory",
+  "path_en": "Remembrance",
+  "icon": "icon/light_cone/23049.png",
+  "preview": "image/light_cone_preview/23049.png",
+  "portrait": "image/light_cone_portrait/23049.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 52.8,
+        "hp_step": 7.92,
+        "atk_base": 24,
+        "atk_step": 3.6,
+        "def_base": 21,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 116.16,
+        "hp_step": 7.92,
+        "atk_base": 52.8,
+        "atk_step": 3.6,
+        "def_base": 46.2,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 200.64,
+        "hp_step": 7.92,
+        "atk_base": 91.2,
+        "atk_step": 3.6,
+        "def_base": 79.8,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 285.12,
+        "hp_step": 7.92,
+        "atk_base": 129.6,
+        "atk_step": 3.6,
+        "def_base": 113.4,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 369.6,
+        "hp_step": 7.92,
+        "atk_base": 168,
+        "atk_step": 3.6,
+        "def_base": 147,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 454.08,
+        "hp_step": 7.92,
+        "atk_base": 206.4,
+        "atk_step": 3.6,
+        "def_base": 180.6,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 538.56,
+        "hp_step": 7.92,
+        "atk_base": 244.8,
+        "atk_step": 3.6,
+        "def_base": 214.2,
+        "def_step": 3.15
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "115011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110251",
+          "num": 4
+        },
+        {
+          "id": "115011",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110252",
+          "num": 4
+        },
+        {
+          "id": "115012",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110252",
+          "num": 8
+        },
+        {
+          "id": "115012",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110253",
+          "num": 5
+        },
+        {
+          "id": "115013",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110253",
+          "num": 10
+        },
+        {
+          "id": "115013",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "未眠",
+  "skill_desc": "使装备者的生命上限提高#1[i]%。装备者的忆灵施放技能时，使装备者获得【夜色】。装备者持有【夜色】时，我方全体忆灵造成的伤害无视目标#2[i]%的防御力，装备者和装备者忆灵造成的伤害提高#3[i]%，装备者的忆灵消失时为装备者恢复#4[i]点能量，同类效果无法叠加。",
+  "params": [
+    [
+      0.3,
+      0.2,
+      0.3,
+      8
+    ],
+    [
+      0.375,
+      0.225,
+      0.375,
+      10
+    ],
+    [
+      0.45,
+      0.25,
+      0.45,
+      12
+    ],
+    [
+      0.525,
+      0.275,
+      0.525,
+      14
+    ],
+    [
+      0.6,
+      0.3,
+      0.6,
+      16
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.3
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.375
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.45
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.525
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.6
+      }
+    ]
+  ]
+}

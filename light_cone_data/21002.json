@@ -1,0 +1,211 @@
+{
+  "id": "21002",
+  "name": "余生的第一天",
+  "tag": "21002",
+  "rarity": 4,
+  "path": "存护",
+  "path_key": "Knight",
+  "path_en": "Preservation",
+  "icon": "icon/light_cone/21002.png",
+  "preview": "image/light_cone_preview/21002.png",
+  "portrait": "image/light_cone_portrait/21002.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 16.8,
+        "atk_step": 2.52,
+        "def_base": 21,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 36.96,
+        "atk_step": 2.52,
+        "def_base": 46.2,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 63.84,
+        "atk_step": 2.52,
+        "def_base": 79.8,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 90.72,
+        "atk_step": 2.52,
+        "def_base": 113.4,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 117.6,
+        "atk_step": 2.52,
+        "def_base": 147,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 144.48,
+        "atk_step": 2.52,
+        "def_base": 180.6,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 171.36,
+        "atk_step": 2.52,
+        "def_base": 214.2,
+        "def_step": 3.15
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "111001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110141",
+          "num": 3
+        },
+        {
+          "id": "111001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110142",
+          "num": 3
+        },
+        {
+          "id": "111002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110142",
+          "num": 6
+        },
+        {
+          "id": "111002",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110143",
+          "num": 4
+        },
+        {
+          "id": "111003",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110143",
+          "num": 8
+        },
+        {
+          "id": "111003",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "此刻定格",
+  "skill_desc": "使装备者的防御力提高#1[i]%。进入战斗后，使我方全体的全属性抗性提高#2[i]%。同类技能无法重复生效。",
+  "params": [
+    [
+      0.16,
+      0.08
+    ],
+    [
+      0.18,
+      0.09
+    ],
+    [
+      0.2,
+      0.1
+    ],
+    [
+      0.22,
+      0.11
+    ],
+    [
+      0.24,
+      0.12
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.16
+      }
+    ],
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.18
+      }
+    ],
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.22
+      }
+    ],
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.24
+      }
+    ]
+  ]
+}

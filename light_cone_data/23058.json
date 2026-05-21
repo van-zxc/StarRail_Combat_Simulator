@@ -1,0 +1,236 @@
+{
+  "id": "23058",
+  "name": "邂逅于下一个花季",
+  "tag": "23058",
+  "rarity": 5,
+  "path": "欢愉",
+  "path_key": "Elation",
+  "path_en": "Elation",
+  "icon": "icon/light_cone/23058.png",
+  "preview": "image/light_cone_preview/23058.png",
+  "portrait": "image/light_cone_portrait/23058.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 28.8,
+        "atk_step": 4.32,
+        "def_base": 21,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 63.36,
+        "atk_step": 4.32,
+        "def_base": 46.2,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 109.44,
+        "atk_step": 4.32,
+        "def_base": 79.8,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 155.52,
+        "atk_step": 4.32,
+        "def_base": 113.4,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 201.6,
+        "atk_step": 4.32,
+        "def_base": 147,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 247.68,
+        "atk_step": 4.32,
+        "def_base": 180.6,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 293.76,
+        "atk_step": 4.32,
+        "def_base": 214.2,
+        "def_step": 3.15
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "116001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110261",
+          "num": 4
+        },
+        {
+          "id": "116001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110262",
+          "num": 4
+        },
+        {
+          "id": "116002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110262",
+          "num": 8
+        },
+        {
+          "id": "116002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110263",
+          "num": 5
+        },
+        {
+          "id": "116003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110263",
+          "num": 10
+        },
+        {
+          "id": "116003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "遐想",
+  "skill_desc": "使装备者的暴击伤害提高#1[i]%，能量恢复效率提高#4[f1]%。装备者的能量上限大于#5[i]时，每超出10点能量上限额外使能量恢复效率提高#6[f1]%，最多计入#7[i]点超出的能量上限。装备者施放欢愉技时，使敌方全体受到的伤害提高#2[f1]%，持续#3[i]回合，同类效果无法叠加。",
+  "params": [
+    [
+      0.6,
+      0.15,
+      2,
+      0.1,
+      120,
+      0.003,
+      360
+    ],
+    [
+      0.75,
+      0.1875,
+      2,
+      0.115,
+      120,
+      0.003,
+      360
+    ],
+    [
+      0.9,
+      0.225,
+      2,
+      0.13,
+      120,
+      0.003,
+      360
+    ],
+    [
+      1.05,
+      0.2625,
+      2,
+      0.145,
+      120,
+      0.003,
+      360
+    ],
+    [
+      1.2,
+      0.3,
+      2,
+      0.16,
+      120,
+      0.003,
+      360
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.6
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.75
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.9
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 1.05
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 1.2
+      }
+    ]
+  ]
+}

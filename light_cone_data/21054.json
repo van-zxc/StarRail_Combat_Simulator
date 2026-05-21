@@ -1,0 +1,216 @@
+{
+  "id": "21054",
+  "name": "故事的下一页",
+  "tag": "21054",
+  "rarity": 4,
+  "path": "记忆",
+  "path_key": "Memory",
+  "path_en": "Remembrance",
+  "icon": "icon/light_cone/21054.png",
+  "preview": "image/light_cone_preview/21054.png",
+  "portrait": "image/light_cone_portrait/21054.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 16.8,
+        "atk_step": 2.52,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 36.96,
+        "atk_step": 2.52,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 63.84,
+        "atk_step": 2.52,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 90.72,
+        "atk_step": 2.52,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 117.6,
+        "atk_step": 2.52,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 144.48,
+        "atk_step": 2.52,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 171.36,
+        "atk_step": 2.52,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "115011",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110251",
+          "num": 3
+        },
+        {
+          "id": "115011",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110252",
+          "num": 3
+        },
+        {
+          "id": "115012",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110252",
+          "num": 6
+        },
+        {
+          "id": "115012",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110253",
+          "num": 4
+        },
+        {
+          "id": "115013",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110253",
+          "num": 8
+        },
+        {
+          "id": "115013",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "书写",
+  "skill_desc": "使装备者的生命上限提高#1[i]%。装备者的忆灵攻击后，使装备者与忆灵的治疗量提高#2[i]%，持续#3[i]回合。",
+  "params": [
+    [
+      0.16,
+      0.12,
+      1
+    ],
+    [
+      0.2,
+      0.15,
+      1
+    ],
+    [
+      0.24,
+      0.18,
+      1
+    ],
+    [
+      0.28,
+      0.21,
+      1
+    ],
+    [
+      0.32,
+      0.24,
+      1
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.16
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.28
+      }
+    ],
+    [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.32
+      }
+    ]
+  ]
+}

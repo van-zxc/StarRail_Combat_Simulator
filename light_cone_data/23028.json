@@ -1,0 +1,236 @@
+{
+  "id": "23028",
+  "name": "偏偏希望无价",
+  "tag": "23028",
+  "rarity": 5,
+  "path": "智识",
+  "path_key": "Mage",
+  "path_en": "Erudition",
+  "icon": "icon/light_cone/23028.png",
+  "preview": "image/light_cone_preview/23028.png",
+  "portrait": "image/light_cone_portrait/23028.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 26.4,
+        "atk_step": 3.96,
+        "def_base": 24,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 58.08,
+        "atk_step": 3.96,
+        "def_base": 52.8,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 100.32,
+        "atk_step": 3.96,
+        "def_base": 91.2,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 142.56,
+        "atk_step": 3.96,
+        "def_base": 129.6,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 184.8,
+        "atk_step": 3.96,
+        "def_base": 168,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 227.04,
+        "atk_step": 3.96,
+        "def_base": 206.4,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 269.28,
+        "atk_step": 3.96,
+        "def_base": 244.8,
+        "def_step": 3.6
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "114001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110201",
+          "num": 4
+        },
+        {
+          "id": "114001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110202",
+          "num": 4
+        },
+        {
+          "id": "114002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110202",
+          "num": 8
+        },
+        {
+          "id": "114002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110203",
+          "num": 5
+        },
+        {
+          "id": "114003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110203",
+          "num": 10
+        },
+        {
+          "id": "114003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "承诺",
+  "skill_desc": "使装备者的暴击率提高#1[i]%。当装备者在战斗中暴击伤害大于#2[i]%时，每超过#3[i]%，追加攻击造成的伤害提高#4[i]%，该效果可叠加#5[i]层。战斗开始时和装备者施放普攻后，使终结技或追加攻击造成的伤害无视目标#6[i]%的防御，持续#7[i]回合。",
+  "params": [
+    [
+      0.16,
+      1.2,
+      0.2,
+      0.12,
+      4,
+      0.2,
+      2
+    ],
+    [
+      0.19,
+      1.2,
+      0.2,
+      0.14,
+      4,
+      0.24,
+      2
+    ],
+    [
+      0.22,
+      1.2,
+      0.2,
+      0.16,
+      4,
+      0.28,
+      2
+    ],
+    [
+      0.25,
+      1.2,
+      0.2,
+      0.18,
+      4,
+      0.32,
+      2
+    ],
+    [
+      0.28,
+      1.2,
+      0.2,
+      0.2,
+      4,
+      0.36,
+      2
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.16
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.19
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.22
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.25
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.28
+      }
+    ]
+  ]
+}

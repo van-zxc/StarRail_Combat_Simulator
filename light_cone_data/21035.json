@@ -1,0 +1,216 @@
+{
+  "id": "21035",
+  "name": "何物为真",
+  "tag": "21035",
+  "rarity": 4,
+  "path": "丰饶",
+  "path_key": "Priest",
+  "path_en": "Abundance",
+  "icon": "icon/light_cone/21035.png",
+  "preview": "image/light_cone_preview/21035.png",
+  "portrait": "image/light_cone_portrait/21035.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 19.2,
+        "atk_step": 2.88,
+        "def_base": 15,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 42.24,
+        "atk_step": 2.88,
+        "def_base": 33,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 72.96,
+        "atk_step": 2.88,
+        "def_base": 57,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 103.68,
+        "atk_step": 2.88,
+        "def_base": 81,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 134.4,
+        "atk_step": 2.88,
+        "def_base": 105,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 165.12,
+        "atk_step": 2.88,
+        "def_base": 129,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 195.84,
+        "atk_step": 2.88,
+        "def_base": 153,
+        "def_step": 2.25
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "114001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110171",
+          "num": 3
+        },
+        {
+          "id": "114001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110172",
+          "num": 3
+        },
+        {
+          "id": "114002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110172",
+          "num": 6
+        },
+        {
+          "id": "114002",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110173",
+          "num": 4
+        },
+        {
+          "id": "114003",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110173",
+          "num": 8
+        },
+        {
+          "id": "114003",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "假设",
+  "skill_desc": "使装备者的击破特攻提高#1[i]%。施放普攻后，装备者回复等同于#2[f1]%生命上限+#3[i]点的生命值。",
+  "params": [
+    [
+      0.24,
+      0.02,
+      800
+    ],
+    [
+      0.3,
+      0.025,
+      800
+    ],
+    [
+      0.36,
+      0.03,
+      800
+    ],
+    [
+      0.42,
+      0.035,
+      800
+    ],
+    [
+      0.48,
+      0.04,
+      800
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.3
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.36
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.42
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.48
+      }
+    ]
+  ]
+}

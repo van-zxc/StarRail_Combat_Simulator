@@ -33,7 +33,7 @@ class StatModifier:
 #  EquipmentEffect — 装备特效抽象接口
 # ============================================================
 class EquipmentEffect(ABC):
-    """装备特效基类：装备时 / 进入战斗时触发。"""
+    """装备特效基类：装备时 / 进入战斗时 / 卸载时触发。"""
 
     @abstractmethod
     def on_equip(self, character: "Character") -> None:
@@ -44,6 +44,10 @@ class EquipmentEffect(ABC):
     def on_combat_start(self, game_state: "GameState", character: "Character") -> None:
         """进入战斗时触发，用于注册事件监听器。"""
         ...
+
+    def on_unequip(self, character: "Character") -> None:
+        """卸载时触发，用于取消事件订阅。默认空实现。"""
+        pass
 
 
 # ============================================================

@@ -1,0 +1,181 @@
+{
+  "id": "20017",
+  "name": "开疆",
+  "tag": "20017",
+  "rarity": 3,
+  "path": "存护",
+  "path_key": "Knight",
+  "path_en": "Preservation",
+  "icon": "icon/light_cone/20017.png",
+  "preview": "image/light_cone_preview/20017.png",
+  "portrait": "image/light_cone_portrait/20017.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 12,
+        "atk_step": 1.8,
+        "def_base": 12,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 26.4,
+        "atk_step": 1.8,
+        "def_base": 26.4,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 45.6,
+        "atk_step": 1.8,
+        "def_base": 45.6,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 64.8,
+        "atk_step": 1.8,
+        "def_base": 64.8,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 84,
+        "atk_step": 1.8,
+        "def_base": 84,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 103.2,
+        "atk_step": 1.8,
+        "def_base": 103.2,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 122.4,
+        "atk_step": 1.8,
+        "def_base": 122.4,
+        "def_step": 1.8
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "111001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110141",
+          "num": 2
+        },
+        {
+          "id": "111001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110142",
+          "num": 2
+        },
+        {
+          "id": "111002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110142",
+          "num": 4
+        },
+        {
+          "id": "111002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110143",
+          "num": 3
+        },
+        {
+          "id": "111003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110143",
+          "num": 6
+        },
+        {
+          "id": "111003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "公司",
+  "skill_desc": "当装备者击破敌方目标的弱点时，回复等同于自身生命上限#1[i]%的生命值。",
+  "params": [
+    [
+      0.12
+    ],
+    [
+      0.14
+    ],
+    [
+      0.16
+    ],
+    [
+      0.18
+    ],
+    [
+      0.2
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

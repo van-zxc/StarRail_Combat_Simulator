@@ -1,0 +1,221 @@
+{
+  "id": "21016",
+  "name": "宇宙市场趋势",
+  "tag": "21016",
+  "rarity": 4,
+  "path": "存护",
+  "path_key": "Knight",
+  "path_en": "Preservation",
+  "icon": "icon/light_cone/21016.png",
+  "preview": "image/light_cone_preview/21016.png",
+  "portrait": "image/light_cone_portrait/21016.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 16.8,
+        "atk_step": 2.52,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 36.96,
+        "atk_step": 2.52,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 63.84,
+        "atk_step": 2.52,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 90.72,
+        "atk_step": 2.52,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 117.6,
+        "atk_step": 2.52,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 144.48,
+        "atk_step": 2.52,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 171.36,
+        "atk_step": 2.52,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "113001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110141",
+          "num": 3
+        },
+        {
+          "id": "113001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110142",
+          "num": 3
+        },
+        {
+          "id": "113002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110142",
+          "num": 6
+        },
+        {
+          "id": "113002",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110143",
+          "num": 4
+        },
+        {
+          "id": "113003",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110143",
+          "num": 8
+        },
+        {
+          "id": "113003",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "新一轮洗牌",
+  "skill_desc": "使装备者的防御力提高#1[i]%。当装备者受到攻击后，有#2[i]%的基础概率使敌方目标陷入灼烧状态，每回合造成等同于装备者#3[i]%防御力的持续伤害，持续#4[i]回合。",
+  "params": [
+    [
+      0.16,
+      1,
+      0.4,
+      2
+    ],
+    [
+      0.2,
+      1.05,
+      0.5,
+      2
+    ],
+    [
+      0.24,
+      1.1,
+      0.6,
+      2
+    ],
+    [
+      0.28,
+      1.15,
+      0.7,
+      2
+    ],
+    [
+      0.32,
+      1.2,
+      0.8,
+      2
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.16
+      }
+    ],
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.28
+      }
+    ],
+    [
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.32
+      }
+    ]
+  ]
+}

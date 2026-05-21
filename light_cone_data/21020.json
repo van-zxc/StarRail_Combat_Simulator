@@ -1,0 +1,216 @@
+{
+  "id": "21020",
+  "name": "天才们的休憩",
+  "tag": "21020",
+  "rarity": 4,
+  "path": "智识",
+  "path_key": "Mage",
+  "path_en": "Erudition",
+  "icon": "icon/light_cone/21020.png",
+  "preview": "image/light_cone_preview/21020.png",
+  "portrait": "image/light_cone_portrait/21020.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 38.4,
+        "hp_step": 5.76,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 84.48,
+        "hp_step": 5.76,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 145.92,
+        "hp_step": 5.76,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 207.36,
+        "hp_step": 5.76,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 268.8,
+        "hp_step": 5.76,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 330.24,
+        "hp_step": 5.76,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 391.68,
+        "hp_step": 5.76,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "113001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110131",
+          "num": 3
+        },
+        {
+          "id": "113001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110132",
+          "num": 3
+        },
+        {
+          "id": "113002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110132",
+          "num": 6
+        },
+        {
+          "id": "113002",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110133",
+          "num": 4
+        },
+        {
+          "id": "113003",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110133",
+          "num": 8
+        },
+        {
+          "id": "113003",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "各得其所",
+  "skill_desc": "使装备者攻击力提高#1[i]%，当装备者消灭敌方目标后，暴击伤害提高#2[i]%，持续#3[i]回合。",
+  "params": [
+    [
+      0.16,
+      0.24,
+      3
+    ],
+    [
+      0.2,
+      0.3,
+      3
+    ],
+    [
+      0.24,
+      0.36,
+      3
+    ],
+    [
+      0.28,
+      0.42,
+      3
+    ],
+    [
+      0.32,
+      0.48,
+      3
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.16
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.28
+      }
+    ],
+    [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.32
+      }
+    ]
+  ]
+}

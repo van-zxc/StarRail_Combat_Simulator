@@ -1,0 +1,181 @@
+{
+  "id": "20012",
+  "name": "轮契",
+  "tag": "20012",
+  "rarity": 3,
+  "path": "同谐",
+  "path_key": "Shaman",
+  "path_en": "Harmony",
+  "icon": "icon/light_cone/20012.png",
+  "preview": "image/light_cone_preview/20012.png",
+  "portrait": "image/light_cone_portrait/20012.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 38.4,
+        "hp_step": 5.76,
+        "atk_base": 14.4,
+        "atk_step": 2.16,
+        "def_base": 12,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 84.48,
+        "hp_step": 5.76,
+        "atk_base": 31.68,
+        "atk_step": 2.16,
+        "def_base": 26.4,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 145.92,
+        "hp_step": 5.76,
+        "atk_base": 54.72,
+        "atk_step": 2.16,
+        "def_base": 45.6,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 207.36,
+        "hp_step": 5.76,
+        "atk_base": 77.76,
+        "atk_step": 2.16,
+        "def_base": 64.8,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 268.8,
+        "hp_step": 5.76,
+        "atk_base": 100.8,
+        "atk_step": 2.16,
+        "def_base": 84,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 330.24,
+        "hp_step": 5.76,
+        "atk_base": 123.84,
+        "atk_step": 2.16,
+        "def_base": 103.2,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 391.68,
+        "hp_step": 5.76,
+        "atk_base": 146.88,
+        "atk_step": 2.16,
+        "def_base": 122.4,
+        "def_step": 1.8
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "112001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110161",
+          "num": 2
+        },
+        {
+          "id": "112001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110162",
+          "num": 2
+        },
+        {
+          "id": "112002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110162",
+          "num": 4
+        },
+        {
+          "id": "112002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110163",
+          "num": 3
+        },
+        {
+          "id": "112003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110163",
+          "num": 6
+        },
+        {
+          "id": "112003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "速决",
+  "skill_desc": "使装备者施放攻击或受到攻击后，额外恢复#1[i]点能量，该效果单个回合内不可重复触发。",
+  "params": [
+    [
+      4
+    ],
+    [
+      5
+    ],
+    [
+      6
+    ],
+    [
+      7
+    ],
+    [
+      8
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "id": "21005",
+  "name": "鼹鼠党欢迎你",
+  "tag": "21005",
+  "rarity": 4,
+  "path": "毁灭",
+  "path_key": "Warrior",
+  "path_en": "Destruction",
+  "icon": "icon/light_cone/21005.png",
+  "preview": "image/light_cone_preview/21005.png",
+  "portrait": "image/light_cone_portrait/21005.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 12,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 26.4,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 45.6,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 64.8,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 84,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 103.2,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 122.4,
+        "def_step": 1.8
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "111011",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110111",
+          "num": 3
+        },
+        {
+          "id": "111011",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110112",
+          "num": 3
+        },
+        {
+          "id": "111012",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110112",
+          "num": 6
+        },
+        {
+          "id": "111012",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110113",
+          "num": 4
+        },
+        {
+          "id": "111013",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110113",
+          "num": 8
+        },
+        {
+          "id": "111013",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "奇妙冒险",
+  "skill_desc": "装备者施放普攻、战技或终结技攻击敌方目标后，分别获取一层【淘气值】。每层使装备者的攻击力提高#1[i]%。",
+  "params": [
+    [
+      0.12
+    ],
+    [
+      0.15
+    ],
+    [
+      0.18
+    ],
+    [
+      0.21
+    ],
+    [
+      0.24
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

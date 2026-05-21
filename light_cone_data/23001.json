@@ -1,0 +1,226 @@
+{
+  "id": "23001",
+  "name": "于夜色中",
+  "tag": "23001",
+  "rarity": 5,
+  "path": "巡猎",
+  "path_key": "Rogue",
+  "path_en": "The Hunt",
+  "icon": "icon/light_cone/23001.png",
+  "preview": "image/light_cone_preview/23001.png",
+  "portrait": "image/light_cone_portrait/23001.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 26.4,
+        "atk_step": 3.96,
+        "def_base": 21,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 58.08,
+        "atk_step": 3.96,
+        "def_base": 46.2,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 100.32,
+        "atk_step": 3.96,
+        "def_base": 79.8,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 142.56,
+        "atk_step": 3.96,
+        "def_base": 113.4,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 184.8,
+        "atk_step": 3.96,
+        "def_base": 147,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 227.04,
+        "atk_step": 3.96,
+        "def_base": 180.6,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 269.28,
+        "atk_step": 3.96,
+        "def_base": 214.2,
+        "def_step": 3.15
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "111011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110121",
+          "num": 4
+        },
+        {
+          "id": "111011",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110122",
+          "num": 4
+        },
+        {
+          "id": "111012",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110122",
+          "num": 8
+        },
+        {
+          "id": "111012",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110123",
+          "num": 5
+        },
+        {
+          "id": "111013",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110123",
+          "num": 10
+        },
+        {
+          "id": "111013",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "花与蝶",
+  "skill_desc": "使装备者的暴击率提高#1[i]%。当装备者在战斗中速度大于100时，每超过#2[i]点，普攻和战技造成的伤害提高#3[i]%，同时终结技的暴击伤害提高#4[i]%，该效果可叠加#5[i]层。",
+  "params": [
+    [
+      0.18,
+      10,
+      0.06,
+      0.12,
+      6
+    ],
+    [
+      0.21,
+      10,
+      0.07,
+      0.14,
+      6
+    ],
+    [
+      0.24,
+      10,
+      0.08,
+      0.16,
+      6
+    ],
+    [
+      0.27,
+      10,
+      0.09,
+      0.18,
+      6
+    ],
+    [
+      0.3,
+      10,
+      0.1,
+      0.2,
+      6
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.18
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.21
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.27
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.3
+      }
+    ]
+  ]
+}

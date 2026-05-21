@@ -1,0 +1,181 @@
+{
+  "id": "20013",
+  "name": "灵钥",
+  "tag": "20013",
+  "rarity": 3,
+  "path": "智识",
+  "path_key": "Mage",
+  "path_en": "Erudition",
+  "icon": "icon/light_cone/20013.png",
+  "preview": "image/light_cone_preview/20013.png",
+  "portrait": "image/light_cone_portrait/20013.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 33.6,
+        "hp_step": 5.04,
+        "atk_base": 16.8,
+        "atk_step": 2.52,
+        "def_base": 12,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 73.92,
+        "hp_step": 5.04,
+        "atk_base": 36.96,
+        "atk_step": 2.52,
+        "def_base": 26.4,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 127.68,
+        "hp_step": 5.04,
+        "atk_base": 63.84,
+        "atk_step": 2.52,
+        "def_base": 45.6,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 181.44,
+        "hp_step": 5.04,
+        "atk_base": 90.72,
+        "atk_step": 2.52,
+        "def_base": 64.8,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 235.2,
+        "hp_step": 5.04,
+        "atk_base": 117.6,
+        "atk_step": 2.52,
+        "def_base": 84,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 288.96,
+        "hp_step": 5.04,
+        "atk_base": 144.48,
+        "atk_step": 2.52,
+        "def_base": 103.2,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 342.72,
+        "hp_step": 5.04,
+        "atk_base": 171.36,
+        "atk_step": 2.52,
+        "def_base": 122.4,
+        "def_step": 1.8
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "111001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110131",
+          "num": 2
+        },
+        {
+          "id": "111001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110132",
+          "num": 2
+        },
+        {
+          "id": "111002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110132",
+          "num": 4
+        },
+        {
+          "id": "111002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110133",
+          "num": 3
+        },
+        {
+          "id": "111003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110133",
+          "num": 6
+        },
+        {
+          "id": "111003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "顿悟",
+  "skill_desc": "使装备者施放战技后额外恢复#1[i]点能量，该效果单个回合内不可重复触发。",
+  "params": [
+    [
+      8
+    ],
+    [
+      9
+    ],
+    [
+      10
+    ],
+    [
+      11
+    ],
+    [
+      12
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

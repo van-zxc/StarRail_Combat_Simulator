@@ -2,11 +2,9 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
 from typing import Optional
 
 
-@dataclass
 class BaseLightCone:
     id: str = ""
     name: str = ""
@@ -20,6 +18,21 @@ class BaseLightCone:
     _default_base_hp: float = 0.0
     _default_base_atk: float = 0.0
     _default_base_def: float = 0.0
+
+    _light_cone_registry: dict[str, type["BaseLightCone"]] = {}
+
+    def __init_subclass__(cls, **kwargs: object) -> None:
+        super().__init_subclass__(**kwargs)
+        if cls._default_id:
+            BaseLightCone._light_cone_registry[cls._default_id] = cls
+
+    def __new__(cls, id: str = "", **kwargs: object) -> "BaseLightCone":
+        if cls is not BaseLightCone:
+            return super().__new__(cls)
+        if id and id in cls._light_cone_registry:
+            sub_cls = cls._light_cone_registry[id]
+            return sub_cls.__new__(sub_cls)
+        return super().__new__(cls)
 
     def __init__(
         self,

@@ -1,0 +1,231 @@
+{
+  "id": "23054",
+  "name": "当她决定看见",
+  "tag": "23054",
+  "rarity": 5,
+  "path": "欢愉",
+  "path_key": "Elation",
+  "path_en": "Elation",
+  "icon": "icon/light_cone/23054.png",
+  "preview": "image/light_cone_preview/23054.png",
+  "portrait": "image/light_cone_portrait/23054.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 24,
+        "atk_step": 3.6,
+        "def_base": 24,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 52.8,
+        "atk_step": 3.6,
+        "def_base": 52.8,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 91.2,
+        "atk_step": 3.6,
+        "def_base": 91.2,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 129.6,
+        "atk_step": 3.6,
+        "def_base": 129.6,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 168,
+        "atk_step": 3.6,
+        "def_base": 168,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 206.4,
+        "atk_step": 3.6,
+        "def_base": 206.4,
+        "def_step": 3.6
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 244.8,
+        "atk_step": 3.6,
+        "def_base": 244.8,
+        "def_step": 3.6
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "116001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110261",
+          "num": 4
+        },
+        {
+          "id": "116001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110262",
+          "num": 4
+        },
+        {
+          "id": "116002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110262",
+          "num": 8
+        },
+        {
+          "id": "116002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110263",
+          "num": 5
+        },
+        {
+          "id": "116003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110263",
+          "num": 10
+        },
+        {
+          "id": "116003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "破局",
+  "skill_desc": "使装备者的速度提高#1[i]%。装备者进入战斗或对我方目标施放终结技时，使装备者获得【上上签】，持续#4[i]回合。当装备者持有【上上签】时，我方全体暴击率提高#2[i]%，暴击伤害提高#3[i]%，装备者自身能量恢复效率提高#5[i]%。\n每个波次开始时，装备者固定恢复#6[i]点能量。",
+  "params": [
+    [
+      0.18,
+      0.1,
+      0.3,
+      3,
+      0.12,
+      15
+    ],
+    [
+      0.21,
+      0.11,
+      0.375,
+      3,
+      0.14,
+      15
+    ],
+    [
+      0.24,
+      0.12,
+      0.45,
+      3,
+      0.16,
+      15
+    ],
+    [
+      0.27,
+      0.13,
+      0.525,
+      3,
+      0.18,
+      15
+    ],
+    [
+      0.3,
+      0.14,
+      0.6,
+      3,
+      0.2,
+      15
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.18
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.21
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.24
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.27
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.3
+      }
+    ]
+  ]
+}

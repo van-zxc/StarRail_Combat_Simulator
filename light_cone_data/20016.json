@@ -1,0 +1,186 @@
+{
+  "id": "20016",
+  "name": "俱殁",
+  "tag": "20016",
+  "rarity": 3,
+  "path": "毁灭",
+  "path_key": "Warrior",
+  "path_en": "Destruction",
+  "icon": "icon/light_cone/20016.png",
+  "preview": "image/light_cone_preview/20016.png",
+  "portrait": "image/light_cone_portrait/20016.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 38.4,
+        "hp_step": 5.76,
+        "atk_base": 16.8,
+        "atk_step": 2.52,
+        "def_base": 9,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 84.48,
+        "hp_step": 5.76,
+        "atk_base": 36.96,
+        "atk_step": 2.52,
+        "def_base": 19.8,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 145.92,
+        "hp_step": 5.76,
+        "atk_base": 63.84,
+        "atk_step": 2.52,
+        "def_base": 34.2,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 207.36,
+        "hp_step": 5.76,
+        "atk_base": 90.72,
+        "atk_step": 2.52,
+        "def_base": 48.6,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 268.8,
+        "hp_step": 5.76,
+        "atk_base": 117.6,
+        "atk_step": 2.52,
+        "def_base": 63,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 330.24,
+        "hp_step": 5.76,
+        "atk_base": 144.48,
+        "atk_step": 2.52,
+        "def_base": 77.4,
+        "def_step": 1.35
+      },
+      {
+        "hp_base": 391.68,
+        "hp_step": 5.76,
+        "atk_base": 171.36,
+        "atk_step": 2.52,
+        "def_base": 91.8,
+        "def_step": 1.35
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "112001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110111",
+          "num": 2
+        },
+        {
+          "id": "112001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110112",
+          "num": 2
+        },
+        {
+          "id": "112002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110112",
+          "num": 4
+        },
+        {
+          "id": "112002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110113",
+          "num": 3
+        },
+        {
+          "id": "112003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110113",
+          "num": 6
+        },
+        {
+          "id": "112003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "军团",
+  "skill_desc": "装备者当前生命值百分比小于#1[i]%时，暴击率提高#2[i]%。",
+  "params": [
+    [
+      0.8,
+      0.12
+    ],
+    [
+      0.8,
+      0.15
+    ],
+    [
+      0.8,
+      0.18
+    ],
+    [
+      0.8,
+      0.21
+    ],
+    [
+      0.8,
+      0.24
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

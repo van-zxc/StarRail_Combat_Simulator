@@ -1,0 +1,181 @@
+{
+  "id": "20001",
+  "name": "物穰",
+  "tag": "20001",
+  "rarity": 3,
+  "path": "丰饶",
+  "path_key": "Priest",
+  "path_en": "Abundance",
+  "icon": "icon/light_cone/20001.png",
+  "preview": "image/light_cone_preview/20001.png",
+  "portrait": "image/light_cone_portrait/20001.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 12,
+        "atk_step": 1.8,
+        "def_base": 12,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 26.4,
+        "atk_step": 1.8,
+        "def_base": 26.4,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 45.6,
+        "atk_step": 1.8,
+        "def_base": 45.6,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 64.8,
+        "atk_step": 1.8,
+        "def_base": 64.8,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 84,
+        "atk_step": 1.8,
+        "def_base": 84,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 103.2,
+        "atk_step": 1.8,
+        "def_base": 103.2,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 122.4,
+        "atk_step": 1.8,
+        "def_base": 122.4,
+        "def_step": 1.8
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "112001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110171",
+          "num": 2
+        },
+        {
+          "id": "112001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110172",
+          "num": 2
+        },
+        {
+          "id": "112002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110172",
+          "num": 4
+        },
+        {
+          "id": "112002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110173",
+          "num": 3
+        },
+        {
+          "id": "112003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110173",
+          "num": 6
+        },
+        {
+          "id": "112003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "繁盛",
+  "skill_desc": "装备者施放战技和终结技时，治疗量提高#1[i]%。",
+  "params": [
+    [
+      0.12
+    ],
+    [
+      0.15
+    ],
+    [
+      0.18
+    ],
+    [
+      0.21
+    ],
+    [
+      0.24
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

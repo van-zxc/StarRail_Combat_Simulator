@@ -1,0 +1,186 @@
+{
+  "id": "20022",
+  "name": "溯忆",
+  "tag": "20022",
+  "rarity": 3,
+  "path": "记忆",
+  "path_key": "Memory",
+  "path_en": "Remembrance",
+  "icon": "icon/light_cone/20022.png",
+  "preview": "image/light_cone_preview/20022.png",
+  "portrait": "image/light_cone_portrait/20022.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 28.8,
+        "hp_step": 4.32,
+        "atk_base": 19.2,
+        "atk_step": 2.88,
+        "def_base": 12,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 63.36,
+        "hp_step": 4.32,
+        "atk_base": 42.24,
+        "atk_step": 2.88,
+        "def_base": 26.4,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 109.44,
+        "hp_step": 4.32,
+        "atk_base": 72.96,
+        "atk_step": 2.88,
+        "def_base": 45.6,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 155.52,
+        "hp_step": 4.32,
+        "atk_base": 103.68,
+        "atk_step": 2.88,
+        "def_base": 64.8,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 201.6,
+        "hp_step": 4.32,
+        "atk_base": 134.4,
+        "atk_step": 2.88,
+        "def_base": 84,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 247.68,
+        "hp_step": 4.32,
+        "atk_base": 165.12,
+        "atk_step": 2.88,
+        "def_base": 103.2,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 293.76,
+        "hp_step": 4.32,
+        "atk_base": 195.84,
+        "atk_step": 2.88,
+        "def_base": 122.4,
+        "def_step": 1.8
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "115001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110251",
+          "num": 2
+        },
+        {
+          "id": "115001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110252",
+          "num": 2
+        },
+        {
+          "id": "115002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110252",
+          "num": 4
+        },
+        {
+          "id": "115002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110253",
+          "num": 3
+        },
+        {
+          "id": "115003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110253",
+          "num": 6
+        },
+        {
+          "id": "115003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "入寐",
+  "skill_desc": "忆灵的回合开始时，使装备者和忆灵分别获得1层【缅怀】，每层使造成的伤害提高#1[i]%，最多叠加#2[i]层。忆灵消失时移除装备者和忆灵的【缅怀】。",
+  "params": [
+    [
+      0.08,
+      4
+    ],
+    [
+      0.09,
+      4
+    ],
+    [
+      0.1,
+      4
+    ],
+    [
+      0.11,
+      4
+    ],
+    [
+      0.12,
+      4
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

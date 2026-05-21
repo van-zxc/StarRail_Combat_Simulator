@@ -1,0 +1,221 @@
+{
+  "id": "23027",
+  "name": "驶向第二次生命",
+  "tag": "23027",
+  "rarity": 5,
+  "path": "巡猎",
+  "path_key": "Rogue",
+  "path_en": "The Hunt",
+  "icon": "icon/light_cone/23027.png",
+  "preview": "image/light_cone_preview/23027.png",
+  "portrait": "image/light_cone_portrait/23027.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 26.4,
+        "atk_step": 3.96,
+        "def_base": 21,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 58.08,
+        "atk_step": 3.96,
+        "def_base": 46.2,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 100.32,
+        "atk_step": 3.96,
+        "def_base": 79.8,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 142.56,
+        "atk_step": 3.96,
+        "def_base": 113.4,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 184.8,
+        "atk_step": 3.96,
+        "def_base": 147,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 227.04,
+        "atk_step": 3.96,
+        "def_base": 180.6,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 269.28,
+        "atk_step": 3.96,
+        "def_base": 214.2,
+        "def_step": 3.15
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "114011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110191",
+          "num": 4
+        },
+        {
+          "id": "114011",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110192",
+          "num": 4
+        },
+        {
+          "id": "114012",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110192",
+          "num": 8
+        },
+        {
+          "id": "114012",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110193",
+          "num": 5
+        },
+        {
+          "id": "114013",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110193",
+          "num": 10
+        },
+        {
+          "id": "114013",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "苦航",
+  "skill_desc": "使装备者的击破特攻提高#1[i]%，造成的击破伤害无视目标#3[i]%的防御力。当装备者在战斗中击破特攻大于等于#2[i]%时，速度提高#4[i]%。",
+  "params": [
+    [
+      0.6,
+      1.5,
+      0.2,
+      0.12
+    ],
+    [
+      0.7,
+      1.5,
+      0.23,
+      0.14
+    ],
+    [
+      0.8,
+      1.5,
+      0.26,
+      0.16
+    ],
+    [
+      0.9,
+      1.5,
+      0.29,
+      0.18
+    ],
+    [
+      1,
+      1.5,
+      0.32,
+      0.2
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.6
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.7
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.8
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.9
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 1
+      }
+    ]
+  ]
+}

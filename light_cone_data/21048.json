@@ -1,0 +1,216 @@
+{
+  "id": "21048",
+  "name": "梦的蒙太奇",
+  "tag": "21048",
+  "rarity": 4,
+  "path": "丰饶",
+  "path_key": "Priest",
+  "path_en": "Abundance",
+  "icon": "icon/light_cone/21048.png",
+  "preview": "image/light_cone_preview/21048.png",
+  "portrait": "image/light_cone_portrait/21048.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 19.2,
+        "atk_step": 2.88,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 42.24,
+        "atk_step": 2.88,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 72.96,
+        "atk_step": 2.88,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 103.68,
+        "atk_step": 2.88,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 134.4,
+        "atk_step": 2.88,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 165.12,
+        "atk_step": 2.88,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 195.84,
+        "atk_step": 2.88,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "114001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110241",
+          "num": 3
+        },
+        {
+          "id": "114001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110242",
+          "num": 3
+        },
+        {
+          "id": "114002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110242",
+          "num": 6
+        },
+        {
+          "id": "114002",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110243",
+          "num": 4
+        },
+        {
+          "id": "114003",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110243",
+          "num": 8
+        },
+        {
+          "id": "114003",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "学院式剪接",
+  "skill_desc": "使装备者的速度提高#1[i]%，攻击处于弱点击破状态下的敌方目标后，恢复#2[f1]点能量，该效果每回合最多触发#3[i]次。",
+  "params": [
+    [
+      0.08,
+      3,
+      2
+    ],
+    [
+      0.09,
+      3.5,
+      2
+    ],
+    [
+      0.1,
+      4,
+      2
+    ],
+    [
+      0.11,
+      4.5,
+      2
+    ],
+    [
+      0.12,
+      5,
+      2
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.08
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.09
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.1
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.11
+      }
+    ],
+    [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.12
+      }
+    ]
+  ]
+}

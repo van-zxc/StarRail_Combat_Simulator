@@ -1,0 +1,186 @@
+{
+  "id": "23000",
+  "name": "银河铁道之夜",
+  "tag": "23000",
+  "rarity": 5,
+  "path": "智识",
+  "path_key": "Mage",
+  "path_en": "Erudition",
+  "icon": "icon/light_cone/23000.png",
+  "preview": "image/light_cone_preview/23000.png",
+  "portrait": "image/light_cone_portrait/23000.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 52.8,
+        "hp_step": 7.92,
+        "atk_base": 26.4,
+        "atk_step": 3.96,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 116.16,
+        "hp_step": 7.92,
+        "atk_base": 58.08,
+        "atk_step": 3.96,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 200.64,
+        "hp_step": 7.92,
+        "atk_base": 100.32,
+        "atk_step": 3.96,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 285.12,
+        "hp_step": 7.92,
+        "atk_base": 142.56,
+        "atk_step": 3.96,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 369.6,
+        "hp_step": 7.92,
+        "atk_base": 184.8,
+        "atk_step": 3.96,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 454.08,
+        "hp_step": 7.92,
+        "atk_base": 227.04,
+        "atk_step": 3.96,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 538.56,
+        "hp_step": 7.92,
+        "atk_base": 269.28,
+        "atk_step": 3.96,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "111001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110131",
+          "num": 4
+        },
+        {
+          "id": "111001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110132",
+          "num": 4
+        },
+        {
+          "id": "111002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110132",
+          "num": 8
+        },
+        {
+          "id": "111002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110133",
+          "num": 5
+        },
+        {
+          "id": "111003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110133",
+          "num": 10
+        },
+        {
+          "id": "111003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "流星群",
+  "skill_desc": "场上每有1个敌方目标，使装备者的攻击力提高#2[f1]%，该效果最多叠加5层。当有敌方目标的弱点被击破时，装备者造成的伤害提高#1[i]%，持续1回合。",
+  "params": [
+    [
+      0.3,
+      0.09
+    ],
+    [
+      0.35,
+      0.105
+    ],
+    [
+      0.4,
+      0.12
+    ],
+    [
+      0.45,
+      0.135
+    ],
+    [
+      0.5,
+      0.15
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

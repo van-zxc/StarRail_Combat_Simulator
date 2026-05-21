@@ -1,0 +1,191 @@
+{
+  "id": "21015",
+  "name": "决心如汗珠般闪耀",
+  "tag": "21015",
+  "rarity": 4,
+  "path": "虚无",
+  "path_key": "Warlock",
+  "path_en": "Nihility",
+  "icon": "icon/light_cone/21015.png",
+  "preview": "image/light_cone_preview/21015.png",
+  "portrait": "image/light_cone_portrait/21015.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 15,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 33,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 57,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 81,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 105,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 129,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 153,
+        "def_step": 2.25
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "113011",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110151",
+          "num": 3
+        },
+        {
+          "id": "113011",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110152",
+          "num": 3
+        },
+        {
+          "id": "113012",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110152",
+          "num": 6
+        },
+        {
+          "id": "113012",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110153",
+          "num": 4
+        },
+        {
+          "id": "113013",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110153",
+          "num": 8
+        },
+        {
+          "id": "113013",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "回眸",
+  "skill_desc": "当装备者击中敌方目标时，如果该目标不处于【攻陷】状态，则有#1[i]%的基础概率使其陷入【攻陷】状态。【攻陷】状态下的敌方目标防御力降低#2[i]%，持续#3[i]回合。",
+  "params": [
+    [
+      0.6,
+      0.12,
+      1
+    ],
+    [
+      0.7,
+      0.13,
+      1
+    ],
+    [
+      0.8,
+      0.14,
+      1
+    ],
+    [
+      0.9,
+      0.15,
+      1
+    ],
+    [
+      1,
+      0.16,
+      1
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

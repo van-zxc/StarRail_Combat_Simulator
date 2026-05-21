@@ -1,0 +1,211 @@
+{
+  "id": "23050",
+  "name": "勿忘她的火焰",
+  "tag": "23050",
+  "rarity": 5,
+  "path": "虚无",
+  "path_key": "Warlock",
+  "path_en": "Nihility",
+  "icon": "icon/light_cone/23050.png",
+  "preview": "image/light_cone_preview/23050.png",
+  "portrait": "image/light_cone_portrait/23050.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 52.8,
+        "hp_step": 7.92,
+        "atk_base": 24,
+        "atk_step": 3.6,
+        "def_base": 21,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 116.16,
+        "hp_step": 7.92,
+        "atk_base": 52.8,
+        "atk_step": 3.6,
+        "def_base": 46.2,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 200.64,
+        "hp_step": 7.92,
+        "atk_base": 91.2,
+        "atk_step": 3.6,
+        "def_base": 79.8,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 285.12,
+        "hp_step": 7.92,
+        "atk_base": 129.6,
+        "atk_step": 3.6,
+        "def_base": 113.4,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 369.6,
+        "hp_step": 7.92,
+        "atk_base": 168,
+        "atk_step": 3.6,
+        "def_base": 147,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 454.08,
+        "hp_step": 7.92,
+        "atk_base": 206.4,
+        "atk_step": 3.6,
+        "def_base": 180.6,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 538.56,
+        "hp_step": 7.92,
+        "atk_base": 244.8,
+        "atk_step": 3.6,
+        "def_base": 214.2,
+        "def_step": 3.15
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "114011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110221",
+          "num": 4
+        },
+        {
+          "id": "114011",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110222",
+          "num": 4
+        },
+        {
+          "id": "114012",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110222",
+          "num": 8
+        },
+        {
+          "id": "114012",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110223",
+          "num": 5
+        },
+        {
+          "id": "114013",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110223",
+          "num": 10
+        },
+        {
+          "id": "114013",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "焚身",
+  "skill_desc": "使装备者的击破特攻提高#1[i]%。进入战斗时，使装备者和另一位开战的队友造成的击破伤害提高#2[i]%，若不存在开战的队友则对装备者和击破特攻最高的队友生效，同类效果无法叠加。装备者为敌方目标添加弱点时，恢复1个战技点，该效果最多触发1次，施放终结技时重置可触发次数。",
+  "params": [
+    [
+      0.6,
+      0.32
+    ],
+    [
+      0.75,
+      0.42
+    ],
+    [
+      0.9,
+      0.52
+    ],
+    [
+      1.05,
+      0.62
+    ],
+    [
+      1.2,
+      0.72
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.6
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.75
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.9
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 1.05
+      }
+    ],
+    [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 1.2
+      }
+    ]
+  ]
+}

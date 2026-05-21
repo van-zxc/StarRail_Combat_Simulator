@@ -1,0 +1,216 @@
+{
+  "id": "23024",
+  "name": "行于流逝的岸",
+  "tag": "23024",
+  "rarity": 5,
+  "path": "虚无",
+  "path_key": "Warlock",
+  "path_en": "Nihility",
+  "icon": "icon/light_cone/23024.png",
+  "preview": "image/light_cone_preview/23024.png",
+  "portrait": "image/light_cone_portrait/23024.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 28.8,
+        "atk_step": 4.32,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 63.36,
+        "atk_step": 4.32,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 109.44,
+        "atk_step": 4.32,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 155.52,
+        "atk_step": 4.32,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 201.6,
+        "atk_step": 4.32,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 247.68,
+        "atk_step": 4.32,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 293.76,
+        "atk_step": 4.32,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "114001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110221",
+          "num": 4
+        },
+        {
+          "id": "114001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110222",
+          "num": 4
+        },
+        {
+          "id": "114002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110222",
+          "num": 8
+        },
+        {
+          "id": "114002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110223",
+          "num": 5
+        },
+        {
+          "id": "114003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110223",
+          "num": 10
+        },
+        {
+          "id": "114003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "司渡",
+  "skill_desc": "使装备者的暴击伤害提高#1[i]%。当装备者击中敌方目标时，使敌方陷入【泡影】状态，持续1回合。装备者每次攻击时，对每个目标只可触发1次。装备者对陷入【泡影】状态的目标造成的伤害提高#2[i]%，终结技造成的伤害额外提高#3[i]%。",
+  "params": [
+    [
+      0.36,
+      0.24,
+      0.24
+    ],
+    [
+      0.42,
+      0.28,
+      0.28
+    ],
+    [
+      0.48,
+      0.32,
+      0.32
+    ],
+    [
+      0.54,
+      0.36,
+      0.36
+    ],
+    [
+      0.6,
+      0.4,
+      0.4
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.36
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.42
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.48
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.54
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.6
+      }
+    ]
+  ]
+}

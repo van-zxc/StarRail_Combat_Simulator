@@ -44,6 +44,11 @@ class CombatEngine:
                 if hasattr(skill, "on_combat_start"):
                     skill.on_combat_start(self.state)
 
+        # 注册光锥特效事件监听器
+        for char in self.state.alive_characters:
+            if char.light_cone is not None and char.light_cone.effect is not None:
+                char.light_cone.effect.on_combat_start(self.state, char)
+
         self.event_bus.emit(EventType.BATTLE_START, engine=self)
         self.state.apply_techniques()
 

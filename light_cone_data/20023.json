@@ -1,0 +1,181 @@
+{
+  "id": "20023",
+  "name": "嗤笑",
+  "tag": "20023",
+  "rarity": 3,
+  "path": "欢愉",
+  "path_key": "Elation",
+  "path_en": "Elation",
+  "icon": "icon/light_cone/20023.png",
+  "preview": "image/light_cone_preview/20023.png",
+  "portrait": "image/light_cone_portrait/20023.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 33.6,
+        "hp_step": 5.04,
+        "atk_base": 16.8,
+        "atk_step": 2.52,
+        "def_base": 12,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 73.92,
+        "hp_step": 5.04,
+        "atk_base": 36.96,
+        "atk_step": 2.52,
+        "def_base": 26.4,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 127.68,
+        "hp_step": 5.04,
+        "atk_base": 63.84,
+        "atk_step": 2.52,
+        "def_base": 45.6,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 181.44,
+        "hp_step": 5.04,
+        "atk_base": 90.72,
+        "atk_step": 2.52,
+        "def_base": 64.8,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 235.2,
+        "hp_step": 5.04,
+        "atk_base": 117.6,
+        "atk_step": 2.52,
+        "def_base": 84,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 288.96,
+        "hp_step": 5.04,
+        "atk_base": 144.48,
+        "atk_step": 2.52,
+        "def_base": 103.2,
+        "def_step": 1.8
+      },
+      {
+        "hp_base": 342.72,
+        "hp_step": 5.04,
+        "atk_base": 171.36,
+        "atk_step": 2.52,
+        "def_base": 122.4,
+        "def_step": 1.8
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 3000
+        },
+        {
+          "id": "116001",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 6000
+        },
+        {
+          "id": "110261",
+          "num": 2
+        },
+        {
+          "id": "116001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 12000
+        },
+        {
+          "id": "110262",
+          "num": 2
+        },
+        {
+          "id": "116002",
+          "num": 4
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 30000
+        },
+        {
+          "id": "110262",
+          "num": 4
+        },
+        {
+          "id": "116002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 60000
+        },
+        {
+          "id": "110263",
+          "num": 3
+        },
+        {
+          "id": "116003",
+          "num": 3
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 120000
+        },
+        {
+          "id": "110263",
+          "num": 6
+        },
+        {
+          "id": "116003",
+          "num": 5
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "纵欢",
+  "skill_desc": "阿哈时刻发动时，使装备者的欢愉度提高#1[i]%，持续到阿哈时刻结束。",
+  "params": [
+    [
+      0.16
+    ],
+    [
+      0.2
+    ],
+    [
+      0.24
+    ],
+    [
+      0.28
+    ],
+    [
+      0.32
+    ]
+  ],
+  "properties": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

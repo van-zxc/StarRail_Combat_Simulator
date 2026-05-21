@@ -1,0 +1,231 @@
+{
+  "id": "23038",
+  "name": "如果时间是一朵花",
+  "tag": "23038",
+  "rarity": 5,
+  "path": "同谐",
+  "path_key": "Shaman",
+  "path_en": "Harmony",
+  "icon": "icon/light_cone/23038.png",
+  "preview": "image/light_cone_preview/23038.png",
+  "portrait": "image/light_cone_portrait/23038.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 57.6,
+        "hp_step": 8.64,
+        "atk_base": 24,
+        "atk_step": 3.6,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 126.72,
+        "hp_step": 8.64,
+        "atk_base": 52.8,
+        "atk_step": 3.6,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 218.88,
+        "hp_step": 8.64,
+        "atk_base": 91.2,
+        "atk_step": 3.6,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 311.04,
+        "hp_step": 8.64,
+        "atk_base": 129.6,
+        "atk_step": 3.6,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 403.2,
+        "hp_step": 8.64,
+        "atk_base": 168,
+        "atk_step": 3.6,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 495.36,
+        "hp_step": 8.64,
+        "atk_base": 206.4,
+        "atk_step": 3.6,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 587.52,
+        "hp_step": 8.64,
+        "atk_base": 244.8,
+        "atk_step": 3.6,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "115001",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110231",
+          "num": 4
+        },
+        {
+          "id": "115001",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110232",
+          "num": 4
+        },
+        {
+          "id": "115002",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110232",
+          "num": 8
+        },
+        {
+          "id": "115002",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110233",
+          "num": 5
+        },
+        {
+          "id": "115003",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110233",
+          "num": 10
+        },
+        {
+          "id": "115003",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "希冀",
+  "skill_desc": "使装备者的暴击伤害提高#1[i]%。装备者施放追加攻击后额外恢复#2[i]点能量，并获得【谕示】，持续#3[i]回合。当装备者持有【谕示】时，我方全体目标的暴击伤害提高#4[i]%。进入战斗时，装备者恢复#5[i]点能量，并获得【谕示】，持续#6[i]回合。",
+  "params": [
+    [
+      0.36,
+      12,
+      2,
+      0.48,
+      21,
+      2
+    ],
+    [
+      0.42,
+      12,
+      2,
+      0.6,
+      21,
+      2
+    ],
+    [
+      0.48,
+      12,
+      2,
+      0.72,
+      21,
+      2
+    ],
+    [
+      0.54,
+      12,
+      2,
+      0.84,
+      21,
+      2
+    ],
+    [
+      0.6,
+      12,
+      2,
+      0.96,
+      21,
+      2
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.36
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.42
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.48
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.54
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.6
+      }
+    ]
+  ]
+}

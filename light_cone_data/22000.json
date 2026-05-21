@@ -1,0 +1,211 @@
+{
+  "id": "22000",
+  "name": "新手任务开始前",
+  "tag": "22000",
+  "rarity": 4,
+  "path": "虚无",
+  "path_key": "Warlock",
+  "path_en": "Nihility",
+  "icon": "icon/light_cone/22000.png",
+  "preview": "image/light_cone_preview/22000.png",
+  "portrait": "image/light_cone_portrait/22000.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 15,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 33,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 57,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 81,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 105,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 129,
+        "def_step": 2.25
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 153,
+        "def_step": 2.25
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "111001",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110151",
+          "num": 3
+        },
+        {
+          "id": "111001",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110152",
+          "num": 3
+        },
+        {
+          "id": "111002",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110152",
+          "num": 6
+        },
+        {
+          "id": "111002",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110153",
+          "num": 4
+        },
+        {
+          "id": "111003",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110153",
+          "num": 8
+        },
+        {
+          "id": "111003",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "眼疾手快",
+  "skill_desc": "使装备者的效果命中提高#1[i]%。当装备者攻击防御力被降低的敌方目标后，恢复#2[i]点能量。",
+  "params": [
+    [
+      0.2,
+      4
+    ],
+    [
+      0.25,
+      5
+    ],
+    [
+      0.3,
+      6
+    ],
+    [
+      0.35,
+      7
+    ],
+    [
+      0.4,
+      8
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "StatusProbabilityBase",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "StatusProbabilityBase",
+        "value": 0.25
+      }
+    ],
+    [
+      {
+        "type": "StatusProbabilityBase",
+        "value": 0.3
+      }
+    ],
+    [
+      {
+        "type": "StatusProbabilityBase",
+        "value": 0.35
+      }
+    ],
+    [
+      {
+        "type": "StatusProbabilityBase",
+        "value": 0.4
+      }
+    ]
+  ]
+}

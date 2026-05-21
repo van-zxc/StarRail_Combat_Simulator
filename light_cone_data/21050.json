@@ -1,0 +1,216 @@
+{
+  "id": "21050",
+  "name": "胜利只在朝夕间",
+  "tag": "21050",
+  "rarity": 4,
+  "path": "记忆",
+  "path_key": "Memory",
+  "path_en": "Remembrance",
+  "icon": "icon/light_cone/21050.png",
+  "preview": "image/light_cone_preview/21050.png",
+  "portrait": "image/light_cone_portrait/21050.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 38.4,
+        "hp_step": 5.76,
+        "atk_base": 21.6,
+        "atk_step": 3.24,
+        "def_base": 18,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 84.48,
+        "hp_step": 5.76,
+        "atk_base": 47.52,
+        "atk_step": 3.24,
+        "def_base": 39.6,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 145.92,
+        "hp_step": 5.76,
+        "atk_base": 82.08,
+        "atk_step": 3.24,
+        "def_base": 68.4,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 207.36,
+        "hp_step": 5.76,
+        "atk_base": 116.64,
+        "atk_step": 3.24,
+        "def_base": 97.2,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 268.8,
+        "hp_step": 5.76,
+        "atk_base": 151.2,
+        "atk_step": 3.24,
+        "def_base": 126,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 330.24,
+        "hp_step": 5.76,
+        "atk_base": 185.76,
+        "atk_step": 3.24,
+        "def_base": 154.8,
+        "def_step": 2.7
+      },
+      {
+        "hp_base": 391.68,
+        "hp_step": 5.76,
+        "atk_base": 220.32,
+        "atk_step": 3.24,
+        "def_base": 183.6,
+        "def_step": 2.7
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 4000
+        },
+        {
+          "id": "111011",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 8000
+        },
+        {
+          "id": "110251",
+          "num": 3
+        },
+        {
+          "id": "111011",
+          "num": 10
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 16000
+        },
+        {
+          "id": "110252",
+          "num": 3
+        },
+        {
+          "id": "111012",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 40000
+        },
+        {
+          "id": "110252",
+          "num": 6
+        },
+        {
+          "id": "111012",
+          "num": 9
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 80000
+        },
+        {
+          "id": "110253",
+          "num": 4
+        },
+        {
+          "id": "111013",
+          "num": 5
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 160000
+        },
+        {
+          "id": "110253",
+          "num": 8
+        },
+        {
+          "id": "111013",
+          "num": 7
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "最后一击",
+  "skill_desc": "使装备者的暴击伤害提高#1[i]%，当装备者的忆灵对我方目标施放技能时，使我方全体目标造成的伤害提高#2[i]%，持续#3[i]回合。",
+  "params": [
+    [
+      0.12,
+      0.08,
+      3
+    ],
+    [
+      0.15,
+      0.1,
+      3
+    ],
+    [
+      0.18,
+      0.12,
+      3
+    ],
+    [
+      0.21,
+      0.14,
+      3
+    ],
+    [
+      0.24,
+      0.16,
+      3
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.12
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.15
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.18
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.21
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.24
+      }
+    ]
+  ]
+}

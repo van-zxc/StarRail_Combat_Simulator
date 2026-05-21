@@ -1,0 +1,216 @@
+{
+  "id": "23031",
+  "name": "我将，巡征追猎",
+  "tag": "23031",
+  "rarity": 5,
+  "path": "巡猎",
+  "path_key": "Rogue",
+  "path_en": "The Hunt",
+  "icon": "icon/light_cone/23031.png",
+  "preview": "image/light_cone_preview/23031.png",
+  "portrait": "image/light_cone_portrait/23031.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 43.2,
+        "hp_step": 6.48,
+        "atk_base": 28.8,
+        "atk_step": 4.32,
+        "def_base": 21,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 95.04,
+        "hp_step": 6.48,
+        "atk_base": 63.36,
+        "atk_step": 4.32,
+        "def_base": 46.2,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 164.16,
+        "hp_step": 6.48,
+        "atk_base": 109.44,
+        "atk_step": 4.32,
+        "def_base": 79.8,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 233.28,
+        "hp_step": 6.48,
+        "atk_base": 155.52,
+        "atk_step": 4.32,
+        "def_base": 113.4,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 302.4,
+        "hp_step": 6.48,
+        "atk_base": 201.6,
+        "atk_step": 4.32,
+        "def_base": 147,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 371.52,
+        "hp_step": 6.48,
+        "atk_base": 247.68,
+        "atk_step": 4.32,
+        "def_base": 180.6,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 440.64,
+        "hp_step": 6.48,
+        "atk_base": 293.76,
+        "atk_step": 4.32,
+        "def_base": 214.2,
+        "def_step": 3.15
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "113011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110191",
+          "num": 4
+        },
+        {
+          "id": "113011",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110192",
+          "num": 4
+        },
+        {
+          "id": "113012",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110192",
+          "num": 8
+        },
+        {
+          "id": "113012",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110193",
+          "num": 5
+        },
+        {
+          "id": "113013",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110193",
+          "num": 10
+        },
+        {
+          "id": "113013",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "震慑",
+  "skill_desc": "使装备者的暴击率提高#1[f1]%。装备者施放追加攻击时，获得1层【流光】，最多叠加#3[i]层。每层【流光】使装备者造成的终结技伤害无视目标#2[i]%的防御力。装备者回合结束时，移除1层【流光】。",
+  "params": [
+    [
+      0.15,
+      0.27,
+      2
+    ],
+    [
+      0.175,
+      0.3,
+      2
+    ],
+    [
+      0.2,
+      0.33,
+      2
+    ],
+    [
+      0.225,
+      0.36,
+      2
+    ],
+    [
+      0.25,
+      0.39,
+      2
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.15
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.175
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.2
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.225
+      }
+    ],
+    [
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.25
+      }
+    ]
+  ]
+}

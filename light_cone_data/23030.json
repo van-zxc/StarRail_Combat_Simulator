@@ -1,0 +1,221 @@
+{
+  "id": "23030",
+  "name": "落日时起舞",
+  "tag": "23030",
+  "rarity": 5,
+  "path": "毁灭",
+  "path_key": "Warrior",
+  "path_en": "Destruction",
+  "icon": "icon/light_cone/23030.png",
+  "preview": "image/light_cone_preview/23030.png",
+  "portrait": "image/light_cone_portrait/23030.png",
+  "promotions": {
+    "levels": [
+      {
+        "hp_base": 48,
+        "hp_step": 7.2,
+        "atk_base": 26.4,
+        "atk_step": 3.96,
+        "def_base": 21,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 105.6,
+        "hp_step": 7.2,
+        "atk_base": 58.08,
+        "atk_step": 3.96,
+        "def_base": 46.2,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 182.4,
+        "hp_step": 7.2,
+        "atk_base": 100.32,
+        "atk_step": 3.96,
+        "def_base": 79.8,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 259.2,
+        "hp_step": 7.2,
+        "atk_base": 142.56,
+        "atk_step": 3.96,
+        "def_base": 113.4,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 336,
+        "hp_step": 7.2,
+        "atk_base": 184.8,
+        "atk_step": 3.96,
+        "def_base": 147,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 412.8,
+        "hp_step": 7.2,
+        "atk_base": 227.04,
+        "atk_step": 3.96,
+        "def_base": 180.6,
+        "def_step": 3.15
+      },
+      {
+        "hp_base": 489.6,
+        "hp_step": 7.2,
+        "atk_base": 269.28,
+        "atk_step": 3.96,
+        "def_base": 214.2,
+        "def_step": 3.15
+      }
+    ],
+    "materials": [
+      [
+        {
+          "id": "2",
+          "num": 5000
+        },
+        {
+          "id": "113011",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 10000
+        },
+        {
+          "id": "110181",
+          "num": 4
+        },
+        {
+          "id": "113011",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 20000
+        },
+        {
+          "id": "110182",
+          "num": 4
+        },
+        {
+          "id": "113012",
+          "num": 8
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 50000
+        },
+        {
+          "id": "110182",
+          "num": 8
+        },
+        {
+          "id": "113012",
+          "num": 12
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 100000
+        },
+        {
+          "id": "110183",
+          "num": 5
+        },
+        {
+          "id": "113013",
+          "num": 6
+        }
+      ],
+      [
+        {
+          "id": "2",
+          "num": 200000
+        },
+        {
+          "id": "110183",
+          "num": 10
+        },
+        {
+          "id": "113013",
+          "num": 8
+        }
+      ],
+      []
+    ]
+  },
+  "skill_name": "沉酣",
+  "skill_desc": "使装备者受到攻击的概率大幅提高，暴击伤害提高#1[i]%。当装备者施放终结技后，获得1层【火舞】，持续2回合，最多叠加#2[i]层。每层【火舞】使装备者追加攻击造成的伤害提高#3[i]%。",
+  "params": [
+    [
+      0.36,
+      2,
+      0.36,
+      5
+    ],
+    [
+      0.42,
+      2,
+      0.42,
+      5
+    ],
+    [
+      0.48,
+      2,
+      0.48,
+      5
+    ],
+    [
+      0.54,
+      2,
+      0.54,
+      5
+    ],
+    [
+      0.6,
+      2,
+      0.6,
+      5
+    ]
+  ],
+  "properties": [
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.36
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.42
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.48
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.54
+      }
+    ],
+    [
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.6
+      }
+    ]
+  ]
+}
