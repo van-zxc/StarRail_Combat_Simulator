@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """PlayerGirl Traces — ATK+28%, HP+18%, DEF+12.5%, 3 bonus abilities。
 
 来源: 8002_playergirl.json traces.stat_bonuses + traces.ability_bonuses

@@ -1,6 +1,5 @@
-"""Silver Wolf — 虚无·量子 (lv80 满破数据, from 1006_silverwolf.json, Enhanced 11006xx)."""
-
 from __future__ import annotations
+"""Silver Wolf — 虚无·量子 (lv80 满破数据, from 1006_silverwolf.json, Enhanced 11006xx)."""
 
 from core.enums import ElementType, PathType, StatType
 from core.entity_stats import stats_defaults

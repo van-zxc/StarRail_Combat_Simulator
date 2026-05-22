@@ -1,9 +1,8 @@
+from __future__ import annotations
 """Asta Skills — 普攻+灼烧 / 战技弹射5段 / 终结技全体加速 / 天赋蓄能ATK buff / 秘技AoE。
 
 来源: 1009_asta.json
 """
-
-from __future__ import annotations
 
 from core.enums import ActionType, DamageType, StatType, StatModifierType, ElementType
 from core.targeting import TargetManager

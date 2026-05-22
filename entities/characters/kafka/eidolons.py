@@ -1,10 +1,8 @@
+from __future__ import annotations
 """Kafka Eidolons — 星魂 1-6 (Enhanced)。
 
 来源: 1005_kafka.json eidolons
 """
-
-from __future__ import annotations
-
 
 def eidolon_1(owner) -> list:
     owner._has_e1 = True

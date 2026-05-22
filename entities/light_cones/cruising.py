@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Cruising in the Stellar Sea — 巡猎光锥。"""
 
 from entities.light_cones.base import BaseLightCone

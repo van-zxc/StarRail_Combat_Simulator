@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """DanHeng Traces — 风伤+22.4%, 攻击+18%, 防御+12.5%, 3 bonus abilities。
 
 来源: 1002_danheng.json traces.stat_bonuses + traces.ability_bonuses

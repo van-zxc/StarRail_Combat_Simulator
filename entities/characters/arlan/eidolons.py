@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Arlan Eidolons — 星魂 1-6。
 
 来源: 1008_arlan.json eidolons

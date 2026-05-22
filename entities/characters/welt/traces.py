@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Welt Traces (Enhanced) — 虚数伤+14.4%, 效果命中+28%, 效果抵抗+10%, 3 bonus abilities。
 
 来源: 1004_welt.json traces (enhanced 11004xx stat_bonuses + ability_bonuses)

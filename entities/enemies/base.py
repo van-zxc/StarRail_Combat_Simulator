@@ -1,6 +1,5 @@
-"""BaseEnemy — 敌方目标基类 (JSON 优先，类属性 fallback)。"""
-
 from __future__ import annotations
+"""BaseEnemy — 敌方目标基类 (JSON 优先，类属性 fallback)。"""
 
 from typing import Optional
 

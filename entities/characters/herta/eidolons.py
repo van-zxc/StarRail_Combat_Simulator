@@ -1,10 +1,8 @@
+from __future__ import annotations
 """Herta Eidolons — 星魂 1-6。
 
 来源: 1013_herta.json eidolons
 """
-
-from __future__ import annotations
-
 
 def eidolon_1(owner) -> list:
     owner._has_e1 = True

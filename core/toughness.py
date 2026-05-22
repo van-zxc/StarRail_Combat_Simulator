@@ -1,6 +1,5 @@
-"""击破与 CC 处理 — 从 CombatEngine 拆出, 保持纯函数风格。"""
-
 from __future__ import annotations
+"""击破与 CC 处理 — 从 CombatEngine 拆出, 保持纯函数风格。"""
 
 from typing import TYPE_CHECKING
 

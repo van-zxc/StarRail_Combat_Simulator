@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Night on the Milky Way (银河铁道之夜) — 5★ 智识光锥。
 
 特效:
@@ -6,8 +7,6 @@
 
 已知问题: KI-001 — 分裂造物是否计入 enemy count 待实机验证。
 """
-
-from __future__ import annotations
 
 from typing import Optional
 

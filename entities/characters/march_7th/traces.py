@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """March7th Traces — 冰伤+22.4%, 防御+22.5%, 效果抵抗+10%, 3 bonus abilities。
 
 来源: character_skill_trees.json

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Silver Wolf Eidolons — 星魂 1-6 (Enhanced).
 
 来源: 1006_silverwolf.json eidolons

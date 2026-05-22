@@ -1,6 +1,5 @@
-"""CombatEngine — 行动值推进 + 终极技插队 + 回合调度 + 日志。"""
-
 from __future__ import annotations
+"""CombatEngine — 行动值推进 + 终极技插队 + 回合调度 + 日志。"""
 
 from typing import Optional
 
@@ -8,6 +7,13 @@ from core.enums import ActionType, DamageType, ElementType, PathType, StatType
 from core.events import EventBus, EventType
 from config.game_config import CYCLE_0_DURATION, CYCLE_DURATION, ENERGY_ON_HIT
 from core.toughness import BreakEffectHandler, CCProcessor, get_break_level_multiplier
+
+
+_ACTION_NAMES: dict[ActionType, str] = {
+    ActionType.BASIC_ATTACK: "普攻",
+    ActionType.SKILL: "战技",
+    ActionType.ULTIMATE: "终结技",
+}
 
 
 class CombatEngine:
@@ -139,6 +145,7 @@ class CombatEngine:
                 self._manage_aha()
 
         self.event_bus.emit(EventType.BATTLE_END, engine=self)
+        self.event_bus.clear_all()
         return self._conclude()
 
     # ── 类型缓存（避免运行时循环导入） ──
@@ -294,8 +301,7 @@ class CombatEngine:
             action_type = getattr(skill_obj, "action_type", ActionType.BASIC_ATTACK)
             damage_type = getattr(skill_obj, "damage_type", DamageType.DIRECT)
             skill_tags = getattr(skill_obj, "tags", None)
-            action_name = "战技" if action_type == ActionType.SKILL else \
-                          "终结技" if action_type == ActionType.ULTIMATE else "普攻"
+            action_name = _ACTION_NAMES.get(action_type, "普攻")
 
             self.event_bus.emit(
                 EventType.ACTION_START, unit=char, target=hits_list[0].target if hits_list else target,
@@ -328,8 +334,7 @@ class CombatEngine:
             # 技能对象有自定义 execute → 直接调用, 不走标准管线
             damage, is_crit, toughness, is_break = skill_obj.execute(target, self.state)
             action_type = getattr(skill_obj, "action_type", ActionType.BASIC_ATTACK)
-            action_name = "战技" if action_type == ActionType.SKILL else \
-                          "终结技" if action_type == ActionType.ULTIMATE else "普攻"
+            action_name = _ACTION_NAMES.get(action_type, "普攻")
             self.event_bus.emit(
                 EventType.ACTION_START, unit=char, target=target,
                 action_type=action_type, engine=self,
@@ -349,21 +354,16 @@ class CombatEngine:
         if skill_obj is not None:
             action_type = getattr(skill_obj, "action_type", ActionType.BASIC_ATTACK)
             skill_mult = getattr(skill_obj, "skill_multiplier", 1.0)
-            if action_type == ActionType.SKILL:
-                action_name = "战技"
-            elif action_type == ActionType.ULTIMATE:
-                action_name = "终结技"
-            else:
-                action_name = "普攻"
+            action_name = _ACTION_NAMES.get(action_type, "普攻")
             sp_hint = ""
         elif self.state.skill_points > 0:
             action_type = ActionType.SKILL
-            action_name = "战技"
+            action_name = _ACTION_NAMES[action_type]
             sp_hint = ""
             skill_mult = 2.0
         else:
             action_type = ActionType.BASIC_ATTACK
-            action_name = "普攻"
+            action_name = _ACTION_NAMES[action_type]
             sp_hint = "（SP不足）"
             skill_mult = 1.0
 

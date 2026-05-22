@@ -1,6 +1,5 @@
-"""Welt — 虚无·虚数属性角色 (lv80 满破数据, from 1004_welt.json, Enhanced 11004xx)."""
-
 from __future__ import annotations
+"""Welt — 虚无·虚数属性角色 (lv80 满破数据, from 1004_welt.json, Enhanced 11004xx)."""
 
 from core.enums import ElementType, PathType, StatType, ActionType
 from core.entity_stats import stats_defaults
@@ -48,7 +47,6 @@ class Welt(TemplateCharacter):
         self._has_e2: bool = False
         self._has_e4: bool = False
         self._has_e6: bool = False
-        self._killing_action: str = ""
 
         super().__init__(character_id, level, unlocked_traces, eidolon_level)
 

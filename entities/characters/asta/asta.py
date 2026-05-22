@@ -1,6 +1,5 @@
-"""Asta — 同谐·火 (lv80 满破数据, from 1009_asta.json)."""
-
 from __future__ import annotations
+"""Asta — 同谐·火 (lv80 满破数据, from 1009_asta.json)."""
 
 from core.enums import ElementType, PathType, StatType, ActionType
 from core.entity_stats import stats_defaults

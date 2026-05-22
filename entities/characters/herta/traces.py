@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Herta Traces — 冰伤+22.4%, 防御+22.5%, 暴击+6.7%, 3 bonus abilities.
 
 来源: 1013_herta.json traces.stat_bonuses + traces.ability_bonuses

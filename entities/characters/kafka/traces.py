@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Kafka Traces (Enhanced) — ATK+28%, 效果命中+18%, HP+10%, 3 bonus abilities。
 
 来源: 1005_kafka.json traces (enhanced 11005xx stat_bonuses + ability_bonuses)

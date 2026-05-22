@@ -1,6 +1,5 @@
-"""DataLoader — JSON 数据加载与缓存。"""
-
 from __future__ import annotations
+"""DataLoader — JSON 数据加载与缓存。"""
 
 import json
 from typing import Optional

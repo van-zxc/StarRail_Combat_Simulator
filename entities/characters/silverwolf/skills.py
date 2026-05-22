@@ -1,9 +1,8 @@
+from __future__ import annotations
 """Silver Wolf Skills — 普攻140% / 战技弱点植入+全属性抗性降低 / 终结技群攻+减防 / 天赋缺陷植入 / 秘技群攻。
 
 来源: 1006_silverwolf.json (Enhanced 11006xx)
 """
-
-from __future__ import annotations
 
 import random
 

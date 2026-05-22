@@ -1,6 +1,5 @@
-"""乘区计算纯函数 — 每个乘区一个函数，签名统一。"""
-
 from __future__ import annotations
+"""乘区计算纯函数 — 每个乘区一个函数，签名统一。"""
 
 import random
 from typing import Optional

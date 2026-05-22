@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """可插拔乘区链 — 按 DamageType 映射乘区函数列表。
 
 新增伤害类型只需在此表中增加一行，无需修改 execute_action。

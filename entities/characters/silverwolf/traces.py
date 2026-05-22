@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Silver Wolf Traces (Enhanced 11006xx).
 
 来源: 1006_silverwolf.json traces (stat_bonuses + ability_bonuses)

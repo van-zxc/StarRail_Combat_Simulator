@@ -1,6 +1,5 @@
-"""Himeko Skills — 普攻140% / 战技250%+100%扩散 / 终结技276%群攻+击杀回能 / 天赋充能FUA / 秘技易伤。"""
-
 from __future__ import annotations
+"""Himeko Skills — 普攻140% / 战技250%+100%扩散 / 终结技276%群攻+击杀回能 / 天赋充能FUA / 秘技易伤。"""
 
 import random
 
@@ -71,7 +70,6 @@ class HimekoBasicAttack(TemplateBasicAttack):
     energy_gain = 20
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "basic"
         beacon = _apply_beacon(self.owner)
         e2 = _apply_e2(self.owner, target)
 
@@ -93,8 +91,6 @@ class HimekoSkill(TemplateSkill):
     energy_gain = 30
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "skill"
-
         blast_targets = TargetManager.select_blast(state.alive_enemies, target)
         total_dmg = 0
         total_crit = False
@@ -135,8 +131,6 @@ class HimekoUltimate(TemplateUltimate):
     energy_gain = 5
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "ultimate"
-
         enemies = state.alive_enemies
         total_dmg = 0
         total_crit = False
@@ -204,9 +198,9 @@ class HimekoTalent:
     def _on_weakness_break(self, **kwargs) -> None:
         self.owner._charge_count = min(self.owner._charge_count + 1, self.owner._charge_max)
 
-        breaker = kwargs.get("breaker")
-        if breaker == self.owner and getattr(self.owner, "_has_e4", False):
-            if self.owner._killing_action == "skill":
+        source = kwargs.get("source")
+        if source == self.owner and getattr(self.owner, "_has_e4", False):
+            if kwargs.get("action_type") == ActionType.SKILL:
                 self.owner._charge_count = min(self.owner._charge_count + 1, self.owner._charge_max)
 
     def _on_after_action(self, **kwargs) -> None:
@@ -243,8 +237,6 @@ class HimekoTalent:
                 self.owner.stats.apply_modifier(mod, "refresh")
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "talent_fua"
-
         enemies = state.alive_enemies
         total_dmg = 0
         total_crit = False

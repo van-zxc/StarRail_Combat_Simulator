@@ -1,6 +1,5 @@
-"""March7th Skills — 基于 JSON 数据: 普攻140% / 战技护盾+嘲讽 / 终结技群攻+冻结Dot / 天赋反击 / 秘技冻结。"""
-
 from __future__ import annotations
+"""March7th Skills — 基于 JSON 数据: 普攻140% / 战技护盾+嘲讽 / 终结技群攻+冻结Dot / 天赋反击 / 秘技冻结。"""
 
 from core.enums import ActionType, DamageType, ElementType, StatType
 from entities.base import ToughnessDamagePacket

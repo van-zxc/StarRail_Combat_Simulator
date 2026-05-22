@@ -1,6 +1,5 @@
-"""Himeko — 智识·火属性角色 (lv80 满破数据, from 1003_himeko.json)."""
-
 from __future__ import annotations
+"""Himeko — 智识·火属性角色 (lv80 满破数据, from 1003_himeko.json)."""
 
 from core.enums import ElementType, PathType, StatType, ActionType
 from core.entity_stats import stats_defaults
@@ -49,7 +48,6 @@ class Himeko(TemplateCharacter):
         self._has_e2: bool = False
         self._has_e4: bool = False
         self._has_e6: bool = False
-        self._killing_action: str = ""
 
         super().__init__(character_id, level, unlocked_traces, eidolon_level)
 

@@ -1,6 +1,5 @@
-"""BaseCharacter — 己方角色基类 (JSON 优先，类属性 fallback)。"""
-
 from __future__ import annotations
+"""BaseCharacter — 己方角色基类 (JSON 优先，类属性 fallback)。"""
 
 from typing import Optional
 

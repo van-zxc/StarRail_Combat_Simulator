@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """角色实体模块。"""
 from entities.characters.base import BaseCharacter
 from entities.characters.dan_heng import DanHeng

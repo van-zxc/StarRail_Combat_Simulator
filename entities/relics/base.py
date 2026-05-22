@@ -1,6 +1,5 @@
-"""BaseRelic + RelicSetManager — 遗器基类与套装管理器。"""
-
 from __future__ import annotations
+"""BaseRelic + RelicSetManager — 遗器基类与套装管理器。"""
 
 from typing import Optional
 

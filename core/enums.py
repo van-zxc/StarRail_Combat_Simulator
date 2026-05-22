@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """战斗系统枚举定义。"""
 
 from enum import Enum, auto
@@ -125,19 +127,6 @@ _ELEMENT_DMG_STAT: dict[ElementType, StatType] = {
     ElementType.QUANTUM: StatType.QUANTUM_DMG_BONUS,
     ElementType.IMAGINARY: StatType.IMAGINARY_DMG_BONUS,
 }
-
-
-# ============================================================
-#  ElementType / PathType — 属性 & 命途枚举
-# ============================================================
-class ElementType(Enum):
-    PHYSICAL = auto()
-    FIRE = auto()
-    ICE = auto()
-    LIGHTNING = auto()
-    WIND = auto()
-    QUANTUM = auto()
-    IMAGINARY = auto()
 
 
 class PathType(Enum):

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """March7th Eidolons — E1-E6 (from character_ranks.json)."""
 
 from entities.base import StatModifier

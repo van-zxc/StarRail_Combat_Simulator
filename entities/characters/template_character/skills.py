@@ -1,10 +1,9 @@
+from __future__ import annotations
 """TemplateSkills — 标准技能类（普攻 / 战技 / 终结技）。
 
 每个技能对象持有角色引用，调用 GameState.execute_action。
 子类可覆写 execute() 以附加 DoT / Buff 等额外效果。
 """
-
-from __future__ import annotations
 
 from core.enums import ActionType, DamageType
 

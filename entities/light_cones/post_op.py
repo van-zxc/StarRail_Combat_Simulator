@@ -1,3 +1,4 @@
+from __future__ import annotations
 """Post-Op Conversation (一场术后对话) — 4★ 丰饶光锥。
 
 特效:
@@ -6,8 +7,6 @@
 
 已知问题: KI-002 — 治疗 buff 在终结技后残留至下一正常回合结束。
 """
-
-from __future__ import annotations
 
 from typing import Optional
 

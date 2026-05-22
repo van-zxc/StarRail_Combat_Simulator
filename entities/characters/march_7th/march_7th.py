@@ -1,6 +1,5 @@
-"""March7th — 存护·冰属性角色 (lv80 满破数据, from character_ranks + character_promotions + character_skills + character_skill_trees)."""
-
 from __future__ import annotations
+"""March7th — 存护·冰属性角色 (lv80 满破数据, from character_ranks + character_promotions + character_skills + character_skill_trees)."""
 
 from core.enums import ElementType, PathType, StatType, ActionType
 from core.entity_stats import stats_defaults

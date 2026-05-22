@@ -1,6 +1,5 @@
-"""Aha — 欢愉体系的行动条实体 (倒计时对象)。"""
-
 from __future__ import annotations
+"""Aha — 欢愉体系的行动条实体 (倒计时对象)。"""
 
 from typing import TYPE_CHECKING
 

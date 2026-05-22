@@ -1,6 +1,5 @@
-"""Kafka Skills — 普攻140% / 战技200%+75%扩散+DoT引爆 / 终结技96%群攻+触电+全引爆 / 天赋FUA+触电 / 秘技触电。"""
-
 from __future__ import annotations
+"""Kafka Skills — 普攻140% / 战技200%+75%扩散+DoT引爆 / 终结技96%群攻+触电+全引爆 / 天赋FUA+触电 / 秘技触电。"""
 
 from core.enums import ActionType, DamageType, StatType, StatModifierType, ElementType
 from core.targeting import TargetManager
@@ -57,7 +56,6 @@ class KafkaBasicAttack(TemplateBasicAttack):
     energy_gain = 20
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "basic"
         dmg, crit, tough, brk = state.execute_action(
             self.owner, self.action_type, target,
             self.skill_multiplier, damage_type=self.damage_type,
@@ -73,8 +71,6 @@ class KafkaSkill(TemplateSkill):
     energy_gain = 30
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "skill"
-
         blast_targets = TargetManager.select_blast(state.alive_enemies, target)
         total_dmg = 0
         total_crit = False
@@ -111,8 +107,6 @@ class KafkaUltimate(TemplateUltimate):
     energy_gain = 5
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "ultimate"
-
         enemies = state.alive_enemies
         total_dmg = 0
         total_crit = False
@@ -211,8 +205,6 @@ class KafkaTalent:
             self.owner.gain_energy(5)
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "talent_fua"
-
         total_dmg = 0
         total_crit = False
         total_tough = 0.0

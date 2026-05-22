@@ -1,9 +1,8 @@
+from __future__ import annotations
 """Arrows (锋镝) — 3★ 巡猎光锥。
 
 特效: 战斗开始时，使装备者的暴击率提高#1[i]%，持续#2[i]回合。
 """
-
-from __future__ import annotations
 
 from typing import Optional
 

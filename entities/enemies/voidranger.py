@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Voidranger — 虚卒·敌方怪物。"""
 
 from starrail_combat import ElementType

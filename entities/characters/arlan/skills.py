@@ -1,9 +1,8 @@
+from __future__ import annotations
 """Arlan Skills — 普攻2段30%+70% / 战技HP消耗不耗SP / 终结技3段扩散 / 天赋HP损失→DMG / 秘技AoE。
 
 来源: 1008_arlan.json
 """
-
-from __future__ import annotations
 
 import math
 

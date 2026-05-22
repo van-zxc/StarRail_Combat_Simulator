@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Asta Eidolons — 星魂 1-6。
 
 来源: 1009_asta.json eidolons

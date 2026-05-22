@@ -1,6 +1,5 @@
-"""Arlan — 毁灭·雷 (lv80 满破数据, from 1008_arlan.json)."""
-
 from __future__ import annotations
+"""Arlan — 毁灭·雷 (lv80 满破数据, from 1008_arlan.json)."""
 
 from core.enums import ElementType, PathType, StatType, ActionType
 from core.entity_stats import stats_defaults

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """基础伤害计算 — 按 DamageType 返回不同基础值。"""
 
 from core.enums import DamageType

@@ -1,6 +1,5 @@
-"""EntityStats — 属性面板（白值 / 绿值分离）。"""
-
 from __future__ import annotations
+"""EntityStats — 属性面板（白值 / 绿值分离）。"""
 
 from typing import Optional
 
@@ -25,6 +24,13 @@ class EntityStats:
     def add_modifier(self, modifier: "StatModifier") -> None:
         """向后兼容入口，等效于 apply_modifier(mod, 'independent')。"""
         self.apply_modifier(modifier, "independent")
+
+    def _recalc_spd_if_changed(self, old_spd: float) -> None:
+        """SPD 变化时通知 owner 重算 AV。"""
+        if self._owner and old_spd > 0:
+            new_spd = self.get_total_stat(StatType.SPD)
+            if old_spd != new_spd:
+                self._owner.recalc_av_for_spd(old_spd, new_spd)
 
     def apply_modifier(self, modifier: "StatModifier", stack_policy: str) -> None:
         """统一修饰器施加入口，按 stack_policy 处理同源冲突。
@@ -69,13 +75,10 @@ class EntityStats:
             if not existing:
                 self.active_modifiers.append(modifier)
         else:
-            # 未知策略 → fallback 到 independent
             self.active_modifiers.append(modifier)
 
-        if self._owner and modifier.stat_type == StatType.SPD and old_spd > 0:
-            new_spd = self.get_total_stat(StatType.SPD)
-            if old_spd != new_spd:
-                self._owner.recalc_av_for_spd(old_spd, new_spd)
+        if modifier.stat_type == StatType.SPD:
+            self._recalc_spd_if_changed(old_spd)
 
         if self._owner is not None and self._owner.event_bus is not None:
             from core.events import EventType
@@ -86,10 +89,8 @@ class EntityStats:
     def remove_modifier(self, modifier: "StatModifier") -> None:
         old_spd = self.get_total_stat(StatType.SPD) if self._owner else 0.0
         self.active_modifiers = [m for m in self.active_modifiers if m is not modifier]
-        if self._owner and modifier.stat_type == StatType.SPD and old_spd > 0:
-            new_spd = self.get_total_stat(StatType.SPD)
-            if old_spd != new_spd:
-                self._owner.recalc_av_for_spd(old_spd, new_spd)
+        if modifier.stat_type == StatType.SPD:
+            self._recalc_spd_if_changed(old_spd)
 
     def remove_modifier_by_source(self, source: str) -> None:
         """移除所有来源为 source 且可驱散的修饰器。"""
@@ -98,10 +99,7 @@ class EntityStats:
             m for m in self.active_modifiers
             if m.source != source or not m.dispellable
         ]
-        if self._owner and old_spd > 0:
-            new_spd = self.get_total_stat(StatType.SPD)
-            if old_spd != new_spd:
-                self._owner.recalc_av_for_spd(old_spd, new_spd)
+        self._recalc_spd_if_changed(old_spd)
 
     def purge_source(self, source: str) -> None:
         """移除所有 source 匹配的修饰器 (无视 dispellable，用于卸载装备)。"""
@@ -109,10 +107,7 @@ class EntityStats:
         self.active_modifiers = [
             m for m in self.active_modifiers if m.source != source
         ]
-        if self._owner and old_spd > 0:
-            new_spd = self.get_total_stat(StatType.SPD)
-            if old_spd != new_spd:
-                self._owner.recalc_av_for_spd(old_spd, new_spd)
+        self._recalc_spd_if_changed(old_spd)
 
     def remove_modifier_by_tag(self, tag: str) -> None:
         """移除所有包含 tag 且可驱散的修饰器。"""
@@ -121,10 +116,7 @@ class EntityStats:
             m for m in self.active_modifiers
             if tag not in m.tags or not m.dispellable
         ]
-        if self._owner and old_spd > 0:
-            new_spd = self.get_total_stat(StatType.SPD)
-            if old_spd != new_spd:
-                self._owner.recalc_av_for_spd(old_spd, new_spd)
+        self._recalc_spd_if_changed(old_spd)
 
     def get_base_stat(self, stat_type: StatType) -> float:
         base = self._base_stats.get(stat_type, 0.0)

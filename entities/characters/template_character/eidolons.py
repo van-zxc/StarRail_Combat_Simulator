@@ -1,10 +1,9 @@
+from __future__ import annotations
 """TemplateEidolons — 星魂修饰器模板。
 
 每个星魂为一个函数，接收角色引用，返回 StatModifier 列表。
 按 eidolon_level 整数决定挂载 E1~E6。
 """
-
-from __future__ import annotations
 
 from entities.base import StatModifier
 from core.enums import StatModifierType, StatType

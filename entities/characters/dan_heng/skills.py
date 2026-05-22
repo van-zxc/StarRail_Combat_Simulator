@@ -1,6 +1,5 @@
-"""DanHeng Skills — 普攻140% / 战技325%+减速 / 终结技480%(+144%减速) / 天赋RES_PEN / 秘技ATK+40%。"""
-
 from __future__ import annotations
+"""DanHeng Skills — 普攻140% / 战技325%+减速 / 终结技480%(+144%减速) / 天赋RES_PEN / 秘技ATK+40%。"""
 
 from core.enums import ActionType, DamageType, StatType, StatModifierType
 from entities.base import StatModifier
@@ -23,8 +22,6 @@ class DanHengBasicAttack(TemplateBasicAttack):
     energy_gain = 20
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "basic"
-
         e1_applied = False
         if getattr(self.owner, "_has_e1", False):
             if target.max_hp > 0 and target.hp / target.max_hp >= 0.5:
@@ -56,8 +53,6 @@ class DanHengSkill(TemplateSkill):
     energy_gain = 30
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "skill"
-
         e1_applied = False
         if getattr(self.owner, "_has_e1", False):
             if target.max_hp > 0 and target.hp / target.max_hp >= 0.5:
@@ -94,8 +89,6 @@ class DanHengUltimate(TemplateUltimate):
     energy_gain = 5
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "ultimate"
-
         multiplier = self.skill_multiplier
         if _target_is_slowed(target):
             multiplier += self.slow_bonus
@@ -197,7 +190,7 @@ class DanHengTalent:
             return
         if not getattr(self.owner, "_has_e4", False):
             return
-        if self.owner._killing_action != "ultimate":
+        if kwargs.get("action_type") != ActionType.ULTIMATE:
             return
         self.owner.advance_action(1.0)
 

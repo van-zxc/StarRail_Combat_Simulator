@@ -1,6 +1,5 @@
-"""Welt Skills — 普攻140% / 战技5段弹射90%+减速 / 终结技180%群攻+禁锢+失重 / 天赋附加伤害+失重被动 / 秘技禁锢。"""
-
 from __future__ import annotations
+"""Welt Skills — 普攻140% / 战技5段弹射90%+减速 / 终结技180%群攻+禁锢+失重 / 天赋附加伤害+失重被动 / 秘技禁锢。"""
 
 import random
 
@@ -52,8 +51,6 @@ class WeltBasicAttack(TemplateBasicAttack):
     energy_gain = 20
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "basic"
-
         _apply_verdict(self.owner)
         dmg, crit, tough, brk = state.execute_action(
             self.owner, self.action_type, target,
@@ -92,8 +89,6 @@ class WeltSkill(TemplateSkill):
     energy_gain = 30
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "skill"
-
         _apply_verdict(self.owner)
 
         total_dmg = 0
@@ -164,8 +159,6 @@ class WeltUltimate(TemplateUltimate):
     energy_gain = 5
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "ultimate"
-
         _apply_verdict(self.owner)
 
         enemies = state.alive_enemies

@@ -1,6 +1,5 @@
-"""Kafka — 虚无·雷属性角色 (lv80 满破数据, from 1005_kafka.json, Enhanced 11005xx)."""
-
 from __future__ import annotations
+"""Kafka — 虚无·雷属性角色 (lv80 满破数据, from 1005_kafka.json, Enhanced 11005xx)."""
 
 from core.enums import ElementType, PathType, StatType, ActionType
 from core.entity_stats import stats_defaults
@@ -51,8 +50,6 @@ class Kafka(TemplateCharacter):
         self._has_e2: bool = False
         self._has_e4: bool = False
         self._has_e6: bool = False
-
-        self._killing_action: str = ""
 
         super().__init__(character_id, level, unlocked_traces, eidolon_level)
 

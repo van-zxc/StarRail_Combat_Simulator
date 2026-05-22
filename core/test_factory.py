@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """create_test_character — 测试辅助工厂，走 BaseCharacter.__init__ 正常链路。"""
 
 from core.entity_stats import stats_defaults

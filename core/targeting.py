@@ -1,9 +1,8 @@
+from __future__ import annotations
 """TargetManager — 统一索敌管理器。
 
 支持五级优先级: 退场 → 嘲讽 → 锁定 → 弹射 → 仇恨概率。
 """
-
-from __future__ import annotations
 
 import random
 

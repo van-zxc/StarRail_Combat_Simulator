@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Himeko Traces — 火伤+22.4%, 攻击+18%, 效果抵抗+10%, 3 bonus abilities。
 
 来源: 1003_himeko.json traces.stat_bonuses + traces.ability_bonuses

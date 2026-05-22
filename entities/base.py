@@ -1,9 +1,8 @@
+from __future__ import annotations
 """entities 通用基类 — Fighter, StatModifier, EquipmentEffect, DoTStatus。
 
 注意: EntityStats 保留在 starrail_combat.py 中（依赖 StatType 枚举类级常量）。
 """
-
-from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass

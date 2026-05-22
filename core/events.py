@@ -1,6 +1,5 @@
-"""事件系统 — 发布订阅模式, 替代硬编码流程分支。"""
-
 from __future__ import annotations
+"""事件系统 — 发布订阅模式, 替代硬编码流程分支。"""
 
 from enum import Enum, auto
 from typing import Callable
@@ -63,6 +62,10 @@ class EventBus:
             self._listeners[event_type] = [
                 cb for cb in self._listeners[event_type] if cb is not callback
             ]
+
+    def clear_all(self) -> None:
+        """清除所有事件监听器，用于战斗结束时清理订阅。"""
+        self._listeners.clear()
 
     def emit(self, event_type: EventType, **kwargs: object) -> None:
         for cb in self._listeners.get(event_type, []):

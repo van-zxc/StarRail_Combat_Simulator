@@ -1,6 +1,5 @@
-"""TemplateCharacter — 通用角色组装模板。"""
 from __future__ import annotations
-
+"""TemplateCharacter — 通用角色组装模板。"""
 from entities.characters.base import BaseCharacter
 
 

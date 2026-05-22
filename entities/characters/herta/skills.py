@@ -1,6 +1,5 @@
-"""Herta Skills — 普攻140% / 战技2段AoE+HP条件增伤 / 终结技240%+冻结增伤 / 天赋HP阈值FUA / 秘技ATK+40%。"""
-
 from __future__ import annotations
+"""Herta Skills — 普攻140% / 战技2段AoE+HP条件增伤 / 终结技240%+冻结增伤 / 天赋HP阈值FUA / 秘技ATK+40%。"""
 
 from core.enums import ActionType, DamageType, StatType, StatModifierType, ElementType
 from entities.base import StatModifier, ToughnessDamagePacket, HitPacket

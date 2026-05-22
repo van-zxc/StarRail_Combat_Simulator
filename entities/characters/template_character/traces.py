@@ -1,10 +1,9 @@
+from __future__ import annotations
 """TemplateTraces — 行迹修饰器模板。
 
 每个行迹为一个函数/类，接收角色引用，返回 StatModifier 列表。
 角色 __init__ 中调用后通过 self.stats.add_modifier 挂载。
 """
-
-from __future__ import annotations
 
 from entities.base import StatModifier
 from core.enums import StatModifierType, StatType

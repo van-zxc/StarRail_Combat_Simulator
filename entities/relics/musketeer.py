@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """快枪手的野穗 — 4件套装 (2件: ATK+12%, 4件: SPD+6% & 普攻伤害+10%)。"""
 
 from starrail_combat import RelicPart, StatModifierType, StatType

@@ -1,6 +1,5 @@
-"""PlayerGirl Skills — 普攻140% / 战技156.25%扩散 / 终结技二选一(525%单/315%+189%扩散) / 天赋击破+ATK / 秘技回血。"""
-
 from __future__ import annotations
+"""PlayerGirl Skills — 普攻140% / 战技156.25%扩散 / 终结技二选一(525%单/315%+189%扩散) / 天赋击破+ATK / 秘技回血。"""
 
 from core.enums import ActionType, DamageType, StatType, StatModifierType, ElementType
 from core.targeting import TargetManager
@@ -17,8 +16,6 @@ class PlayerGirlBasicAttack(TemplateBasicAttack):
     energy_gain = 20
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "basic"
-
         e4_applied = False
         if getattr(self.owner, "_has_e4", False):
             if getattr(target, "current_toughness", 1.0) <= 0:
@@ -42,8 +39,6 @@ class PlayerGirlSkill(TemplateSkill):
     energy_gain = 30
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "skill"
-
         blast_targets = TargetManager.select_blast(state.alive_enemies, target)
         total_dmg = 0
         total_crit = False
@@ -95,8 +90,6 @@ class PlayerGirlUltimate(TemplateUltimate):
     energy_gain = 5
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
-        self.owner._killing_action = "ultimate"
-
         enemies = state.alive_enemies
         has_a6 = getattr(self.owner, "_has_fighting_spirit", False)
 
@@ -212,7 +205,7 @@ class PlayerGirlTalent:
             self._add_talent_stack()
 
         if getattr(self.owner, "_has_e1", False) and not self.owner._e1_triggered_this_attack:
-            if self.owner._killing_action == "ultimate":
+            if kwargs.get("action_type") == ActionType.ULTIMATE:
                 self.owner.gain_energy(10)
                 self.owner._e1_triggered_this_attack = True
 

@@ -1,6 +1,5 @@
-"""BaseLightCone — 光锥基类。"""
-
 from __future__ import annotations
+"""BaseLightCone — 光锥基类。"""
 
 from typing import Optional
 

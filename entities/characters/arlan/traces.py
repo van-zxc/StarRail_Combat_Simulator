@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Arlan Traces.
 
 来源: 1008_arlan.json traces (stat_bonuses + ability_bonuses)

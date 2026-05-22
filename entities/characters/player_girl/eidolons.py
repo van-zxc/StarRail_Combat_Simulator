@@ -1,10 +1,8 @@
+from __future__ import annotations
 """PlayerGirl Eidolons — 星魂 1-6。
 
 来源: 8002_playergirl.json eidolons
 """
-
-from __future__ import annotations
-
 
 def eidolon_1(owner) -> list:
     owner._has_e1 = True

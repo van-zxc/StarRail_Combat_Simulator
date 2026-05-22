@@ -1,6 +1,5 @@
-"""GameState — 战技点管理、终极技队列、伤害结算、胜负判定。"""
-
 from __future__ import annotations
+"""GameState — 战技点管理、终极技队列、伤害结算、胜负判定。"""
 
 from typing import Optional
 
@@ -222,6 +221,7 @@ class GameState:
                 self._notify_death(target, character)
                 self.event_bus.emit(
                     EventType.ON_KILL, source=character, target=target,
+                    action_type=action_type,
                 )
                 self.on_kill(character)
 
@@ -271,6 +271,7 @@ class GameState:
                             if self.event_bus is not None:
                                 self.event_bus.emit(
                                     EventType.ON_WEAKNESS_BREAK, source=character, target=target,
+                                    action_type=action_type,
                                 )
 
         return (actual_damage, is_crit, toughness_dealt, did_weakness_break)

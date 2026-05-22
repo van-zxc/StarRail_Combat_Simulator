@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """Asta Traces.
 
 来源: 1009_asta.json traces (stat_bonuses + ability_bonuses)
