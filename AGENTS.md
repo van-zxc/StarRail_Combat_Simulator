@@ -37,6 +37,7 @@ entities/
     base.py                  # BaseRelic + RelicSetManager
 docs/
   todo.md                    # 开发路线图 (已完成/缺失/待实测)
+  anti_regression.md         # 防错清单 (详细规则 + 历史案例)
 original_data/                   # 原始文档与数据源
   enemy/                         # DimbreathBot 完整数据 (4.2.0, 2026-05)
     excel_output/                # MonsterConfig.json + MonsterSkillConfig.json (2027文件)
@@ -68,43 +69,22 @@ test_starrail_combat.py      # pytest: 312 tests
 - 测试工厂: `create_test_character(name, hp, speed, atk, crit_rate, element, path, level, max_energy)`
 - 实体注册: `Character("DanHeng")` 自动分发到 `DanHeng` 子类; `Enemy.from_template("Voidranger")`
 
-## 防错清单 (Anti-Regression Checklist)
+## 核心约束
 
-修改代码时必须遵循以下规则，防止历史债务重现：
+违反以下任意一条将导致静默 bug。详情见 `docs/anti_regression.md`。
 
-### 枚举
-- **禁止重复定义 Enum 类** — `class ElementType(Enum):` 不得出现第二次。
-  重复定义会导致第一个类变为新类的不同 shadow，模块级引用该类的 dict/map 会静默失效。
-  *已修复: 2026-05-22 (removed duplicate ElementType in core/enums.py)*
-
-### 事件系统
-- **事件 emit 必须在战斗结束时清理** — BATTLE_END 后调用 `event_bus.clear_all()`。
-  缺少清理会导致角色实例复用时事件监听器累积，每次事件触发多次回调。
-  *已修复: 2026-05-22 (added EventBus.clear_all() + CombatEngine cleanup)*
-- **事件 kwargs key 必须与 emit 端一致** — emit 用 `source=xxx`，handler 就必须读 `kwargs.get("source")`。
-  用错 key (如 `breaker` 对应 `source`) 会导致条件永远不满足。
-  *已修复: 2026-05-22 (HimekoE4 breaker→source)*
-
-### 角色技能
-- **禁止在技能 execute() 中设置可变属性 (`_killing_action`) 来传递上下文** —
-  应通过事件的 `**kwargs` 传递 `action_type`，否则新增技能遗漏赋值会导致静默错误。
-  *已修复: 2026-05-22 (removed all _killing_action, replaced with action_type in ON_KILL kwargs)*
-
-### 代码质量
-- **重复代码块必须提取** — 发现同一个逻辑在 3+ 处重复时，立即提取为辅助函数/模块常量。
-  典型：SPD 重算逻辑（5 处 → 提取为 `_recalc_spd_if_changed`）、action_name 解析（3 处 → 提取为 `_ACTION_NAMES` dict）。
-- **`from __future__ import annotations` 必须是每个 `.py` 文件的第一行非空行**。
-  添加新文件时包含它，不要事后批量补。
-
-### 版本兼容
-- **禁止用 PowerShell `Set-Content` 修改 `.py` 文件** — 它会破坏 UTF-8 编码。
-  始终用 Python 脚本或直接 Edit 工具。
-- **所有工具脚本操作 `.py` 文件时必须指定 `encoding='utf-8'`**。
+- **禁止重复定义 Enum 类** — 重复定义会使引用旧类的 dict/map 静默失效。
+- **BATTLE_END 后必须调用 `event_bus.clear_all()`** — 防止跨战斗订阅泄漏。
+- **事件 emit 的 kwargs key 必须与 handler 读的 key 一致** — 用错 key 会导致条件永远不满足。
+- **禁止在技能 execute() 中设置可变属性传递上下文** — 应通过事件 `**kwargs` 传递；用错会导致静默错误。
+- **`from __future__ import annotations` 必须是每个 `.py` 文件的第一行非空行** — 新文件创建时就要写。
+- **重复 ≥3 处的代码块必须提取为辅助函数或模块常量** — 单点修改遗漏会导致行为不一致。
 
 ## Agent 使用指南
 
 1. 阅读 `docs/todo.md` 了解当前开发状态
 2. 阅读 `core/` 下各模块了解引擎机制
-3. 运行 `pytest test_starrail_combat.py` 验证改动
-4. 运行 `python starrail_combat.py` 验证 demo
-5. 变更后更新 `docs/todo.md` 和 `.agent_memory`
+3. 阅读 `docs/anti_regression.md` 了解禁止操作
+4. 运行 `pytest test_starrail_combat.py` 验证改动
+5. 运行 `python starrail_combat.py` 验证 demo
+6. 变更后更新 `docs/todo.md` 和 `.agent_memory`

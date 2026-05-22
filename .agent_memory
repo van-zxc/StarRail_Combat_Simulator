@@ -69,14 +69,15 @@
 - 敌人多技能/行动模式
 - 某些配置项待社区实测确认 (docs/todo.md §待实测)
 
-## 防错规则 (Anti-Regression)
+## 防错规则
 
-- **禁止重复定义 Enum 类**: 重复定义会导致引用第一个类的 dict/map 静默失效
-- **事件 emit kwargs 必须与 handler 读的 key 一致**: source ↔ source, action_type ↔ action_type
-- **禁止 `_xxx_field` 字符串属性传递上下文**: 用事件 `**kwargs` 代替
-- **禁止用 PowerShell Set-Content 修改 .py 文件**: 破坏 UTF-8 编码
-- **重复代码 (≥3处) 必须提取为辅助函数**
-- **新文件必须包含 `from __future__ import annotations`**
+详见 `docs/anti_regression.md` (7 条核心规则 + 历史案例 + 工具警告)。
+
+规则摘要:
+- 禁止重复定义 Enum 类 / 事件 kwargs key 不一致 / `_xxx_field` 属性传上下文
+- BATTLE_END 后必须 `event_bus.clear_all()`
+- 重复代码 ≥3 处必须提取 / 新文件必须 `from __future__ import annotations`
+- 禁止用 PowerShell `Set-Content` 修改 .py 文件 (破坏 UTF-8)
 
 ## 模块大小概览
 
