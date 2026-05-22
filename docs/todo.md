@@ -142,3 +142,10 @@
 - [x] SilverWolf 秘技削韧: 60→10
 - [x] 角色实现: Asta (同谐·火) — 弹射战技/全体SPD buff/蓄能ATK天赋/灼烧/火伤光环/DEF叠层
 - [x] 角色实现: Herta (智识·冰) — 2段AoE战技/HP条件增伤/冻结终结技增伤/HP阈值天赋FUA/波次清理/多段Hit
+- [x] **代码债清理 (2026-05-22):** ElementType 重复定义修复 (元素增伤静默失效 bug)
+- [x] 事件订阅泄漏修复: `EventBus.clear_all()` + `BATTLE_END` 清理
+- [x] `_killing_action` 字符串标志反模式消除: → 事件 `action_type` kwargs (11 文件)
+- [x] SPD 重算重复代码提取: `_recalc_spd_if_changed()` 公共方法
+- [x] action_name 解析重复代码提取: `_ACTION_NAMES` 模块级 dict
+- [x] Himeko ON_WEAKNESS_BREAK `breaker→source` key 名不匹配修复
+- [x] `from __future__ import annotations` 补全至全部 84 个 .py 文件
