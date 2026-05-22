@@ -1,0 +1,94 @@
+# .agent_memory — 崩坏星穹铁道 战斗模拟引擎 项目状态 (348 tests)
+
+## 核心数据
+
+- **348** pytest (全部通过)
+- **30** EventType 事件类型, **26** emit 点
+- **6** 乘区链 (DIRECT/DOT/BREAK/SUPER_BREAK/ADDITIONAL_DMG/ELATION)
+- **4** 伤害类型 Level Multiplier 表 (Break/Elation)
+- **9** Path 基础仇恨表 / **6** 种叠层策略 / **3** 种 FUA 返能分类
+
+## 已完成系统一览
+
+### 战斗核心
+- AV/SPD/AG 公式 + 拉条推条/immediate_action + 轮次系统 + 同 AV LIFO 排序
+- 七乘区伤害公式 + 6 种 DamageType 可插拔链
+- 多段攻击: HitPacket + execute_multi_hit + skip_action_resources
+- 波次系统 + 秘技接口 + 伏击(全体 20AV 延迟)
+
+### 状态系统
+- EntityStats: 白值/绿值分离 + 修饰器池 + 6 种叠层策略 (refresh/independent/add_stacks/replace_weaker/stronger/no_stack)
+- StatModifier 字段: dispellable/duration/tick_timing/duration_mode/tags
+- 驱散净化: remove_modifier_by_source/source+tag
+- CC 处理: Freeze/Imprison/Entanglement (角色+敌方)
+- 击破系统: BreakEffectHandler + CCProcessor (已拆至 core/toughness.py)
+
+### 生存系统
+- 护盾吸收下沉至 Fighter.take_damage() (顺序吸收 + bypass_shield)
+- ShieldStatus.duration 字段 + 引擎递减
+- 治疗: calculate_and_apply_heal + HEAL_DONE 事件
+- 死亡事件: BEFORE_DEATH / UNIT_DOWNED / ON_KILL + _notify_death 统一 emit
+- 复活/离场钩子: ON_REVIVE / ON_LEAVE_FIELD (枚举预留)
+
+### 目标选择
+- TargetManager: Aggro 加权随机 / Bounce 均等随机 / Blast 主+邻 / AoE 全体 / Random 无放回
+- 优先级: 退场/死亡过滤 → Bounce → LockOn → Taunt → 仇恨权重
+- BaseEnemy.hit_energy_bucket 受击回能分段
+
+### 事件系统
+- EventBus: 30 事件类型, subscribe/unsubscribe/emit/clear_all
+- 关键 emit: execute_action 全线 (pay_cost/hit/damage/toughness) + CombatEngine 调度线 (turn/action/ultimate)
+- ON_SHIELD_APPLIED 通过 Fighter.apply_shield() 统一入口 emit
+- ON_STATUS_APPLY 通过 EntityStats.apply_modifier() 统一入口 emit
+- 角色技能通过 on_combat_start 注册监听 (e.g. March7thTalent → ON_HIT)
+- **clear_all() 在 BATTLE_END 后调用，防止跨战斗订阅泄漏**
+
+### 欢愉体系
+- ELATION 独立乘区链 (跳过 DMG_BONUS/Weaken/TrueDMG)
+- Elation Level Multiplier 表 (Lv1-80)
+- Aha 倒计时对象 (SPD 公式取前 4 位 Elation 角色加权)
+- Aha Instant 结算窗口 (CC解除 → 参与者排序 → Elation Skill → CB → Punchline重置)
+- Punchline/CertifiedBanger 资源管理
+
+### 配置化
+- config/game_config.py: TOUGHNESS_DAMAGE/ENERGY_REGEN/BASE_AGGRO/SP_INITIAL/SP_MAX/CYCLE_TIMING/SP_CARRY_OVER_WAVES/AMBUSH_AV_DELAY/FOLLOW_UP_ENERGY
+
+### 2026-05-22 代码债清理
+- ElementType 重复定义修复 (元素增伤静默失效 P0 bug)
+- _killing_action 字符串标志 → 事件 kwargs action_type (11 文件)
+- _recalc_spd_if_changed() 提取 (消除 5 处重复)
+- _ACTION_NAMES 模块级 dict 提取 (消除 3 处重复)
+- Himeko ON_WEAKNESS_BREAK breaker→source key 修复
+- from __future__ import annotations 补全至全 84 个 .py 文件
+
+## 已知待完成
+
+- Memosprite durationMode/remainingActions (召唤物生命周期)
+- 遗器套装效果实现
+- 光锥特效实现 (已有 Pipeline + 2 个示例, 需扩展)
+- 敌人多技能/行动模式
+- 某些配置项待社区实测确认 (docs/todo.md §待实测)
+
+## 防错规则 (Anti-Regression)
+
+- **禁止重复定义 Enum 类**: 重复定义会导致引用第一个类的 dict/map 静默失效
+- **事件 emit kwargs 必须与 handler 读的 key 一致**: source ↔ source, action_type ↔ action_type
+- **禁止 `_xxx_field` 字符串属性传递上下文**: 用事件 `**kwargs` 代替
+- **禁止用 PowerShell Set-Content 修改 .py 文件**: 破坏 UTF-8 编码
+- **重复代码 (≥3处) 必须提取为辅助函数**
+- **新文件必须包含 `from __future__ import annotations`**
+
+## 模块大小概览
+
+```
+core/combat_engine.py (562行) — 主循环+回合调度+日志+Aha
+core/game_state.py    (584行) — 伤害结算+SP/Energy+DoT+治疗+波次
+core/toughness.py     (190行) — 击破效果+CC处理+LM表
+core/targeting.py     (115行) — 仇恨+Blast/AoE/Random
+core/events.py        ( 73行) — EventBus(30类型) + clear_all
+core/entity_stats.py  (177行) — 白值/绿值 + _recalc_spd_if_changed
+core/enums.py         (155行) — 枚举 (ElementType 去重)
+config/game_config.py  ( 65行) — 全部可配置数值
+entities/base.py      (345行) — Fighter+状态类型+HitPacket+Memosprite
+test_starrail_combat.py (5293行) — 348 tests (待拆分)
+```
