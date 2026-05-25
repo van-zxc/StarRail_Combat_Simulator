@@ -39,7 +39,7 @@
 - [x] 失重系统: enemy.weightless 字段 + ON_DAMAGE_DEALT 延迟 + 命中计数
 - [x] DoT 引爆: _detonate_dots() 通用函数
 - [x] 条件属性转换: A6 Verdict (EHR→ATK) / A2 Torture (队友 EHR→ATK)
-- [x] 测试体系: 312 tests (36 角色专属 + 5 集成 + 6 边缘)
+- [x] 测试体系: 402 tests across 11 files (test/)
 - [x] 文档完善: character_implementation_guide.md v2 (增强版技能/新机制速查/测试指南)
 
 ---
@@ -149,3 +149,4 @@
 - [x] action_name 解析重复代码提取: `_ACTION_NAMES` 模块级 dict
 - [x] Himeko ON_WEAKNESS_BREAK `breaker→source` key 名不匹配修复
 - [x] `from __future__ import annotations` 补全至全部 84 个 .py 文件
+- [x] 测试文件拆分: `test_starrail_combat.py` (5933行) → `test/` 目录 11 个按模块的文件 (402 tests)

@@ -1,0 +1,275 @@
+{
+  "id": "301",
+  "name": "太空封印站",
+  "set_type": "planar",
+  "desc": [
+    "使装备者的攻击力提高12%。当装备者的速度大于等于120时，攻击力额外提高12%。"
+  ],
+  "set_effects": {
+    "2": [
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.12,
+        "field": "atk",
+        "ratio": true,
+        "percent": true
+      }
+    ]
+  },
+  "pieces": [
+    {
+      "id": "63015",
+      "name": "「黑塔」的空间站点",
+      "rarity": 5,
+      "type": "PLANAR_SPHERE",
+      "max_level": 15,
+      "main_affix_group": "55",
+      "sub_affix_group": "5"
+    },
+    {
+      "id": "63016",
+      "name": "「黑塔」的漫历轨迹",
+      "rarity": 5,
+      "type": "LINK_ROPE",
+      "max_level": 15,
+      "main_affix_group": "56",
+      "sub_affix_group": "5"
+    }
+  ],
+  "main_affixes": {
+    "55": [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.06912,
+        "field": "hp",
+        "ratio": true,
+        "percent": true,
+        "step": 0.024192
+      },
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.06912,
+        "field": "atk",
+        "ratio": true,
+        "percent": true,
+        "step": 0.024192
+      },
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.0864,
+        "field": "def",
+        "ratio": true,
+        "percent": true,
+        "step": 0.03024
+      },
+      {
+        "type": "PhysicalAddedRatio",
+        "value": 0.062208,
+        "field": "physical_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.021773
+      },
+      {
+        "type": "FireAddedRatio",
+        "value": 0.062208,
+        "field": "fire_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.021773
+      },
+      {
+        "type": "IceAddedRatio",
+        "value": 0.062208,
+        "field": "ice_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.021773
+      },
+      {
+        "type": "ThunderAddedRatio",
+        "value": 0.062208,
+        "field": "thunder_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.021773
+      },
+      {
+        "type": "WindAddedRatio",
+        "value": 0.062208,
+        "field": "wind_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.021773
+      },
+      {
+        "type": "QuantumAddedRatio",
+        "value": 0.062208,
+        "field": "quantum_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.021773
+      },
+      {
+        "type": "ImaginaryAddedRatio",
+        "value": 0.062208,
+        "field": "imaginary_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.021773
+      }
+    ],
+    "56": [
+      {
+        "type": "BreakDamageAddedRatioBase",
+        "value": 0.10368,
+        "field": "break_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.036288
+      },
+      {
+        "type": "SPRatioBase",
+        "value": 0.031104,
+        "field": "sp_rate",
+        "ratio": false,
+        "percent": true,
+        "step": 0.010886
+      },
+      {
+        "type": "HPAddedRatio",
+        "value": 0.06912,
+        "field": "hp",
+        "ratio": true,
+        "percent": true,
+        "step": 0.024192
+      },
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.06912,
+        "field": "atk",
+        "ratio": true,
+        "percent": true,
+        "step": 0.024192
+      },
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.0864,
+        "field": "def",
+        "ratio": true,
+        "percent": true,
+        "step": 0.03024
+      }
+    ]
+  },
+  "sub_affixes": [
+    {
+      "type": "HPDelta",
+      "value": 33.87,
+      "field": "hp",
+      "ratio": false,
+      "percent": false,
+      "step": 4.23376,
+      "step_num": 2
+    },
+    {
+      "type": "AttackDelta",
+      "value": 16.935,
+      "field": "atk",
+      "ratio": false,
+      "percent": false,
+      "step": 2.11688,
+      "step_num": 2
+    },
+    {
+      "type": "DefenceDelta",
+      "value": 16.935,
+      "field": "def",
+      "ratio": false,
+      "percent": false,
+      "step": 2.11688,
+      "step_num": 2
+    },
+    {
+      "type": "HPAddedRatio",
+      "value": 0.03456,
+      "field": "hp",
+      "ratio": true,
+      "percent": true,
+      "step": 0.00432,
+      "step_num": 2
+    },
+    {
+      "type": "AttackAddedRatio",
+      "value": 0.03456,
+      "field": "atk",
+      "ratio": true,
+      "percent": true,
+      "step": 0.00432,
+      "step_num": 2
+    },
+    {
+      "type": "DefenceAddedRatio",
+      "value": 0.0432,
+      "field": "def",
+      "ratio": true,
+      "percent": true,
+      "step": 0.0054,
+      "step_num": 2
+    },
+    {
+      "type": "SpeedDelta",
+      "value": 2,
+      "field": "spd",
+      "ratio": false,
+      "percent": false,
+      "step": 0.3,
+      "step_num": 2
+    },
+    {
+      "type": "CriticalChanceBase",
+      "value": 0.02592,
+      "field": "crit_rate",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00324,
+      "step_num": 2
+    },
+    {
+      "type": "CriticalDamageBase",
+      "value": 0.05184,
+      "field": "crit_dmg",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00648,
+      "step_num": 2
+    },
+    {
+      "type": "StatusProbabilityBase",
+      "value": 0.03456,
+      "field": "effect_hit",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00432,
+      "step_num": 2
+    },
+    {
+      "type": "StatusResistanceBase",
+      "value": 0.03456,
+      "field": "effect_res",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00432,
+      "step_num": 2
+    },
+    {
+      "type": "BreakDamageAddedRatioBase",
+      "value": 0.05184,
+      "field": "break_dmg",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00648,
+      "step_num": 2
+    }
+  ]
+}

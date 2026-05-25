@@ -104,4 +104,4 @@
 Arlan/Herta 用 `HitPacket` + `execute_multi_hit()`；其余角色手写 `for` 循环多次 `execute_action()`。后续开发应选择统一模式。
 
 ### 测试文件过大
-`test_starrail_combat.py` 5293 行单一文件，应拆分为按模块的多个测试文件。
+`test/` 目录下 11 个文件（402 tests），后续新增测试应放入对应模块文件。

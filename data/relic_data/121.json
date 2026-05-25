@@ -1,0 +1,283 @@
+{
+  "id": "121",
+  "name": "重循苦旅的司铎",
+  "set_type": "cavern",
+  "desc": [
+    "速度提高6%。",
+    "对我方单体目标施放战技或终结技时，使技能目标的暴击伤害提高18%，持续2回合，该效果最多叠加2次。"
+  ],
+  "set_effects": {
+    "2": [
+      {
+        "type": "SpeedAddedRatio",
+        "value": 0.06,
+        "field": "spd",
+        "ratio": true,
+        "percent": true
+      }
+    ],
+    "4": []
+  },
+  "pieces": [
+    {
+      "id": "61211",
+      "name": "司铎的律音耳坠",
+      "rarity": 5,
+      "type": "HEAD",
+      "max_level": 15,
+      "main_affix_group": "51",
+      "sub_affix_group": "5"
+    },
+    {
+      "id": "61212",
+      "name": "司铎的授邀手套",
+      "rarity": 5,
+      "type": "HANDS",
+      "max_level": 15,
+      "main_affix_group": "52",
+      "sub_affix_group": "5"
+    },
+    {
+      "id": "61213",
+      "name": "司铎的圣职礼服",
+      "rarity": 5,
+      "type": "BODY",
+      "max_level": 15,
+      "main_affix_group": "53",
+      "sub_affix_group": "5"
+    },
+    {
+      "id": "61214",
+      "name": "司铎的苦旅短靴",
+      "rarity": 5,
+      "type": "FEET",
+      "max_level": 15,
+      "main_affix_group": "54",
+      "sub_affix_group": "5"
+    }
+  ],
+  "main_affixes": {
+    "51": [
+      {
+        "type": "HPDelta",
+        "value": 112.896,
+        "field": "hp",
+        "ratio": false,
+        "percent": false,
+        "step": 39.5136
+      }
+    ],
+    "52": [
+      {
+        "type": "AttackDelta",
+        "value": 56.448,
+        "field": "atk",
+        "ratio": false,
+        "percent": false,
+        "step": 19.7568
+      }
+    ],
+    "53": [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.06912,
+        "field": "hp",
+        "ratio": true,
+        "percent": true,
+        "step": 0.024192
+      },
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.06912,
+        "field": "atk",
+        "ratio": true,
+        "percent": true,
+        "step": 0.024192
+      },
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.0864,
+        "field": "def",
+        "ratio": true,
+        "percent": true,
+        "step": 0.03024
+      },
+      {
+        "type": "CriticalChanceBase",
+        "value": 0.05184,
+        "field": "crit_rate",
+        "ratio": false,
+        "percent": true,
+        "step": 0.018144
+      },
+      {
+        "type": "CriticalDamageBase",
+        "value": 0.10368,
+        "field": "crit_dmg",
+        "ratio": false,
+        "percent": true,
+        "step": 0.036288
+      },
+      {
+        "type": "HealRatioBase",
+        "value": 0.055296,
+        "field": "heal_rate",
+        "ratio": false,
+        "percent": true,
+        "step": 0.019354
+      },
+      {
+        "type": "StatusProbabilityBase",
+        "value": 0.06912,
+        "field": "effect_hit",
+        "ratio": false,
+        "percent": true,
+        "step": 0.024192
+      }
+    ],
+    "54": [
+      {
+        "type": "HPAddedRatio",
+        "value": 0.06912,
+        "field": "hp",
+        "ratio": true,
+        "percent": true,
+        "step": 0.024192
+      },
+      {
+        "type": "AttackAddedRatio",
+        "value": 0.06912,
+        "field": "atk",
+        "ratio": true,
+        "percent": true,
+        "step": 0.024192
+      },
+      {
+        "type": "DefenceAddedRatio",
+        "value": 0.0864,
+        "field": "def",
+        "ratio": true,
+        "percent": true,
+        "step": 0.03024
+      },
+      {
+        "type": "SpeedDelta",
+        "value": 4.032,
+        "field": "spd",
+        "ratio": false,
+        "percent": false,
+        "step": 1.4
+      }
+    ]
+  },
+  "sub_affixes": [
+    {
+      "type": "HPDelta",
+      "value": 33.87,
+      "field": "hp",
+      "ratio": false,
+      "percent": false,
+      "step": 4.23376,
+      "step_num": 2
+    },
+    {
+      "type": "AttackDelta",
+      "value": 16.935,
+      "field": "atk",
+      "ratio": false,
+      "percent": false,
+      "step": 2.11688,
+      "step_num": 2
+    },
+    {
+      "type": "DefenceDelta",
+      "value": 16.935,
+      "field": "def",
+      "ratio": false,
+      "percent": false,
+      "step": 2.11688,
+      "step_num": 2
+    },
+    {
+      "type": "HPAddedRatio",
+      "value": 0.03456,
+      "field": "hp",
+      "ratio": true,
+      "percent": true,
+      "step": 0.00432,
+      "step_num": 2
+    },
+    {
+      "type": "AttackAddedRatio",
+      "value": 0.03456,
+      "field": "atk",
+      "ratio": true,
+      "percent": true,
+      "step": 0.00432,
+      "step_num": 2
+    },
+    {
+      "type": "DefenceAddedRatio",
+      "value": 0.0432,
+      "field": "def",
+      "ratio": true,
+      "percent": true,
+      "step": 0.0054,
+      "step_num": 2
+    },
+    {
+      "type": "SpeedDelta",
+      "value": 2,
+      "field": "spd",
+      "ratio": false,
+      "percent": false,
+      "step": 0.3,
+      "step_num": 2
+    },
+    {
+      "type": "CriticalChanceBase",
+      "value": 0.02592,
+      "field": "crit_rate",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00324,
+      "step_num": 2
+    },
+    {
+      "type": "CriticalDamageBase",
+      "value": 0.05184,
+      "field": "crit_dmg",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00648,
+      "step_num": 2
+    },
+    {
+      "type": "StatusProbabilityBase",
+      "value": 0.03456,
+      "field": "effect_hit",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00432,
+      "step_num": 2
+    },
+    {
+      "type": "StatusResistanceBase",
+      "value": 0.03456,
+      "field": "effect_res",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00432,
+      "step_num": 2
+    },
+    {
+      "type": "BreakDamageAddedRatioBase",
+      "value": 0.05184,
+      "field": "break_dmg",
+      "ratio": false,
+      "percent": true,
+      "step": 0.00648,
+      "step_num": 2
+    }
+  ]
+}

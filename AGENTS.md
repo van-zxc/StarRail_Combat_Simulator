@@ -32,9 +32,21 @@ entities/
     base.py                  # BaseEnemy + hit_energy_bucket
     voidranger.py
   light_cones/
-    base.py / cruising.py    # EquipmentEffect 抽象基类
+    base.py / cruising.py / ...    # BaseLightCone + 10 个具体光锥
   relics/
     base.py                  # BaseRelic + RelicSetManager
+test/
+  test_equipment.py          # 装备系统 + 修饰器池
+  test_combat.py             # 韧性/暴击/防御/伤害公式
+  test_action.py             # AV系统/终结技插队/额外回合/FUA/多段Hit
+  test_energy.py             # 能量/SP/受击回能
+  test_targeting.py          # Aggro/弹射/Blast/AoE/LockOn
+  test_damage_heal.py        # DoT/附加伤害/治疗/真实伤害
+  test_shield_death.py       # 护盾/死亡/治疗事件
+  test_break_debuff.py       # 击破机制/CC/驱散/减益
+  test_system.py             # 波次/召唤物/叠层/边缘案例
+  test_characters.py         # 9 个角色 (DanHeng~Herta) + 集成测试
+  test_light_cones.py        # 11 个光锥 + 命途限制 + 等级系统
 docs/
   todo.md                    # 开发路线图 (已完成/缺失/待实测)
   anti_regression.md         # 防错清单 (详细规则 + 历史案例)
@@ -103,6 +115,6 @@ test_starrail_combat.py      # pytest: 312 tests
 1. 阅读 `docs/todo.md` 了解当前开发状态
 2. 阅读 `core/` 下各模块了解引擎机制
 3. 阅读 `docs/anti_regression.md` 了解禁止操作
-4. 运行 `pytest test_starrail_combat.py` 验证改动
+4. 运行 `pytest test/` 验证改动
 5. 运行 `python starrail_combat.py` 验证 demo
 6. 变更后更新 `docs/todo.md` 和 `.agent_memory`
