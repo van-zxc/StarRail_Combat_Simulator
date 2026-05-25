@@ -1,6 +1,7 @@
 from __future__ import annotations
-"""BaseRelic + RelicSetManager — 遗器基类与套装管理器。"""
+"""BaseRelic + RelicSetEffect — 遗器基类与套装效果。"""
 
+from abc import ABC, abstractmethod
 from typing import Optional
 
 
@@ -23,9 +24,50 @@ class BaseRelic:
         self.sub_stats = list(sub_stats) if sub_stats is not None else list(self._default_sub_stats)
 
 
-class RelicSetManager:
-    """套装效果管理器 — 当前为存根，预留接口。"""
+class RelicSetEffect(ABC):
+    set_id: str = ""
+    set_type: str = "cavern"
 
-    @staticmethod
-    def check_and_apply_set_effects(character: "Character") -> None:
+    _registry: dict[str, type["RelicSetEffect"]] = {}
+
+    def __init_subclass__(cls, **kwargs: object) -> None:
+        super().__init_subclass__(**kwargs)
+        if cls.set_id:
+            cls._registry[cls.set_id] = cls
+
+    @abstractmethod
+    def on_equip(self, character: "Character", piece_count: int) -> None:
+        ...
+
+    def on_combat_start(self, state: "GameState", character: "Character") -> None:
         pass
+
+    def on_unequip(self, character: "Character") -> None:
+        pass
+
+
+def check_and_apply_set_effects(character: "Character") -> None:
+    """装备/更换部件时重算套装效果。"""
+
+    for old_eff in getattr(character, "_relic_set_active", {}).values():
+        old_eff.on_unequip(character)
+
+    counts: dict[str, int] = {}
+    for relic in character.relics.values():
+        if relic.set_id:
+            counts[relic.set_id] = counts.get(relic.set_id, 0) + 1
+
+    active: dict[str, "RelicSetEffect"] = {}
+    for set_id, count in counts.items():
+        if set_id in RelicSetEffect._registry:
+            eff = RelicSetEffect._registry[set_id]()
+            if count >= 2:
+                eff.on_equip(character, count)
+                active[set_id] = eff
+
+    character._relic_set_active = active
+
+
+def start_relic_set_effects(state: "GameState", character: "Character") -> None:
+    for eff in getattr(character, "_relic_set_active", {}).values():
+        eff.on_combat_start(state, character)

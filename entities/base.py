@@ -116,14 +116,22 @@ class Fighter(ABC):
         """是否能行动（未被控制类状态阻止）。"""
         return not self.is_cc_blocked
 
-    def take_damage(self, amount: int, *, bypass_shield: bool = False) -> int:
+    def take_damage(self, amount: int, *, bypass_shield: bool = False, mitigated: bool = False) -> int:
         """扣除生命值，返回实际造成的伤害值。
 
         bypass_shield=True 时跳过护盾吸收（如 DoT）。
+        mitigated=True 时跳过减伤乘区（已在乘区链中处理过）。
         """
         if amount > 0 and not bypass_shield and self._nullify_direct_dmg:
             self._nullify_direct_dmg = False
             return 0
+
+        # 减伤乘区: DMG_MITIGATION 独立累乘（仅当未在乘区链中处理时）
+        if not mitigated and amount > 0 and hasattr(self, "stats"):
+            for mv in self.stats.get_mitigation_values():
+                amount *= (1.0 - mv)
+            amount = max(int(amount), 0)
+
         if not bypass_shield and amount > 0 and self.shield_statuses:
             remaining = []
             for s in self.shield_statuses:

@@ -40,6 +40,7 @@ class StatType(Enum):
     DEF = auto()
     HP = auto()
     DEF_REDUCTION = auto()
+    DEF_IGNORE = auto()
     SPD = auto()
     CRIT_RATE = auto()
     CRIT_DMG = auto()

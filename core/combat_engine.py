@@ -59,6 +59,11 @@ class CombatEngine:
                     continue
                 lc.effect.on_combat_start(self.state, char)
 
+        # 注册遗器套装战斗开始回调
+        from entities.relics.base import start_relic_set_effects
+        for char in self.state.alive_characters:
+            start_relic_set_effects(self.state, char)
+
         self.event_bus.emit(EventType.BATTLE_START, engine=self)
         self.state.apply_techniques()
 

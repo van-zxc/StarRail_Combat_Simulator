@@ -36,7 +36,7 @@ from core.test_factory import create_test_character
 from entities.characters.base import BaseCharacter
 from entities.enemies.base import BaseEnemy
 from entities.light_cones.base import BaseLightCone
-from entities.relics.base import BaseRelic, RelicSetManager
+from entities.relics.base import BaseRelic, RelicSetEffect, check_and_apply_set_effects, start_relic_set_effects
 from entities.base import DoTStatus, EquipmentEffect, Fighter, StatModifier, ShieldStatus, Memosprite, CCStatus, CertifiedBanger, ToughnessDamagePacket, HitPacket
 from entities.aha import Aha
 

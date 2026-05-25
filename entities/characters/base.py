@@ -179,8 +179,6 @@ class BaseCharacter(Fighter):
         self._recalc_max_hp()
 
     def equip_relic(self, relic: "Relic") -> None:
-        from starrail_combat import RelicSetManager
-
         if relic.part in self.relics:
             old = self.relics[relic.part]
             for mod in [old.main_stat] + old.sub_stats:
@@ -192,7 +190,8 @@ class BaseCharacter(Fighter):
             self.stats.add_modifier(mod)
 
         self.relics[relic.part] = relic
-        RelicSetManager.check_and_apply_set_effects(self)
+        from entities.relics.base import check_and_apply_set_effects
+        check_and_apply_set_effects(self)
         self._recalc_max_hp()
 
     def _recalc_max_hp(self) -> None:

@@ -202,7 +202,7 @@ class GameState:
             self.event_bus.emit(EventType.ON_BEFORE_HIT, source=character,
                                  target=target, damage=final_damage,
                                  damage_type=damage_type)
-        actual_damage = target.take_damage(final_damage, bypass_shield=is_dot)
+        actual_damage = target.take_damage(final_damage, bypass_shield=is_dot, mitigated=True)
         if damage_type != DamageType.BREAK:
             target.hit_count += 1
 

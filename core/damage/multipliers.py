@@ -110,12 +110,14 @@ def apply_weaken(dmg: int, attacker: "Character", defender: "Enemy") -> int:
 def defense_multiplier(attacker: "Character", defender: "Enemy") -> float:
     """防御减伤乘区: attacker_base / (effective_def + attacker_base)。
     
-    effective_def = DEF × (1 − DEF_REDUCTION), 减防与无视防御同桶。
+    effective_def = DEF × (1 − DEF_REDUCTION − DEF_IGNORE), 减防与无视防御同桶。
     """
     attacker_base = attacker.level * 10 + 200
     defender_def = max(defender.stats.get_total_stat(StatType.DEF), 0.0)
     def_reduction = min(defender.stats.get_total_stat(StatType.DEF_REDUCTION), 1.0)
-    effective_def = defender_def * (1.0 - def_reduction)
+    def_ignore = max(attacker.stats.get_total_stat(StatType.DEF_IGNORE), 0.0) if hasattr(attacker, "stats") else 0.0
+    total_reduction = min(def_reduction + def_ignore, 1.0)
+    effective_def = defender_def * (1.0 - total_reduction)
     return attacker_base / (max(effective_def, 0.0) + attacker_base)
 
 
