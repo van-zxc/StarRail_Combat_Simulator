@@ -472,6 +472,19 @@ class GameState:
 
         return False
 
+    def dispel_one_buff(self, target: "Fighter") -> bool:
+        """移除目标上的一个增益效果（value>0 的可驱散 modifier）。
+        用于 Return to Darkness (21031) 的暴击驱散效果。
+        """
+        if not hasattr(target, "stats"):
+            return False
+        for m in target.stats.active_modifiers:
+            if m.dispellable and m.value > 0:
+                target.stats.remove_modifier(m)
+                print(f"  [驱散增益] {target.name} 的 {m.source} 被移除")
+                return True
+        return False
+
     # --- 冻结附加伤害结算 ---
 
     def resolve_freeze_dot_ticks(self, enemy: "Enemy") -> list[dict]:

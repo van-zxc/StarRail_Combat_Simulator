@@ -214,6 +214,29 @@ class Fighter(ABC):
 
 
 # ============================================================
+#  count_debuffs — 负面效果计数统一函数
+# ============================================================
+
+
+def count_debuffs(target) -> int:
+    """统计目标实体上生效的负面效果数量。
+
+    包含:
+    - 属性减益: active_modifiers 中 value<0 的 modifier
+    - CC 控制: cc_statuses 条目（Freeze / Imprison / Entanglement）
+    - DoT 状态: dot_statuses 条目（Bleed / Burn / Shock / WindShear）
+    """
+    count = 0
+    if hasattr(target, "stats"):
+        for mod in target.stats.active_modifiers:
+            if mod.value < 0:
+                count += 1
+    count += len(getattr(target, "cc_statuses", []))
+    count += len(getattr(target, "dot_statuses", []))
+    return count
+
+
+# ============================================================
 #  DoTStatus — 持续伤害状态对象
 # ============================================================
 @dataclass

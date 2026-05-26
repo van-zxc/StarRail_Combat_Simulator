@@ -50,7 +50,8 @@ def compute_base_damage(
     if override is not None:
         return override
     if damage_type in (DamageType.DIRECT, DamageType.ADDITIONAL_DMG):
-        return int(attacker.atk * skill_multiplier)
+        flat = getattr(attacker, "_extra_base_dmg", 0.0)
+        return int(attacker.atk * skill_multiplier + flat)
     if damage_type == DamageType.ELATION:
         lm = _get_elation_level_multiplier(attacker.level)
         return int(lm * skill_multiplier)

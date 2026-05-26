@@ -58,6 +58,7 @@ class StatType(Enum):
     SKILL_DMG = auto()
     ULT_DMG = auto()
     FUA_DMG = auto()
+    DOT_DMG = auto()
     AGGRO_MODIFIER = auto()
     BREAK_EFFECT = auto()
     BREAK_DMG_INCREASE = auto()

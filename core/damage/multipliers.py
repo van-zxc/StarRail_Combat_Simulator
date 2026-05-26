@@ -45,8 +45,8 @@ def damage_bonus_multiplier(attacker: "Character") -> float:
 
 def apply_dmg_bonus(
     dmg: int,
-    attacker: "Character",
-    defender: "Enemy",
+    attacker: "Fighter",
+    target: object = None,
     action_type: ActionType | None = None,
     damage_type: DamageType | None = None,
     tags: set[str] | None = None,
@@ -56,6 +56,7 @@ def apply_dmg_bonus(
 
     ADDITIONAL_DMG 只享受通用增伤，不享受动作标签增伤和元素专属增伤。
     BREAK / SUPER_BREAK 不享受增伤。
+    DoT 伤害额外加入 DOT_DMG 与 DMG_BONUS 加法叠加。
     """
     if damage_type in (DamageType.BREAK, DamageType.SUPER_BREAK):
         return dmg
@@ -65,6 +66,10 @@ def apply_dmg_bonus(
         bonus = attacker.stats.get_total_stat(StatType.DMG_BONUS)
     else:
         bonus = attacker.stats.get_element_dmg_bonus(element)
+
+    # DoT 专属增伤 (与 DMG_BONUS 加算)
+    if damage_type == DamageType.DOT:
+        bonus += attacker.stats.get_total_stat(StatType.DOT_DMG)
 
     if damage_type != DamageType.ADDITIONAL_DMG and action_type is not None:
         cond_stat = _CONDITIONAL_DMG.get(action_type)
