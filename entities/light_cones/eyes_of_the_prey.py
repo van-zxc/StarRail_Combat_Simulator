@@ -33,7 +33,8 @@ class EyesOfThePrey(BaseLightCone):
 
 class EyesOfThePreyEffect(EquipmentEffect):
     _PARAMS = [[0.20, 0.24], [0.25, 0.30], [0.30, 0.36], [0.35, 0.42], [0.40, 0.48]]
-    _SOURCE = "LightCone_21008"
+    _SOURCE_EHR = "LightCone_21008_EHR"
+    _SOURCE_DOT = "LightCone_21008_DOT"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -46,14 +47,14 @@ class EyesOfThePreyEffect(EquipmentEffect):
             stat_type=StatType.EFFECT_HIT_RATE,
             modifier_type=StatModifierType.PERCENT,
             value=p[0],
-            source=self._SOURCE,
+            source=self._SOURCE_EHR,
             dispellable=False,
         )
         dot_dmg_mod = StatModifier(
             stat_type=StatType.DOT_DMG,
             modifier_type=StatModifierType.PERCENT,
             value=p[1],
-            source=self._SOURCE,
+            source=self._SOURCE_DOT,
             dispellable=False,
         )
         character.stats.apply_modifier(ehr_mod, "refresh")
@@ -63,4 +64,5 @@ class EyesOfThePreyEffect(EquipmentEffect):
         pass
 
     def on_unequip(self, character: "Character") -> None:
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_EHR)
+        character.stats.purge_source(self._SOURCE_DOT)

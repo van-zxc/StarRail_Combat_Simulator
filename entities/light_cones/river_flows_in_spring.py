@@ -33,7 +33,8 @@ class RiverFlowsInSpring(BaseLightCone):
 
 class RiverFlowsInSpringEffect(EquipmentEffect):
     _PARAMS = [[0.08, 0.12], [0.09, 0.15], [0.10, 0.18], [0.11, 0.21], [0.12, 0.24]]
-    _SOURCE = "LightCone_21024"
+    _SOURCE_SPD = "LightCone_21024_SPD"
+    _SOURCE_DMG = "LightCone_21024_DMG"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -51,14 +52,14 @@ class RiverFlowsInSpringEffect(EquipmentEffect):
             stat_type=StatType.SPD,
             modifier_type=StatModifierType.PERCENT,
             value=p[0],
-            source=self._SOURCE,
+            source=self._SOURCE_SPD,
             dispellable=False,
         )
         dmg_mod = StatModifier(
             stat_type=StatType.DMG_BONUS,
             modifier_type=StatModifierType.PERCENT,
             value=p[1],
-            source=self._SOURCE,
+            source=self._SOURCE_DMG,
             dispellable=False,
         )
         self._character.stats.apply_modifier(spd_mod, "refresh")
@@ -84,7 +85,8 @@ class RiverFlowsInSpringEffect(EquipmentEffect):
         if target is not self._character:
             return
         self._broken_turns_remaining = 2
-        self._character.stats.purge_source(self._SOURCE)
+        self._character.stats.purge_source(self._SOURCE_SPD)
+        self._character.stats.purge_source(self._SOURCE_DMG)
 
     def _on_turn_end(self, unit: "Fighter") -> None:
         if unit is not self._character:
@@ -102,7 +104,8 @@ class RiverFlowsInSpringEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_SPD)
+        character.stats.purge_source(self._SOURCE_DMG)
         if character.event_bus is not None:
             bus = character.event_bus
             if self._cb_start is not None:

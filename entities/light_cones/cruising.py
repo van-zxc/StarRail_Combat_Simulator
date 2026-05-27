@@ -42,7 +42,8 @@ class CruisingEffect(EquipmentEffect):
         [0.14, 0.50, 0.14, 0.35, 2],
         [0.16, 0.50, 0.16, 0.40, 2],
     ]
-    _SOURCE = "LightCone_24001"
+    _SOURCE = "LightCone_24001_CRIT"
+    _ATK_SOURCE = "LightCone_24001_ATK"
     _COND_SOURCE = "LightCone_24001_COND"
 
     def __init__(self, superimpose: int = 1) -> None:
@@ -87,7 +88,7 @@ class CruisingEffect(EquipmentEffect):
     def _on_action_start(self, unit: "Character", target: "Fighter") -> None:
         if unit is not self._character:
             return
-        if target is None or not hasattr(target, "dot_statuses"):
+        if target is None or not hasattr(target, "max_hp"):
             return
         from core.enums import StatType, StatModifierType
 
@@ -123,7 +124,7 @@ class CruisingEffect(EquipmentEffect):
             stat_type=StatType.ATK,
             modifier_type=StatModifierType.PERCENT,
             value=atk,
-            source=self._SOURCE,
+            source=self._ATK_SOURCE,
             duration=dur,
             dispellable=False,
         )
@@ -135,6 +136,7 @@ class CruisingEffect(EquipmentEffect):
         from core.events import EventType
 
         character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._ATK_SOURCE)
         character.stats.purge_source(self._COND_SOURCE)
         if character.event_bus is not None:
             bus = character.event_bus

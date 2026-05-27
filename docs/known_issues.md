@@ -162,3 +162,20 @@ bracket_i 从 `base[i]` 开始，到 `base[i+1]`（或 Lv80 的 `base[6]+step[6]
 所有 light cone effect 在 `on_unequip` 中 unsubscribe 了自身订阅的事件。但若装备从未被卸载（如整场战斗未更换装备），且引擎未在战斗结束后执行 `clear_all()`，则订阅会泄漏到下一场战斗。
 
 建议在 `GameState` 的 `BATTLE_END` 处理中统一调用 `event_bus.clear_all()`。
+
+---
+
+## Light Cone: 论剑 (Swordplay) (21010)
+
+### KI-011: 目标追踪使用 name 字符串而非实例 identity
+
+**代码**: `entities/light_cones/swordplay.py:80` → `SwordplayEffect._on_hit()`
+
+**描述**: 判断"是否同一目标"时使用 `target.name`（字符串比较）。同种怪物共享相同 name，切换至同类型另一只怪物时不会触发"目标变化→清除层数"的逻辑。
+
+**当前行为**: `_current_target_name = target.name`，若 A 怪物与 B 怪物 name 相同则视为同一目标。
+
+**待验证**: 实机中论剑按怪物实例 identity 判定。等怪物系统支持 UUID/实例标识后修复。
+
+---
+

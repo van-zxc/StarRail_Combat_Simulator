@@ -33,7 +33,8 @@ class GeniusesRepose(BaseLightCone):
 
 class GeniusesReposeEffect(EquipmentEffect):
     _PARAMS = [[0.16, 0.24, 3], [0.20, 0.30, 3], [0.24, 0.36, 3], [0.28, 0.42, 3], [0.32, 0.48, 3]]
-    _SOURCE = "LightCone_21020"
+    _SOURCE_ATK = "LightCone_21020_ATK"
+    _SOURCE_CDMG = "LightCone_21020_CDMG"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -48,7 +49,7 @@ class GeniusesReposeEffect(EquipmentEffect):
             stat_type=StatType.ATK,
             modifier_type=StatModifierType.PERCENT,
             value=atk_pct,
-            source=self._SOURCE,
+            source=self._SOURCE_ATK,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -71,7 +72,7 @@ class GeniusesReposeEffect(EquipmentEffect):
             stat_type=StatType.CRIT_DMG,
             modifier_type=StatModifierType.PERCENT,
             value=cd_val,
-            source=self._SOURCE,
+            source=self._SOURCE_CDMG,
             duration=duration,
             dispellable=False,
         )
@@ -80,6 +81,7 @@ class GeniusesReposeEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_ATK)
+        character.stats.purge_source(self._SOURCE_CDMG)
         if self._cb_kill is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.ON_KILL, self._cb_kill)

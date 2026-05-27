@@ -33,7 +33,8 @@ class UnderTheBlueSky(BaseLightCone):
 
 class UnderTheBlueSkyEffect(EquipmentEffect):
     _PARAMS = [[0.16, 0.12, 3], [0.20, 0.15, 3], [0.24, 0.18, 3], [0.28, 0.21, 3], [0.32, 0.24, 3]]
-    _SOURCE = "LightCone_21019"
+    _SOURCE_ATK = "LightCone_21019_ATK"
+    _SOURCE_CRIT = "LightCone_21019_CRIT"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -48,7 +49,7 @@ class UnderTheBlueSkyEffect(EquipmentEffect):
             stat_type=StatType.ATK,
             modifier_type=StatModifierType.PERCENT,
             value=atk_pct,
-            source=self._SOURCE,
+            source=self._SOURCE_ATK,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -72,7 +73,7 @@ class UnderTheBlueSkyEffect(EquipmentEffect):
             stat_type=StatType.CRIT_RATE,
             modifier_type=StatModifierType.PERCENT,
             value=cr_val,
-            source=self._SOURCE,
+            source=self._SOURCE_CRIT,
             duration=duration,
             dispellable=False,
         )
@@ -81,6 +82,7 @@ class UnderTheBlueSkyEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_ATK)
+        character.stats.purge_source(self._SOURCE_CRIT)
         if self._cb_kill is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.ON_KILL, self._cb_kill)

@@ -33,7 +33,8 @@ class DayOne(BaseLightCone):
 
 class DayOneEffect(EquipmentEffect):
     _PARAMS = [[0.16, 0.08], [0.18, 0.09], [0.20, 0.10], [0.22, 0.11], [0.24, 0.12]]
-    _SOURCE = "LightCone_21002"
+    _SOURCE_DEF = "LightCone_21002_DEF"
+    _SOURCE_RES = "LightCone_21002_RES"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -48,7 +49,7 @@ class DayOneEffect(EquipmentEffect):
             stat_type=StatType.DEF,
             modifier_type=StatModifierType.PERCENT,
             value=def_pct,
-            source=self._SOURCE,
+            source=self._SOURCE_DEF,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -70,7 +71,7 @@ class DayOneEffect(EquipmentEffect):
             stat_type=StatType.RES,
             modifier_type=StatModifierType.PERCENT,
             value=res_pct,
-            source=self._SOURCE,
+            source=self._SOURCE_RES,
             dispellable=False,
         )
         for char in state.characters:
@@ -85,13 +86,14 @@ class DayOneEffect(EquipmentEffect):
             if not hasattr(char, "stats"):
                 continue
             for m in char.stats.active_modifiers:
-                if m.source == self._SOURCE:
+                if m.source == self._SOURCE_RES:
                     return True
         return False
 
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_DEF)
+        character.stats.purge_source(self._SOURCE_RES)
         if self._cb_start is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.BATTLE_START, self._cb_start)

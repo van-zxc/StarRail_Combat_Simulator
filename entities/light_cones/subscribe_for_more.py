@@ -33,7 +33,8 @@ class SubscribeForMore(BaseLightCone):
 
 class SubscribeForMoreEffect(EquipmentEffect):
     _PARAMS = [[0.24, 0.24], [0.30, 0.30], [0.36, 0.36], [0.42, 0.42], [0.48, 0.48]]
-    _SOURCE = "LightCone_21017"
+    _SOURCE_BA = "LightCone_21017_BA"
+    _SOURCE_SKILL = "LightCone_21017_SKILL"
     _COND_SOURCE = "LightCone_21017_COND"
 
     def __init__(self, superimpose: int = 1) -> None:
@@ -50,7 +51,7 @@ class SubscribeForMoreEffect(EquipmentEffect):
             stat_type=StatType.BASIC_ATK_DMG,
             modifier_type=StatModifierType.PERCENT,
             value=pct,
-            source=self._SOURCE,
+            source=self._SOURCE_BA,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -58,7 +59,7 @@ class SubscribeForMoreEffect(EquipmentEffect):
             stat_type=StatType.SKILL_DMG,
             modifier_type=StatModifierType.PERCENT,
             value=pct,
-            source=self._SOURCE,
+            source=self._SOURCE_SKILL,
             dispellable=False,
         )
         character.stats.apply_modifier(mod2, "refresh")
@@ -104,7 +105,8 @@ class SubscribeForMoreEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_BA)
+        character.stats.purge_source(self._SOURCE_SKILL)
         character.stats.purge_source(self._COND_SOURCE)
         if character.event_bus is not None:
             bus = character.event_bus

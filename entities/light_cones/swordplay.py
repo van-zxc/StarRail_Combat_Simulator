@@ -77,6 +77,8 @@ class SwordplayEffect(EquipmentEffect):
             return
         if target is None:
             return
+        # TODO: 使用 target.name 比较无法区分同种不同怪物个体。
+        # 当怪物系统支持身份标识(id/UUID)后, 改为按 identity 比较。
         if self._current_target_name is None or target.name != self._current_target_name:
             self._current_target_name = target.name
             self._hit_count = 1

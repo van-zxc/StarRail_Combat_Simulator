@@ -247,10 +247,23 @@ class Test<Name>LightCone:
 
 ### Modifier Source Convention
 
-- Primary source: `"LightCone_<id>"`
-- For multiple separate effects, use distinct suffixes: `"LightCone_<id>"` and `"LightCone_<id>_DMG"`
-- `purge_source()` removes ALL modifiers matching that source (ignoring dispellable)
-- `on_unequip` MUST `purge_source` for every source string used
+**强制规则: 同一个光锥的不同 buff/debuff 必须使用不同的 source tag。**
+
+- 每个 StatModifier 的 `source` 字段必须是独一无二的字符串
+- 格式: `"LightCone_<id>_<EFFECT>"`，其中 `<EFFECT>` 是能区分效果的短标识
+- 示例: `"LightCone_21002_DEF"` 和 `"LightCone_21002_RES"`（余生的第一天）
+- **严禁**多个不同 stat_type 的 modifier 共用同一个 source 字符串
+- 原因: `purge_source()` 会移除所有匹配该 source 的 modifier，共用 source 会导致 A 效果被误清或 B 效果被误判为"已存在"
+
+**命名建议**:
+- 常驻属性 buff: `_SOURCE_<STAT>` (如 `_SOURCE_DEF`, `_SOURCE_ATK`, `_SOURCE_EHR`)
+- 条件触发 buff: `_SOURCE_<COND>` 或 `_SOURCE_COND` (如 `_SOURCE_COND`, `_SOURCE_CDMG`)
+- 多个相同类型但不同来源的: 加数字或场景后缀区分
+- 动态 source（如 NightMilkyWay 的 break DMG）: `f"{self._SOURCE}_DMG"`
+
+**on_unequip 规则**:
+- 必须 `purge_source()` 每一个 source 字符串
+- 必须对目标为队友的 modifier 也要清除（遍历所有队友 purge）
 
 ### Event Subscription Lifecycle
 

@@ -42,7 +42,8 @@ class BeforeDawnEffect(EquipmentEffect):
         [0.54, 0.27, 0.72],
         [0.60, 0.30, 0.80],
     ]
-    _SOURCE = "LightCone_23010"
+    _SOURCE = "LightCone_23010_CDMG"
+    _SKILL_ULT_SOURCE = "LightCone_23010_SKILL_ULT"
     _DREAM_SOURCE = "LightCone_23010_DREAM"
 
     def __init__(self, superimpose: int = 1) -> None:
@@ -67,14 +68,14 @@ class BeforeDawnEffect(EquipmentEffect):
             stat_type=StatType.SKILL_DMG,
             modifier_type=StatModifierType.PERCENT,
             value=p[1],
-            source=self._SOURCE,
+            source=self._SKILL_ULT_SOURCE,
             dispellable=False,
         )
         ud_mod = StatModifier(
             stat_type=StatType.ULT_DMG,
             modifier_type=StatModifierType.PERCENT,
             value=p[1],
-            source=self._SOURCE,
+            source=self._SKILL_ULT_SOURCE,
             dispellable=False,
         )
         character.stats.apply_modifier(cd_mod, "refresh")
@@ -130,6 +131,7 @@ class BeforeDawnEffect(EquipmentEffect):
         from core.events import EventType
 
         character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SKILL_ULT_SOURCE)
         character.stats.purge_source(self._DREAM_SOURCE)
         self._dream_body = False
         if character.event_bus is not None:

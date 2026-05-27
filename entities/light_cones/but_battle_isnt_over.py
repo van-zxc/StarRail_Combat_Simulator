@@ -36,7 +36,8 @@ class ButBattleIsntOver(BaseLightCone):
 
 class ButBattleIsntOverEffect(EquipmentEffect):
     _PARAMS = [[0.10, 0.30, 1], [0.12, 0.35, 1], [0.14, 0.40, 1], [0.16, 0.45, 1], [0.18, 0.50, 1]]
-    _SOURCE = "LightCone_23003"
+    _SOURCE_ERR = "LightCone_23003_ERR"
+    _SOURCE_DMG = "LightCone_23003_DMG"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -54,7 +55,7 @@ class ButBattleIsntOverEffect(EquipmentEffect):
             stat_type=StatType.ERR,
             modifier_type=StatModifierType.PERCENT,
             value=err_val,
-            source=self._SOURCE,
+            source=self._SOURCE_ERR,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -105,7 +106,7 @@ class ButBattleIsntOverEffect(EquipmentEffect):
             stat_type=StatType.DMG_BONUS,
             modifier_type=StatModifierType.PERCENT,
             value=dmg_pct,
-            source=self._SOURCE,
+            source=self._SOURCE_DMG,
             duration=duration,
             dispellable=False,
         )
@@ -116,7 +117,8 @@ class ButBattleIsntOverEffect(EquipmentEffect):
 
         for c in getattr(self._state, "characters", []):
             if hasattr(c, "stats"):
-                c.stats.purge_source(self._SOURCE)
+                c.stats.purge_source(self._SOURCE_ERR)
+                c.stats.purge_source(self._SOURCE_DMG)
         if character.event_bus is not None:
             bus = character.event_bus
             if self._cb_ult is not None:

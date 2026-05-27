@@ -426,7 +426,7 @@ class TestPostOpConversation:
         lc = LightCone("21000", superimpose=1)
         char.equip_light_cone(lc)
         total_err = sum(m.value for m in char.stats.active_modifiers
-                        if m.stat_type == StatType.ERR and m.source == "LightCone_21000")
+                        if m.stat_type == StatType.ERR and m.source == "LightCone_21000_ERR")
         assert total_err == pytest.approx(0.08)
 
     def test_no_heal_bonus_on_equip(self) -> None:
@@ -434,7 +434,7 @@ class TestPostOpConversation:
         lc = LightCone("21000", superimpose=1)
         char.equip_light_cone(lc)
         heal_mods = [m for m in char.stats.active_modifiers
-                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000"]
+                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000_HEAL"]
         assert len(heal_mods) == 0
 
     def test_heal_buff_on_ultimate(self) -> None:
@@ -444,7 +444,7 @@ class TestPostOpConversation:
         lc.effect.on_combat_start(engine.state, char)
         engine.event_bus.emit(EventType.ON_ULTIMATE_INSERTED, character=char, target=None)
         heal_mods = [m for m in char.stats.active_modifiers
-                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000"]
+                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000_HEAL"]
         assert len(heal_mods) == 1
         assert heal_mods[0].value == pytest.approx(0.12)
 
@@ -458,17 +458,17 @@ class TestPostOpConversation:
         lc.effect.on_combat_start(engine.state, char)
         engine.event_bus.emit(EventType.ON_ULTIMATE_INSERTED, character=other, target=None)
         heal_mods = [m for m in char.stats.active_modifiers
-                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000"]
+                     if m.stat_type == StatType.OUTGOING_HEALING_BOOST and m.source == "LightCone_21000_HEAL"]
         assert len(heal_mods) == 0
 
     def test_unequip_cleans_up(self) -> None:
         char = self._make_char_priest()
         lc = LightCone("21000", superimpose=1)
         char.equip_light_cone(lc)
-        assert any(m.source == "LightCone_21000" for m in char.stats.active_modifiers)
+        assert any(m.source in ("LightCone_21000_ERR", "LightCone_21000_HEAL") for m in char.stats.active_modifiers)
         bare = LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10)
         char.equip_light_cone(bare)
-        assert not any(m.source == "LightCone_21000" for m in char.stats.active_modifiers)
+        assert not any(m.source in ("LightCone_21000_ERR", "LightCone_21000_HEAL") for m in char.stats.active_modifiers)
 
 
 # ============================================================
@@ -2493,7 +2493,7 @@ class TestRiverFlowsInSpring:
         char.equip_light_cone(lc)
         lc.effect.on_combat_start(engine.state, char)
         engine.event_bus.emit(EventType.BATTLE_START)
-        mods = [m for m in char.stats.active_modifiers if m.source == "LightCone_21024"]
+        mods = [m for m in char.stats.active_modifiers if m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG")]
         assert len(mods) == 2
         assert any(m.stat_type == StatType.SPD for m in mods)
         assert any(m.stat_type == StatType.DMG_BONUS for m in mods)
@@ -2504,12 +2504,12 @@ class TestRiverFlowsInSpring:
         char.equip_light_cone(lc)
         lc.effect.on_combat_start(engine.state, char)
         engine.event_bus.emit(EventType.BATTLE_START)
-        assert any(m.source == "LightCone_21024" for m in char.stats.active_modifiers)
+        assert any(m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG") for m in char.stats.active_modifiers)
         engine.event_bus.emit(EventType.ON_HIT, source=enemy, target=char,
                                damage=50, action_type=ActionType.BASIC_ATTACK,
                                damage_type=DamageType.DIRECT, is_crit=False)
-        assert not any(m.source == "LightCone_21024" for m in char.stats.active_modifiers)
-        assert lc.effect._state == RiverFlowsInSpringEffect._STATE_BROKEN
+        assert not any(m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG") for m in char.stats.active_modifiers)
+        assert lc.effect._broken_turns_remaining == 2
 
     def test_turn_end_restores_buffs(self):
         char, enemy, _, engine = self._make_setup()
@@ -2520,10 +2520,12 @@ class TestRiverFlowsInSpring:
         engine.event_bus.emit(EventType.ON_HIT, source=enemy, target=char,
                                damage=50, action_type=ActionType.BASIC_ATTACK,
                                damage_type=DamageType.DIRECT, is_crit=False)
-        assert not any(m.source == "LightCone_21024" for m in char.stats.active_modifiers)
+        assert not any(m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG") for m in char.stats.active_modifiers)
+        # Wait 2 turn-end events to restore (下回合结束时恢复)
         engine.event_bus.emit(EventType.TURN_END, unit=char, engine=engine)
-        assert any(m.source == "LightCone_21024" for m in char.stats.active_modifiers)
-        assert lc.effect._state == RiverFlowsInSpringEffect._STATE_ACTIVE
+        assert not any(m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG") for m in char.stats.active_modifiers)
+        engine.event_bus.emit(EventType.TURN_END, unit=char, engine=engine)
+        assert any(m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG") for m in char.stats.active_modifiers)
 
     def test_other_unit_turn_end_does_not_restore(self):
         char, enemy, _, engine = self._make_setup()
@@ -2535,7 +2537,7 @@ class TestRiverFlowsInSpring:
                                damage=50, action_type=ActionType.BASIC_ATTACK,
                                damage_type=DamageType.DIRECT, is_crit=False)
         engine.event_bus.emit(EventType.TURN_END, unit=enemy, engine=engine)
-        assert not any(m.source == "LightCone_21024" for m in char.stats.active_modifiers)
+        assert not any(m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG") for m in char.stats.active_modifiers)
 
     def test_unequip_cleans_up(self):
         char, enemy, _, engine = self._make_setup()
@@ -2543,9 +2545,9 @@ class TestRiverFlowsInSpring:
         char.equip_light_cone(lc)
         lc.effect.on_combat_start(engine.state, char)
         engine.event_bus.emit(EventType.BATTLE_START)
-        assert any(m.source == "LightCone_21024" for m in char.stats.active_modifiers)
+        assert any(m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG") for m in char.stats.active_modifiers)
         char.equip_light_cone(LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10))
-        assert not any(m.source == "LightCone_21024" for m in char.stats.active_modifiers)
+        assert not any(m.source in ("LightCone_21024_SPD", "LightCone_21024_DMG") for m in char.stats.active_modifiers)
 
 
 # ============================================================
@@ -2826,7 +2828,7 @@ class TestPerfectTiming:
         char.stats.apply_modifier(extra_res, "refresh")
         new_heal_mods = [m for m in char.stats.active_modifiers
                          if m.stat_type == StatType.OUTGOING_HEALING_BOOST
-                         and m.source == "LightCone_21014"]
+                         and m.source == "LightCone_21014_HEAL"]
         assert new_heal_mods[0].value > initial_val
 
 
@@ -3311,8 +3313,7 @@ class TestPlanetaryRendezvous:
         lc = LightCone("21011", superimpose=1)
         char.equip_light_cone(lc)
         lc.effect.on_combat_start(engine.state, char)
-        engine.event_bus.emit(EventType.ACTION_START, unit=ally, target=enemy,
-                               action_type=ActionType.SKILL, engine=engine)
+        engine.event_bus.emit(EventType.BATTLE_START)
         dmg_mods = [m for m in ally.stats.active_modifiers if m.source == "LightCone_21011"]
         assert len(dmg_mods) == 1
         assert dmg_mods[0].value == pytest.approx(0.12)
@@ -3322,23 +3323,21 @@ class TestPlanetaryRendezvous:
         lc = LightCone("21011", superimpose=1)
         char.equip_light_cone(lc)
         lc.effect.on_combat_start(engine.state, char)
-        engine.event_bus.emit(EventType.ACTION_START, unit=ally2, target=enemy,
-                               action_type=ActionType.SKILL, engine=engine)
+        engine.event_bus.emit(EventType.BATTLE_START)
         assert not any(m.source == "LightCone_21011" for m in ally2.stats.active_modifiers)
 
-    def test_after_clears_dmg(self):
+    def test_aura_persistent_after_action(self):
         char, ally, _, enemy, _, engine = self._make_setup()
         lc = LightCone("21011", superimpose=1)
         char.equip_light_cone(lc)
         lc.effect.on_combat_start(engine.state, char)
-        engine.event_bus.emit(EventType.ACTION_START, unit=ally, target=enemy,
-                               action_type=ActionType.SKILL, engine=engine)
+        engine.event_bus.emit(EventType.BATTLE_START)
         assert any(m.source == "LightCone_21011" for m in ally.stats.active_modifiers)
+        # Permanent aura persists after any action
         engine.event_bus.emit(EventType.AFTER_ACTION, unit=ally, target=enemy,
                                action_type=ActionType.SKILL, damage=100, is_crit=False,
                                engine=engine)
-        for char in engine.state.characters:
-            assert not any(m.source == "LightCone_21011" for m in char.stats.active_modifiers)
+        assert any(m.source == "LightCone_21011" for m in ally.stats.active_modifiers)
 
 
 # ============================================================
@@ -3716,7 +3715,7 @@ class TestSeriousnessOfBreakfast:
         lc = LightCone("21027", superimpose=1); char.equip_light_cone(lc); lc.effect.on_combat_start(state, char)
         with patch.object(state, '_notify_death'):
             engine.event_bus.emit(EventType.ON_KILL, source=char, target=e, action_type=ActionType.BASIC_ATTACK)
-        atk_mods = [m for m in char.stats.active_modifiers if m.source == "LightCone_21027"]
+        atk_mods = [m for m in char.stats.active_modifiers if m.source == "LightCone_21027_ATK"]
         assert any(m.stat_type == StatType.ATK for m in atk_mods)
 
 
@@ -3908,7 +3907,7 @@ class TestCruising:
         engine.event_bus.emit(EventType.ON_KILL, source=char, target=enemy,
                                action_type=ActionType.BASIC_ATTACK)
         atk_mods = [m for m in char.stats.active_modifiers
-                    if m.source == "LightCone_24001" and m.stat_type == StatType.ATK]
+                    if m.source == "LightCone_24001_ATK" and m.stat_type == StatType.ATK]
         assert len(atk_mods) == 1
         assert atk_mods[0].value == pytest.approx(0.20)
         assert atk_mods[0].duration == 2
@@ -3924,7 +3923,7 @@ class TestCruising:
         lc.effect.on_combat_start(engine.state, char)
         engine.event_bus.emit(EventType.ON_KILL, source=other, target=enemy,
                                action_type=ActionType.BASIC_ATTACK)
-        assert not any(m.source == "LightCone_24001" and m.stat_type == StatType.ATK
+        assert not any(m.source == "LightCone_24001_ATK" and m.stat_type == StatType.ATK
                        for m in char.stats.active_modifiers)
 
     def test_kill_atk_expires_after_2_actions(self):
@@ -3936,7 +3935,7 @@ class TestCruising:
         engine.event_bus.emit(EventType.ON_KILL, source=char, target=enemy,
                                action_type=ActionType.BASIC_ATTACK)
         mods = lambda: [m for m in char.stats.active_modifiers
-                        if m.source == "LightCone_24001" and m.stat_type == StatType.ATK]
+                    if m.source == "LightCone_24001_ATK" and m.stat_type == StatType.ATK]
         assert len(mods()) == 1
         engine._decrement_modifiers(unit=char)
         assert mods()[0].duration == 1
@@ -3954,7 +3953,7 @@ class TestCruising:
                                action_type=ActionType.BASIC_ATTACK, engine=engine)
         engine.event_bus.emit(EventType.ON_KILL, source=char, target=enemy,
                                action_type=ActionType.BASIC_ATTACK)
-        assert any(m.source == "LightCone_24001" for m in char.stats.active_modifiers)
+        assert any(m.source in ("LightCone_24001_CRIT", "LightCone_24001_ATK") for m in char.stats.active_modifiers)
         assert any(m.source == "LightCone_24001_COND" for m in char.stats.active_modifiers)
         char.equip_light_cone(LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10))
         assert not any(m.source.startswith("LightCone_24001")
@@ -4183,7 +4182,7 @@ class TestButBattleIsntOver:
         engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
                                action_type=ActionType.SKILL, damage=100, is_crit=False,
                                tags=set(), engine=engine)
-        dmg_mods = [m for m in ally.stats.active_modifiers if m.source == "LightCone_23003"]
+        dmg_mods = [m for m in ally.stats.active_modifiers if m.source == "LightCone_23003_DMG"]
         assert len(dmg_mods) == 1
         assert dmg_mods[0].value == pytest.approx(0.30)
 
@@ -4196,7 +4195,7 @@ class TestButBattleIsntOver:
         engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
                                action_type=ActionType.BASIC_ATTACK, damage=100, is_crit=False,
                                tags=set(), engine=engine)
-        assert not any(m.source == "LightCone_23003" for m in ally.stats.active_modifiers)
+        assert not any(m.source == "LightCone_23003_DMG" for m in ally.stats.active_modifiers)
 
     def test_other_character_skill_no_effect(self):
         """非 owner 的战技不影响。"""
@@ -4207,7 +4206,7 @@ class TestButBattleIsntOver:
         engine.event_bus.emit(EventType.AFTER_ACTION, unit=ally, target=enemy,
                                action_type=ActionType.SKILL, damage=100, is_crit=False,
                                tags=set(), engine=engine)
-        assert not any(m.source == "LightCone_23003" for m in ally.stats.active_modifiers)
+        assert not any(m.source == "LightCone_23003_DMG" for m in ally.stats.active_modifiers)
 
     def test_unequip_cleans_all(self):
         char, ally, enemy, _, engine = self._make_setup()
@@ -4217,6 +4216,6 @@ class TestButBattleIsntOver:
         engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
                                action_type=ActionType.SKILL, damage=100, is_crit=False,
                                tags=set(), engine=engine)
-        assert any(m.source == "LightCone_23003" for m in ally.stats.active_modifiers)
+        assert any(m.source == "LightCone_23003_DMG" for m in ally.stats.active_modifiers)
         char.equip_light_cone(LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10))
-        assert not any(m.source == "LightCone_23003" for m in ally.stats.active_modifiers)
+        assert not any(m.source == "LightCone_23003_DMG" for m in ally.stats.active_modifiers)

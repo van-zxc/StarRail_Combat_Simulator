@@ -31,7 +31,8 @@ class LandausChoice(BaseLightCone):
 
 class LandausChoiceEffect(EquipmentEffect):
     _PARAMS = [[2, 0.16], [2, 0.18], [2, 0.20], [2, 0.22], [2, 0.24]]
-    _SOURCE = "LightCone_21009"
+    _SOURCE_AGGRO = "LightCone_21009_AGGRO"
+    _SOURCE_MIT = "LightCone_21009_MIT"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -44,14 +45,14 @@ class LandausChoiceEffect(EquipmentEffect):
             stat_type=StatType.AGGRO_MODIFIER,
             modifier_type=StatModifierType.FLAT,
             value=p[0],
-            source=self._SOURCE,
+            source=self._SOURCE_AGGRO,
             dispellable=False,
         )
         mit_mod = StatModifier(
             stat_type=StatType.DMG_MITIGATION,
             modifier_type=StatModifierType.PERCENT,
             value=p[1],
-            source=self._SOURCE,
+            source=self._SOURCE_MIT,
             dispellable=False,
         )
         character.stats.apply_modifier(agg_mod, "refresh")
@@ -61,4 +62,5 @@ class LandausChoiceEffect(EquipmentEffect):
         pass
 
     def on_unequip(self, character: "Character") -> None:
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_AGGRO)
+        character.stats.purge_source(self._SOURCE_MIT)

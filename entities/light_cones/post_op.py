@@ -44,7 +44,8 @@ class PostOpEffect(EquipmentEffect):
         [0.16, 0.24],
     ]
     _PERM_ERR = [0.08, 0.10, 0.12, 0.14, 0.16]
-    _SOURCE = "LightCone_21000"
+    _SOURCE_ERR = "LightCone_21000_ERR"
+    _SOURCE_HEAL = "LightCone_21000_HEAL"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -59,7 +60,7 @@ class PostOpEffect(EquipmentEffect):
             stat_type=StatType.ERR,
             modifier_type=StatModifierType.PERCENT,
             value=err_val,
-            source=self._SOURCE,
+            source=self._SOURCE_ERR,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -81,7 +82,7 @@ class PostOpEffect(EquipmentEffect):
             stat_type=StatType.OUTGOING_HEALING_BOOST,
             modifier_type=StatModifierType.PERCENT,
             value=heal_pct,
-            source=self._SOURCE,
+            source=self._SOURCE_HEAL,
             duration=1,
             dispellable=False,
         )
@@ -90,6 +91,7 @@ class PostOpEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_ERR)
+        character.stats.purge_source(self._SOURCE_HEAL)
         if self._cb_ult is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ult)

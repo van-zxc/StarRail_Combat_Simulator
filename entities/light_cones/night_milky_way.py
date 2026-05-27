@@ -2,8 +2,8 @@ from __future__ import annotations
 """Night on the Milky Way (银河铁道之夜) — 5★ 智识光锥。
 
 特效:
-  #1: 场上每有1个敌方目标，ATK提高#2%，最多5层 (动态叠加)
-  #2: 敌方弱点被击破时，DMG提高#1%，持续1回合 (ON_WEAKNESS_BREAK 驱动)
+  #1: 敌方弱点被击破时，DMG提高#1[i]%，持续1回合 (ON_WEAKNESS_BREAK 驱动)
+  #2: 场上每有1个敌方目标，ATK提高#2[f1]%，最多5层 (动态叠加)
 
 已知问题: KI-001 — 分裂造物是否计入 enemy count 待实机验证。
 """

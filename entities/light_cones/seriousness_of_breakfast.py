@@ -33,7 +33,8 @@ class SeriousnessOfBreakfast(BaseLightCone):
 
 class SeriousnessOfBreakfastEffect(EquipmentEffect):
     _PARAMS = [[0.12, 0.04, 3], [0.15, 0.05, 3], [0.18, 0.06, 3], [0.21, 0.07, 3], [0.24, 0.08, 3]]
-    _SOURCE = "LightCone_21027"
+    _SOURCE_DMG = "LightCone_21027_DMG"
+    _SOURCE_ATK = "LightCone_21027_ATK"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -49,7 +50,7 @@ class SeriousnessOfBreakfastEffect(EquipmentEffect):
             stat_type=StatType.DMG_BONUS,
             modifier_type=StatModifierType.PERCENT,
             value=dmg_pct,
-            source=self._SOURCE,
+            source=self._SOURCE_DMG,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -72,7 +73,7 @@ class SeriousnessOfBreakfastEffect(EquipmentEffect):
             stat_type=StatType.ATK,
             modifier_type=StatModifierType.PERCENT,
             value=per_stack * stacks,
-            source=self._SOURCE,
+            source=self._SOURCE_ATK,
             dispellable=False,
         )
         self._character.stats.apply_modifier(mod, "refresh")
@@ -86,6 +87,7 @@ class SeriousnessOfBreakfastEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_DMG)
+        character.stats.purge_source(self._SOURCE_ATK)
         if self._cb_kill is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.ON_KILL, self._cb_kill)

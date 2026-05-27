@@ -39,7 +39,8 @@ class SkyfallEffect(EquipmentEffect):
         [0.35],
         [0.40],
     ]
-    _SOURCE = "LightCone_20002"
+    _SOURCE_BA = "LightCone_20002_BA"
+    _SOURCE_SKILL = "LightCone_20002_SKILL"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -49,12 +50,13 @@ class SkyfallEffect(EquipmentEffect):
         from core.enums import StatType, StatModifierType
 
         p = self._PARAMS[self.superimpose - 1]
-        for stat in (StatType.BASIC_ATK_DMG, StatType.SKILL_DMG):
+        for stat, src in ((StatType.BASIC_ATK_DMG, self._SOURCE_BA),
+                           (StatType.SKILL_DMG, self._SOURCE_SKILL)):
             mod = StatModifier(
                 stat_type=stat,
                 modifier_type=StatModifierType.PERCENT,
                 value=p[0],
-                source=self._SOURCE,
+                source=src,
                 dispellable=False,
             )
             character.stats.apply_modifier(mod, "refresh")
@@ -63,4 +65,5 @@ class SkyfallEffect(EquipmentEffect):
         pass
 
     def on_unequip(self, character: "Character") -> None:
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_BA)
+        character.stats.purge_source(self._SOURCE_SKILL)

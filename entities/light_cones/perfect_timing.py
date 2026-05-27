@@ -33,7 +33,8 @@ class PerfectTiming(BaseLightCone):
 
 class PerfectTimingEffect(EquipmentEffect):
     _PARAMS = [[0.16, 0.33, 0.15], [0.20, 0.36, 0.18], [0.24, 0.39, 0.21], [0.28, 0.42, 0.24], [0.32, 0.45, 0.27]]
-    _SOURCE = "LightCone_21014"
+    _SOURCE_RES = "LightCone_21014_RES"
+    _SOURCE_HEAL = "LightCone_21014_HEAL"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -50,7 +51,7 @@ class PerfectTimingEffect(EquipmentEffect):
             stat_type=StatType.EFFECT_RES,
             modifier_type=StatModifierType.PERCENT,
             value=er_val,
-            source=self._SOURCE,
+            source=self._SOURCE_RES,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -72,12 +73,12 @@ class PerfectTimingEffect(EquipmentEffect):
                     stat_type=StatType.OUTGOING_HEALING_BOOST,
                     modifier_type=StatModifierType.PERCENT,
                     value=heal_val,
-                    source=self._SOURCE,
+                    source=self._SOURCE_HEAL,
                     dispellable=False,
                 )
                 self._character.stats.apply_modifier(mod, "refresh")
             else:
-                self._character.stats.purge_source(self._SOURCE)
+                self._character.stats.purge_source(self._SOURCE_HEAL)
         finally:
             self._recalc_in_progress = False
 
@@ -100,7 +101,8 @@ class PerfectTimingEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._SOURCE_RES)
+        character.stats.purge_source(self._SOURCE_HEAL)
         if character.event_bus is not None:
             bus = character.event_bus
             if self._cb_status_apply is not None:
