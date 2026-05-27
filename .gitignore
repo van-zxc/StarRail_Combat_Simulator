@@ -16,9 +16,8 @@ AGENTS
 test_starrail_combat.py
 test_elation.py
 
-# Raw data / docs
+# Raw data
 original_data/
-docs/
 
 # OS
 Thumbs.db
