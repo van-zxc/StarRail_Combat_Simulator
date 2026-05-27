@@ -45,6 +45,9 @@ Enemy = BaseEnemy
 LightCone = BaseLightCone
 Relic = BaseRelic
 
+# ── 位面饰品套装注册 (触发 RelicSetEffect.__init_subclass__) ──
+import entities.planar_ornaments  # noqa: F401
+
 # ── 演示脚本 ──
 if __name__ == "__main__":
     init_data()

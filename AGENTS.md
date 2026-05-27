@@ -118,3 +118,4 @@ test_starrail_combat.py      # pytest: 312 tests
 4. 运行 `pytest test/` 验证改动
 5. 运行 `python starrail_combat.py` 验证 demo
 6. 变更后更新 `docs/todo.md` 和 `.agent_memory`
+7. **提交前必须先阅读 `docs/github_upload_guide.md`**，严格遵循其中的文件排除规则（docs/、original_data/、test_*.py 等），绝不上传不允许的文件
