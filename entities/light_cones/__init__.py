@@ -64,3 +64,6 @@ from entities.light_cones.today_is_peaceful import TodayIsPeaceful
 from entities.light_cones.trend_universal_market import TrendUniversalMarket
 from entities.light_cones.swordplay import Swordplay
 from entities.light_cones.this_is_me import ThisIsMe
+
+from entities.light_cones.before_dawn import BeforeDawn
+from entities.light_cones.but_battle_isnt_over import ButBattleIsntOver

@@ -77,7 +77,8 @@ class CombatEngine:
                 if char.is_cc_blocked:
                     print(f"  [拦截] {char.name} 处于控制状态，追加行动被阻断")
                     continue
-                self._execute_character_turn(char, skill_obj=skill_obj, is_extra_turn=True)
+                self._execute_character_turn(char, skill_obj=skill_obj,
+                                              is_extra_turn=True, tags={"follow_up"})
             if self.state.battle_ended:
                 break
 
@@ -290,7 +291,7 @@ class CombatEngine:
     # ================================================================
     def _execute_character_turn(
         self, char: "Character", skill_obj: object = None,
-        is_extra_turn: bool = False,
+        is_extra_turn: bool = False, tags: Optional[set] = None,
     ) -> None:
         """执行角色回合。extra_turn 时 AV 不重置、修饰器不削层。"""
         targets = self.state.alive_enemies
@@ -308,9 +309,10 @@ class CombatEngine:
             skill_tags = getattr(skill_obj, "tags", None)
             action_name = _ACTION_NAMES.get(action_type, "普攻")
 
+            effective_tags = skill_tags if skill_tags is not None else tags
             self.event_bus.emit(
                 EventType.ACTION_START, unit=char, target=hits_list[0].target if hits_list else target,
-                action_type=action_type, engine=self,
+                action_type=action_type, engine=self, tags=effective_tags,
             )
             results = self.state.execute_multi_hit(
                 char, hits_list, action_type=action_type,
@@ -331,7 +333,7 @@ class CombatEngine:
             self.event_bus.emit(
                 EventType.AFTER_ACTION, unit=char, target=target,
                 action_type=action_type, damage=total_dmg, is_crit=any_crit,
-                engine=self,
+                engine=self, tags=effective_tags,
             )
             return
 
@@ -342,7 +344,7 @@ class CombatEngine:
             action_name = _ACTION_NAMES.get(action_type, "普攻")
             self.event_bus.emit(
                 EventType.ACTION_START, unit=char, target=target,
-                action_type=action_type, engine=self,
+                action_type=action_type, engine=self, tags=tags,
             )
             self._log_action(char, action_type, target, damage, is_crit, toughness, is_break)
             crit_text = " 暴击！" if is_crit else ""
@@ -352,7 +354,7 @@ class CombatEngine:
             self.event_bus.emit(
                 EventType.AFTER_ACTION, unit=char, target=target,
                 action_type=action_type, damage=damage, is_crit=is_crit,
-                engine=self,
+                engine=self, tags=tags,
             )
             return
 
@@ -374,7 +376,7 @@ class CombatEngine:
 
         self.event_bus.emit(
             EventType.ACTION_START, unit=char, target=target,
-            action_type=action_type, engine=self,
+            action_type=action_type, engine=self, tags=tags,
         )
 
         damage, is_crit, toughness, is_break = self.state.execute_action(
@@ -411,7 +413,7 @@ class CombatEngine:
         self.event_bus.emit(
             EventType.AFTER_ACTION, unit=char, target=target,
             action_type=action_type, damage=damage, is_crit=is_crit,
-            engine=self,
+            engine=self, tags=tags,
         )
 
     def _resolve_enemy_dot_ticks(self, enemy: "Enemy") -> None:

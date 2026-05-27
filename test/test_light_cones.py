@@ -69,6 +69,9 @@ from entities.light_cones.loop import Loop, LoopEffect
 from entities.light_cones.meshing_cogs import MeshingCogs, MeshingCogsEffect
 from entities.light_cones.passkey import Passkey, PasskeyEffect
 from entities.light_cones.hidden_shadow import HiddenShadow, HiddenShadowEffect
+from entities.light_cones.cruising import Cruising, CruisingEffect
+from entities.light_cones.before_dawn import BeforeDawn, BeforeDawnEffect
+from entities.light_cones.but_battle_isnt_over import ButBattleIsntOver, ButBattleIsntOverEffect
 from entities.light_cones.landaus_choice import LandausChoice, LandausChoiceEffect
 from entities.light_cones.nwhere_to_run import NowhereToRun, NowhereToRunEffect
 from entities.light_cones.only_silence_remains import OnlySilenceRemains, OnlySilenceRemainsEffect
@@ -3747,3 +3750,473 @@ class TestWarmthShortensColdNights:
         lc = LightCone("21028", superimpose=1); char.equip_light_cone(lc); lc.effect.on_combat_start(state, char)
         engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy, action_type=ActionType.BASIC_ATTACK, damage=100, is_crit=False, engine=engine)
         assert char.hp > 300 and char2.hp > 300
+
+
+# ============================================================
+#  TestCruising — 24001 星海巡航 (5★ 巡猎)
+#  Herta Shop 光锥: PERM CRIT + per-target + ON_KILL ATK
+# ============================================================
+
+
+class TestCruising:
+    """验证 5★ 巡猎光锥 星海巡航空的三重特效。"""
+
+    def _make_char(self):
+        c = create_test_character("T", hp=500, speed=100, atk=100, crit_rate=0.05)
+        c.path = PathType.HUNT
+        return c
+
+    def _make_setup(self):
+        char = self._make_char()
+        enemy = Enemy("E", hp=100000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return char, enemy, state, engine
+
+    def test_registry(self):
+        lc = LightCone("24001")
+        assert isinstance(lc, Cruising)
+        assert lc.id == "24001"
+        assert lc.name == "星海巡航"
+
+    def test_lv80_stats(self):
+        lc = LightCone("24001")
+        assert lc.base_hp == pytest.approx(505.44)
+        assert lc.base_atk == pytest.approx(280.8)
+        assert lc.base_def == pytest.approx(245.7)
+
+    def test_effect_params_s1(self):
+        e = CruisingEffect(superimpose=1)
+        assert e._PARAMS[0][0] == pytest.approx(0.08)
+        assert e._PARAMS[0][1] == pytest.approx(0.50)
+        assert e._PARAMS[0][2] == pytest.approx(0.08)
+        assert e._PARAMS[0][3] == pytest.approx(0.20)
+        assert e._PARAMS[0][4] == 2
+
+    def test_effect_params_s5(self):
+        e = CruisingEffect(superimpose=5)
+        assert e._PARAMS[4][0] == pytest.approx(0.16)
+        assert e._PARAMS[4][3] == pytest.approx(0.40)
+
+    def test_on_equip_grants_permanent_crit(self):
+        """Part 1: 永久暴击率。"""
+        char = self._make_char()
+        e = CruisingEffect(superimpose=1)
+        e.on_equip(char)
+        assert char.stats.get_total_stat(StatType.CRIT_RATE) == pytest.approx(0.05 + 0.08)
+
+    def test_hp_below_50_extra_crit(self):
+        """Part 2: HP≤50% → ACTION_START 时额外暴击率生效。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        enemy.hp = 30000
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK, engine=engine)
+        cond = [m for m in char.stats.active_modifiers if m.source == "LightCone_24001_COND"]
+        assert len(cond) == 1
+        assert cond[0].value == pytest.approx(0.08)
+
+    def test_hp_above_50_no_extra_crit(self):
+        """HP>50% → 额外暴击率不生效。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        enemy.hp = 80000
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK, engine=engine)
+        assert not any(m.source == "LightCone_24001_COND" for m in char.stats.active_modifiers)
+
+    def test_hp_equal_50_extra_crit(self):
+        """HP=50% → ≤ 条件成立，额外暴击率生效。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        enemy.hp = 50000
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK, engine=engine)
+        assert any(m.source == "LightCone_24001_COND" for m in char.stats.active_modifiers)
+
+    def test_extra_crit_cleared_after_action(self):
+        """AFTER_ACTION 后额外暴击率被 purge。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        enemy.hp = 30000
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK, engine=engine)
+        assert any(m.source == "LightCone_24001_COND" for m in char.stats.active_modifiers)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK, damage=100, is_crit=False,
+                               engine=engine)
+        assert not any(m.source == "LightCone_24001_COND" for m in char.stats.active_modifiers)
+
+    def test_different_targets_rechecked(self):
+        """换目标后重新检查HP条件。"""
+        char, _, _, engine = self._make_setup()
+        e_low = Enemy("EL", hp=100000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        e_high = Enemy("EH", hp=100000, speed=50, base_damage=0, level=1,
+                        weaknesses=[ElementType.PHYSICAL])
+        engine.state.enemies = [e_low, e_high]
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        e_low.hp = 30000
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=e_low,
+                               action_type=ActionType.BASIC_ATTACK, engine=engine)
+        assert any(m.source == "LightCone_24001_COND" for m in char.stats.active_modifiers)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=e_low,
+                               action_type=ActionType.BASIC_ATTACK, damage=100, is_crit=False,
+                               engine=engine)
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=e_high,
+                               action_type=ActionType.BASIC_ATTACK, engine=engine)
+        assert not any(m.source == "LightCone_24001_COND" for m in char.stats.active_modifiers)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=e_high,
+                               action_type=ActionType.BASIC_ATTACK, damage=100, is_crit=False,
+                               engine=engine)
+
+    def test_non_enemy_target_ignored(self):
+        """队友目标（无 dot_statuses）不会触发条件检查。"""
+        char, _, _, engine = self._make_setup()
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        ally = self._make_char()
+        ally.name = "Ally"
+        engine.state.characters.append(ally)
+        hp_before = sum(m.value for m in char.stats.active_modifiers
+                        if m.source == "LightCone_24001_COND")
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=ally,
+                               action_type=ActionType.SKILL, engine=engine)
+        hp_after = sum(m.value for m in char.stats.active_modifiers
+                       if m.source == "LightCone_24001_COND")
+        assert hp_after == hp_before
+
+    def test_on_kill_grants_atk(self):
+        """Part 3: ON_KILL → ATK buff。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        atk_before = char.stats.get_total_stat(StatType.ATK)
+        engine.event_bus.emit(EventType.ON_KILL, source=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK)
+        atk_mods = [m for m in char.stats.active_modifiers
+                    if m.source == "LightCone_24001" and m.stat_type == StatType.ATK]
+        assert len(atk_mods) == 1
+        assert atk_mods[0].value == pytest.approx(0.20)
+        assert atk_mods[0].duration == 2
+
+    def test_on_kill_only_for_owner(self):
+        """其他人击杀不影响自己。"""
+        char, enemy, _, engine = self._make_setup()
+        other = self._make_char()
+        other.name = "O2"
+        engine.state.characters.append(other)
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.ON_KILL, source=other, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK)
+        assert not any(m.source == "LightCone_24001" and m.stat_type == StatType.ATK
+                       for m in char.stats.active_modifiers)
+
+    def test_kill_atk_expires_after_2_actions(self):
+        """ATK buff 持续 2 次普通行动后消失。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.ON_KILL, source=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK)
+        mods = lambda: [m for m in char.stats.active_modifiers
+                        if m.source == "LightCone_24001" and m.stat_type == StatType.ATK]
+        assert len(mods()) == 1
+        engine._decrement_modifiers(unit=char)
+        assert mods()[0].duration == 1
+        engine._decrement_modifiers(unit=char)
+        assert len(mods()) == 0
+
+    def test_unequip_cleans_all(self):
+        """卸下光锥后清除所有 modifier。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("24001", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        enemy.hp = 30000
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK, engine=engine)
+        engine.event_bus.emit(EventType.ON_KILL, source=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK)
+        assert any(m.source == "LightCone_24001" for m in char.stats.active_modifiers)
+        assert any(m.source == "LightCone_24001_COND" for m in char.stats.active_modifiers)
+        char.equip_light_cone(LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10))
+        assert not any(m.source.startswith("LightCone_24001")
+                       for m in char.stats.active_modifiers)
+
+
+# ============================================================
+#  TestBeforeDawn — 23010 拂晓之前 (5★ 智识)
+#  【梦身】: 战技/终结技→FUA 消费
+# ============================================================
+
+
+class TestBeforeDawn:
+    """验证 5★ 智识光锥拂晓之前: 永久 CRIT/SKILL/ULT_DMG + 梦身 FUA。"""
+
+    def _make_char(self):
+        c = create_test_character("T", hp=500, speed=100, atk=100, crit_rate=0.05)
+        c.path = PathType.ERUDITION
+        return c
+
+    def _make_setup(self):
+        char = self._make_char()
+        enemy = Enemy("E", hp=100000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return char, enemy, state, engine
+
+    def test_registry(self):
+        lc = LightCone("23010")
+        assert isinstance(lc, BeforeDawn)
+        assert lc.id == "23010"
+        assert lc.name == "拂晓之前"
+
+    def test_lv80_stats(self):
+        lc = LightCone("23010")
+        assert lc.base_hp == pytest.approx(561.6)
+        assert lc.base_atk == pytest.approx(308.88)
+        assert lc.base_def == pytest.approx(245.7)
+
+    def test_effect_params_s1(self):
+        e = BeforeDawnEffect(superimpose=1)
+        assert e._PARAMS[0][0] == pytest.approx(0.36)
+        assert e._PARAMS[0][1] == pytest.approx(0.18)
+        assert e._PARAMS[0][2] == pytest.approx(0.48)
+
+    def test_on_equip_grants_all(self):
+        """Part 1+2: 永久 CRIT_DMG + SKILL_DMG + ULT_DMG。"""
+        char = self._make_char()
+        e = BeforeDawnEffect(superimpose=1)
+        e.on_equip(char)
+        assert char.stats.get_total_stat(StatType.CRIT_DMG) >= 0.36
+        assert char.stats.get_total_stat(StatType.SKILL_DMG) >= 0.18
+        assert char.stats.get_total_stat(StatType.ULT_DMG) >= 0.18
+
+    def test_skill_sets_dream_body(self):
+        """战技后设置 _dream_body。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("23010", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        assert not lc.effect._dream_body
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        assert lc.effect._dream_body
+
+    def test_ult_sets_dream_body(self):
+        """终结技后设置 dream_body。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("23010", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.ULTIMATE, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        assert lc.effect._dream_body
+
+    def test_fua_consumes_dream_body(self):
+        """FUA (tags 含 follow_up) 消费梦身 + FUA_DMG 生效。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("23010", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        assert lc.effect._dream_body
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, engine=engine,
+                               tags={"follow_up"})
+        dream_mods = [m for m in char.stats.active_modifiers if m.source == "LightCone_23010_DREAM"]
+        assert len(dream_mods) == 1
+        assert dream_mods[0].value == pytest.approx(0.48)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, damage=100, is_crit=False,
+                               tags={"follow_up"}, engine=engine)
+        assert not lc.effect._dream_body
+        assert not any(m.source == "LightCone_23010_DREAM" for m in char.stats.active_modifiers)
+
+    def test_non_fua_does_not_consume(self):
+        """非 FUA 动作保留梦身。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("23010", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        assert lc.effect._dream_body
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK, engine=engine,
+                               tags=set())
+        # non-fua ACTION_START should NOT apply DREAM source
+        assert not any(m.source == "LightCone_23010_DREAM" for m in char.stats.active_modifiers)
+        # dream body still set, since nonFUA doesn't consume
+        assert lc.effect._dream_body
+
+    def test_fua_without_dream_no_bonus(self):
+        """没有梦身时 FUA 无额外加成。"""
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("23010", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, engine=engine,
+                               tags={"follow_up"})
+        assert not any(m.source == "LightCone_23010_DREAM" for m in char.stats.active_modifiers)
+
+    def test_unequip_cleans_all(self):
+        char, enemy, _, engine = self._make_setup()
+        lc = LightCone("23010", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        engine.event_bus.emit(EventType.ACTION_START, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, engine=engine,
+                               tags={"follow_up"})
+        assert any(m.source == "LightCone_23010_DREAM" for m in char.stats.active_modifiers)
+        char.equip_light_cone(LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10))
+        assert not any(m.source.startswith("LightCone_23010")
+                       for m in char.stats.active_modifiers)
+        assert not lc.effect._dream_body
+
+
+# ============================================================
+#  TestButBattleIsntOver — 23003 但战斗还未结束 (5★ 同谐)
+#  ERR + SP 计数 + 战技后队友 DMG
+# ============================================================
+
+
+class TestButBattleIsntOver:
+    """验证 5★ 同谐光锥: ERR + 每 2 次 Ult SP + 战技后下个队友 DMG。"""
+
+    def _make_char(self):
+        c = create_test_character("T", hp=500, speed=100, atk=100)
+        c.path = PathType.HARMONY
+        return c
+
+    def _make_setup(self):
+        char = self._make_char()
+        ally = create_test_character("A", hp=500, speed=80, atk=100)
+        enemy = Enemy("E", hp=100000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char, ally], enemies=[enemy])
+        engine = CombatEngine(state)
+        return char, ally, enemy, state, engine
+
+    def test_registry(self):
+        lc = LightCone("23003")
+        assert isinstance(lc, ButBattleIsntOver)
+        assert lc.id == "23003"
+        assert lc.name == "但战斗还未结束"
+
+    def test_lv80_stats(self):
+        lc = LightCone("23003")
+        assert lc.base_hp == pytest.approx(617.76)
+        assert lc.base_atk == pytest.approx(280.8)
+        assert lc.base_def == pytest.approx(245.7)
+
+    def test_effect_params_s1(self):
+        e = ButBattleIsntOverEffect(superimpose=1)
+        assert e._PARAMS[0][0] == pytest.approx(0.10)
+        assert e._PARAMS[0][1] == pytest.approx(0.30)
+        assert e._PARAMS[0][2] == 1
+
+    def test_on_equip_grants_err(self):
+        """Part 1: 能量恢复效率。"""
+        char = self._make_char()
+        e = ButBattleIsntOverEffect(superimpose=1)
+        e.on_equip(char)
+        assert char.stats.get_total_stat(StatType.ERR) >= 0.10
+
+    def test_ult_every_2_grants_sp(self):
+        """Part 2: 每 2 次对友方终结技生成 1 SP。"""
+        char, ally, _, _, engine = self._make_setup()
+        lc = LightCone("23003", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        sp_before = engine.state.skill_points
+        engine.event_bus.emit(EventType.ON_ULTIMATE_INSERTED, character=char, target=ally)
+        assert engine.state.skill_points == sp_before
+        engine.event_bus.emit(EventType.ON_ULTIMATE_INSERTED, character=char, target=ally)
+        assert engine.state.skill_points == sp_before + 1
+
+    def test_ult_on_enemy_no_sp(self):
+        """对敌人放的终结技不计入 SP 计数。"""
+        char, ally, enemy, _, engine = self._make_setup()
+        lc = LightCone("23003", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        sp_before = engine.state.skill_points
+        engine.event_bus.emit(EventType.ON_ULTIMATE_INSERTED, character=char, target=enemy)
+        assert engine.state.skill_points == sp_before
+        engine.event_bus.emit(EventType.ON_ULTIMATE_INSERTED, character=char, target=enemy)
+        assert engine.state.skill_points == sp_before
+
+    def test_skill_gives_next_ally_dmg(self):
+        """Part 3: 战技后下一个行动队友获得 DMG_BONUS。"""
+        char, ally, enemy, _, engine = self._make_setup()
+        lc = LightCone("23003", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        dmg_mods = [m for m in ally.stats.active_modifiers if m.source == "LightCone_23003"]
+        assert len(dmg_mods) == 1
+        assert dmg_mods[0].value == pytest.approx(0.30)
+
+    def test_basic_does_not_give_ally_dmg(self):
+        """非战技不触发队友 DMG。"""
+        char, ally, enemy, _, engine = self._make_setup()
+        lc = LightCone("23003", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.BASIC_ATTACK, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        assert not any(m.source == "LightCone_23003" for m in ally.stats.active_modifiers)
+
+    def test_other_character_skill_no_effect(self):
+        """非 owner 的战技不影响。"""
+        char, ally, enemy, _, engine = self._make_setup()
+        lc = LightCone("23003", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=ally, target=enemy,
+                               action_type=ActionType.SKILL, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        assert not any(m.source == "LightCone_23003" for m in ally.stats.active_modifiers)
+
+    def test_unequip_cleans_all(self):
+        char, ally, enemy, _, engine = self._make_setup()
+        lc = LightCone("23003", superimpose=1)
+        char.equip_light_cone(lc)
+        lc.effect.on_combat_start(engine.state, char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=enemy,
+                               action_type=ActionType.SKILL, damage=100, is_crit=False,
+                               tags=set(), engine=engine)
+        assert any(m.source == "LightCone_23003" for m in ally.stats.active_modifiers)
+        char.equip_light_cone(LightCone(id="Bare", base_hp=10, base_atk=10, base_def=10))
+        assert not any(m.source == "LightCone_23003" for m in ally.stats.active_modifiers)
