@@ -47,6 +47,7 @@ class AmberEffect(EquipmentEffect):
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
         self._character: Optional["Character"] = None
+        self._cb_start: Optional[callable] = None
         self._cb_dmg: Optional[callable] = None
         self._cb_heal: Optional[callable] = None
 
@@ -67,8 +68,10 @@ class AmberEffect(EquipmentEffect):
         from core.events import EventType
 
         self._character = character
+        self._cb_start = lambda **kw: self._check_hp(character)
         self._cb_dmg = lambda **kw: self._check_hp(kw.get("target"))
         self._cb_heal = lambda **kw: self._check_hp(kw.get("target"))
+        state.event_bus.subscribe(EventType.BATTLE_START, self._cb_start)
         state.event_bus.subscribe(EventType.ON_DAMAGE_DEALT, self._cb_dmg)
         state.event_bus.subscribe(EventType.HEAL_DONE, self._cb_heal)
 
@@ -102,6 +105,8 @@ class AmberEffect(EquipmentEffect):
         character.stats.purge_source(self._SOURCE)
         character.stats.purge_source(self._SOURCE_COND)
         if character.event_bus is not None:
+            if self._cb_start is not None:
+                character.event_bus.unsubscribe(EventType.BATTLE_START, self._cb_start)
             if self._cb_dmg is not None:
                 character.event_bus.unsubscribe(EventType.ON_DAMAGE_DEALT, self._cb_dmg)
             if self._cb_heal is not None:

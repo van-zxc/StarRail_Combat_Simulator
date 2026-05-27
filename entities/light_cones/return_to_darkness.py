@@ -39,6 +39,8 @@ class ReturnToDarknessEffect(EquipmentEffect):
         self.superimpose = max(1, min(superimpose, 5))
         self._character: Optional["Character"] = None
         self._state: Optional["GameState"] = None
+        self._triggered_this_action: bool = False
+        self._cb_action_start: Optional[callable] = None
         self._cb_hit: Optional[callable] = None
 
     def on_equip(self, character: "Character") -> None:
@@ -59,11 +61,19 @@ class ReturnToDarknessEffect(EquipmentEffect):
 
         self._character = character
         self._state = state
+        self._cb_action_start = lambda **kw: self._on_action_start(kw.get("unit"))
         self._cb_hit = lambda **kw: self._on_hit(kw.get("source"), kw.get("target"), kw.get("is_crit"))
+        state.event_bus.subscribe(EventType.ACTION_START, self._cb_action_start)
         state.event_bus.subscribe(EventType.ON_HIT, self._cb_hit)
+
+    def _on_action_start(self, unit: "Character") -> None:
+        if unit is self._character:
+            self._triggered_this_action = False
 
     def _on_hit(self, source: "Character", target: "Fighter", is_crit: bool) -> None:
         if source is not self._character:
+            return
+        if self._triggered_this_action:
             return
         if target is None or not hasattr(target, "stats"):
             return
@@ -74,11 +84,15 @@ class ReturnToDarknessEffect(EquipmentEffect):
         pct = self._PARAMS[self.superimpose - 1][1]
         if random.random() >= pct:
             return
+        self._triggered_this_action = True
         self._state.dispel_one_buff(target)
 
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
         character.stats.purge_source(self._SOURCE)
-        if self._cb_hit is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.ON_HIT, self._cb_hit)
+        if character.event_bus is not None:
+            if self._cb_action_start is not None:
+                character.event_bus.unsubscribe(EventType.ACTION_START, self._cb_action_start)
+            if self._cb_hit is not None:
+                character.event_bus.unsubscribe(EventType.ON_HIT, self._cb_hit)

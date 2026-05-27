@@ -72,7 +72,7 @@ class ButBattleIsntOverEffect(EquipmentEffect):
     def _on_ult(self, caster: "Character", target: "Fighter") -> None:
         if caster is not self._character:
             return
-        if target is not None and hasattr(target, "dot_statuses"):
+        if target is None or target not in self._state.characters:
             return
         self._ult_count += 1
         if self._ult_count >= 2:

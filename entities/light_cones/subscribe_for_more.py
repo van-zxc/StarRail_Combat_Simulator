@@ -67,27 +67,34 @@ class SubscribeForMoreEffect(EquipmentEffect):
         from core.events import EventType
 
         self._character = character
-        self._cb_action_start = lambda **kw: self._on_action_start(kw.get("unit"))
+        self._cb_action_start = lambda **kw: self._on_action_start(kw.get("unit"), kw.get("action_type"))
         self._cb_after = lambda **kw: self._on_after(kw.get("unit"))
         bus = state.event_bus
         bus.subscribe(EventType.ACTION_START, self._cb_action_start)
         bus.subscribe(EventType.AFTER_ACTION, self._cb_after)
 
-    def _on_action_start(self, unit: "Character") -> None:
+    def _on_action_start(self, unit: "Character", action_type: object) -> None:
         if unit is not self._character:
             return
-        from core.enums import StatType, StatModifierType
+        from core.enums import ActionType, StatType, StatModifierType
 
         extra = self._PARAMS[self.superimpose - 1][1]
-        if self._character.energy >= self._character.max_energy:
-            mod = StatModifier(
-                stat_type=StatType.DMG_BONUS,
-                modifier_type=StatModifierType.PERCENT,
-                value=extra,
-                source=self._COND_SOURCE,
-                dispellable=False,
-            )
-            self._character.stats.apply_modifier(mod, "refresh")
+        if self._character.energy < self._character.max_energy:
+            return
+        if action_type == ActionType.BASIC_ATTACK:
+            stat_type = StatType.BASIC_ATK_DMG
+        elif action_type == ActionType.SKILL:
+            stat_type = StatType.SKILL_DMG
+        else:
+            return
+        mod = StatModifier(
+            stat_type=stat_type,
+            modifier_type=StatModifierType.PERCENT,
+            value=extra,
+            source=self._COND_SOURCE,
+            dispellable=False,
+        )
+        self._character.stats.apply_modifier(mod, "refresh")
 
     def _on_after(self, unit: "Character") -> None:
         if unit is not self._character:

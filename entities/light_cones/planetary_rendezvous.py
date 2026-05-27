@@ -39,30 +39,26 @@ class PlanetaryRendezvousEffect(EquipmentEffect):
         self.superimpose = max(1, min(superimpose, 5))
         self._character: Optional["Character"] = None
         self._state: Optional["GameState"] = None
-        self._cb_action_start: Optional[callable] = None
-        self._cb_after: Optional[callable] = None
+        self._cb_start: Optional[callable] = None
+        self._cb_death: Optional[callable] = None
+        self._cb_revive: Optional[callable] = None
 
     def on_equip(self, character: "Character") -> None:
         pass
 
-    def on_combat_start(self, state: "GameState", character: "Character") -> None:
-        from core.events import EventType
-
-        self._character = character
-        self._state = state
-        self._cb_action_start = lambda **kw: self._on_action_start(kw.get("unit"))
-        self._cb_after = lambda **kw: self._on_after()
-        bus = state.event_bus
-        bus.subscribe(EventType.ACTION_START, self._cb_action_start)
-        bus.subscribe(EventType.AFTER_ACTION, self._cb_after)
-
-    def _on_action_start(self, unit: "Character") -> None:
-        if unit is None or not hasattr(unit, "element"):
+    def _apply_aura(self) -> None:
+        if self._state is None or self._character is None:
             return
-        if unit.element == self._character.element:
-            from core.enums import StatType, StatModifierType
+        from core.enums import StatType, StatModifierType
 
-            dmg_val = self._PARAMS[self.superimpose - 1]
+        dmg_val = self._PARAMS[self.superimpose - 1]
+        for char in self._state.characters:
+            if hasattr(char, "is_memosprite") and char.is_memosprite:
+                continue
+            if not hasattr(char, "stats") or not hasattr(char, "element"):
+                continue
+            if char.element != self._character.element:
+                continue
             mod = StatModifier(
                 stat_type=StatType.DMG_BONUS,
                 modifier_type=StatModifierType.PERCENT,
@@ -70,22 +66,47 @@ class PlanetaryRendezvousEffect(EquipmentEffect):
                 source=self._SOURCE,
                 dispellable=False,
             )
-            unit.stats.apply_modifier(mod, "refresh")
+            char.stats.apply_modifier(mod, "refresh")
 
-    def _on_after(self) -> None:
+    def _purge_aura(self) -> None:
         if self._state is None:
             return
         for char in self._state.characters:
             if hasattr(char, "stats"):
                 char.stats.purge_source(self._SOURCE)
 
+    def on_combat_start(self, state: "GameState", character: "Character") -> None:
+        from core.events import EventType
+
+        self._character = character
+        self._state = state
+        self._cb_start = lambda **kw: self._apply_aura()
+        self._cb_death = lambda **kw: self._on_unit_downed(kw.get("unit"))
+        self._cb_revive = lambda **kw: self._on_revive(kw.get("unit"))
+        bus = state.event_bus
+        bus.subscribe(EventType.BATTLE_START, self._cb_start)
+        bus.subscribe(EventType.UNIT_DOWNED, self._cb_death)
+        bus.subscribe(EventType.ON_REVIVE, self._cb_revive)
+
+    def _on_unit_downed(self, unit: "Fighter") -> None:
+        if unit is not self._character:
+            return
+        self._purge_aura()
+
+    def _on_revive(self, unit: "Fighter") -> None:
+        if unit is not self._character:
+            return
+        self._apply_aura()
+
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        self._on_after()
+        self._purge_aura()
         if character.event_bus is not None:
             bus = character.event_bus
-            if self._cb_action_start is not None:
-                bus.unsubscribe(EventType.ACTION_START, self._cb_action_start)
-            if self._cb_after is not None:
-                bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)
+            if self._cb_start is not None:
+                bus.unsubscribe(EventType.BATTLE_START, self._cb_start)
+            if self._cb_death is not None:
+                bus.unsubscribe(EventType.UNIT_DOWNED, self._cb_death)
+            if self._cb_revive is not None:
+                bus.unsubscribe(EventType.ON_REVIVE, self._cb_revive)

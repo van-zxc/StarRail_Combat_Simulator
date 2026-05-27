@@ -33,7 +33,8 @@ class OnlySilenceRemains(BaseLightCone):
 
 class OnlySilenceRemainsEffect(EquipmentEffect):
     _PARAMS = [[0.16, 0.12], [0.20, 0.15], [0.24, 0.18], [0.28, 0.21], [0.32, 0.24]]
-    _SOURCE = "LightCone_21003"
+    _ATK_SOURCE = "LightCone_21003_ATK"
+    _CRIT_SOURCE = "LightCone_21003_CRIT"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
@@ -50,7 +51,7 @@ class OnlySilenceRemainsEffect(EquipmentEffect):
             stat_type=StatType.ATK,
             modifier_type=StatModifierType.PERCENT,
             value=atk_pct,
-            source=self._SOURCE,
+            source=self._ATK_SOURCE,
             dispellable=False,
         )
         character.stats.apply_modifier(mod, "refresh")
@@ -66,12 +67,12 @@ class OnlySilenceRemainsEffect(EquipmentEffect):
                 stat_type=StatType.CRIT_RATE,
                 modifier_type=StatModifierType.PERCENT,
                 value=crit_val,
-                source=self._SOURCE,
+                source=self._CRIT_SOURCE,
                 dispellable=False,
             )
             self._character.stats.apply_modifier(mod, "refresh")
         else:
-            self._character.stats.purge_source(self._SOURCE)
+            self._character.stats.purge_source(self._CRIT_SOURCE)
 
     def on_combat_start(self, state: "GameState", character: "Character") -> None:
         from core.events import EventType
@@ -88,7 +89,8 @@ class OnlySilenceRemainsEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        character.stats.purge_source(self._ATK_SOURCE)
+        character.stats.purge_source(self._CRIT_SOURCE)
         if character.event_bus is not None:
             bus = character.event_bus
             if self._cb_kill is not None:

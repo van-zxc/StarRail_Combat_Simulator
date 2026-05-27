@@ -47,15 +47,6 @@ class ResolutionShinesEffect(EquipmentEffect):
     def on_equip(self, character: "Character") -> None:
         pass
 
-    @staticmethod
-    def _target_has_ensnared(target: "Fighter") -> bool:
-        if not hasattr(target, "stats"):
-            return False
-        for m in target.stats.active_modifiers:
-            if getattr(m, "tag", "") == _RESOLUTION_TAG:
-                return True
-        return False
-
     def on_combat_start(self, state: "GameState", character: "Character") -> None:
         from core.events import EventType
 
@@ -67,8 +58,6 @@ class ResolutionShinesEffect(EquipmentEffect):
         if source is not self._character:
             return
         if target is None or not hasattr(target, "stats"):
-            return
-        if self._target_has_ensnared(target):
             return
         from core.enums import StatType, StatModifierType
 

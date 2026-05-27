@@ -53,16 +53,17 @@ class CollateralEffect(EquipmentEffect):
         from core.events import EventType
 
         self._character = character
-        self._callback = lambda **kw: self._on_action_start(kw.get("action_type"))
+        self._callback = lambda **kw: self._on_action_start(kw.get("unit"), kw.get("action_type"))
         state.event_bus.subscribe(EventType.ACTION_START, self._callback)
 
-    def _on_action_start(self, action_type) -> None:
+    def _on_action_start(self, unit, action_type) -> None:
+        if unit is not self._character:
+            return
         from core.enums import ActionType, StatType, StatModifierType
 
         if action_type not in (ActionType.SKILL, ActionType.ULTIMATE):
             return
 
-        healer = self._character
         p = self._PARAMS[self.superimpose - 1]
         mod = StatModifier(
             stat_type=StatType.OUTGOING_HEALING_BOOST,
@@ -72,7 +73,7 @@ class CollateralEffect(EquipmentEffect):
             duration=1,
             dispellable=False,
         )
-        healer.stats.apply_modifier(mod, "refresh")
+        self._character.stats.apply_modifier(mod, "refresh")
 
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType

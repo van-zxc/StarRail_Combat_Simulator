@@ -34,13 +34,11 @@ class RiverFlowsInSpring(BaseLightCone):
 class RiverFlowsInSpringEffect(EquipmentEffect):
     _PARAMS = [[0.08, 0.12], [0.09, 0.15], [0.10, 0.18], [0.11, 0.21], [0.12, 0.24]]
     _SOURCE = "LightCone_21024"
-    _STATE_ACTIVE = "active"
-    _STATE_BROKEN = "broken"
 
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
         self._character: Optional["Character"] = None
-        self._state: str = self._STATE_ACTIVE
+        self._broken_turns_remaining: int = 0
         self._cb_start: Optional[callable] = None
         self._cb_hit: Optional[callable] = None
         self._cb_turn_end: Optional[callable] = None
@@ -73,7 +71,7 @@ class RiverFlowsInSpringEffect(EquipmentEffect):
         from core.events import EventType
 
         self._character = character
-        self._state = self._STATE_ACTIVE
+        self._broken_turns_remaining = 0
         self._cb_start = lambda **kw: self._apply_buffs()
         self._cb_hit = lambda **kw: self._on_hit(kw.get("target"))
         self._cb_turn_end = lambda **kw: self._on_turn_end(kw.get("unit"))
@@ -85,14 +83,20 @@ class RiverFlowsInSpringEffect(EquipmentEffect):
     def _on_hit(self, target: "Fighter") -> None:
         if target is not self._character:
             return
-        self._state = self._STATE_BROKEN
+        self._broken_turns_remaining = 2
         self._character.stats.purge_source(self._SOURCE)
 
     def _on_turn_end(self, unit: "Fighter") -> None:
         if unit is not self._character:
+            self._decrement_broken()
             return
-        if self._state == self._STATE_BROKEN:
-            self._state = self._STATE_ACTIVE
+        self._decrement_broken()
+
+    def _decrement_broken(self) -> None:
+        if self._broken_turns_remaining <= 0:
+            return
+        self._broken_turns_remaining -= 1
+        if self._broken_turns_remaining == 0:
             self._apply_buffs()
 
     def on_unequip(self, character: "Character") -> None:
