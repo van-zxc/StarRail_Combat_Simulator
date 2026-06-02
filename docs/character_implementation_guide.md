@@ -10,9 +10,9 @@
 
 ### 1.1 数据源
 
-角色数据已通过 `extract_character_data.py` 提取到 `character_data/` 目录。
+角色数据已通过 `scripts/extract_character_data.py` 提取到 `data/character_data/` 目录。
 
-文件名格式: `<id>_<tag>.json`（如 `1001_mar7th.json`），可通过 `character_data/_index.json` 快速查找。
+文件名格式: `<id>_<tag>.json`（如 `1001_mar7th.json`），可通过 `data/character_data/_index.json` 快速查找。
 
 ### 1.2 JSON 五大模块
 
@@ -557,7 +557,7 @@ self._skills["technique"] = ... # 如有秘技
 ### 6.4 验证步骤
 
 ```
-1. pytest test_starrail_combat.py    # 全量测试必须全绿
+1. pytest test/                        # 全量测试必须全绿
 2. python starrail_combat.py         # demo 无崩溃
 3. 编写角色专属测试类 (≥8 tests, 见 §8)
 ```

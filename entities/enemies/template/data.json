@@ -1,0 +1,26 @@
+{
+  "name": "TemplateEnemy",
+  "element": "Physical",
+  "weaknesses": ["Fire", "Ice", "Lightning"],
+  "max_toughness": 30.0,
+  "base_res": 0.20,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.20,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "50":  {"hp": 1000, "atk": 100, "def": 500, "spd": 80, "ehr": 0.00, "eres": 0.00},
+    "80":  {"hp": 5000, "atk": 300, "def": 700, "spd": 100,"ehr": 0.10, "eres": 0.05},
+    "95":  {"hp": 10000,"atk": 500, "def": 900, "spd": 110,"ehr": 0.20, "eres": 0.10}
+  },
+  "skills": [
+    {
+      "skill_id": "basic_attack",
+      "name": "Basic Attack",
+      "multiplier": 1.0,
+      "element": "Physical",
+      "targeting": "single",
+      "energy_gain": 10.0
+    }
+  ],
+  "ai": {"type": "simple"}
+}

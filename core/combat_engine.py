@@ -128,6 +128,7 @@ class CombatEngine:
             elif hasattr(actor, "is_memosprite"):
                 self._execute_memosprite_turn(actor)
             else:
+                actor.on_turn_start()
                 self._resolve_freeze_dots(actor)
                 self._resolve_enemy_dot_ticks(actor)
                 self._check_break_recovery(actor)
@@ -458,6 +459,115 @@ class CombatEngine:
         print(f"  [忆灵] {sprite.name} 攻击 → {target.name}，造成 {damage} 点伤害")
 
     def _execute_enemy_turn(self, enemy: "Enemy") -> None:
+        if enemy._ai is not None:
+            self._execute_enemy_skill_turn(enemy)
+        else:
+            self._execute_enemy_legacy_turn(enemy)
+
+    def _execute_enemy_skill_turn(self, enemy: "Enemy") -> None:
+        from core.damage.enemy_pipeline import compute_enemy_damage
+
+        skill = enemy.decide_skill(self.state)
+        targets = self._get_enemy_targets(enemy, skill)
+        if not targets:
+            return
+
+        total_damage = 0
+        is_crit = False
+        for target in targets:
+            damage = compute_enemy_damage(enemy, skill, target)
+            if damage == 0 and skill.multiplier > 0 and enemy.crit_rate > 0:
+                pass
+            elif damage > enemy.atk * skill.multiplier:
+                is_crit = True
+            actual = target.take_damage(damage, mitigated=True)
+            total_damage += actual
+            target.hit_count += 1
+            self.state.on_hit(target, base_amount=enemy.hit_energy_bucket)
+            self.event_bus.emit(EventType.ON_HIT, source=enemy, target=target,
+                                damage=actual, action_type=None, damage_type=DamageType.DIRECT)
+            if not target.is_alive:
+                self.state._notify_death(target, enemy)
+                self.event_bus.emit(EventType.ON_KILL, source=enemy, target=target)
+
+        self._log_action(enemy, ActionType.BASIC_ATTACK, targets[0],
+                          total_damage, is_crit, 0.0, False)
+        tname = targets[0].name if len(targets) == 1 else f"{len(targets)} 个目标"
+        print(f"  {enemy.name} 使用【{skill.name}】→ {tname}，造成 {total_damage} 点伤害")
+        enemy.after_action(skill)
+
+        self._apply_skill_effects(enemy, skill, targets)
+
+    def _get_enemy_targets(self, enemy: "Enemy", skill: "EnemySkill") -> list["Character"]:
+        t = skill.targeting
+        alive = self.state.alive_characters
+        if not alive:
+            return []
+        if t == "single":
+            from core.targeting import TargetManager
+            tgt = TargetManager.select_target(enemy, alive)
+            return [tgt] if tgt else []
+        if t == "aoe":
+            return list(alive)
+        return [alive[0]]
+
+    def _apply_skill_effects(self, enemy: "Enemy", skill: "EnemySkill",
+                              targets: list["Character"]) -> None:
+        from entities.enemies.enemy_skill import (
+            DamageEffect, DebuffEffect, DoTEffect,
+            BuffEffect, HealEffect, ShieldEffect,
+        )
+        from entities.base import StatModifier, DoTStatus, ShieldStatus
+        from core.enums import StatModifierType as SMT
+
+        for eff in skill.effects:
+            if isinstance(eff, DebuffEffect):
+                for tgt in targets:
+                    ok, _ = self.state.try_apply_debuff(enemy, tgt, eff.base_chance)
+                    if ok:
+                        mod = StatModifier(
+                            stat_type=eff.stat_type,
+                            modifier_type=eff.modifier_type,
+                            value=eff.value,
+                            source=f"{enemy.name}_{skill.name}",
+                            duration=eff.duration,
+                        )
+                        tgt.stats.apply_modifier(mod, "refresh")
+            elif isinstance(eff, DoTEffect):
+                for tgt in targets:
+                    ok, _ = self.state.try_apply_debuff(enemy, tgt, eff.base_chance)
+                    if ok:
+                        dot = DoTStatus(
+                            source_character=None,
+                            element=eff.element,
+                            dot_multiplier=eff.dot_multiplier,
+                            duration=eff.duration,
+                        )
+                        enemy.apply_dot(dot)
+            elif isinstance(eff, BuffEffect):
+                mod = StatModifier(
+                    stat_type=eff.stat_type,
+                    modifier_type=eff.modifier_type,
+                    value=eff.value,
+                    source=f"{enemy.name}_{skill.name}",
+                    duration=eff.duration,
+                )
+                enemy.stats.apply_modifier(mod, "refresh")
+            elif isinstance(eff, HealEffect):
+                heal = int(eff.multiplier * enemy.max_hp + eff.flat_amount)
+                actual = enemy.receive_heal(heal)
+                if actual > 0:
+                    self.event_bus.emit(EventType.HEAL_DONE, healer=enemy,
+                                         target=enemy, amount=actual)
+            elif isinstance(eff, ShieldEffect):
+                shield_val = enemy.atk * eff.multiplier + eff.flat_amount
+                shield = ShieldStatus(
+                    shield_value=shield_val, max_shield_value=shield_val,
+                    source_name=enemy.name, duration=eff.duration,
+                )
+                enemy.apply_shield(shield)
+
+    def _execute_enemy_legacy_turn(self, enemy: "Enemy") -> None:
         target_name, damage = enemy.attack(self.state.characters)
         if not target_name:
             return

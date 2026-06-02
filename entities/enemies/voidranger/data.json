@@ -1,0 +1,14 @@
+{
+  "name": "Voidranger",
+  "weaknesses": ["Fire", "Ice"],
+  "max_toughness": 30.0,
+  "base_res": 0.20,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.20,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "95": {"hp": 300, "atk": 25, "def": 1150, "spd": 90, "ehr": 0.36, "eres": 0.10}
+  },
+  "skills": [],
+  "ai": {"type": "simple"}
+}

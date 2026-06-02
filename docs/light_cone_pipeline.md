@@ -9,21 +9,21 @@ References: Arrows (20000), PostOpConversation (21000), NightOnTheMilkyWay (2300
 
 | File | Purpose |
 |------|---------|
-| `light_cone_data/{id}.json` | Raw data (stats, skill, params, promotions) |
+| `data/light_cone_data/{id}.json` | Raw data (stats, skill, params, promotions) |
 | `entities/light_cones/base.py` | `BaseLightCone` + registry + level system + path mapping |
 | `entities/light_cones/<name>.py` | Concrete light cone class + effect |
 | `entities/light_cones/__init__.py` | Export new LC |
 | `entities/base.py` | `EquipmentEffect` ABC (`on_equip` / `on_combat_start` / `on_unequip`) |
 | `core/combat_engine.py` | `on_combat_start` wiring + `_decrement_modifiers(unit)` |
 | `entities/characters/base.py` | `equip_light_cone()` with path check |
-| `test_starrail_combat.py` | Tests |
+| `test/test_light_cones.py` | Tests |
 | `docs/known_issues.md` | Untested behaviors tracked with code references |
 
 ---
 
 ## 2. Data Reference
 
-Open `light_cone_data/{id}.json`. Key fields:
+Open `data/light_cone_data/{id}.json`. Key fields:
 
 ```json
 {
@@ -72,7 +72,7 @@ class <Name>(BaseLightCone):
     _default_name = "<zh_name>"
     _default_path_key = "<path_key>"    # "Rogue"/"Mage"/"Priest"/etc.
 
-    _PROMOTIONS = [                     # from light_cone_data/{id}.json
+    _PROMOTIONS = [                     # from data/light_cone_data/{id}.json
         {"hp_base": ..., "hp_step": ..., "atk_base": ..., "atk_step": ..., "def_base": ..., "def_step": ...},
         ... # 7 entries total
     ]

@@ -1,16 +1,21 @@
 from __future__ import annotations
-"""BaseEnemy — 敌方目标基类 (JSON 优先，类属性 fallback)。"""
+"""BaseEnemy — 敌方目标基类 (Config 驱动 + 类属性 fallback)。"""
 
 from typing import Optional
 
 from core.entity_stats import stats_defaults
 from entities.base import DoTStatus, Fighter, CCStatus, ImplantedWeakness
+from entities.enemies.enemy_skill import EnemySkill
+from entities.enemies.enemy_ai import EnemyAI, SimpleAI
 
 
 class BaseEnemy(Fighter):
-    """敌方目标，拥有固定伤害值、弱点属性、韧性条、与等级驱动的防御面板。
+    """敌方目标。支持两套初始化路径:
 
-    子类可覆盖类属性设置默认值；from_template() JSON 优先 → 子类 fallback。
+    1. Config 驱动 (推荐): 传 EnemyConfig, 从成长表读取属性
+    2. 显式参数 (兼容旧代码): 传 name/hp/speed/base_damage 等
+
+    子类可覆盖 _CONFIG 类属性达到零代码定义。
     """
 
     _enemy_registry: dict[str, type["BaseEnemy"]] = {}
@@ -42,6 +47,10 @@ class BaseEnemy(Fighter):
     _default_weaknesses: list["ElementType"] = None
     _default_max_toughness: float = 0.0
     _default_level: int = 95
+    _default_element: "ElementType | None" = None
+    _default_crit_rate: float = 0.0
+    _default_crit_dmg: float = 0.20
+    _default_base_res: float = 0.20
 
     def __init__(
         self,
@@ -52,22 +61,102 @@ class BaseEnemy(Fighter):
         weaknesses: Optional[list["ElementType"]] = None,
         max_toughness: Optional[float] = None,
         level: Optional[int] = None,
+        *,
+        config: Optional["EnemyConfig"] = None,
     ) -> None:
         from starrail_combat import ElementType, EntityStats, StatType
 
         n = name or self._default_name
         lv = level if level is not None else self._default_level
+
+        self.level = lv
+
+        if config is not None:
+            self._init_from_config(config, lv, n)
+        else:
+            self._init_from_args(n, lv, hp, speed, base_damage, weaknesses, max_toughness)
+
+        self.max_toughness = (
+            max_toughness if max_toughness is not None
+            else (config.max_toughness if config else self._default_max_toughness)
+        )
+        self.current_toughness = self.max_toughness
+        self.broken: bool = False
+        self.broken_by: Optional["ElementType"] = None
+        self.broken_source_id: Optional[str] = None
+        self.weightless_remaining_turns: int = 0
+        self.weightless_hit_count: int = 0
+        self.dot_statuses: list[DoTStatus] = []
+        self.cc_statuses: list["CCStatus"] = []
+        self.hit_energy_bucket: float = (
+            config.hit_energy_bucket if config else 10.0
+        )
+        self.implanted_weakness: Optional[ImplantedWeakness] = None
+        self.element_res_modifiers: dict[ElementType, float] = {}
+
+        from core.enums import StatType as ST
+        spd_final = int(self.stats.get_total_stat(ST.SPD))
+        hp_final = int(self.stats.get_total_stat(ST.HP))
+        super().__init__(n, hp_final, spd_final)
+
+        _init_old = not config
+        if _init_old:
+            self.base_damage = base_damage if base_damage is not None else self._default_base_damage
+            self._element = self._default_element
+        self.weaknesses: list[ElementType] = (
+            weaknesses if weaknesses is not None
+            else (config.weaknesses if config else (self._default_weaknesses or []))
+        )
+        if config:
+            self._element = config.element
+
+    def _init_from_config(self, config: "EnemyConfig", lv: int, name: str) -> None:
+        from starrail_combat import ElementType, EntityStats, StatType
+        from entities.enemies.enemy_skill import EnemySkill as ES
+
+        stats = self._resolve_level_stats(config, lv)
+
+        base_data = stats_defaults()
+        base_data[StatType.HP] = float(stats["hp"])
+        base_data[StatType.ATK] = float(stats["atk"])
+        base_data[StatType.DEF] = float(stats["def"])
+        base_data[StatType.SPD] = float(stats["spd"])
+        base_data[StatType.EFFECT_HIT_RATE] = float(stats.get("ehr", 0.0))
+        base_data[StatType.EFFECT_RES] = float(stats.get("eres", 0.0))
+        base_data[StatType.CRIT_RATE] = config.crit_rate
+        base_data[StatType.CRIT_DMG] = config.crit_dmg
+        self.stats = EntityStats(base_data)
+        self.stats.bind(self)
+
+        self._skills: dict[str, EnemySkill] = {s.skill_id: s for s in config.skills}
+        self._ai: EnemyAI = config.ai
+
+        fallback = next(iter(self._skills.values()), None)
+        if fallback is None:
+            fallback = ES(
+                skill_id="default_attack", name="攻击",
+                multiplier=1.0, element=config.element or ElementType.PHYSICAL,
+                targeting="single",
+            )
+        self._default_skill: EnemySkill = fallback
+
+        self._energy: float = 0.0
+        self._max_energy: float = config.max_energy if config.max_energy is not None else 0.0
+
+        self.base_damage = int(stats["atk"])
+
+    def _init_from_args(self, name: str, lv: int, hp, speed, base_damage, weaknesses, max_toughness) -> None:
+        from starrail_combat import ElementType, EntityStats, StatType
+
         hp_val = hp if hp is not None else self._default_hp
         spd_val = speed if speed is not None else self._default_speed
 
-        self.level = lv
-        # 效果命中等级成长
         eh_base = 0.0
         if lv > 50:
             eh_base = min((lv - 50) * 0.008, 0.40)
         if lv >= 120:
             eh_base += 0.10
-        # 速度等级乘区
+
         scale = 1.0
         for (lo, hi), s in self._SPD_SCALING:
             if lo <= lv <= hi:
@@ -77,36 +166,111 @@ class BaseEnemy(Fighter):
         def_base = lv * 10 + 200
         base_data = stats_defaults()
         base_data[StatType.HP] = float(hp_val)
+        base_data[StatType.ATK] = float(base_damage if base_damage is not None else self._default_base_damage)
         base_data[StatType.SPD] = float(spd_val)
         base_data[StatType.DEF] = float(def_base)
         base_data[StatType.EFFECT_HIT_RATE] = eh_base
+        base_data[StatType.CRIT_RATE] = self._default_crit_rate
+        base_data[StatType.CRIT_DMG] = self._default_crit_dmg
         self.stats = EntityStats(base_data)
         self.stats.bind(self)
 
-        super().__init__(n, int(self.stats.get_base_stat(StatType.HP)), int(self.stats.get_base_stat(StatType.SPD)))
-
-        self.base_damage = base_damage if base_damage is not None else self._default_base_damage
-        self.weaknesses: list[ElementType] = (
-            weaknesses
-            if weaknesses is not None
-            else (self._default_weaknesses or [])
+        self._skills: dict[str, EnemySkill] = {}
+        self._ai: Optional[EnemyAI] = None
+        self._default_skill: EnemySkill = EnemySkill(
+            skill_id="default_attack", name="攻击",
+            multiplier=1.0, element=ElementType.PHYSICAL,
+            targeting="single",
         )
-        self.max_toughness = max_toughness if max_toughness is not None else self._default_max_toughness
-        self.current_toughness = self.max_toughness
-        self.broken: bool = False
-        self.broken_by: Optional["ElementType"] = None
-        self.broken_source_id: Optional[str] = None
-        self.weightless_remaining_turns: int = 0
-        self.weightless_hit_count: int = 0
-        self.dot_statuses: list[DoTStatus] = []
-        self.cc_statuses: list["CCStatus"] = []
-        self.hit_energy_bucket: float = 10.0  # 受击回能分段 (§17.2)
-        self.implanted_weakness: Optional[ImplantedWeakness] = None  # 弱点植入
-        self.element_res_modifiers: dict[ElementType, float] = {}  # per-element RES 修改
+        self._energy: float = 0.0
+        self._max_energy: float = 0.0
+
+    @staticmethod
+    def _resolve_level_stats(config: "EnemyConfig", level: int) -> dict:
+        table = config.level_stats
+        if level in table:
+            return table[level]
+        keys = sorted(table.keys())
+        if not keys:
+            return {"hp": 300, "atk": 25, "def": 200, "spd": 90, "ehr": 0.0, "eres": 0.0}
+        if level <= keys[0]:
+            return table[keys[0]]
+        if level >= keys[-1]:
+            return table[keys[-1]]
+        for i in range(len(keys) - 1):
+            lo, hi = keys[i], keys[i + 1]
+            if lo <= level <= hi:
+                lo_data = table[lo]
+                hi_data = table[hi]
+                ratio = (level - lo) / (hi - lo)
+                return {
+                    k: lo_data[k] + (hi_data[k] - lo_data[k]) * ratio
+                    for k in lo_data if k in hi_data
+                }
+        return table[keys[-1]]
+
+    # ── 属性代理 ──
+
+    @property
+    def element(self) -> Optional["ElementType"]:
+        return getattr(self, "_element", None)
+
+    @element.setter
+    def element(self, value: Optional["ElementType"]) -> None:
+        self._element = value
+
+    @property
+    def atk(self) -> float:
+        from core.enums import StatType
+        return self.stats.get_total_stat(StatType.ATK)
+
+    @property
+    def crit_rate(self) -> float:
+        from core.enums import StatType
+        return self.stats.get_total_stat(StatType.CRIT_RATE)
+
+    @property
+    def crit_dmg(self) -> float:
+        from core.enums import StatType
+        return self.stats.get_total_stat(StatType.CRIT_DMG)
+
+    @property
+    def energy(self) -> float:
+        return self._energy
+
+    @property
+    def max_energy(self) -> float:
+        return self._max_energy
+
+    # ── 技能与 AI ──
+
+    def decide_skill(self, state: "GameState") -> "EnemySkill":
+        if self._ai is not None:
+            return self._ai.select_skill(self, state)
+        return self._default_skill
+
+    def gain_energy(self, amount: float) -> float:
+        if self._max_energy <= 0:
+            return 0.0
+        capped = max(0.0, min(amount, self._max_energy - self._energy))
+        self._energy += capped
+        return capped
+
+    def consume_energy(self, amount: float) -> None:
+        self._energy = max(0.0, self._energy - amount)
+
+    def after_action(self, skill: "EnemySkill") -> None:
+        skill.start_cooldown()
+        self.gain_energy(skill.energy_gain)
+
+    def on_turn_start(self) -> None:
+        for s in self._skills.values():
+            s.tick_cooldown()
+
+    # ── 工厂方法 ──
 
     @classmethod
     def from_template(cls, enemy_id: str) -> "BaseEnemy":
-        """创建 Enemy 实例：JSON 优先，不可用时回退到已注册子类。"""
         from starrail_combat import ElementType, get_data_loader
 
         try:
@@ -129,14 +293,14 @@ class BaseEnemy(Fighter):
                 max_toughness=data.get("max_toughness", 0.0),
             )
 
-        # JSON 不可用 → 已注册子类 -> 使用其类属性默认值
         if enemy_id in cls._enemy_registry:
             return cls._enemy_registry[enemy_id]()
 
         raise KeyError(f"Unknown enemy: {enemy_id}")
 
+    # ── 旧攻击接口 (兼容) ──
+
     def attack(self, targets: list["Character"], is_bounce: bool = False) -> tuple[str, int]:
-        """按索敌规则选择目标造成固定伤害。"""
         from core.targeting import TargetManager
 
         target = TargetManager.select_target(self, targets, is_bounce=is_bounce)
@@ -145,8 +309,9 @@ class BaseEnemy(Fighter):
         damage = target.take_damage(self.base_damage)
         return (target.name, damage)
 
+    # ── DoT ──
+
     def apply_dot(self, dot: DoTStatus) -> None:
-        """挂载 DoT：同来源同元素则叠加层数 + 刷新持续。"""
         for existing in self.dot_statuses:
             if existing.element == dot.element and existing.source_character is dot.source_character:
                 existing.stacks += dot.stacks

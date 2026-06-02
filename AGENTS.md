@@ -3,67 +3,93 @@
 ## 项目结构
 
 ```
-starrail_combat.py           # 入口模块 (re-export)
+starrail_combat.py              # 入口模块 (re-export)
 core/
-  enums.py                   # ActionType/DamageType/StatType/ElementType/PathType 枚举
-  events.py                  # EventBus: 30 事件类型 + subscribe/emit
-  entity_stats.py            # EntityStats: 白值/绿值分离 + 修饰器池 + apply_modifier 叠层策略
-  game_state.py              # SP/Energy/execute_action/DoT/heal/debuff/wave/technique
-  combat_engine.py           # 主循环: AV推进/FUA队列/ExtraTurn/Ultimate插队/回合调度
-  targeting.py               # TargetManager: Aggro/Bounce/Blast/AoE/Random/LockOn/Taunt
-  toughness.py               # BreakEffectHandler + CCProcessor + Break LM表
-  test_factory.py            # create_test_character()
-  data_loader.py             # DataLoader: JSON 可选加载
+  enums.py                      # ActionType/DamageType/StatType/ElementType/PathType 枚举
+  events.py                     # EventBus: 30 事件类型 + subscribe/emit
+  entity_stats.py               # EntityStats: 白值/绿值分离 + 修饰器池 + apply_modifier 叠层策略
+  game_state.py                 # SP/Energy/execute_action/DoT/heal/debuff/wave/technique
+  combat_engine.py              # 主循环: AV推进/FUA队列/ExtraTurn/Ultimate插队/回合调度 (+敌人技能)
+  targeting.py                  # TargetManager: Aggro/Bounce/Blast/AoE/Random/LockOn/Taunt
+  toughness.py                  # BreakEffectHandler + CCProcessor + Break LM表
+  test_factory.py               # create_test_character()
+  data_loader.py                # DataLoader: JSON 可选加载 (角色/光锥/遗器/敌人)
   damage/
-    __init__.py              # MULTIPLIER_CHAIN: 6种DamageType乘区链调度表
-    multipliers.py           # 15个独立乘区函数 (dmg_bonus/def/res/crit/break/elation...)
-    base.py                  # compute_base_damage() + Elation LM表
+    __init__.py                 # MULTIPLIER_CHAIN: 6种DamageType乘区链调度表
+    multipliers.py              # 15个独立乘区函数 (dmg_bonus/def/res/crit/break/elation...)
+    base.py                     # compute_base_damage() + Elation LM表
+    enemy_pipeline.py           # 敌人→角色六乘区伤害管道
 config/
-  game_config.py             # 引擎配置: SP/Energy/Aggro/Cycle/Ambush/FollowUpEnergy
+  game_config.py                # 引擎配置: SP/Energy/Aggro/Cycle/Ambush/FollowUpEnergy
 entities/
-  base.py                    # Fighter/StatModifier/ShieldStatus/DoTStatus/CCStatus/CertifiedBanger/ToughnessDamagePacket/HitPacket/Memosprite
-  aha.py                     # Aha 倒计时对象
+  base.py                       # Fighter/StatModifier/ShieldStatus/DoTStatus/CCStatus/Memosprite + HitPacket/ToughnessDamagePacket
+  aha.py                        # Aha 倒计时对象
   characters/
-    base.py                  # BaseCharacter + _character_registry
-    dan_heng/                # DanHeng (HUNT/WIND) + Elation测试技能
-    march_7th/               # March7th (PRESERVATION/ICE) + 护盾/反击
-    template_character/      # 标准角色模板
+    base.py                     # BaseCharacter + _character_registry
+    arlan/                      # Arlan (DESTRUCTION/LIGHTNING) — 10 角色 (已全实现)
+    asta/
+    dan_heng/
+    herta/
+    himeko/
+    kafka/
+    march_7th/
+    player_girl/
+    silverwolf/
+    welt/
+    template_character/         # 标准角色模板
   enemies/
-    base.py                  # BaseEnemy + hit_energy_bucket
-    voidranger.py
+    base.py                     # BaseEnemy + Config驱动 + ATK/CRIT/能量/技能/AI系统
+    enemy_skill.py              # EnemySkill + 7种 SkillEffect (Damage/Debuff/DoT/Buff/Heal/Shield/Summon)
+    enemy_ai.py                 # SimpleAI / PriorityAI / BehaviorTree 骨架
+    enemy_config.py             # EnemyConfig + load_config_from_json() 共享加载器
+    antibaryon/
+      __init__.py               # class Antibaryon (IMAGINARY, 弱点 Physical+Quantum)
+      data.json                 # 纯数值: Lv1~120 成长表 + Obliterate (250% ATK)
+    baryon/                     # class Baryon (QUANTUM, 弱点 Ice+Wind)
+    voidranger/                 # class Voidranger (旧式兼容)
+    template/                   # 新敌人起手式 (复制即用)
   light_cones/
-    base.py / cruising.py / ...    # BaseLightCone + 10 个具体光锥
+    base.py                     # BaseLightCone + 60 个具体光锥 (.py 文件)
   relics/
-    base.py                  # BaseRelic + RelicSetManager
+    base.py                     # BaseRelic + RelicSetManager + 11 套隧洞遗器
+  planar_ornaments/             # 7 套位面饰品 (301-308)
+data/
+  character_data/               # 77 文件: 角色 JSON (_index.json + 76 角色)
+  light_cone_data/              # 162 文件: 光锥 JSON (_index.json + 161 光锥)
+  relic_data/                   # 58 文件: 遗器 JSON (_index.json + 57 套)
 test/
-  test_equipment.py          # 装备系统 + 修饰器池
-  test_combat.py             # 韧性/暴击/防御/伤害公式
-  test_action.py             # AV系统/终结技插队/额外回合/FUA/多段Hit
-  test_energy.py             # 能量/SP/受击回能
-  test_targeting.py          # Aggro/弹射/Blast/AoE/LockOn
-  test_damage_heal.py        # DoT/附加伤害/治疗/真实伤害
-  test_shield_death.py       # 护盾/死亡/治疗事件
-  test_break_debuff.py       # 击破机制/CC/驱散/减益
-  test_system.py             # 波次/召唤物/叠层/边缘案例
-  test_characters.py         # 9 个角色 (DanHeng~Herta) + 集成测试
-  test_light_cones.py        # 11 个光锥 + 命途限制 + 等级系统
+  test_action.py                # AV系统/终结技插队/额外回合/FUA/多段Hit
+  test_break_debuff.py          # 击破机制/CC/驱散/减益
+  test_characters.py            # 10 个角色集成测试
+  test_combat.py                # 韧性/暴击/防御/伤害公式
+  test_damage_heal.py           # DoT/附加伤害/治疗/真实伤害
+  test_elation.py               # 欢愉体系
+  test_enemies.py               # 敌人系统: 构造/AI/伤害/集成/兼容
+  test_energy.py                # 能量/SP/受击回能
+  test_equipment.py             # 装备系统 + 修饰器池
+  test_light_cones.py           # 60 个光锥 + 命途限制 + 等级系统
+  test_shield_death.py          # 护盾/死亡/治疗事件
+  test_system.py                # 波次/召唤物/叠层/边缘案例
+  test_targeting.py             # Aggro/弹射/Blast/AoE/LockOn
 docs/
-  todo.md                    # 开发路线图 (已完成/缺失/待实测)
-  anti_regression.md         # 防错清单 (详细规则 + 历史案例)
-original_data/                   # 原始文档与数据源
-  enemy/                         # DimbreathBot 完整数据 (4.2.0, 2026-05)
-    excel_output/                # MonsterConfig.json + MonsterSkillConfig.json (2027文件)
-    config_character/            # 怪物技能配置 (541文件)
-    config_ability/              # 怪物能力实现 (688文件)
-    config_ai/                   # 怪物 AI 行为树 (688文件)
-enemy_data/                      # 构建后的单文件数据源
-  _data.json                     # ★ 引擎加载的唯一文件: {<tid>: {弱点/技能/AI}, _ai: {...}, _meta: {...}}
-  override/                      # ★ 用户覆盖目录 — 同名文件按字段覆盖
+  todo.md                       # 开发路线图 (已完成/缺失/待实测)
+  anti_regression.md            # 防错清单 (详细规则 + 历史案例)
+  enemy_pipeline.md             # 敌人实现管线 (架构/JSON格式/加载/技能/AI/伤害/添加流程)
+  character_implementation_guide.md  # 角色实现方法论
+  light_cone_pipeline.md        # 光锥实现管线
+  relic_pipeline.md             # 遗器实现管线
+  planar_ornament_pipeline.md   # 位面饰品实现管线
+  known_issues.md               # 已知问题记录
+  github_upload_guide.md        # GitHub 上传规则
 scripts/
-  download_enemy_data.ps1        # 下载脚本 (git clone 方式)
-  build_enemy_data.py            # 从原始数据构建 _data.json
-  split_enemy_data.py            # 废弃 (已被build替代)
-test_starrail_combat.py      # pytest: 312 tests
+  extract_character_data.py     # 角色数据提取
+  extract_light_cone_data.py    # 光锥数据提取
+  build_relic_data.py           # 遗器数据构建
+  classification_data.py        # 怪物分类名录 (BOSS/Elite/Normal)
+original_data/
+  StarRailRes/                  # DimbreathBot 静态数据 (4.2.0)
+  SRSim-master/                 # 参考实现 (Python 战斗模拟器)
+  Elation.md                    # 欢愉体系参考文档
 ```
 
 ## 开发约定
@@ -79,7 +105,7 @@ test_starrail_combat.py      # pytest: 312 tests
 - 多段攻击: `HitPacket` 列表 + `execute_multi_hit()` / `skip_action_resources`
 - 波次系统: `GameState.waves` / `start_next_wave()` / `WAVE_START` emit / `av_keep_on_wave`
 - 测试工厂: `create_test_character(name, hp, speed, atk, crit_rate, element, path, level, max_energy)`
-- 实体注册: `Character("DanHeng")` 自动分发到 `DanHeng` 子类; `Enemy.from_template("Voidranger")`
+- 实体注册: `Character("DanHeng")` 自动分发到 `DanHeng` 子类; `Enemy.from_template("Voidranger")` / `Enemy.from_template("Antibaryon")`
 
 ## 核心约束
 
@@ -107,7 +133,7 @@ test_starrail_combat.py      # pytest: 312 tests
 **涉及覆写（overwrite）已有文件的操作，必须先向用户确认**。包括但不限于：`write` 工具覆写现有文件、`edit` 工具替换文件大部分内容、`bash` 命令直接输出重定向到现有文件。不确定时，先问再执行。
 
 ### 以验证为终点
-每个任务都要有明确的验证标准——通常是让一个测试从红变绿。在声称"完成"之前，必须运行 `pytest test_starrail_combat.py` 确认全部通过。写法：
+每个任务都要有明确的验证标准——通常是让一个测试从红变绿。在声称"完成"之前，必须运行 `pytest test/` 确认全部通过。写法：
 ```
 1. [步骤] → 验证: [具体检查]
 2. [步骤] → 验证: [具体检查]

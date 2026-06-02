@@ -1708,3 +1708,699 @@ class TestThiefOfShootingMeteor:
                                     main_stat=StatModifier(StatType.ATK, StatModifierType.PERCENT, 0.30)))
 
         assert not any(m.source.startswith("RelicSet_111_") for m in char.stats.active_modifiers)
+
+
+# ============================================================
+#  TestSpaceSealingStation — 太空封印站 (301)
+# ============================================================
+
+
+class TestSpaceSealingStation:
+    """2件: ATK+12%, 速度>=120时额外ATK+12%"""
+
+    _SET_ID = "301"
+    _SOURCE_2PC = "RelicSet_301_2pc"
+    _SOURCE_EXTRA = "RelicSet_301_2pc_extra"
+
+    def _make_char(self):
+        return create_test_character("T", hp=1000, speed=100, atk=500.0)
+
+    def _make_state(self, char):
+        enemy = Enemy(name="E", hp=10000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return state, engine
+
+    def _equip_2pc(self, char):
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+
+    def _get_2pc_mods(self, char):
+        return [m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]
+
+    def _get_extra_mods(self, char):
+        return [m for m in char.stats.active_modifiers if m.source == self._SOURCE_EXTRA]
+
+    def test_2pc_atk_bonus(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        mods = self._get_2pc_mods(char)
+        assert len(mods) == 1
+        assert mods[0].value == pytest.approx(0.12)
+
+    def test_1pc_no_bonus(self):
+        char = self._make_char()
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert len(self._get_2pc_mods(char)) == 0
+
+    def test_extra_on_init_high_spd(self):
+        char = self._make_char()
+        char.stats.add_modifier(StatModifier(StatType.SPD, StatModifierType.FLAT, 30, source="InitSpd"))
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert len(self._get_extra_mods(char)) == 1
+
+    def test_extra_not_active_low_spd(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert len(self._get_extra_mods(char)) == 0
+
+    def test_dynamic_toggle_on(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        char.stats.add_modifier(StatModifier(StatType.SPD, StatModifierType.FLAT, 30, source="SpdUp"))
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0])
+        assert len(self._get_extra_mods(char)) == 1
+
+    def test_dynamic_toggle_off(self):
+        char = self._make_char()
+        char.stats.add_modifier(StatModifier(StatType.SPD, StatModifierType.FLAT, 30, source="SpdUp"))
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        char.stats.remove_modifier_by_source("SpdUp")
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0])
+        assert len(self._get_extra_mods(char)) == 0
+
+    def test_cavern_planar_coexist(self):
+        char = self._make_char()
+        for part in (RelicPart.HEAD, RelicPart.HANDS, RelicPart.BODY, RelicPart.FEET):
+            m = (StatModifier(StatType.HP, StatModifierType.FLAT, 705.0)
+                 if part == RelicPart.HEAD
+                 else StatModifier(StatType.ATK, StatModifierType.FLAT, 352.0)
+                 if part == RelicPart.HANDS
+                 else StatModifier(StatType.ATK, StatModifierType.PERCENT, 0.30))
+            char.equip_relic(Relic(part=part, set_id="109", main_stat=m))
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert any(m.source == "RelicSet_109_2pc" for m in char.stats.active_modifiers)
+        assert any(m.source == self._SOURCE_2PC for m in char.stats.active_modifiers)
+
+    def test_unequip_cleans_sources(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        assert any(m.source.startswith("RelicSet_301_") for m in char.stats.active_modifiers)
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+        assert not any(m.source.startswith("RelicSet_301_") for m in char.stats.active_modifiers)
+
+
+# ============================================================
+#  TestFleetOfTheAgeless — 不老者的仙舟 (302)
+# ============================================================
+
+
+class TestFleetOfTheAgeless:
+    """2件: HP+12%, 速度>=120时我方全体ATK+8% (可叠加)"""
+
+    _SET_ID = "302"
+    _SOURCE_2PC = "RelicSet_302_2pc"
+
+    def _make_char(self, name="T", spd=120):
+        return create_test_character(name, hp=1000, speed=spd, atk=500.0)
+
+    def _make_state(self, *chars):
+        enemy = Enemy(name="E", hp=10000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=list(chars), enemies=[enemy])
+        engine = CombatEngine(state)
+        return state, engine
+
+    def _equip_2pc(self, char):
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+
+    def _team_source(self, char):
+        return f"RelicSet_302_2pc_team_{id(char)}"
+
+    def test_2pc_hp(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        mods = [m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]
+        assert len(mods) == 1
+        assert mods[0].value == pytest.approx(0.12)
+
+    def test_1pc_no_bonus(self):
+        char = self._make_char()
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert len([m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]) == 0
+
+    def test_team_atk_applied(self):
+        a = self._make_char("A")
+        b = self._make_char("B")
+        self._equip_2pc(a)
+        state, engine = self._make_state(a, b)
+        start_relic_set_effects(state, a)
+        b_source = self._team_source(a)
+        assert any(m.source == b_source for m in a.stats.active_modifiers)
+        assert any(m.source == b_source for m in b.stats.active_modifiers)
+
+    def test_team_atk_removed_if_below(self):
+        a = self._make_char("A", spd=100)
+        b = self._make_char("B")
+        self._equip_2pc(a)
+        state, engine = self._make_state(a, b)
+        start_relic_set_effects(state, a)
+        src = self._team_source(a)
+        assert not any(m.source == src for m in b.stats.active_modifiers)
+
+    def test_two_wearers_stack(self):
+        a = self._make_char("A")
+        b = self._make_char("B")
+        self._equip_2pc(a)
+        self._equip_2pc(b)
+        state, engine = self._make_state(a, b)
+        start_relic_set_effects(state, a)
+        start_relic_set_effects(state, b)
+        atk_c = a.stats.get_total_stat(StatType.ATK)
+        assert atk_c == pytest.approx(500.0 * 1.16)
+
+    def test_sources_independent(self):
+        a = self._make_char("A")
+        b = self._make_char("B")
+        self._equip_2pc(a)
+        self._equip_2pc(b)
+        state, engine = self._make_state(a, b)
+        start_relic_set_effects(state, a)
+        start_relic_set_effects(state, b)
+        a.stats.purge_source(self._team_source(a))
+        atk = a.stats.get_total_stat(StatType.ATK)
+        assert atk == pytest.approx(500.0 * 1.08)
+
+    def test_wearer_death_removes_team_buff(self):
+        a = self._make_char("A")
+        self._equip_2pc(a)
+        state, engine = self._make_state(a)
+        start_relic_set_effects(state, a)
+        a.hp = 0
+        a._before_death_emitted = True
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=a, target=state.enemies[0])
+        assert not any(m.source == self._team_source(a) for m in a.stats.active_modifiers)
+
+    def test_wearer_revive_restores_buff(self):
+        a = self._make_char("A")
+        self._equip_2pc(a)
+        state, engine = self._make_state(a)
+        start_relic_set_effects(state, a)
+        a.hp = 0
+        a._before_death_emitted = True
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=a, target=state.enemies[0])
+        a.hp = a.max_hp
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=a, target=state.enemies[0])
+        assert any(m.source == self._team_source(a) for m in a.stats.active_modifiers)
+
+    def test_unequip_cleans_sources(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+        assert not any(m.source.startswith("RelicSet_302_") for m in char.stats.active_modifiers)
+
+
+# ============================================================
+#  TestPanCosmicCommercialEnterprise — 泛银河商业公司 (303)
+# ============================================================
+
+
+class TestPanCosmicCommercialEnterprise:
+    """2件: EHR+10%, ATK% = EHR×25% (上限25%)"""
+
+    _SET_ID = "303"
+    _SOURCE_2PC = "RelicSet_303_2pc"
+    _SOURCE_CONV = "RelicSet_303_2pc_conversion"
+
+    def _make_char(self):
+        return create_test_character("T", hp=1000, speed=100, atk=500.0)
+
+    def _make_state(self, char):
+        enemy = Enemy(name="E", hp=10000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return state, engine
+
+    def _equip_2pc(self, char):
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+
+    def _conv_val(self, char):
+        for m in char.stats.active_modifiers:
+            if m.source == self._SOURCE_CONV:
+                return m.value
+        return None
+
+    def test_2pc_ehr(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        mods = [m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]
+        assert len(mods) == 1
+        assert mods[0].value == pytest.approx(0.10)
+
+    def test_1pc_no_bonus(self):
+        char = self._make_char()
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert len([m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]) == 0
+
+    def test_conversion_base(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert self._conv_val(char) == pytest.approx(0.025)
+
+    def test_conversion_partial(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        char.stats.add_modifier(StatModifier(StatType.EFFECT_HIT_RATE, StatModifierType.PERCENT, 0.30, source="Ext"))
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert self._conv_val(char) == pytest.approx(0.10)
+
+    def test_conversion_capped(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        char.stats.add_modifier(StatModifier(StatType.EFFECT_HIT_RATE, StatModifierType.PERCENT, 2.00, source="Ext"))
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert self._conv_val(char) == pytest.approx(0.25)
+
+    def test_conversion_dynamic(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        char.stats.add_modifier(StatModifier(StatType.EFFECT_HIT_RATE, StatModifierType.PERCENT, 0.50, source="Ext"))
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0])
+        assert self._conv_val(char) == pytest.approx(0.15)
+
+    def test_conversion_precision(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        char.stats.add_modifier(StatModifier(StatType.EFFECT_HIT_RATE, StatModifierType.PERCENT, 0.56, source="Ext"))
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        expected = (0.10 + 0.56) * 0.25
+        assert self._conv_val(char) == pytest.approx(expected)
+
+    def test_unequip_cleans_sources(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+        assert not any(m.source.startswith("RelicSet_303_") for m in char.stats.active_modifiers)
+
+
+# ============================================================
+#  TestBelobogOfTheArchitects — 筑城者的贝洛伯格 (304)
+# ============================================================
+
+
+class TestBelobogOfTheArchitects:
+    """2件: DEF+15%, EHR>=50%时额外DEF+15%"""
+
+    _SET_ID = "304"
+    _SOURCE_2PC = "RelicSet_304_2pc"
+    _SOURCE_EXTRA = "RelicSet_304_2pc_extra"
+
+    def _make_char(self):
+        return create_test_character("T", hp=1000, speed=100, atk=500.0)
+
+    def _make_state(self, char):
+        enemy = Enemy(name="E", hp=10000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return state, engine
+
+    def _equip_2pc(self, char):
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+
+    def _get_2pc_mods(self, char):
+        return [m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]
+
+    def _get_extra_mods(self, char):
+        return [m for m in char.stats.active_modifiers if m.source == self._SOURCE_EXTRA]
+
+    def test_2pc_def(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        mods = self._get_2pc_mods(char)
+        assert len(mods) == 1
+        assert mods[0].value == pytest.approx(0.15)
+
+    def test_1pc_no_bonus(self):
+        char = self._make_char()
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert len(self._get_extra_mods(char)) == 0
+
+    def test_threshold_active(self):
+        char = self._make_char()
+        char.stats.add_modifier(StatModifier(StatType.EFFECT_HIT_RATE, StatModifierType.PERCENT, 0.50, source="EHR"))
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert len(self._get_extra_mods(char)) == 1
+
+    def test_threshold_inactive(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert len(self._get_extra_mods(char)) == 0
+
+    def test_dynamic_toggle(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        char.stats.add_modifier(StatModifier(StatType.EFFECT_HIT_RATE, StatModifierType.PERCENT, 0.50, source="EHR"))
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0])
+        assert len(self._get_extra_mods(char)) == 1
+        char.stats.remove_modifier_by_source("EHR")
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0])
+        assert len(self._get_extra_mods(char)) == 0
+
+    def test_unequip_cleans_sources(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        assert any(m.source.startswith("RelicSet_304_") for m in char.stats.active_modifiers)
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert not any(m.source.startswith("RelicSet_304_") for m in char.stats.active_modifiers)
+
+
+# ============================================================
+#  TestCelestialDifferentiator — 星体差分机 (305)
+# ============================================================
+
+
+class TestCelestialDifferentiator:
+    """2件: CRIT_DMG+16%, 暴伤>=120%时开局CRIT_RATE+60%直到首次攻击"""
+
+    _SET_ID = "305"
+    _SOURCE_2PC = "RelicSet_305_2pc"
+    _SOURCE_BATTLE = "RelicSet_305_2pc_battle"
+
+    def _make_char(self, base_cd=0.50):
+        char = create_test_character("T", hp=1000, speed=100, atk=500.0, crit_dmg=base_cd, crit_rate=0.05)
+        return char
+
+    def _make_state(self, char):
+        enemy = Enemy(name="E", hp=10000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return state, engine
+
+    def _equip_2pc(self, char):
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+
+    def _ensure_high_cd(self, char):
+        char.stats.add_modifier(StatModifier(StatType.CRIT_DMG, StatModifierType.FLAT, 1.00, source="CDBoost"))
+
+    def test_2pc_crit_dmg(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        mods = [m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]
+        assert len(mods) == 1
+        assert mods[0].value == pytest.approx(0.16)
+
+    def test_1pc_no_bonus(self):
+        char = self._make_char()
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert not any(m.source == self._SOURCE_2PC for m in char.stats.active_modifiers)
+
+    def test_battle_start_applies(self):
+        char = self._make_char(base_cd=0.50)
+        self._ensure_high_cd(char)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        assert any(m.source == self._SOURCE_BATTLE for m in char.stats.active_modifiers)
+
+    def test_battle_start_no_apply_low_cd(self):
+        char = self._make_char(base_cd=0.50)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        assert not any(m.source == self._SOURCE_BATTLE for m in char.stats.active_modifiers)
+
+    def test_battle_start_no_late_trigger(self):
+        char = self._make_char(base_cd=0.50)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        self._ensure_high_cd(char)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0])
+        assert not any(m.source == self._SOURCE_BATTLE for m in char.stats.active_modifiers)
+
+    def test_attack_removes_buff(self):
+        char = self._make_char(base_cd=0.50)
+        self._ensure_high_cd(char)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        assert any(m.source == self._SOURCE_BATTLE for m in char.stats.active_modifiers)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0],
+                              action_type=ActionType.BASIC_ATTACK)
+        assert not any(m.source == self._SOURCE_BATTLE for m in char.stats.active_modifiers)
+
+    def test_non_attack_preserves_buff(self):
+        char = self._make_char(base_cd=0.50)
+        self._ensure_high_cd(char)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0],
+                              action_type=ActionType.TALENT)
+        assert any(m.source == self._SOURCE_BATTLE for m in char.stats.active_modifiers)
+
+    def test_buff_not_reapplied_after_first_attack(self):
+        char = self._make_char(base_cd=0.50)
+        self._ensure_high_cd(char)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0],
+                              action_type=ActionType.BASIC_ATTACK)
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0],
+                              action_type=ActionType.SKILL)
+        assert not any(m.source == self._SOURCE_BATTLE for m in char.stats.active_modifiers)
+
+    def test_unequip_cleans_sources(self):
+        char = self._make_char(base_cd=0.50)
+        self._ensure_high_cd(char)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert not any(m.source.startswith("RelicSet_305_") for m in char.stats.active_modifiers)
+
+    def test_all_attack_types_consume(self):
+        char = self._make_char(base_cd=0.50)
+        self._ensure_high_cd(char)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        for i, at in enumerate([ActionType.FOLLOW_UP, ActionType.COUNTER, ActionType.ULTIMATE,
+                                 ActionType.SKILL, ActionType.ENHANCED_BASIC]):
+            char2 = self._make_char(base_cd=0.50)
+            self._ensure_high_cd(char2)
+            self._equip_2pc(char2)
+            s2, e2 = self._make_state(char2)
+            start_relic_set_effects(s2, char2)
+            e2.event_bus.emit(EventType.BATTLE_START, engine=e2)
+            e2.event_bus.emit(EventType.AFTER_ACTION, unit=char2, target=s2.enemies[0], action_type=at)
+            assert not any(m.source == self._SOURCE_BATTLE for m in char2.stats.active_modifiers), f"Failed at {at}"
+
+
+# ============================================================
+#  TestInertSalsotto — 停转的萨尔索图 (306)
+# ============================================================
+
+
+class TestInertSalsotto:
+    """2件: CRIT_RATE+8%, 暴击>=50%时终结技和追加攻击伤害+15%"""
+
+    _SET_ID = "306"
+    _SOURCE_2PC = "RelicSet_306_2pc"
+    _SOURCE_ULT = "RelicSet_306_2pc_ult"
+    _SOURCE_FUA = "RelicSet_306_2pc_fua"
+
+    def _make_char(self):
+        return create_test_character("T", hp=1000, speed=100, atk=500.0, crit_rate=0.05)
+
+    def _make_state(self, char):
+        enemy = Enemy(name="E", hp=10000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return state, engine
+
+    def _equip_2pc(self, char):
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+
+    def test_2pc_crit_rate(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        mods = [m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]
+        assert len(mods) == 1 and mods[0].value == pytest.approx(0.08)
+
+    def test_1pc_no_bonus(self):
+        char = self._make_char()
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert not any(m.source == self._SOURCE_2PC for m in char.stats.active_modifiers)
+
+    def test_threshold_active(self):
+        char = self._make_char()
+        char.stats.add_modifier(StatModifier(StatType.CRIT_RATE, StatModifierType.PERCENT, 0.50, source="CR"))
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert any(m.source == self._SOURCE_ULT for m in char.stats.active_modifiers)
+        assert any(m.source == self._SOURCE_FUA for m in char.stats.active_modifiers)
+
+    def test_threshold_inactive(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        assert not any(m.source == self._SOURCE_ULT for m in char.stats.active_modifiers)
+        assert not any(m.source == self._SOURCE_FUA for m in char.stats.active_modifiers)
+
+    def test_dynamic_toggle(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        char.stats.add_modifier(StatModifier(StatType.CRIT_RATE, StatModifierType.PERCENT, 0.50, source="CR"))
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0])
+        assert any(m.source == self._SOURCE_ULT for m in char.stats.active_modifiers)
+        assert any(m.source == self._SOURCE_FUA for m in char.stats.active_modifiers)
+        char.stats.remove_modifier_by_source("CR")
+        engine.event_bus.emit(EventType.AFTER_ACTION, unit=char, target=state.enemies[0])
+        assert not any(m.source == self._SOURCE_ULT for m in char.stats.active_modifiers)
+        assert not any(m.source == self._SOURCE_FUA for m in char.stats.active_modifiers)
+
+    def test_unequip_cleans_sources(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert not any(m.source.startswith("RelicSet_306_") for m in char.stats.active_modifiers)
+
+
+# ============================================================
+#  TestSprightlyVonwacq — 生命的翁瓦克 (308)
+# ============================================================
+
+
+class TestSprightlyVonwacq:
+    """2件: ERR+5%, 速度>=120时进入战斗行动提前40%"""
+
+    _SET_ID = "308"
+    _SOURCE_2PC = "RelicSet_308_2pc"
+
+    def _make_char(self, spd=120):
+        return create_test_character("T", hp=1000, speed=spd, atk=500.0)
+
+    def _make_state(self, char):
+        enemy = Enemy(name="E", hp=10000, speed=50, base_damage=0, level=1,
+                       weaknesses=[ElementType.PHYSICAL])
+        state = GameState(characters=[char], enemies=[enemy])
+        engine = CombatEngine(state)
+        return state, engine
+
+    def _equip_2pc(self, char):
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        char.equip_relic(Relic(part=RelicPart.LINK_ROPE, set_id=self._SET_ID,
+                                main_stat=StatModifier(StatType.BREAK_EFFECT, StatModifierType.PERCENT, 0.104)))
+
+    def test_2pc_err(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        mods = [m for m in char.stats.active_modifiers if m.source == self._SOURCE_2PC]
+        assert len(mods) == 1 and mods[0].value == pytest.approx(0.05)
+        assert char.stats.get_total_stat(StatType.ERR) == pytest.approx(1.05)
+
+    def test_advance_on_battle_start(self):
+        char = self._make_char(spd=120)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        av_before = char.current_av
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        assert char.current_av < av_before
+
+    def test_no_advance_below_threshold(self):
+        char = self._make_char(spd=100)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        av_before = char.current_av
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        assert char.current_av == pytest.approx(av_before)
+
+    def test_one_time_only(self):
+        char = self._make_char(spd=120)
+        self._equip_2pc(char)
+        state, engine = self._make_state(char)
+        start_relic_set_effects(state, char)
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        av_first = char.current_av
+        char.reset_av()
+        char.current_av = 83.33
+        engine.event_bus.emit(EventType.BATTLE_START, engine=engine)
+        assert char.current_av == pytest.approx(83.33, rel=0.1)
+
+    def test_unequip_cleans_sources(self):
+        char = self._make_char()
+        self._equip_2pc(char)
+        char.equip_relic(Relic(part=RelicPart.PLANAR_SPHERE, set_id="OtherSet",
+                                main_stat=StatModifier(StatType.HP, StatModifierType.PERCENT, 0.069)))
+        assert not any(m.source.startswith("RelicSet_308_") for m in char.stats.active_modifiers)

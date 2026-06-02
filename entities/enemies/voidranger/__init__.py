@@ -1,6 +1,5 @@
 from __future__ import annotations
-
-"""Voidranger — 虚卒·敌方怪物。"""
+"""Voidranger — 虚卒 (反物质军团)"""
 
 from starrail_combat import ElementType
 from entities.enemies.base import BaseEnemy

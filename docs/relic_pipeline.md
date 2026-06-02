@@ -1,6 +1,6 @@
 # 遗器套装实现指南
 
-> 如何从 `relic_data/` 的 JSON 数据出发，将一个遗器套装完整接入战斗引擎。
+> 如何从 `data/relic_data/` 的 JSON 数据出发，将一个遗器套装完整接入战斗引擎。
 > 参考实现：`entities/relics/set_102_musketeer.py`（快枪手套装）。
 
 ---
