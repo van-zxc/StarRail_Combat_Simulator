@@ -1,6 +1,9 @@
 from __future__ import annotations
 
-"""密林卧雪的猎人 — 4件套装 (2件: 冰伤+10%, 4件: 终结技后暴伤+25%持续2回合)。"""
+"""密林卧雪的猎人 — 4件套装 (2件: 冰伤+10%, 4件: 终结技前暴伤+25%持续2回合)。
+
+JSON: OnBeforeSkillUse:Ultra (终结技前触发一次).
+Python: ON_ULTIMATE_INSERTED (映射到技能执行前)."""
 
 from typing import Optional
 
@@ -47,7 +50,6 @@ class HunterOfGlacialForest(RelicSetEffect):
 
     def __init__(self) -> None:
         self._character: Optional["Character"] = None
-        self._cb_after: Optional[callable] = None
         self._cb_ultimate: Optional[callable] = None
 
     def on_equip(self, character, piece_count):
@@ -61,17 +63,8 @@ class HunterOfGlacialForest(RelicSetEffect):
         from core.events import EventType
 
         self._character = character
-        self._cb_after = lambda **kw: self._on_after_action(**kw)
         self._cb_ultimate = lambda **kw: self._on_ultimate(**kw)
-        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after)
-        state.event_bus.subscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)
-
-    def _on_after_action(self, **kwargs):
-        if kwargs.get("unit") is not self._character:
-            return
-        if kwargs.get("action_type") is not ActionType.ULTIMATE:
-            return
-        self._apply_buff()
+        state.event_bus.subscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)  # JSON: OnBeforeSkillUse:Ultra
 
     def _on_ultimate(self, **kwargs):
         if kwargs.get("character") is not self._character:
@@ -90,7 +83,5 @@ class HunterOfGlacialForest(RelicSetEffect):
 
         character.stats.purge_source(self._SOURCE_2PC)
         character.stats.purge_source(self._SOURCE_4PC)
-        if self._cb_after is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)
         if self._cb_ultimate is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)

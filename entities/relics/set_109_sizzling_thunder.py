@@ -57,10 +57,10 @@ class BandOfSizzlingThunder(RelicSetEffect):
         from core.events import EventType
 
         self._character = character
-        self._cb_skill = lambda **kw: self._on_after_action(**kw)
-        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_skill)
+        self._cb_skill = lambda **kw: self._on_action_start(**kw)
+        state.event_bus.subscribe(EventType.ACTION_START, self._cb_skill)  # JSON: OnBeforeSkillUse:Skill
 
-    def _on_after_action(self, **kwargs):
+    def _on_action_start(self, **kwargs):
         if kwargs.get("unit") is not self._character:
             return
         if kwargs.get("action_type") is not ActionType.SKILL:
@@ -77,4 +77,4 @@ class BandOfSizzlingThunder(RelicSetEffect):
         character.stats.purge_source("RelicSet_109_2pc")
         character.stats.purge_source("RelicSet_109_4pc")
         if self._cb_skill is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_skill)
+            character.event_bus.unsubscribe(EventType.ACTION_START, self._cb_skill)

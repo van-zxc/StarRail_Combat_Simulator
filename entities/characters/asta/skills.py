@@ -14,10 +14,11 @@ from entities.characters.template_character.skills import (
 )
 
 
-def _apply_charge_buff(owner) -> None:
+def _apply_charge_buff(owner, allies) -> None:
     """Apply ATK buff to all party members based on charge count."""
     from entities.characters.base import BaseCharacter
-    owner.stats.remove_modifier_by_source("Asta_Charge_ATK")
+    for ally in allies:
+        ally.stats.remove_modifier_by_source("Asta_Charge_ATK")
     for mod in owner.stats.active_modifiers:
         if mod.source == "Asta_Charge_DEF":
             owner.stats.remove_modifier(mod)
@@ -29,9 +30,10 @@ def _apply_charge_buff(owner) -> None:
         return
 
     atk_pct = count * talent.charge_atk_pct
-    atk_mod = StatModifier(StatType.ATK, StatModifierType.PERCENT, atk_pct,
-                           source="Asta_Charge_ATK", dispellable=False)
-    owner.stats.apply_modifier(atk_mod, "refresh")
+    for ally in allies:
+        atk_mod = StatModifier(StatType.ATK, StatModifierType.PERCENT, atk_pct,
+                               source="Asta_Charge_ATK", dispellable=False)
+        ally.stats.apply_modifier(atk_mod, "refresh")
 
     if getattr(owner, "_has_constellation", False):
         def_pct = count * talent.constellation_def_pct
@@ -78,7 +80,7 @@ class AstaBasicAttack(TemplateBasicAttack):
         if hit_targets:
             added = _add_charges(self.owner, hit_targets)
             if added > 0:
-                _apply_charge_buff(self.owner)
+                _apply_charge_buff(self.owner, state.characters)
 
         if target.is_alive and getattr(self.owner, "_has_spark", False):
             self._apply_spark_burn(target, state)
@@ -134,7 +136,7 @@ class AstaSkill(TemplateSkill):
         if hit_targets:
             added = _add_charges(self.owner, hit_targets)
             if added > 0:
-                _apply_charge_buff(self.owner)
+                _apply_charge_buff(self.owner, state.characters)
 
         return (total_dmg, total_crit, total_tough, total_brk)
 
@@ -175,6 +177,8 @@ class AstaTalent:
         self._state_ref = state
         from core.events import EventType
         state.event_bus.subscribe(EventType.TURN_START, self._on_turn_start)
+        state.event_bus.subscribe(EventType.BATTLE_START, self._apply_ignite_aura)
+        state.event_bus.subscribe(EventType.UNIT_DOWNED, self._remove_ignite_aura)
 
     def _on_turn_start(self, **kwargs) -> None:
         unit = kwargs.get("unit")
@@ -190,7 +194,25 @@ class AstaTalent:
             decay = self.decay_amount - (1 if getattr(self.owner, "_has_e6", False) else 0)
             self.owner._charge_count = max(0, self.owner._charge_count - decay)
 
-        _apply_charge_buff(self.owner)
+        _apply_charge_buff(self.owner, self._state_ref.characters)
+
+    def _apply_ignite_aura(self, **kwargs) -> None:
+        if not getattr(self.owner, "_has_ignite", False):
+            return
+        source = "Asta_Trace_Ignite"
+        for ally in self._state_ref.characters:
+            ally.stats.remove_modifier_by_source(source)
+            mod = StatModifier(StatType.FIRE_DMG_BONUS, StatModifierType.FLAT, 0.18,
+                               source=source, dispellable=False)
+            ally.stats.apply_modifier(mod, "no_stack")
+
+    def _remove_ignite_aura(self, **kwargs) -> None:
+        target = kwargs.get("target") or kwargs.get("unit")
+        if target is not self.owner:
+            return
+        source = "Asta_Trace_Ignite"
+        for ally in self._state_ref.characters:
+            ally.stats.remove_modifier_by_source(source)
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
         return (0, False, 0.0, False)

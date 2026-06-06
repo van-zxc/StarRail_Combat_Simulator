@@ -40,6 +40,7 @@ class MutualDemiseEffect(EquipmentEffect):
         self._character: Optional["Character"] = None
         self._cb_damage: Optional[callable] = None
         self._cb_heal: Optional[callable] = None
+        self._cb_hp: Optional[callable] = None
 
     def on_equip(self, character: "Character") -> None:
         self._check_hp(character)
@@ -69,8 +70,10 @@ class MutualDemiseEffect(EquipmentEffect):
         self._character = character
         self._cb_damage = lambda **kw: self._on_damage_or_heal(kw.get("target"))
         self._cb_heal = lambda **kw: self._on_damage_or_heal(kw.get("target"))
+        self._cb_hp = lambda **kw: self._on_damage_or_heal(kw.get("target"))
         state.event_bus.subscribe(EventType.ON_DAMAGE_DEALT, self._cb_damage)
         state.event_bus.subscribe(EventType.HEAL_DONE, self._cb_heal)
+        state.event_bus.subscribe(EventType.ON_HP_CHANGE, self._cb_hp)  # JSON: OnHPChange
 
     def _on_damage_or_heal(self, target: "Fighter") -> None:
         if target is not self._character:
@@ -87,3 +90,5 @@ class MutualDemiseEffect(EquipmentEffect):
                 bus.unsubscribe(EventType.ON_DAMAGE_DEALT, self._cb_damage)
             if self._cb_heal is not None:
                 bus.unsubscribe(EventType.HEAL_DONE, self._cb_heal)
+            if self._cb_hp is not None:
+                bus.unsubscribe(EventType.ON_HP_CHANGE, self._cb_hp)

@@ -139,14 +139,19 @@ def resistance_multiplier(
 ) -> float:
     """抗性乘区: 1.0 - (enemy_res - attacker_pen)。
 
-    支持: 自然弱点 / 植入弱点 / 全局 RES / per-element RES 修改。
+    支持: 自然弱点 / 植入弱点 / 全局 RES / per-element RES 修改 / DamageTypeResistance。
     """
     element = element_override if element_override is not None else attacker.element
     # 检查自然弱点 + 植入弱点
     has_weakness = element in defender.weaknesses
     if not has_weakness and hasattr(defender, "implanted_weakness") and defender.implanted_weakness is not None:
         has_weakness = defender.implanted_weakness.element == element
-    base_res = 0.0 if has_weakness else 0.2
+    # 基础抗性: 弱点=0, 非弱点从 damage_type_resistance 读取，fallback 0.2
+    per_element_res = 0.2
+    if hasattr(defender, "damage_type_resistance") and defender.damage_type_resistance:
+        elem_name = element.name.capitalize()
+        per_element_res = defender.damage_type_resistance.get(elem_name, 0.2)
+    base_res = 0.0 if has_weakness else per_element_res
     # 全局 RES + per-element RES 修改
     element_res_mod = 0.0
     if hasattr(defender, "element_res_modifiers"):

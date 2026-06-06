@@ -1,130 +1,131 @@
 {
-  "name": "Baryon",
-  "element": "Quantum",
+  "name": "Automaton Beetle",
+  "element": "Physical",
   "weaknesses": [
-    "Ice",
-    "Wind"
+    "Lightning",
+    "Wind",
+    "Imaginary"
   ],
-  "max_toughness": 30.0,
+  "max_toughness": 60.0,
   "base_res": 0.2,
   "crit_rate": 0.0,
   "crit_dmg": 0.2,
   "hit_energy_bucket": 10.0,
   "level_stats": {
     "1": {
-      "hp": 45,
+      "hp": 104,
       "atk": 12,
       "def": 210,
-      "spd": 83.0,
+      "spd": 100.0,
       "ehr": 0.0,
       "eres": 0.0
     },
     "10": {
-      "hp": 99,
+      "hp": 231,
       "atk": 26,
       "def": 300,
-      "spd": 83.0,
+      "spd": 100.0,
       "ehr": 0.0,
       "eres": 0.0
     },
     "20": {
-      "hp": 169,
+      "hp": 394,
       "atk": 53,
       "def": 400,
-      "spd": 83.0,
+      "spd": 100.0,
       "ehr": 0.0,
       "eres": 0.0
     },
     "30": {
-      "hp": 293,
+      "hp": 683,
       "atk": 98,
       "def": 500,
-      "spd": 83.0,
+      "spd": 100.0,
       "ehr": 0.0,
       "eres": 0.0
     },
     "40": {
-      "hp": 531,
+      "hp": 1240,
       "atk": 155,
       "def": 600,
-      "spd": 83.0,
+      "spd": 100.0,
       "ehr": 0.0,
       "eres": 0.0
     },
     "50": {
-      "hp": 1235,
+      "hp": 2883,
       "atk": 234,
       "def": 700,
-      "spd": 83.0,
+      "spd": 100.0,
       "ehr": 0.0,
       "eres": 0.0
     },
     "60": {
-      "hp": 2942,
+      "hp": 6865,
       "atk": 338,
       "def": 800,
-      "spd": 83.0,
+      "spd": 100.0,
       "ehr": 0.08,
       "eres": 0.04
     },
     "70": {
-      "hp": 5300,
+      "hp": 12367,
       "atk": 436,
       "def": 900,
-      "spd": 91.3,
+      "spd": 110.0,
       "ehr": 0.16,
       "eres": 0.08
     },
     "80": {
-      "hp": 8259,
+      "hp": 19271,
       "atk": 552,
       "def": 1000,
-      "spd": 99.6,
+      "spd": 120.0,
       "ehr": 0.24,
       "eres": 0.1
     },
     "90": {
-      "hp": 13199,
+      "hp": 30797,
       "atk": 663,
       "def": 1100,
-      "spd": 109.56,
+      "spd": 132.0,
       "ehr": 0.32,
       "eres": 0.1
     },
     "95": {
-      "hp": 16429,
+      "hp": 38334,
       "atk": 718,
       "def": 1150,
-      "spd": 109.56,
+      "spd": 132.0,
       "ehr": 0.36,
       "eres": 0.1
     },
     "100": {
-      "hp": 20302,
+      "hp": 47372,
       "atk": 773,
       "def": 1200,
-      "spd": 109.56,
+      "spd": 132.0,
       "ehr": 0.4,
       "eres": 0.1
     },
     "120": {
-      "hp": 20302,
+      "hp": 47372,
       "atk": 773,
       "def": 1200,
-      "spd": 109.56,
+      "spd": 132.0,
       "ehr": 0.4,
       "eres": 0.1
     }
   },
   "skills": [
     {
-      "skill_id": "skill_801101001",
+      "skill_id": "skill_101203001",
       "name": "Skill01",
-      "multiplier": 2.5,
-      "element": "Quantum",
+      "multiplier": 3.0,
+      "element": "Physical",
       "targeting": "single",
       "cooldown": 1,
-      "energy_gain": 10.0
+      "energy_gain": 15.0
     }
   ],
   "ai": {
@@ -133,8 +134,7 @@
   "damage_type_resistance": {
     "Physical": 0.2,
     "Fire": 0.2,
-    "Lightning": 0.2,
-    "Quantum": 0.2,
-    "Imaginary": 0.2
+    "Ice": 0.2,
+    "Quantum": 0.2
   }
 }

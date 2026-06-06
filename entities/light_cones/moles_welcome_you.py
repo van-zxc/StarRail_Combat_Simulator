@@ -81,5 +81,8 @@ class MolesWelcomeYouEffect(EquipmentEffect):
         from core.events import EventType
 
         character.stats.purge_source(self._SOURCE)
+        self._has_ba = False  # JSON: OnDestroy SetDynamicValue flag reset
+        self._has_skill = False
+        self._has_ult = False
         if self._cb_after is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)

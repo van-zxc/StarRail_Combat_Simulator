@@ -49,7 +49,7 @@ class FiresmithOfLavaForging(RelicSetEffect):
     def __init__(self) -> None:
         self._character: Optional["Character"] = None
         self._cb_after: Optional[callable] = None
-        self._cb_ultimate: Optional[callable] = None
+        self._cb_hit: Optional[callable] = None
         self._buff_pending: bool = False
 
     def on_equip(self, character, piece_count):
@@ -71,24 +71,22 @@ class FiresmithOfLavaForging(RelicSetEffect):
 
         self._character = character
         self._cb_after = lambda **kw: self._on_after_action(**kw)
-        self._cb_ultimate = lambda **kw: self._on_ultimate(**kw)
-        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after)
-        state.event_bus.subscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)
+        self._cb_hit = lambda **kw: self._on_hit(**kw)
+        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after)  # JSON: OnAfterSkillUse:Ultra
+        state.event_bus.subscribe(EventType.ON_HIT, self._cb_hit)  # JSON: OnAfterAttack → remove
 
     def _on_after_action(self, **kwargs):
         if kwargs.get("unit") is not self._character:
             return
-        if self._buff_pending:
-            self._remove_ult_buff()
         if kwargs.get("action_type") is ActionType.ULTIMATE:
             self._apply_ult_buff()
 
-    def _on_ultimate(self, **kwargs):
-        if kwargs.get("character") is not self._character:
+    def _on_hit(self, **kwargs):
+        """JSON OnAfterAttack: 装备者任意攻击后移除火伤 buff。"""
+        if kwargs.get("source") is not self._character:
             return
         if self._buff_pending:
             self._remove_ult_buff()
-        self._apply_ult_buff()
 
     def _apply_ult_buff(self):
         mod = StatModifier(
@@ -110,5 +108,5 @@ class FiresmithOfLavaForging(RelicSetEffect):
         character.stats.purge_source(self._SOURCE_4PC_ULT)
         if self._cb_after is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)
-        if self._cb_ultimate is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)
+        if self._cb_hit is not None and character.event_bus is not None:
+            character.event_bus.unsubscribe(EventType.ON_HIT, self._cb_hit)

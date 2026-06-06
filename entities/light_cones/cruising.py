@@ -5,7 +5,8 @@ from __future__ import annotations
   1. 永久暴击率 +#1[i]% (properties CriticalChanceBase → on_equip)
   2. HP≤#2[i]% 目标额外暴击率 +#3[i]% (per-target conditional)
   3. 消灭敌方目标后 ATK +#4[i]%，持续 #5[i] 回合
-"""
+
+JSON对齐: Part2 OnBeforeHitAll:HP条件 → 额外 CRIT; Python: ACTION_START/AFTER_ACTION (KI-005 模式)."""
 
 from typing import Optional
 

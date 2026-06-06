@@ -47,7 +47,6 @@ class EagleOfTwilightLine(RelicSetEffect):
     def __init__(self) -> None:
         self._character: Optional["Character"] = None
         self._cb_after: Optional[callable] = None
-        self._cb_ultimate: Optional[callable] = None
 
     def on_equip(self, character, piece_count):
         if piece_count >= 2:
@@ -61,19 +60,12 @@ class EagleOfTwilightLine(RelicSetEffect):
 
         self._character = character
         self._cb_after = lambda **kw: self._on_after_action(**kw)
-        self._cb_ultimate = lambda **kw: self._on_ultimate(**kw)
-        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after)
-        state.event_bus.subscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)
+        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after)  # JSON: OnAfterSkillUse:Ultra
 
     def _on_after_action(self, **kwargs):
         if kwargs.get("unit") is not self._character:
             return
         if kwargs.get("action_type") is not ActionType.ULTIMATE:
-            return
-        self._character.advance_action(0.25)
-
-    def _on_ultimate(self, **kwargs):
-        if kwargs.get("character") is not self._character:
             return
         self._character.advance_action(0.25)
 
@@ -83,5 +75,3 @@ class EagleOfTwilightLine(RelicSetEffect):
         character.stats.purge_source(self._SOURCE_2PC)
         if self._cb_after is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)
-        if self._cb_ultimate is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)

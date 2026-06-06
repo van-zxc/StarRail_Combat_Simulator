@@ -2,6 +2,9 @@ from __future__ import annotations
 """渊环 (Loop) — 3★ 虚无光锥。
 
 特效: 对减速状态下的敌方目标造成的伤害提高#1[i]%。
+
+JSON对齐: OnBeforeHitAll:ContainBehaviorFlag → AllDamageTypeAddedRatio (per-hit 实时flag检查).
+Python: ACTION_START/AFTER_ACTION → DMG_BONUS (per-action, KI-005 模式).
 """
 
 from typing import Optional

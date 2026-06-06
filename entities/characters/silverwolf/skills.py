@@ -265,26 +265,49 @@ class SilverWolfTalent:
         state.event_bus.subscribe(EventType.TURN_START, self._on_turn_start)
         state.event_bus.subscribe(EventType.BATTLE_START, self._on_battle_start)
         state.event_bus.subscribe(EventType.WAVE_START, self._on_wave_start)
+        state.event_bus.subscribe(EventType.ON_BEFORE_HIT, self._on_enemy_before_hit_e2)
 
     def _on_battle_start(self, **kwargs) -> None:
-        self._apply_inject_energy()
+        self._apply_inject_sp()
         _apply_annotation(self.owner)
-        self._apply_e2_res_reduce(kwargs.get("engine"))
+        self._apply_e2_vuln(kwargs.get("engine"))
 
     def _on_wave_start(self, **kwargs) -> None:
-        self._apply_e2_res_reduce(kwargs.get("engine"))
+        self._apply_e2_vuln(kwargs.get("engine"))
 
-    def _apply_inject_energy(self) -> None:
-        if getattr(self.owner, "_has_inject", False):
-            self.owner.gain_energy(20.0)
+    def _apply_inject_sp(self) -> None:
+        if not getattr(self.owner, "_has_inject", False):
+            return
+        if self._state_ref is not None and hasattr(self._state_ref, "skill_points"):
+            self._state_ref.skill_points = min(self._state_ref.skill_points + 1, self._state_ref.max_sp)
 
-    def _apply_e2_res_reduce(self, engine) -> None:
+    def _apply_e2_vuln(self, engine) -> None:
         if not getattr(self.owner, "_has_e2", False) or engine is None:
             return
         for enemy in engine.state.alive_enemies:
-            mod = StatModifier(StatType.EFFECT_RES, StatModifierType.FLAT, -0.20,
-                               source="SilverWolf_E2", dispellable=False)
+            mod = StatModifier(StatType.VULNERABILITY, StatModifierType.FLAT, 0.20,
+                               source="SilverWolf_E2_Vuln", dispellable=False)
             enemy.stats.apply_modifier(mod, "refresh")
+
+    def _on_enemy_before_hit_e2(self, **kwargs) -> None:
+        if not getattr(self.owner, "_has_e2", False):
+            return
+        source = kwargs.get("source")
+        target = kwargs.get("target")
+        if source is None or target is None:
+            return
+        if not hasattr(source, "stats") or not hasattr(target, "stats"):
+            return
+        from entities.characters.base import BaseCharacter
+        if not isinstance(target, BaseCharacter):
+            return
+        if not hasattr(source, "dot_statuses"):
+            return
+        _apply_random_bug(
+            self.owner, source, self._state_ref,
+            self.bug_atk_down, self.bug_def_down, self.bug_spd_down,
+            self.bug_base_chance, self._get_bug_duration(),
+        )
 
     def _on_after_action(self, **kwargs) -> None:
         unit = kwargs.get("unit")
@@ -367,7 +390,7 @@ class SilverWolfTalent:
             unit.implanted_weakness = None
 
         if getattr(self.owner, "_has_inject", False) and unit is self.owner:
-            self.owner.gain_energy(5.0)
+            self._apply_inject_sp()
 
         if unit is self.owner:
             _apply_annotation(self.owner)

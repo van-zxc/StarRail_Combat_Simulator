@@ -1,8 +1,10 @@
 from __future__ import annotations
-"""「我」的诞生 (The Birth of the Self) — 4★ 智识光锥。
+"""『我』的诞生 (The Birth of the Self) — 4★ 智识光锥。
 
 特效: 追加攻击伤害提高#1[i]%，若目标HP≤#2[i]%则额外提高#3[i]%。
-"""
+
+JSON对齐: OnBeforeHitAll:Insert+HP≤X → AllDamageTypeAddedRatio (per-hit 实时HP判定).
+Python: ACTION_START/AFTER_ACTION → FUA_DMG + FUA_DMG_COND (per-action, KI-005 模式)."""
 
 from typing import Optional
 

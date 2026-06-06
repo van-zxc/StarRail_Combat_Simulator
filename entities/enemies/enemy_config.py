@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Optional
 
 from entities.enemies.enemy_skill import EnemySkill
-from entities.enemies.enemy_ai import EnemyAI, SimpleAI, PriorityAI, PriorityRule
+from entities.enemies.enemy_ai import EnemyAI, SimpleAI, PriorityAI, PriorityRule, SequenceAI
 
 
 @dataclass
@@ -25,6 +25,7 @@ class EnemyConfig:
     crit_rate: float = 0.0
     crit_dmg: float = 0.20
     hit_energy_bucket: float = 10.0
+    damage_type_resistance: dict[str, float] = field(default_factory=dict)
 
     _LEVEL_STAT_MAP: dict[str, str] = field(
         default_factory=lambda: {
@@ -33,6 +34,29 @@ class EnemyConfig:
         },
         init=False,
     )
+
+
+def _parse_effects(raw_effects: list[dict]) -> list["SkillEffect"]:
+    """将 JSON effects 中的 type 字符串转换为对应的 SkillEffect 子类实例。"""
+    # 延迟导入避免循环依赖
+    from entities.enemies.enemy_skill import (
+        DamageEffect, DebuffEffect, DoTEffect,
+        BuffEffect, HealEffect, ShieldEffect, SummonEffect, DispelEffect,
+        SkillEffect,
+    )
+    _CLASSES = {
+        "damage": DamageEffect, "debuff": DebuffEffect, "dot": DoTEffect,
+        "buff": BuffEffect, "heal": HealEffect, "shield": ShieldEffect,
+        "summon": SummonEffect, "dispel": DispelEffect,
+    }
+    result: list[SkillEffect] = []
+    for eff in raw_effects:
+        eff_type = eff.get("type", "").lower()
+        cls = _CLASSES.get(eff_type)
+        if cls is not None:
+            d = {k: v for k, v in eff.items() if k != "type"}
+            result.append(cls(**d))
+    return result
 
 
 def load_config_from_json(folder: str | Path) -> EnemyConfig:
@@ -57,6 +81,7 @@ def load_config_from_json(folder: str | Path) -> EnemyConfig:
     for sd in raw.get("skills", []):
         sd = dict(sd)
         sd["element"] = _elem(sd["element"])
+        sd["effects"] = _parse_effects(sd.get("effects", []))
         skills.append(EnemySkill(**sd))
 
     ai: EnemyAI
@@ -67,10 +92,16 @@ def load_config_from_json(folder: str | Path) -> EnemyConfig:
         p_ai = PriorityAI()
         p_ai._rules = rules
         ai = p_ai
+    elif ai_cfg.get("type") == "sequence":
+        s_ai = SequenceAI()
+        s_ai._sequence = list(ai_cfg.get("sequence", []))
+        ai = s_ai
     else:
         ai = SimpleAI()
 
     level_stats = {int(k): v for k, v in raw.get("level_stats", {}).items()}
+
+    damage_type_resistance = raw.get("damage_type_resistance", {})
 
     return EnemyConfig(
         name=raw.get("name", ""),
@@ -88,4 +119,5 @@ def load_config_from_json(folder: str | Path) -> EnemyConfig:
         crit_rate=raw.get("crit_rate", 0.0),
         crit_dmg=raw.get("crit_dmg", 0.20),
         hit_energy_bucket=raw.get("hit_energy_bucket", 10.0),
+        damage_type_resistance=damage_type_resistance,
     )

@@ -44,7 +44,7 @@ def trace_spark(owner) -> list[StatModifier]:
     return []
 
 def trace_ignite(owner) -> list[StatModifier]:
-    return [StatModifier(StatType.FIRE_DMG_BONUS, StatModifierType.FLAT, 0.18, source="Trace_Ignite")]
+    return []
 
 def trace_constellation(owner) -> list[StatModifier]:
     return []

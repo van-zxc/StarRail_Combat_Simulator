@@ -142,46 +142,83 @@ class HertaTalent:
 
     def __init__(self, owner) -> None:
         self.owner = owner
+        self._pending_count: int = 0
+        self._enemy_cooldowns: dict[int, bool] = {}
 
     def on_combat_start(self, state) -> None:
         if state.event_bus is None:
             return
         self._state_ref = state
         from core.events import EventType
+        state.event_bus.subscribe(EventType.ON_HIT, self._on_hit)
         state.event_bus.subscribe(EventType.AFTER_ACTION, self._on_after_action)
         state.event_bus.subscribe(EventType.BATTLE_START, self._on_battle_start_reset)
         state.event_bus.subscribe(EventType.WAVE_START, self._on_wave_start)
 
     def _on_battle_start_reset(self, **kwargs) -> None:
-        self.owner._talent_triggered = set()
+        self._pending_count = 0
+        self._enemy_cooldowns.clear()
 
     def _on_wave_start(self, **kwargs) -> None:
-        self.owner._talent_triggered = set()
+        self._pending_count = 0
+        self._enemy_cooldowns.clear()
         self._state_ref.follow_up_action_pending = [
             x for x in self._state_ref.follow_up_action_pending
             if x[0] is not self.owner
         ]
 
+    def _on_hit(self, **kwargs) -> None:
+        target = kwargs.get("target")
+        if target is None:
+            return
+        if target not in self._state_ref.enemies:
+            return
+        if not self.owner.is_alive:
+            return
+        if self.owner.is_cc_blocked:
+            return
+
+        tid = id(target)
+        if tid not in self._enemy_cooldowns:
+            self._enemy_cooldowns[tid] = False
+
+        hp_pct = target.hp / target.max_hp if target.max_hp > 0 else 0.0
+
+        if hp_pct <= 0.50:
+            if not self._enemy_cooldowns[tid]:
+                self._enemy_cooldowns[tid] = True
+                self._pending_count += 1
+        else:
+            if self._enemy_cooldowns[tid]:
+                self._enemy_cooldowns[tid] = False
+
     def _on_after_action(self, **kwargs) -> None:
         unit = kwargs.get("unit")
-        action_type = kwargs.get("action_type")
         if unit is None:
             return
         if not getattr(unit, "is_alive", False):
             return
-        if unit == self.owner and action_type == ActionType.TALENT:
+
+        from entities.characters.base import BaseCharacter
+        if not isinstance(unit, BaseCharacter):
             return
 
-        should_trigger = False
-        for enemy in self._state_ref.alive_enemies:
-            if id(enemy) in self.owner._talent_triggered:
-                continue
-            hp_pct = enemy.hp / enemy.max_hp if enemy.max_hp > 0 else 0.0
-            if hp_pct <= 0.50:
-                self.owner._talent_triggered.add(id(enemy))
-                should_trigger = True
+        if self.owner.is_cc_blocked:
+            return
 
-        if should_trigger:
+        action_type = kwargs.get("action_type")
+        if unit == self.owner and action_type == ActionType.FOLLOW_UP:
+            return
+
+        if self._pending_count <= 0:
+            return
+
+        if not self._state_ref.alive_enemies:
+            return
+
+        count = self._pending_count
+        self._pending_count = 0
+        for _ in range(count):
             self._state_ref.grant_follow_up_action(self.owner, self)
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
@@ -224,10 +261,13 @@ class HertaTechnique:
     def on_combat_start(self, state) -> None:
         if state.event_bus is None:
             return
+        self._state_ref = state
         from core.events import EventType
         state.event_bus.subscribe(EventType.BATTLE_START, self._on_battle_start)
 
     def _on_battle_start(self, **kwargs) -> None:
+        if getattr(self, "_state_ref", None) is not None and self._state_ref.current_wave != 0:
+            return
         mod = StatModifier(StatType.ATK, StatModifierType.PERCENT, 0.40,
                            source="Herta_Technique", duration=3, dispellable=False)
         self.owner.stats.apply_modifier(mod, "refresh")

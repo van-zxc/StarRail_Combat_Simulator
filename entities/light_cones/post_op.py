@@ -3,9 +3,7 @@ from __future__ import annotations
 
 特效:
   #1: 能量恢复效率提高#1[i]% (永久面板, 来自 properties/SPRatioBase)
-  #2: 施放终结技时治疗量提高#2[i]% (ON_ULTIMATE_INSERTED 驱动, duration=1)
-
-已知问题: KI-002 — 治疗 buff 在终结技后残留至下一正常回合结束。
+  #2: 施放终结技时治疗量提高#2[i]% (ACTION_START→AFTER_ACTION 即时移除, 对齐 JSON OnBeforeDealHeal:Ultra)
 """
 
 from typing import Optional
@@ -51,6 +49,7 @@ class PostOpEffect(EquipmentEffect):
         self.superimpose = max(1, min(superimpose, 5))
         self._character: Optional["Character"] = None
         self._cb_ult: Optional[callable] = None
+        self._cb_after: Optional[callable] = None
 
     def on_equip(self, character: "Character") -> None:
         from core.enums import StatType, StatModifierType
@@ -70,7 +69,9 @@ class PostOpEffect(EquipmentEffect):
 
         self._character = character
         self._cb_ult = lambda **kw: self._on_ult(kw.get("character"))
+        self._cb_after = lambda **kw: self._on_after(kw.get("unit"), kw.get("action_type"))
         state.event_bus.subscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ult)
+        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after)
 
     def _on_ult(self, caster: "Character") -> None:
         if caster is not self._character:
@@ -83,15 +84,27 @@ class PostOpEffect(EquipmentEffect):
             modifier_type=StatModifierType.PERCENT,
             value=heal_pct,
             source=self._SOURCE_HEAL,
-            duration=1,
             dispellable=False,
-        )
+        )  # JSON: OnBeforeDealHeal:Ultra 仅在终结技内生效, 无 duration
         self._character.stats.apply_modifier(mod, "refresh")
+
+    def _on_after(self, unit: "Character", action_type: object) -> None:
+        """JSON OnBeforeDealHeal 限定: 终结技结束后立即移除治疗加成。"""
+        from core.enums import ActionType
+
+        if unit is not self._character:
+            return
+        if action_type == ActionType.ULTIMATE:
+            self._character.stats.purge_source(self._SOURCE_HEAL)
 
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
         character.stats.purge_source(self._SOURCE_ERR)
         character.stats.purge_source(self._SOURCE_HEAL)
-        if self._cb_ult is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ult)
+        if character.event_bus is not None:
+            bus = character.event_bus
+            if self._cb_ult is not None:
+                bus.unsubscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ult)
+            if self._cb_after is not None:
+                bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)

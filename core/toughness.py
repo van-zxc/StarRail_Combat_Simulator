@@ -45,6 +45,15 @@ class BreakEffectHandler:
     """击破伤害、元素 Debuff、推条、Broken 恢复。"""
 
     @staticmethod
+    def _cc_resisted(target) -> bool:
+        import random
+        if hasattr(target, "stats"):
+            resist = target.stats.get_total_stat(StatType.CC_RESIST)
+            if resist > 0:
+                return random.random() < resist
+        return False
+
+    @staticmethod
     def apply(
         engine: "CombatEngine",
         char: "BaseCharacter",
@@ -91,22 +100,25 @@ class BreakEffectHandler:
 
         # CC 型 Debuff
         elif element == ElementType.ICE:
-            target.cc_statuses.append(
-                CCStatus("Freeze", remaining_turns=1, break_effect_snapshot=be))
-            print(f"  >>> 击破挂载【冻结】, 持续1回合")
+            if not BreakEffectHandler._cc_resisted(target):
+                target.cc_statuses.append(
+                    CCStatus("Freeze", remaining_turns=1, break_effect_snapshot=be))
+                print(f"  >>> 击破挂载【冻结】, 持续1回合")
         elif element == ElementType.QUANTUM:
-            target.cc_statuses.append(
-                CCStatus("Entanglement", remaining_turns=1, stacks=1,
-                          break_effect_snapshot=be))
-            extra = 0.20 * (1.0 + be)
-            target.delay_action(extra)
-            print(f"  >>> 击破挂载【纠缠】, 额外推条 {extra*100:.1f}%")
+            if not BreakEffectHandler._cc_resisted(target):
+                target.cc_statuses.append(
+                    CCStatus("Entanglement", remaining_turns=1, stacks=1,
+                              break_effect_snapshot=be))
+                extra = 0.20 * (1.0 + be)
+                target.delay_action(extra)
+                print(f"  >>> 击破挂载【纠缠】, 额外推条 {extra*100:.1f}%")
         elif element == ElementType.IMAGINARY:
-            target.cc_statuses.append(
-                CCStatus("Imprison", remaining_turns=1, break_effect_snapshot=be))
-            extra = 0.30 * (1.0 + be)
-            target.delay_action(extra)
-            print(f"  >>> 击破挂载【禁锢】, 额外推条 {extra*100:.1f}%")
+            if not BreakEffectHandler._cc_resisted(target):
+                target.cc_statuses.append(
+                    CCStatus("Imprison", remaining_turns=1, break_effect_snapshot=be))
+                extra = 0.30 * (1.0 + be)
+                target.delay_action(extra)
+                print(f"  >>> 击破挂载【禁锢】, 额外推条 {extra*100:.1f}%")
 
         if base_break > 0:
             bdmg, _, _, _ = engine.state.execute_action(

@@ -95,7 +95,9 @@ class KafkaSkill(TemplateSkill):
 
             if t.is_alive and t.dot_statuses:
                 pct = self.detonate_primary if is_primary else self.detonate_adjacent
+                self.owner._in_detonate = True
                 det_dmg = _detonate_dots(state, t, pct)
+                self.owner._in_detonate = False
                 total_dmg += det_dmg
 
         return (total_dmg, total_crit, total_tough, total_brk)
@@ -103,7 +105,7 @@ class KafkaSkill(TemplateSkill):
 
 class KafkaUltimate(TemplateUltimate):
     skill_multiplier = 0.96
-    detonate_pct = 1.30
+    detonate_pct = 1.10
     energy_gain = 5
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
@@ -127,7 +129,9 @@ class KafkaUltimate(TemplateUltimate):
                 _apply_shock(self.owner, enemy, state, base_chance=1.0)
 
             if enemy.is_alive and enemy.dot_statuses:
+                self.owner._in_detonate = True
                 det_dmg = _detonate_dots(state, enemy, self.detonate_pct)
+                self.owner._in_detonate = False
                 total_dmg += det_dmg
 
         if getattr(self.owner, "_has_thorn", False):
@@ -152,6 +156,7 @@ class KafkaTalent:
         state.event_bus.subscribe(EventType.TURN_END, self._on_turn_end)
         state.event_bus.subscribe(EventType.TURN_START, self._on_turn_start_a2)
         state.event_bus.subscribe(EventType.ON_KILL, self._on_kill_a4)
+        state.event_bus.subscribe(EventType.ON_DAMAGE_DEALT, self._on_damage_dealt_e4)
 
     def _on_turn_start_a2(self, **kwargs) -> None:
         unit = kwargs.get("unit")
@@ -204,6 +209,24 @@ class KafkaTalent:
         if has_shock:
             self.owner.gain_energy(5)
 
+    def _on_damage_dealt_e4(self, **kwargs) -> None:
+        if not getattr(self.owner, "_has_e4", False):
+            return
+        if getattr(self.owner, "_in_detonate", False):
+            return
+        if kwargs.get("damage_type") != DamageType.DOT:
+            return
+        source = kwargs.get("source")
+        if source is not self.owner:
+            return
+        target = kwargs.get("target")
+        if target is None:
+            return
+        for dot in getattr(target, "dot_statuses", []):
+            if dot.source_character is source and dot.element == ElementType.LIGHTNING:
+                self.owner.gain_energy(2)
+                break
+
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
         total_dmg = 0
         total_crit = False
@@ -233,7 +256,9 @@ class KafkaTalent:
                 target.stats.apply_modifier(mod, "refresh")
 
         if target.is_alive and getattr(self.owner, "_has_thorn", False):
+            self.owner._in_detonate = True
             det_dmg = _detonate_dots(state, target, 0.80)
+            self.owner._in_detonate = False
             total_dmg += det_dmg
 
         return (total_dmg, total_crit, total_tough, total_brk)

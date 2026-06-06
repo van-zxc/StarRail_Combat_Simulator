@@ -203,6 +203,8 @@ class ArlanTalent:
     def _on_kill_revival(self, **kwargs) -> None:
         if not getattr(self.owner, "_has_revival", False):
             return
+        if kwargs.get("source") is not self.owner:
+            return
         if self.owner.hp <= self.owner.max_hp * 0.3:
             heal = int(self.owner.max_hp * 0.20)
             self.owner.receive_heal(heal)
@@ -213,7 +215,19 @@ class ArlanTalent:
             return
         if not getattr(self.owner, "_e4_active", False):
             return
-        self.owner.hp = int(self.owner.max_hp * 0.25)
+        # JSON: OnLimboWaitHeal → DispelStatus → revive
+        self.owner.cc_statuses.clear()
+        for ds in list(getattr(self.owner, "dot_statuses", [])):
+            self.owner.dot_statuses.remove(ds)
+        dispellable = self.owner.stats.find_dispellable()
+        for m in dispellable:
+            self.owner.stats.remove_modifier(m)
+        # JSON: OnLimboWaitHeal — 濒死等待复活事件
+        if self.owner.event_bus is not None:
+            from core.events import EventType
+            self.owner.event_bus.emit(EventType.ON_LIMBO, target=self.owner)
+        # 走 receive_heal 统一入口, 确保 ON_HP_CHANGE 事件触发
+        self.owner.receive_heal(int(self.owner.max_hp * 0.25))
         self.owner._e4_active = False
         self.owner._before_death_emitted = False  # 复活后重置标记
 

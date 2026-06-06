@@ -2,7 +2,9 @@ from __future__ import annotations
 """重返幽冥 (Return to Darkness) — 4★ 巡猎光锥。
 
 特效: 暴击率提高#1[i]%。暴击后有#2[i]%的固定概率解除被攻击目标1个增益（每攻击1次）。
-"""
+
+JSON对齐: OnAfterHitAll:IsDamageCritical+RandomChance → DispelStatus (全部命中后一次性判定).
+Python: ACTION_START:set_flag + ON_HIT:Crit→dispel (per-hit判定, _can_dispel gate 防重复)."""
 
 from typing import Optional
 

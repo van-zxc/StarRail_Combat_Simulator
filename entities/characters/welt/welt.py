@@ -43,7 +43,6 @@ class Welt(TemplateCharacter):
         self._has_judgement: bool = False
         self._has_verdict: bool = False
         self._has_e1: bool = False
-        self._e1_empower_remaining: int = 0
         self._has_e2: bool = False
         self._has_e4: bool = False
         self._has_e6: bool = False

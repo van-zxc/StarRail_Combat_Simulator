@@ -1,8 +1,10 @@
 from __future__ import annotations
 """延长记号 (Fermata) — 4★ 虚无光锥。
 
-特效: 击破特攻提高#1[i]%，对触电或风化状态的敌人伤害提高#2[i]%（对持续伤害生效）。
-"""
+特效: 击破特攻提高#1[i]%，对触电/风化状态敌人伤害提高#2[i]%（对持续伤害生效）。
+
+JSON对齐: OnBeforeHitAll:ContainBehaviorFlag → AllDamageTypeAddedRatio (per-hit 实时flag检查).
+Python: ACTION_START/AFTER_ACTION → DMG_BONUS_COND (per-action, KI-005 模式)."""
 
 from typing import Optional
 

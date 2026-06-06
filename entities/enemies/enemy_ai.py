@@ -70,6 +70,33 @@ class PriorityAI(EnemyAI):
         return False
 
 
+class SequenceAI(EnemyAI):
+    """Minion/Elite 用：按固定序列循环使用技能。
+
+    与游戏中 Monster_Common_SequenceThree AI 对应。
+    _sequence 是 skill_id 列表，按顺序尝试每个技能（跳过冷却/能量不足的）。
+    一轮序列完成后重置从头开始。
+    """
+
+    _sequence: list[str] = []
+    _index: int = 0
+
+    def select_skill(self, enemy: "BaseEnemy", state: "GameState") -> "EnemySkill":
+        if not self._sequence:
+            return enemy._default_skill
+
+        n = len(self._sequence)
+        for _ in range(n):
+            sid = self._sequence[self._index]
+            skill = enemy._skills.get(sid)
+            if skill is not None and skill.available and enemy.energy >= skill.energy_cost:
+                self._index = (self._index + 1) % n
+                return skill
+            self._index = (self._index + 1) % n
+
+        return enemy._default_skill
+
+
 # ── 行为树骨架 (Boss 用, 预留) ──
 
 class BTNode(ABC):

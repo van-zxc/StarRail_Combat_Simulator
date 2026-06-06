@@ -509,6 +509,9 @@ class CombatEngine:
             return [tgt] if tgt else []
         if t == "aoe":
             return list(alive)
+        if t == "random":
+            from core.targeting import TargetManager
+            return TargetManager.select_random(alive, count=1)
         return [alive[0]]
 
     def _apply_skill_effects(self, enemy: "Enemy", skill: "EnemySkill",
@@ -564,6 +567,7 @@ class CombatEngine:
                 shield = ShieldStatus(
                     shield_value=shield_val, max_shield_value=shield_val,
                     source_name=enemy.name, duration=eff.duration,
+                    block_once=eff.block_once,
                 )
                 enemy.apply_shield(shield)
 

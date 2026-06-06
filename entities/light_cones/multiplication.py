@@ -2,6 +2,9 @@ from __future__ import annotations
 """蕃息 (Multiplication) — 3★ 丰饶光锥。
 
 特效: 施放普攻后，使下一次行动提前#1[i]%。
+
+JSON对齐: OnBeforeSkillUse → ModifyCurrentSkillDelayCost (修改当前技能延迟).
+Python: AFTER_ACTION → advance_action (后拉当前AV, 数学等价).
 """
 
 from typing import Optional

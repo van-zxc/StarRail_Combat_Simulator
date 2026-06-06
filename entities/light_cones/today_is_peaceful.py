@@ -2,6 +2,9 @@ from __future__ import annotations
 """今日亦是和平的一日 (Today Is Another Peaceful Day) — 4★ 智识光锥。
 
 特效: 根据能量上限提高伤害：每点能量+#1[f2]%，最多#2[i]点。
+
+JSON对齐: OnStack 动态 SetDynamicValueByProperty(CasterMaxSP) → AllDamageTypeAddedRatio.
+Python: on_equip 静态计算一次 (max_energy 当前不变化, 若未来需支持动态 max_energy 需改为 per-event 重算).
 """
 
 from entities.light_cones.base import BaseLightCone

@@ -29,7 +29,7 @@ class March7thSkill(TemplateSkill):
         def_stat = self.owner.stats.get_total_stat(StatType.DEF)
         duration = 4 if getattr(self.owner, "_has_shield_plus", False) else 3
         shield_val = GS.calculate_shield_value(
-            self.owner, def_stat, 0.665, 974.0,
+            self.owner, def_stat, 0.665, 973.75,
         )
 
         # 移除已有的弱护盾 (同源替换)

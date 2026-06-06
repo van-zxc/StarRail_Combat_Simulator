@@ -2,7 +2,9 @@ from __future__ import annotations
 """汪！散步时间！ (Woof! Walk Time!) — 4★ 毁灭光锥。
 
 特效: 攻击力提高#1[i]%，对灼烧或裂伤状态的敌人伤害提高#2[i]%（对持续伤害生效）。
-"""
+
+JSON对齐: OnBeforeHitAll:ContainBehaviorFlag → AllDamageTypeAddedRatio (per-hit 实时flag检查).
+Python: ACTION_START/AFTER_ACTION → DMG_BONUS_COND (per-action, KI-005 模式)."""
 
 from typing import Optional
 

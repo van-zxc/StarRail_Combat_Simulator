@@ -2,6 +2,9 @@ from __future__ import annotations
 """乐圮 (Collapsing Sky) — 3★ 毁灭光锥。
 
 特效: 对当前生命值百分比大于#1[i]%的敌方目标造成的伤害提高#2[i]%。
+
+JSON对齐: OnBeforeHitAll:HP>X → AllDamageTypeAddedRatio (per-hit 实时HP判定).
+Python: ACTION_START/AFTER_ACTION → DMG_BONUS (per-action, KI-005 模式).
 """
 
 from typing import Optional

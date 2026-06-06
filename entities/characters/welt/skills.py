@@ -61,9 +61,6 @@ class WeltBasicAttack(TemplateBasicAttack):
         add_mult = 0.0
         if getattr(self.owner, "_has_judgement", False):
             add_mult += self.skill_multiplier * 0.80
-        if getattr(self.owner, "_e1_empower_remaining", 0) > 0 and self.owner._e1_empower_remaining > 0:
-            add_mult += self.skill_multiplier * 0.50
-            self.owner._e1_empower_remaining -= 1
         if add_mult > 0 and target.is_alive:
             ad, _, _, _ = state.execute_action(
                 self.owner, ActionType.TALENT, target, add_mult,
@@ -72,7 +69,7 @@ class WeltBasicAttack(TemplateBasicAttack):
             total_dmg += ad
 
         if _target_is_slowed(target) and target.is_alive:
-            talent_mult = getattr(self.owner._skills.get("talent"), "skill_multiplier", 1.25)
+            talent_mult = getattr(self.owner._skills.get("talent"), "skill_multiplier", 0.75)
             td, _, _, _ = state.execute_action(
                 self.owner, ActionType.TALENT, target, talent_mult,
                 damage_type=DamageType.ADDITIONAL_DMG, element_override=ElementType.IMAGINARY,
@@ -96,10 +93,12 @@ class WeltSkill(TemplateSkill):
         total_tough = 0.0
         total_brk = False
 
-        num_bounces = 6 if getattr(self.owner, "_has_e6", False) else 5
+        num_bounces = 5
         base_chance = 0.80 + (0.35 if getattr(self.owner, "_has_e4", False) else 0.0)
 
-        talent_mult = getattr(self.owner._skills.get("talent"), "skill_multiplier", 1.25)
+        talent_mult = getattr(self.owner._skills.get("talent"), "skill_multiplier", 0.75)
+
+        e6_crit = getattr(self.owner, "_has_e6", False)
 
         for i in range(num_bounces):
             t = TargetManager.select_target(self.owner, state.alive_enemies, is_bounce=True)
@@ -108,12 +107,25 @@ class WeltSkill(TemplateSkill):
 
             tp = ToughnessDamagePacket(amount=10.0, element=ElementType.IMAGINARY)
 
+            if e6_crit and _target_is_slowed(t):
+                mod_cr = StatModifier(StatType.CRIT_RATE, StatModifierType.FLAT, 0.30,
+                                      source="Welt_E6_CR", dispellable=False)
+                mod_cd = StatModifier(StatType.CRIT_DMG, StatModifierType.FLAT, 0.60,
+                                      source="Welt_E6_CD", dispellable=False)
+                self.owner.stats.apply_modifier(mod_cr, "refresh")
+                self.owner.stats.apply_modifier(mod_cd, "refresh")
+
             dmg, crit, tough, brk = state.execute_action(
                 self.owner, self.action_type, t,
                 self.skill_multiplier, damage_type=self.damage_type,
                 toughness_packet=tp,
                 skip_action_resources=(i > 0),
             )
+
+            if e6_crit and _target_is_slowed(t):
+                self.owner.stats.remove_modifier_by_source("Welt_E6_CR")
+                self.owner.stats.remove_modifier_by_source("Welt_E6_CD")
+
             total_dmg += dmg
             total_crit = total_crit or crit
             total_tough += tough
@@ -131,9 +143,6 @@ class WeltSkill(TemplateSkill):
             add_mult = 0.0
             if getattr(self.owner, "_has_judgement", False):
                 add_mult += self.skill_multiplier * 1.20
-            if getattr(self.owner, "_e1_empower_remaining", 0) > 0 and self.owner._e1_empower_remaining > 0:
-                add_mult += self.skill_multiplier * 0.80
-                self.owner._e1_empower_remaining -= 1
 
             if add_mult > 0 and t.is_alive:
                 ad, _, _, _ = state.execute_action(
@@ -167,13 +176,27 @@ class WeltUltimate(TemplateUltimate):
         total_tough = 0.0
         total_brk = False
 
-        talent_mult = getattr(self.owner._skills.get("talent"), "skill_multiplier", 1.25)
+        talent_mult = getattr(self.owner._skills.get("talent"), "skill_multiplier", 0.75)
+        e6_crit = getattr(self.owner, "_has_e6", False)
 
         for enemy in enemies:
+            if e6_crit and _target_is_slowed(enemy):
+                mod_cr = StatModifier(StatType.CRIT_RATE, StatModifierType.FLAT, 0.30,
+                                      source="Welt_E6_CR", dispellable=False)
+                mod_cd = StatModifier(StatType.CRIT_DMG, StatModifierType.FLAT, 0.60,
+                                      source="Welt_E6_CD", dispellable=False)
+                self.owner.stats.apply_modifier(mod_cr, "refresh")
+                self.owner.stats.apply_modifier(mod_cd, "refresh")
+
             dmg, crit, tough, brk = state.execute_action(
                 self.owner, self.action_type, enemy,
                 self.skill_multiplier, damage_type=self.damage_type,
             )
+
+            if e6_crit and _target_is_slowed(enemy):
+                self.owner.stats.remove_modifier_by_source("Welt_E6_CR")
+                self.owner.stats.remove_modifier_by_source("Welt_E6_CD")
+
             total_dmg += dmg
             total_crit = total_crit or crit
             total_tough += tough
@@ -202,10 +225,6 @@ class WeltUltimate(TemplateUltimate):
                 if getattr(self.owner, "_has_e2", False):
                     self.owner.gain_energy(3)
 
-        # E1: empower next 2 basic/skill
-        if getattr(self.owner, "_has_e1", False):
-            self.owner._e1_empower_remaining = 2
-
         # A6 Verdict: extra energy on ultimate
         if getattr(self.owner, "_has_verdict", False):
             self.owner.gain_energy(5)
@@ -215,7 +234,7 @@ class WeltUltimate(TemplateUltimate):
 
 class WeltTalent:
     action_type = ActionType.TALENT
-    skill_multiplier = 1.25
+    skill_multiplier = 0.75
 
     def __init__(self, owner) -> None:
         self.owner = owner
@@ -228,6 +247,41 @@ class WeltTalent:
         state.event_bus.subscribe(EventType.ON_DAMAGE_DEALT, self._on_damage_dealt)
         state.event_bus.subscribe(EventType.TURN_START, self._on_turn_start)
         state.event_bus.subscribe(EventType.BATTLE_START, self._on_battle_start)
+        state.event_bus.subscribe(EventType.AFTER_ACTION, self._on_after_action_e1)
+
+    def _on_after_action_e1(self, **kwargs) -> None:
+        if not getattr(self.owner, "_has_e1", False):
+            return
+        unit = kwargs.get("unit")
+        target = kwargs.get("target")
+        if unit != self.owner or target is None or not target.is_alive:
+            return
+        action_type = kwargs.get("action_type")
+        if action_type not in (ActionType.SKILL, ActionType.ULTIMATE):
+            return
+        has_weightless = any(
+            m.source == "Welt_Weightless_DEF"
+            for m in getattr(target, "stats", object).active_modifiers
+        )
+        if not has_weightless:
+            return
+        has_mark = any(
+            m.source == "Welt_E1_HitMark"
+            for m in getattr(target, "stats", object).active_modifiers
+        )
+        if has_mark:
+            return
+        mark = StatModifier(StatType.HP, StatModifierType.FLAT, 0,
+                            source="Welt_E1_HitMark", dispellable=False)
+        target.stats.apply_modifier(mark, "refresh")
+        ult = self.owner._skills.get("ultimate")
+        ult_mult = ult.skill_multiplier if ult else 1.80
+        pursue_mult = ult_mult * 0.50
+        self._state_ref.execute_action(
+            self.owner, ActionType.TALENT, target, pursue_mult,
+            damage_type=DamageType.ADDITIONAL_DMG,
+            element_override=ElementType.IMAGINARY,
+        )
 
     def _on_damage_dealt(self, **kwargs) -> None:
         target = kwargs.get("target")

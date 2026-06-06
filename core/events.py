@@ -36,14 +36,23 @@ class EventType(Enum):
     ON_STATUS_APPLY = auto()
     ON_STATUS_EXPIRE = auto()
     ON_SHIELD_APPLIED = auto()
+    # 属性变化 (SPD/EHR/CRIT 等关键属性)
+    ON_ABILITY_PROPERTY_CHANGE = auto()
     # 致死/击杀/复活
     BEFORE_DEATH = auto()
+    ON_LIMBO = auto()               # 濒死等待复活阶段
     UNIT_DOWNED = auto()
     ON_KILL = auto()
     ON_REVIVE = auto()
     ON_LEAVE_FIELD = auto()
     # 治疗
     HEAL_DONE = auto()
+    # HP 变化
+    ON_HP_CHANGE = auto()
+    # 敌人生命周期
+    CHARACTER_CREATED = auto()
+    # 伤害计算前 (per-hit 条件增伤钩子)
+    ON_BEFORE_DAMAGE_CALC = auto()
 
 
 class EventBus:

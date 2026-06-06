@@ -164,6 +164,11 @@ class GameState:
                                      action_type=action_type)
 
         # ── 基础伤害 ──
+        # 事件: 伤害计算前 — 允许 per-hit 条件增伤动态调整属性 (KI-005 钩子)
+        if self.event_bus is not None:
+            self.event_bus.emit(EventType.ON_BEFORE_DAMAGE_CALC,
+                                source=character, target=target,
+                                action_type=action_type, damage_type=damage_type)
         final_damage = compute_base_damage(
             damage_type, character, skill_multiplier, base_damage_override,
         )
@@ -575,6 +580,8 @@ class GameState:
 
         if self.event_bus is not None:
             self.event_bus.emit(EventType.WAVE_START, wave=self.current_wave)
+            for enemy in self.enemies:
+                self.event_bus.emit(EventType.CHARACTER_CREATED, unit=enemy)
 
         # AV 重置: 按实体标记, 非统一规则
         for fighter in self.all_fighters:

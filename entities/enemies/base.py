@@ -93,6 +93,9 @@ class BaseEnemy(Fighter):
         )
         self.implanted_weakness: Optional[ImplantedWeakness] = None
         self.element_res_modifiers: dict[ElementType, float] = {}
+        self.damage_type_resistance: dict[str, float] = (
+            config.damage_type_resistance if config else {}
+        )
 
         from core.enums import StatType as ST
         spd_final = int(self.stats.get_total_stat(ST.SPD))

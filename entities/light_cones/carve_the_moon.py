@@ -108,7 +108,9 @@ class CarveTheMoonEffect(EquipmentEffect):
         from core.events import EventType
 
         for s in self._SOURCES:
-            character.stats.purge_source(s)
+            for c in getattr(self._state, "characters", []):
+                if hasattr(c, "stats"):
+                    c.stats.purge_source(s)
         if character.event_bus is not None:
             bus = character.event_bus
             if self._cb_start is not None:

@@ -1,7 +1,8 @@
 from __future__ import annotations
 """Skyfall (天倾) — 3★ 毁灭光锥。
 
-特效: 使装备者普攻和战技造成的伤害提高#1[i]%。
+JSON对齐: OnBeforeHitAll:Normal|BPSkill → AllDamageTypeAddedRatio (per-hit动态).
+Python: 常驻 BASIC_ATK_DMG + SKILL_DMG (加法乘区数学等价).
 """
 
 from typing import Optional

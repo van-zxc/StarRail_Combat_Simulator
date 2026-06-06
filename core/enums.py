@@ -68,6 +68,7 @@ class StatType(Enum):
     INCOMING_HEALING_REDUCTION = auto()
     SHIELD_BONUS = auto()
     TRUE_DMG_BONUS = auto()
+    CC_RESIST = auto()
     DEBUFF_RES_BLEED = auto()
     DEBUFF_RES_BURN = auto()
     DEBUFF_RES_FREEZE = auto()

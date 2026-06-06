@@ -51,7 +51,7 @@ class FleetOfTheAgeless(RelicSetEffect):
         self._team_source = f"RelicSet_302_2pc_team_{id(character)}"
         self._check_condition()
         self._cb_after_action = lambda **kw: self._check_condition()
-        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after_action)
+        state.event_bus.subscribe(EventType.ON_ABILITY_PROPERTY_CHANGE, self._cb_after_action)  # JSON: OnAbilityPropertyChange:Speed
 
     def _check_condition(self) -> None:
         if not self._character.is_alive:
@@ -80,4 +80,4 @@ class FleetOfTheAgeless(RelicSetEffect):
             for char in self._state.characters:
                 char.stats.purge_source(self._team_source)
         if self._cb_after_action is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after_action)
+            character.event_bus.unsubscribe(EventType.ON_ABILITY_PROPERTY_CHANGE, self._cb_after_action)  # JSON: OnAbilityPropertyChange:Speed

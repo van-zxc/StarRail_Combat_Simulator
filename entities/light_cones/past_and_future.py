@@ -88,6 +88,8 @@ class PastAndFutureEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        for c in getattr(self._state, "characters", []):
+            if hasattr(c, "stats"):
+                c.stats.purge_source(self._SOURCE)
         if self._cb_after is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)

@@ -3,7 +3,9 @@ from __future__ import annotations
 
 特效: 敌方目标每承受1个负面效果，装备者对其造成的伤害提高#1[i]%，最多叠加#2[i]层。
       该效果对持续伤害也会生效。
-"""
+
+JSON对齐: OnBeforeHitAll:SetDynamicValueByStatusCount → AllDamageTypeAddedRatio (per-hit 动态计数).
+Python: ACTION_START/AFTER_ACTION → count_debuffs → DMG_BONUS (per-action, KI-005 模式)."""
 
 from typing import Optional
 

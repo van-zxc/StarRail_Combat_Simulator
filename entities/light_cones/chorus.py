@@ -44,6 +44,7 @@ class ChorusEffect(EquipmentEffect):
     def __init__(self, superimpose: int = 1) -> None:
         self.superimpose = max(1, min(superimpose, 5))
         self._character: Optional["Character"] = None
+        self._state: Optional["GameState"] = None
         self._callback: Optional[callable] = None
 
     def on_equip(self, character: "Character") -> None:
@@ -53,6 +54,7 @@ class ChorusEffect(EquipmentEffect):
         from core.events import EventType
 
         self._character = character
+        self._state = state
         self._callback = lambda **kw: self._on_battle_start(state)
         state.event_bus.subscribe(EventType.BATTLE_START, self._callback)
 
@@ -90,6 +92,8 @@ class ChorusEffect(EquipmentEffect):
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
 
-        character.stats.purge_source(self._SOURCE)
+        for c in getattr(self._state, "characters", []):
+            if hasattr(c, "stats"):
+                c.stats.purge_source(self._SOURCE)
         if self._callback is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.BATTLE_START, self._callback)

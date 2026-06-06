@@ -13,11 +13,23 @@ AGENTS
 .opencode/
 
 # Tests
-test_starrail_combat.py
-test_elation.py
+test/
+test_*.py
+
+# Documentation
+docs/
 
 # Raw data
 original_data/
+
+# Temp extraction files (root level only)
+/_*.py
+/_*.json
+
+# Batch scripts (not for distribution)
+scripts/batch_comment*.py
+scripts/equipment_abilities_extracted.txt
+scripts/equipment_skill_extracted.json
 
 # OS
 Thumbs.db

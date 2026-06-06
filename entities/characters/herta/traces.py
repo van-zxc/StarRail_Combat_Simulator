@@ -44,7 +44,7 @@ def trace_efficiency(owner) -> list[StatModifier]:
     return []
 
 def trace_puppet(owner) -> list[StatModifier]:
-    return [StatModifier(StatType.EFFECT_RES, StatModifierType.FLAT, 0.35, source="Trace_Puppet")]
+    return [StatModifier(StatType.CC_RESIST, StatModifierType.FLAT, 0.35, source="Trace_Puppet")]
 
 def trace_freeze(owner) -> list[StatModifier]:
     return []

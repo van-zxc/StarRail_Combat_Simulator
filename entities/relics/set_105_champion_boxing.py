@@ -1,6 +1,9 @@
 from __future__ import annotations
 
-"""街头出身的拳王 — 4件套装 (2件: 物理伤害+10%, 4件: 攻击/受击后攻击力+5%最多5层)。"""
+"""街头出身的拳王 — 4件套装 (2件: 物理伤害+10%, 4件: 攻击/受击后攻击力+5%最多5层)。
+
+JSON: OnAfterAttack(per-hit) + OnAfterBeingAttacked(per-hit).
+Python: ON_HIT 统一处理(per-hit)."""
 
 from typing import Optional
 
@@ -49,7 +52,6 @@ class ChampionOfStreetwiseBoxing(RelicSetEffect):
 
     def __init__(self) -> None:
         self._character: Optional["Character"] = None
-        self._cb_action: Optional[callable] = None
         self._cb_hit: Optional[callable] = None
 
     def on_equip(self, character, piece_count):
@@ -63,20 +65,12 @@ class ChampionOfStreetwiseBoxing(RelicSetEffect):
         from core.events import EventType
 
         self._character = character
-        self._cb_action = lambda **kw: self._on_after_action(**kw)
         self._cb_hit = lambda **kw: self._on_hit(**kw)
-        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_action)
-        state.event_bus.subscribe(EventType.ON_HIT, self._cb_hit)
-
-    def _on_after_action(self, **kwargs):
-        if kwargs.get("unit") is not self._character:
-            return
-        self._try_stack()
+        state.event_bus.subscribe(EventType.ON_HIT, self._cb_hit)  # JSON: OnAfterAttack + OnAfterBeingAttacked
 
     def _on_hit(self, **kwargs):
-        if kwargs.get("target") is not self._character:
-            return
-        self._try_stack()
+        if kwargs.get("source") is self._character or kwargs.get("target") is self._character:
+            self._try_stack()
 
     def _try_stack(self):
         total = sum(
@@ -97,7 +91,5 @@ class ChampionOfStreetwiseBoxing(RelicSetEffect):
 
         character.stats.purge_source(self._SOURCE_2PC)
         character.stats.purge_source(self._SOURCE_4PC)
-        if self._cb_action is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_action)
         if self._cb_hit is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.ON_HIT, self._cb_hit)

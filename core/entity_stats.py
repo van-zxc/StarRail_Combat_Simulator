@@ -9,6 +9,24 @@ from core.enums import StatType, StatModifierType
 class EntityStats:
     """实体属性面板：白值（角色 + 光锥）→ 绿值（修饰器池驱动）。"""
 
+    _WATCHED_PROPERTY_STATS: set[StatType] = set()
+
+    @classmethod
+    def _watched_stats(cls) -> set[StatType]:
+        if not cls._WATCHED_PROPERTY_STATS:
+            cls._WATCHED_PROPERTY_STATS = {
+                StatType.SPD,
+                StatType.EFFECT_HIT_RATE,
+                StatType.CRIT_RATE,
+                StatType.CRIT_DMG,
+            }
+        return cls._WATCHED_PROPERTY_STATS
+
+    def _emit_property_change(self) -> None:
+        if self._owner is not None and self._owner.event_bus is not None:
+            from core.events import EventType
+            self._owner.event_bus.emit(EventType.ON_ABILITY_PROPERTY_CHANGE, target=self._owner)
+
     _MULTIPLICATIVE_STATS: set[StatType] = {
         StatType.HP, StatType.ATK, StatType.DEF, StatType.SPD,
     }
@@ -85,6 +103,8 @@ class EntityStats:
             self._owner.event_bus.emit(EventType.ON_STATUS_APPLY,
                                         target=self._owner, modifier=modifier,
                                         stack_policy=stack_policy)
+            if modifier.stat_type in self._watched_stats():
+                self._emit_property_change()
 
     def remove_modifier(self, modifier: "StatModifier") -> None:
         old_spd = self.get_total_stat(StatType.SPD) if self._owner else 0.0
@@ -104,9 +124,13 @@ class EntityStats:
     def purge_source(self, source: str) -> None:
         """移除所有 source 匹配的修饰器 (无视 dispellable，用于卸载装备)。"""
         old_spd = self.get_total_stat(StatType.SPD) if self._owner else 0.0
+        removed = [m for m in self.active_modifiers if m.source == source]
         self.active_modifiers = [
             m for m in self.active_modifiers if m.source != source
         ]
+        self._recalc_spd_if_changed(old_spd)
+        if removed and any(m.stat_type in self._watched_stats() for m in removed):
+            self._emit_property_change()
         self._recalc_spd_if_changed(old_spd)
 
     def remove_modifier_by_tag(self, tag: str) -> None:

@@ -2,7 +2,9 @@ from __future__ import annotations
 """后会有期 (We Will Meet Again) — 4★ 虚无光锥。
 
 特效: 普攻或战技后，对随机1个受攻击敌人生成ATK×#1[i]%附加伤害。
-"""
+
+JSON对齐: OnBeforeSkillUse→flag + OnAfterAttack:Flag→Retarget(AttackTargetList) (引擎级 Retarget).
+Python: AFTER_ACTION:BA|Skill→random.choice(alive)→execute_action (手动随机)."""
 
 import random
 from typing import Optional

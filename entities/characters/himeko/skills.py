@@ -193,15 +193,20 @@ class HimekoTalent:
         state.event_bus.subscribe(EventType.BATTLE_START, self._on_battle_start)
 
     def _on_battle_start(self, **kwargs) -> None:
-        self.owner._charge_count = 1
+        self.owner._charge_count = 0
 
     def _on_weakness_break(self, **kwargs) -> None:
-        self.owner._charge_count = min(self.owner._charge_count + 1, self.owner._charge_max)
+        broken_enemy = kwargs.get("target")
+        is_elite = broken_enemy is not None and getattr(broken_enemy, "max_toughness", 0) >= 30
 
-        source = kwargs.get("source")
-        if source == self.owner and getattr(self.owner, "_has_e4", False):
-            if kwargs.get("action_type") == ActionType.SKILL:
-                self.owner._charge_count = min(self.owner._charge_count + 1, self.owner._charge_max)
+        if is_elite:
+            self.owner._charge_count = self.owner._charge_max
+        else:
+            self.owner._charge_count = min(self.owner._charge_count + 1, self.owner._charge_max)
+            source = kwargs.get("source")
+            if source == self.owner and getattr(self.owner, "_has_e4", False):
+                if kwargs.get("action_type") == ActionType.SKILL:
+                    self.owner._charge_count = min(self.owner._charge_count + 1, self.owner._charge_max)
 
     def _on_after_action(self, **kwargs) -> None:
         unit = kwargs.get("unit")

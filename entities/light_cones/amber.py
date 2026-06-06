@@ -50,6 +50,7 @@ class AmberEffect(EquipmentEffect):
         self._cb_start: Optional[callable] = None
         self._cb_dmg: Optional[callable] = None
         self._cb_heal: Optional[callable] = None
+        self._cb_hp: Optional[callable] = None
 
     def on_equip(self, character: "Character") -> None:
         from core.enums import StatType, StatModifierType
@@ -71,9 +72,11 @@ class AmberEffect(EquipmentEffect):
         self._cb_start = lambda **kw: self._check_hp(character)
         self._cb_dmg = lambda **kw: self._check_hp(kw.get("target"))
         self._cb_heal = lambda **kw: self._check_hp(kw.get("target"))
+        self._cb_hp = lambda **kw: self._check_hp(kw.get("target"))
         state.event_bus.subscribe(EventType.BATTLE_START, self._cb_start)
         state.event_bus.subscribe(EventType.ON_DAMAGE_DEALT, self._cb_dmg)
         state.event_bus.subscribe(EventType.HEAL_DONE, self._cb_heal)
+        state.event_bus.subscribe(EventType.ON_HP_CHANGE, self._cb_hp)  # JSON: OnHPChange
 
     def _check_hp(self, target) -> None:
         from core.enums import StatType, StatModifierType
@@ -111,3 +114,5 @@ class AmberEffect(EquipmentEffect):
                 character.event_bus.unsubscribe(EventType.ON_DAMAGE_DEALT, self._cb_dmg)
             if self._cb_heal is not None:
                 character.event_bus.unsubscribe(EventType.HEAL_DONE, self._cb_heal)
+            if self._cb_hp is not None:
+                character.event_bus.unsubscribe(EventType.ON_HP_CHANGE, self._cb_hp)

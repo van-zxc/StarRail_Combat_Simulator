@@ -70,7 +70,7 @@ class QuidProQuoEffect(EquipmentEffect):
                 candidates.append(char)
         if candidates:
             target = random.choice(candidates)
-            target.gain_energy(energy)
+            target.gain_energy(energy, affected_by_err=False)  # JSON: ModifySPNew bypasses ERR
 
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType

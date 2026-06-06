@@ -70,7 +70,7 @@ class GuardOfWutheringSnow(RelicSetEffect):
             return
         heal = int(self._character.max_hp * 0.08)
         self._character.receive_heal(heal)
-        self._character.gain_energy(5.0, affected_by_err=True)
+        self._character.gain_energy(5.0, affected_by_err=False)  # JSON: ModifySPNew bypasses ERR
 
     def on_unequip(self, character):
         from core.events import EventType

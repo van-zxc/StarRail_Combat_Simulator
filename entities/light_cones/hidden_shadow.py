@@ -2,7 +2,9 @@ from __future__ import annotations
 """匿影 (Hidden Shadow) — 3★ 虚无光锥。
 
 特效: 施放战技后，使装备者的下一次普攻对敌方目标造成等同于自身#1[i]%攻击力的附加伤害。
-"""
+
+JSON对齐: OnAfterSkillUse:Skill→Sub→OnBeforeSkillUse:flag; OnAfterAttack:Flag→Retarget (引擎级目标选择).
+Python: AFTER_ACTION→flag + execute_action(random.choice) (手动随机目标)."""
 
 from typing import Optional
 

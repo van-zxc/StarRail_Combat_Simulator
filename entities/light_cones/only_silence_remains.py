@@ -2,6 +2,9 @@ from __future__ import annotations
 """唯有沉默 (Only Silence Remains) — 4★ 巡猎光锥。
 
 特效: 攻击力提高#1[i]%。场上敌方目标≤2时，暴击率提高#2[i]%。
+
+JSON对齐: 监听 OnListenCharacterDie|Escape|Create 三个事件动态计数.
+Python: 仅监听 UNIT_DOWNED + WAVE_START (引擎不支持 Escape/Create 事件).
 """
 
 from typing import Optional

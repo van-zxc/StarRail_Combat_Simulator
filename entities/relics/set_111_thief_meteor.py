@@ -74,7 +74,7 @@ class ThiefOfShootingMeteor(RelicSetEffect):
     def _on_weakness_break(self, **kwargs):
         if kwargs.get("source") is not self._character:
             return
-        self._character.gain_energy(3.0, affected_by_err=True)
+        self._character.gain_energy(3.0, affected_by_err=False)  # JSON: ModifySPNew bypasses ERR
 
     def on_unequip(self, character):
         from core.events import EventType

@@ -69,7 +69,7 @@ class MeshingCogsEffect(EquipmentEffect):
             return
         self._triggered_this_turn = True
         energy = self._PARAMS[self.superimpose - 1]
-        self._character.gain_energy(energy)
+        self._character.gain_energy(energy, affected_by_err=False)  # JSON: ModifySPNew bypasses ERR
 
     def _on_hit(self, target: "Fighter") -> None:
         if target is not self._character:
@@ -78,7 +78,7 @@ class MeshingCogsEffect(EquipmentEffect):
             return
         self._triggered_this_turn = True
         energy = self._PARAMS[self.superimpose - 1]
-        self._character.gain_energy(energy)
+        self._character.gain_energy(energy, affected_by_err=False)  # JSON: ModifySPNew bypasses ERR
 
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType

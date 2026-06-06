@@ -45,6 +45,7 @@ class CollateralEffect(EquipmentEffect):
         self.superimpose = max(1, min(superimpose, 5))
         self._character: Optional["Character"] = None
         self._callback: Optional[callable] = None
+        self._cb_after: Optional[callable] = None
 
     def on_equip(self, character: "Character") -> None:
         pass
@@ -54,7 +55,9 @@ class CollateralEffect(EquipmentEffect):
 
         self._character = character
         self._callback = lambda **kw: self._on_action_start(kw.get("unit"), kw.get("action_type"))
+        self._cb_after = lambda **kw: self._on_after(kw.get("unit"), kw.get("action_type"))
         state.event_bus.subscribe(EventType.ACTION_START, self._callback)
+        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after)
 
     def _on_action_start(self, unit, action_type) -> None:
         if unit is not self._character:
@@ -70,10 +73,18 @@ class CollateralEffect(EquipmentEffect):
             modifier_type=StatModifierType.PERCENT,
             value=p[0],
             source=self._SOURCE,
-            duration=1,
             dispellable=False,
-        )
+        )  # JSON: OnBeforeSkillUse→OnAfterSkillUse 即时移除, 无 duration
         self._character.stats.apply_modifier(mod, "refresh")
+
+    def _on_after(self, unit: "Character", action_type: object) -> None:
+        """JSON OnAfterSkillUse: 技能结束后立即移除 HealRatio buff。"""
+        from core.enums import ActionType
+
+        if unit is not self._character:
+            return
+        if action_type in (ActionType.SKILL, ActionType.ULTIMATE):
+            self._character.stats.purge_source(self._SOURCE)
 
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType
@@ -81,3 +92,5 @@ class CollateralEffect(EquipmentEffect):
         character.stats.purge_source(self._SOURCE)
         if self._callback is not None and character.event_bus is not None:
             character.event_bus.unsubscribe(EventType.ACTION_START, self._callback)
+        if self._cb_after is not None and character.event_bus is not None:
+            character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)

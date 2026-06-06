@@ -2,7 +2,9 @@ from __future__ import annotations
 """点个关注吧！ (Subscribe for More!) — 4★ 巡猎光锥。
 
 特效: 普攻和战技伤害提高#1[i]%，能量满时额外提高#2[i]%。
-"""
+
+JSON对齐: OnBeforeHitAll:BPSkill|Normal+SP>=1 → AllDamageTypeAddedRatio (per-hit 实时SP检查).
+Python: ACTION_START:energy>=max → BASIC_ATK_DMG/SKILL_DMG (per-action, KI-005 模式)."""
 
 from typing import Optional
 

@@ -33,9 +33,6 @@ def eidolon_5(owner) -> list:
     ult = owner._skills.get("ultimate")
     if ult:
         ult.skill_multiplier += 0.12
-    talent = owner._skills.get("talent")
-    if talent:
-        talent.skill_multiplier += 0.10
     return []
 
 

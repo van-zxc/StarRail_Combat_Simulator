@@ -1,7 +1,8 @@
 from __future__ import annotations
 """DataBank (智库) — 3★ 智识光锥。
 
-特效: 使装备者终结技造成的伤害提高#1[i]%。
+JSON对齐: OnBeforeHitAll:Ultra → AllDamageTypeAddedRatio (per-hit动态).
+Python: 常驻 ULT_DMG (加法乘区数学等价).
 """
 
 from typing import Optional

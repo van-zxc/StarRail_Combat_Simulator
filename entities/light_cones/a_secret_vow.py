@@ -2,7 +2,9 @@ from __future__ import annotations
 """秘密誓心 (A Secret Vow) — 4★ 毁灭光锥。
 
 特效: 造成的伤害提高#1[i]%，同时对HP%>=装备者HP%的敌方目标额外造成#2[i]%伤害。
-"""
+
+JSON对齐: OnBeforeHitAll:SetDynamicValueByHPRatio → AllDamageTypeAddedRatio (per-hit 实时HP比较).
+Python: ACTION_START/AFTER_ACTION → DMG_BONUS_COND (per-action, KI-005 模式)."""
 
 from typing import Optional
 

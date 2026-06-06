@@ -8,3 +8,4 @@ from entities.enemies.enemy_ai import SimpleAI, PriorityAI
 from entities.enemies.antibaryon import Antibaryon
 from entities.enemies.baryon import Baryon
 from entities.enemies.voidranger import Voidranger
+from entities.enemies.automaton_beetle import AutomatonBeetle

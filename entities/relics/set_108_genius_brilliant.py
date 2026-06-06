@@ -1,6 +1,10 @@
 from __future__ import annotations
 
-"""繁星璀璨的天才 — 4件套装 (2件: 量子伤+10%, 4件: 造成伤害时无视10%防御, 量子弱点额外10%)。"""
+"""繁星璀璨的天才 — 4件套装 (2件: 量子伤+10%, 4件: 造成伤害时无视10%防御, 量子弱点额外10%)。
+
+JSON: OnBeforeHitAll → ModifyDamageData.Defender_DefenceAddedRatio + ByHasStanceWeak(Quantum) → extra.
+Python: 永久 DEF_IGNORE +10%; ON_BEFORE_DAMAGE_CALC per-hit 检查 target 量子弱点 → toggle extra +10%.
+"""
 
 from typing import Optional
 
@@ -48,8 +52,8 @@ class GeniusOfBrilliantStars(RelicSetEffect):
 
     def __init__(self) -> None:
         self._character: Optional["Character"] = None
-        self._cb_select: Optional[callable] = None
-        self._cb_ultimate: Optional[callable] = None
+        self._cb_precalc: Optional[callable] = None
+        self._cb_after: Optional[callable] = None
 
     def on_equip(self, character, piece_count):
         if piece_count >= 2:
@@ -67,28 +71,27 @@ class GeniusOfBrilliantStars(RelicSetEffect):
         from core.events import EventType
 
         self._character = character
-        self._cb_select = lambda **kw: self._on_before_target_select(**kw)
-        self._cb_ultimate = lambda **kw: self._on_ultimate(**kw)
-        state.event_bus.subscribe(EventType.ON_BEFORE_TARGET_SELECT, self._cb_select)
-        state.event_bus.subscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)
+        self._cb_precalc = lambda **kw: self._on_before_damage_calc(**kw)
+        self._cb_after = lambda **kw: self._on_after_action(**kw)
+        state.event_bus.subscribe(EventType.ON_BEFORE_DAMAGE_CALC, self._cb_precalc)
+        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after)
 
-    def _on_before_target_select(self, **kwargs):
-        if kwargs.get("unit") is not self._character:
-            return
-        targets = kwargs.get("targets", [])
-        if not targets:
-            return
-        extra = ElementType.QUANTUM in getattr(targets[0], "weaknesses", [])
-        self._ensure_extra(extra)
-
-    def _on_ultimate(self, **kwargs):
-        if kwargs.get("character") is not self._character:
+    def _on_before_damage_calc(self, **kwargs):
+        """JSON ByHasStanceWeak(Quantum): 每段伤害计算前检查当前受击目标的量子弱点。"""
+        source = kwargs.get("source")
+        if source is not self._character:
             return
         target = kwargs.get("target")
         if target is None:
             return
         extra = ElementType.QUANTUM in getattr(target, "weaknesses", [])
         self._ensure_extra(extra)
+
+    def _on_after_action(self, **kwargs):
+        """清除 per-hit 临时贴的 quantum extra, 避免跨 action 残留。"""
+        if kwargs.get("unit") is not self._character:
+            return
+        self._character.stats.purge_source(self._SOURCE_4PC_EXTRA)
 
     def _ensure_extra(self, active):
         has = any(m.source == self._SOURCE_4PC_EXTRA for m in self._character.stats.active_modifiers)
@@ -106,7 +109,7 @@ class GeniusOfBrilliantStars(RelicSetEffect):
         character.stats.purge_source(self._SOURCE_2PC)
         character.stats.purge_source(self._SOURCE_4PC_BASE)
         character.stats.purge_source(self._SOURCE_4PC_EXTRA)
-        if self._cb_select is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.ON_BEFORE_TARGET_SELECT, self._cb_select)
-        if self._cb_ultimate is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.ON_ULTIMATE_INSERTED, self._cb_ultimate)
+        if self._cb_precalc is not None and character.event_bus is not None:
+            character.event_bus.unsubscribe(EventType.ON_BEFORE_DAMAGE_CALC, self._cb_precalc)
+        if self._cb_after is not None and character.event_bus is not None:
+            character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after)

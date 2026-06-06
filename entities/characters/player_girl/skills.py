@@ -175,7 +175,8 @@ class PlayerGirlTalent:
         state.event_bus.subscribe(EventType.BATTLE_START, self._on_battle_start_a2)
 
     def _add_talent_stack(self) -> None:
-        if self.owner._talent_stacks >= 2:
+        max_stacks = 3 if getattr(self.owner, "_has_e6", False) else 2
+        if self.owner._talent_stacks >= max_stacks:
             return
         self.owner._talent_stacks += 1
         atk_mod = StatModifier(
@@ -191,7 +192,7 @@ class PlayerGirlTalent:
             self.owner.stats.apply_modifier(def_mod, "add_stacks")
 
     def _on_weakness_break(self, **kwargs) -> None:
-        breaker = kwargs.get("breaker")
+        breaker = kwargs.get("source")
         if breaker != self.owner:
             return
         self._add_talent_stack()
@@ -227,7 +228,7 @@ class PlayerGirlTalent:
 
     def _on_battle_start_a2(self, **kwargs) -> None:
         if getattr(self.owner, "_has_a2_energy", False):
-            self.owner.gain_energy(30)
+            self.owner.gain_energy(15)
 
     def execute(self, target, state) -> tuple[int, bool, float, bool]:
         return (0, False, 0.0, False)

@@ -75,7 +75,7 @@ class SharedFeelingEffect(EquipmentEffect):
                 continue
             if hasattr(char, "is_memosprite") and char.is_memosprite:
                 continue
-            char.gain_energy(energy)
+            char.gain_energy(energy, affected_by_err=False)  # JSON: ModifySPNew bypasses ERR
 
     def on_unequip(self, character: "Character") -> None:
         from core.events import EventType

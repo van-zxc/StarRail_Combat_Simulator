@@ -41,7 +41,6 @@ class Herta(TemplateCharacter):
         self._has_e2: bool = False
         self._has_e4: bool = False
         self._has_e6: bool = False
-        self._talent_triggered: set = set()
 
         super().__init__(character_id, level, unlocked_traces, eidolon_level)
 

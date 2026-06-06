@@ -45,7 +45,7 @@ class BelobogOfTheArchitects(RelicSetEffect):
         self._character = character
         self._check_condition()
         self._cb_after_action = lambda **kw: self._check_condition()
-        state.event_bus.subscribe(EventType.AFTER_ACTION, self._cb_after_action)
+        state.event_bus.subscribe(EventType.ON_ABILITY_PROPERTY_CHANGE, self._cb_after_action)  # JSON: OnAbilityPropertyChange:StatusProbability
 
     def _check_condition(self) -> None:
         ehr = self._character.stats.get_total_stat(StatType.EFFECT_HIT_RATE)
@@ -67,4 +67,4 @@ class BelobogOfTheArchitects(RelicSetEffect):
         character.stats.purge_source(self._SOURCE_2PC)
         character.stats.purge_source(self._SOURCE_2PC_EXTRA)
         if self._cb_after_action is not None and character.event_bus is not None:
-            character.event_bus.unsubscribe(EventType.AFTER_ACTION, self._cb_after_action)
+            character.event_bus.unsubscribe(EventType.ON_ABILITY_PROPERTY_CHANGE, self._cb_after_action)  # JSON: OnAbilityPropertyChange:StatusProbability

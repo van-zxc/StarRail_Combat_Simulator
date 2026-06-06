@@ -141,11 +141,15 @@ class Fighter(ABC):
                 absorbed = min(s.shield_value, amount)
                 s.shield_value -= absorbed
                 amount -= absorbed
-                if s.shield_value > 0:
+                if s.shield_value > 0 and not s.block_once:
                     remaining.append(s)
             self.shield_statuses = remaining
         actual = min(self.hp, amount) if amount > 0 else 0
+        old_hp = self.hp
         self.hp -= actual
+        if actual > 0 and self.event_bus is not None:
+            from core.events import EventType
+            self.event_bus.emit(EventType.ON_HP_CHANGE, target=self, old_hp=old_hp, new_hp=self.hp, delta=-actual)
         if self.hp <= 0 and self.event_bus is not None and not self._before_death_emitted:
             from core.events import EventType
             self._before_death_emitted = True
@@ -162,7 +166,11 @@ class Fighter(ABC):
     def receive_heal(self, amount: int) -> int:
         """接收治疗，返回实际恢复的生命值（不超过 max_hp）。"""
         actual = min(amount, self.max_hp - self.hp)
+        old_hp = self.hp
         self.hp += actual
+        if actual > 0 and self.event_bus is not None:
+            from core.events import EventType
+            self.event_bus.emit(EventType.ON_HP_CHANGE, target=self, old_hp=old_hp, new_hp=self.hp, delta=actual)
         return actual
 
     def reset_av(self) -> None:
@@ -259,6 +267,7 @@ class ShieldStatus:
     max_shield_value: float = 0.0
     source_name: str = ""
     duration: int | None = None  # None=永久, N=剩余回合数
+    block_once: bool = False  # block_once=True: 命中一次即消失（不计残余HP）
 
 
 # ============================================================

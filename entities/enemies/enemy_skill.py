@@ -81,6 +81,7 @@ class ShieldEffect(SkillEffect):
     multiplier: float = 0.0
     flat_amount: float = 0.0
     duration: int = 3
+    block_once: bool = False
 
 
 @dataclass
