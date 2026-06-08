@@ -28,6 +28,7 @@ class CombatEngine:
         self.event_bus = EventBus()
         self.state.event_bus = self.event_bus
         self._inject_event_bus()
+        self._init_enemy_passives()
 
     # ================================================================
     #  主循环
@@ -36,6 +37,12 @@ class CombatEngine:
         """将 event_bus 注入所有 Fighter。"""
         for fighter in self.state.all_fighters:
             fighter.event_bus = self.event_bus
+
+    def _init_enemy_passives(self) -> None:
+        """初始化敌人的被动技能效果（multiplier=0 的非 AI 技能）。"""
+        for enemy in self.state.enemies:
+            if hasattr(enemy, "_apply_passive_effects_from_skills"):
+                enemy._apply_passive_effects_from_skills()
 
     def run(self) -> str:
         print("=" * 52)
@@ -483,7 +490,7 @@ class CombatEngine:
             actual = target.take_damage(damage, mitigated=True)
             total_damage += actual
             target.hit_count += 1
-            self.state.on_hit(target, base_amount=enemy.hit_energy_bucket)
+            self.state.on_hit(target, base_amount=skill.energy_gain)
             self.event_bus.emit(EventType.ON_HIT, source=enemy, target=target,
                                 damage=actual, action_type=None, damage_type=DamageType.DIRECT)
             if not target.is_alive:
@@ -497,6 +504,26 @@ class CombatEngine:
         enemy.after_action(skill)
 
         self._apply_skill_effects(enemy, skill, targets)
+
+        # 亡语触发
+        if not enemy.is_alive and enemy.deathrattle and enemy.marked_targets:
+            from core.damage.enemy_pipeline import compute_enemy_damage
+
+            marked = [t for t in enemy.marked_targets if t.is_alive]
+            if marked:
+                import random
+                tgt = random.choice(marked)
+                d_skill_id = enemy.deathrattle["skill_id"]
+                d_skill = enemy._skills.get(d_skill_id)
+                if d_skill:
+                    dmg = compute_enemy_damage(enemy, d_skill, tgt)
+                    actual = tgt.take_damage(dmg, mitigated=True)
+                    self.event_bus.emit(EventType.ON_HIT, source=enemy, target=tgt,
+                                        damage=actual, action_type=None, damage_type=DamageType.DIRECT)
+                    print(f"  >>> {enemy.name} 亡语触发！→ {tgt.name}，造成 {actual} 点伤害")
+                    if not tgt.is_alive:
+                        self.state._notify_death(tgt, enemy)
+                        self.event_bus.emit(EventType.ON_KILL, source=enemy, target=tgt)
 
     def _get_enemy_targets(self, enemy: "Enemy", skill: "EnemySkill") -> list["Character"]:
         t = skill.targeting
@@ -518,7 +545,8 @@ class CombatEngine:
                               targets: list["Character"]) -> None:
         from entities.enemies.enemy_skill import (
             DamageEffect, DebuffEffect, DoTEffect,
-            BuffEffect, HealEffect, ShieldEffect,
+            BuffEffect, HealEffect, ShieldEffect, SelfDestructEffect,
+            MarkEffect, DeathrattleEffect, ActionDelayEffect,
         )
         from entities.base import StatModifier, DoTStatus, ShieldStatus
         from core.enums import StatModifierType as SMT
@@ -570,6 +598,24 @@ class CombatEngine:
                     block_once=eff.block_once,
                 )
                 enemy.apply_shield(shield)
+            elif isinstance(eff, SelfDestructEffect):
+                self_dmg = enemy.hp
+                enemy.take_damage(self_dmg, bypass_shield=True)
+                print(f"  >>> {enemy.name} 自爆！")
+                if not enemy.is_alive:
+                    self.state._notify_death(enemy, enemy)
+                    self.event_bus.emit(EventType.ON_KILL, source=enemy, target=enemy)
+            elif isinstance(eff, MarkEffect):
+                for tgt in targets:
+                    if tgt not in enemy.marked_targets:
+                        enemy.marked_targets.append(tgt)
+                        print(f"  >>> {enemy.name} 对 {tgt.name} 施加烙印！")
+            elif isinstance(eff, DeathrattleEffect):
+                pass  # 亡语仅作声明，实际在死亡时触发
+            elif isinstance(eff, ActionDelayEffect):
+                for tgt in targets:
+                    tgt.delay_action(eff.value)
+                    print(f"  >>> {tgt.name} 行动被推后 {eff.value*100:.0f}%")
 
     def _execute_enemy_legacy_turn(self, enemy: "Enemy") -> None:
         target_name, damage = enemy.attack(self.state.characters)

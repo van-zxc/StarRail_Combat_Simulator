@@ -1,0 +1,156 @@
+{
+  "name": "Automaton Hound",
+  "element": "Physical",
+  "weaknesses": [
+    "Physical",
+    "Lightning"
+  ],
+  "max_toughness": 60.0,
+  "base_res": 0.2,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.2,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "1": {
+      "hp": 104,
+      "atk": 12,
+      "def": 210,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "10": {
+      "hp": 231,
+      "atk": 26,
+      "def": 300,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "20": {
+      "hp": 394,
+      "atk": 53,
+      "def": 400,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "30": {
+      "hp": 683,
+      "atk": 98,
+      "def": 500,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "40": {
+      "hp": 1240,
+      "atk": 155,
+      "def": 600,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "50": {
+      "hp": 2883,
+      "atk": 234,
+      "def": 700,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "60": {
+      "hp": 6865,
+      "atk": 338,
+      "def": 800,
+      "spd": 100.0,
+      "ehr": 0.08,
+      "eres": 0.04
+    },
+    "70": {
+      "hp": 12367,
+      "atk": 436,
+      "def": 900,
+      "spd": 110.0,
+      "ehr": 0.16,
+      "eres": 0.08
+    },
+    "80": {
+      "hp": 19271,
+      "atk": 552,
+      "def": 1000,
+      "spd": 120.0,
+      "ehr": 0.24,
+      "eres": 0.1
+    },
+    "90": {
+      "hp": 30797,
+      "atk": 663,
+      "def": 1100,
+      "spd": 132.0,
+      "ehr": 0.32,
+      "eres": 0.1
+    },
+    "95": {
+      "hp": 38334,
+      "atk": 718,
+      "def": 1150,
+      "spd": 132.0,
+      "ehr": 0.36,
+      "eres": 0.1
+    },
+    "100": {
+      "hp": 47372,
+      "atk": 773,
+      "def": 1200,
+      "spd": 132.0,
+      "ehr": 0.4,
+      "eres": 0.1
+    },
+    "120": {
+      "hp": 47372,
+      "atk": 773,
+      "def": 1200,
+      "spd": 132.0,
+      "ehr": 0.4,
+      "eres": 0.1
+    }
+  },
+  "skills": [
+    {
+      "skill_id": "skill_101201001",
+      "name": "Skill01",
+      "multiplier": 2.5,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 15.0
+    },
+    {
+      "skill_id": "skill_101201002",
+      "name": "Skill05",
+      "multiplier": 0.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 0.0,
+      "effects": [
+        {
+          "type": "heal",
+          "multiplier": 0.25,
+          "flat_amount": 0.0
+        }
+      ]
+    }
+  ],
+  "ai": {
+    "type": "simple"
+  },
+  "damage_type_resistance": {
+    "Fire": 0.2,
+    "Ice": 0.2,
+    "Wind": 0.2,
+    "Quantum": 0.2,
+    "Imaginary": 0.2
+  }
+}

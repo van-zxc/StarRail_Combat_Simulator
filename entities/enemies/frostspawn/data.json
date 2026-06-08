@@ -1,0 +1,140 @@
+{
+  "name": "Frostspawn",
+  "element": "Ice",
+  "weaknesses": [
+    "Fire",
+    "Wind"
+  ],
+  "max_toughness": 30.0,
+  "base_res": 0.4,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.2,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "1": {
+      "hp": 45,
+      "atk": 12,
+      "def": 210,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "10": {
+      "hp": 99,
+      "atk": 26,
+      "def": 300,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "20": {
+      "hp": 169,
+      "atk": 53,
+      "def": 400,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "30": {
+      "hp": 293,
+      "atk": 98,
+      "def": 500,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "40": {
+      "hp": 531,
+      "atk": 155,
+      "def": 600,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "50": {
+      "hp": 1235,
+      "atk": 234,
+      "def": 700,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "60": {
+      "hp": 2942,
+      "atk": 338,
+      "def": 800,
+      "spd": 83.0,
+      "ehr": 0.08,
+      "eres": 0.04
+    },
+    "70": {
+      "hp": 5300,
+      "atk": 436,
+      "def": 900,
+      "spd": 91.3,
+      "ehr": 0.16,
+      "eres": 0.08
+    },
+    "80": {
+      "hp": 8259,
+      "atk": 552,
+      "def": 1000,
+      "spd": 99.6,
+      "ehr": 0.24,
+      "eres": 0.1
+    },
+    "90": {
+      "hp": 13199,
+      "atk": 663,
+      "def": 1100,
+      "spd": 109.56,
+      "ehr": 0.32,
+      "eres": 0.1
+    },
+    "95": {
+      "hp": 16429,
+      "atk": 718,
+      "def": 1150,
+      "spd": 109.56,
+      "ehr": 0.36,
+      "eres": 0.1
+    },
+    "100": {
+      "hp": 20302,
+      "atk": 773,
+      "def": 1200,
+      "spd": 109.56,
+      "ehr": 0.4,
+      "eres": 0.1
+    },
+    "120": {
+      "hp": 20302,
+      "atk": 773,
+      "def": 1200,
+      "spd": 109.56,
+      "ehr": 0.4,
+      "eres": 0.1
+    }
+  },
+  "skills": [
+    {
+      "skill_id": "skill_800102001",
+      "name": "Skill01",
+      "multiplier": 2.5,
+      "element": "Ice",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 10.0
+    }
+  ],
+  "ai": {
+    "type": "simple"
+  },
+  "damage_type_resistance": {
+    "Physical": 0.2,
+    "Ice": 0.4,
+    "Lightning": 0.2,
+    "Quantum": 0.2,
+    "Imaginary": 0.2
+  }
+}

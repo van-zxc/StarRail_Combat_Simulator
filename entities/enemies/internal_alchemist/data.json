@@ -1,0 +1,176 @@
+{
+  "name": "Disciples of Sanctus Medicus Internal Alchemist",
+  "element": "Lightning",
+  "weaknesses": [
+    "Physical",
+    "Imaginary"
+  ],
+  "max_toughness": 60.0,
+  "base_res": 0.2,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.2,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "1": {
+      "hp": 89,
+      "atk": 12,
+      "def": 210,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "10": {
+      "hp": 198,
+      "atk": 26,
+      "def": 300,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "20": {
+      "hp": 338,
+      "atk": 53,
+      "def": 400,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "30": {
+      "hp": 585,
+      "atk": 98,
+      "def": 500,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "40": {
+      "hp": 1063,
+      "atk": 155,
+      "def": 600,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "50": {
+      "hp": 2471,
+      "atk": 234,
+      "def": 700,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "60": {
+      "hp": 5884,
+      "atk": 338,
+      "def": 800,
+      "spd": 100.0,
+      "ehr": 0.08,
+      "eres": 0.04
+    },
+    "70": {
+      "hp": 10601,
+      "atk": 436,
+      "def": 900,
+      "spd": 110.0,
+      "ehr": 0.16,
+      "eres": 0.08
+    },
+    "80": {
+      "hp": 16518,
+      "atk": 552,
+      "def": 1000,
+      "spd": 120.0,
+      "ehr": 0.24,
+      "eres": 0.1
+    },
+    "90": {
+      "hp": 26397,
+      "atk": 663,
+      "def": 1100,
+      "spd": 132.0,
+      "ehr": 0.32,
+      "eres": 0.1
+    },
+    "95": {
+      "hp": 32857,
+      "atk": 718,
+      "def": 1150,
+      "spd": 132.0,
+      "ehr": 0.36,
+      "eres": 0.1
+    },
+    "100": {
+      "hp": 40605,
+      "atk": 773,
+      "def": 1200,
+      "spd": 132.0,
+      "ehr": 0.4,
+      "eres": 0.1
+    },
+    "120": {
+      "hp": 40605,
+      "atk": 773,
+      "def": 1200,
+      "spd": 132.0,
+      "ehr": 0.4,
+      "eres": 0.1
+    }
+  },
+  "skills": [
+    {
+      "skill_id": "skill_202202001",
+      "name": "Skill01 (烙印)",
+      "multiplier": 0.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 0.0,
+      "effects": [
+        {
+          "type": "mark"
+        }
+      ]
+    },
+    {
+      "skill_id": "skill_202202002",
+      "name": "Skill02 (雷击)",
+      "multiplier": 2.5,
+      "element": "Lightning",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 10.0
+    },
+    {
+      "skill_id": "skill_202202003",
+      "name": "PassiveSkill01 (亡语)",
+      "multiplier": 4.5,
+      "element": "Lightning",
+      "targeting": "single",
+      "cooldown": 0,
+      "energy_gain": 0.0
+    }
+  ],
+  "ai": {
+    "type": "priority",
+    "rules": [
+      {
+        "condition": "always",
+        "skill_id": "skill_202202001"
+      },
+      {
+        "condition": "always",
+        "skill_id": "skill_202202002"
+      }
+    ]
+  },
+  "deathrattle": {
+    "skill_id": "skill_202202003"
+  },
+  "damage_type_resistance": {
+    "Fire": 0.2,
+    "Ice": 0.2,
+    "Lightning": 0.4,
+    "Wind": 0.2,
+    "Quantum": 0.2
+  }
+}

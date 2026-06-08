@@ -1,0 +1,167 @@
+{
+  "name": "Mask of No Thought",
+  "element": "Imaginary",
+  "weaknesses": [
+    "Fire",
+    "Quantum"
+  ],
+  "max_toughness": 30.0,
+  "base_res": 0.2,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.2,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "1": {
+      "hp": 74,
+      "atk": 12,
+      "def": 210,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "10": {
+      "hp": 165,
+      "atk": 26,
+      "def": 300,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "20": {
+      "hp": 281,
+      "atk": 53,
+      "def": 400,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "30": {
+      "hp": 488,
+      "atk": 98,
+      "def": 500,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "40": {
+      "hp": 886,
+      "atk": 155,
+      "def": 600,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "50": {
+      "hp": 2059,
+      "atk": 234,
+      "def": 700,
+      "spd": 100.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "60": {
+      "hp": 4903,
+      "atk": 338,
+      "def": 800,
+      "spd": 100.0,
+      "ehr": 0.08,
+      "eres": 0.04
+    },
+    "70": {
+      "hp": 8834,
+      "atk": 436,
+      "def": 900,
+      "spd": 110.0,
+      "ehr": 0.16,
+      "eres": 0.08
+    },
+    "80": {
+      "hp": 13765,
+      "atk": 552,
+      "def": 1000,
+      "spd": 120.0,
+      "ehr": 0.24,
+      "eres": 0.1
+    },
+    "90": {
+      "hp": 21998,
+      "atk": 663,
+      "def": 1100,
+      "spd": 132.0,
+      "ehr": 0.32,
+      "eres": 0.1
+    },
+    "95": {
+      "hp": 27381,
+      "atk": 718,
+      "def": 1150,
+      "spd": 132.0,
+      "ehr": 0.36,
+      "eres": 0.1
+    },
+    "100": {
+      "hp": 33837,
+      "atk": 773,
+      "def": 1200,
+      "spd": 132.0,
+      "ehr": 0.4,
+      "eres": 0.1
+    },
+    "120": {
+      "hp": 33837,
+      "atk": 773,
+      "def": 1200,
+      "spd": 132.0,
+      "ehr": 0.4,
+      "eres": 0.1
+    }
+  },
+  "skills": [
+    {
+      "skill_id": "skill_800103001",
+      "name": "Skill01",
+      "multiplier": 2.5,
+      "element": "Imaginary",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 10.0
+    },
+    {
+      "skill_id": "skill_800103002",
+      "name": "Skill02 (友方强化)",
+      "multiplier": 0.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 0.0,
+      "effects": [
+        {
+          "type": "buff",
+          "stat_type": "DEF",
+          "modifier_type": "PERCENT",
+          "value": 0.3,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "skill_id": "skill_800103003",
+      "name": "PassiveSkill01 (能量恢复)",
+      "multiplier": 0.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 0.0
+    }
+  ],
+  "ai": {
+    "type": "simple"
+  },
+  "damage_type_resistance": {
+    "Physical": 0.2,
+    "Ice": 0.2,
+    "Lightning": 0.2,
+    "Wind": 0.2,
+    "Imaginary": 0.2
+  }
+}

@@ -26,6 +26,7 @@ class EnemyConfig:
     crit_dmg: float = 0.20
     hit_energy_bucket: float = 10.0
     damage_type_resistance: dict[str, float] = field(default_factory=dict)
+    deathrattle: dict | None = None
 
     _LEVEL_STAT_MAP: dict[str, str] = field(
         default_factory=lambda: {
@@ -39,22 +40,39 @@ class EnemyConfig:
 def _parse_effects(raw_effects: list[dict]) -> list["SkillEffect"]:
     """将 JSON effects 中的 type 字符串转换为对应的 SkillEffect 子类实例。"""
     # 延迟导入避免循环依赖
+    from core.enums import StatType, StatModifierType, ElementType
     from entities.enemies.enemy_skill import (
         DamageEffect, DebuffEffect, DoTEffect,
         BuffEffect, HealEffect, ShieldEffect, SummonEffect, DispelEffect,
-        SkillEffect,
+        SelfDestructEffect, MarkEffect, DeathrattleEffect, ActionDelayEffect, SkillEffect,
     )
     _CLASSES = {
         "damage": DamageEffect, "debuff": DebuffEffect, "dot": DoTEffect,
         "buff": BuffEffect, "heal": HealEffect, "shield": ShieldEffect,
         "summon": SummonEffect, "dispel": DispelEffect,
+        "self_destruct": SelfDestructEffect,
+        "mark": MarkEffect,
+        "deathrattle": DeathrattleEffect,
+        "action_delay": ActionDelayEffect,
+    }
+    _ENUM_FIELDS = {
+        "stat_type": lambda v: StatType[v.upper()],
+        "modifier_type": lambda v: StatModifierType[v.upper()],
+        "element": lambda v: ElementType[v.upper()],
     }
     result: list[SkillEffect] = []
     for eff in raw_effects:
         eff_type = eff.get("type", "").lower()
         cls = _CLASSES.get(eff_type)
         if cls is not None:
-            d = {k: v for k, v in eff.items() if k != "type"}
+            d = {}
+            for k, v in eff.items():
+                if k == "type":
+                    continue
+                if k in _ENUM_FIELDS and isinstance(v, str):
+                    d[k] = _ENUM_FIELDS[k](v)
+                else:
+                    d[k] = v
             result.append(cls(**d))
     return result
 
@@ -120,4 +138,5 @@ def load_config_from_json(folder: str | Path) -> EnemyConfig:
         crit_dmg=raw.get("crit_dmg", 0.20),
         hit_energy_bucket=raw.get("hit_energy_bucket", 10.0),
         damage_type_resistance=damage_type_resistance,
+        deathrattle=raw.get("deathrattle"),
     )

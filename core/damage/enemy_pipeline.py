@@ -23,6 +23,7 @@ def compute_enemy_damage(
     dmg = _vuln_mult(dmg, target, skill.element)
     dmg = _weaken_mult(dmg, target)
     dmg = _damage_bonus_mult(dmg, enemy)
+    dmg = _mitigation_mult(dmg, enemy)
     dmg = _crit_mult(dmg, enemy)
 
     return int(max(dmg, 0))
@@ -63,6 +64,14 @@ def _weaken_mult(dmg: float, target: "Character") -> float:
 def _damage_bonus_mult(dmg: float, enemy: "BaseEnemy") -> float:
     bonus = enemy.stats.get_total_stat(StatType.DMG_BONUS)
     return dmg * (1.0 + bonus)
+
+
+def _mitigation_mult(dmg: float, enemy: "BaseEnemy") -> float:
+    """减伤乘区: 敌人→角色时，敌人自身的 DMG_MITIGATION 降低其输出。"""
+    mult = 1.0
+    for mv in enemy.stats.get_mitigation_values():
+        mult *= (1.0 - mv)
+    return dmg * max(mult, 0.0)
 
 
 def _crit_mult(dmg: float, enemy: "BaseEnemy") -> float:

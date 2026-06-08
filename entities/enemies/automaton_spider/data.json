@@ -1,0 +1,204 @@
+{
+  "name": "Automaton Spider",
+  "element": "Physical",
+  "weaknesses": [
+    "Lightning",
+    "Wind"
+  ],
+  "max_toughness": 60.0,
+  "base_res": 0.2,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.2,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "1": {
+      "hp": 56,
+      "atk": 12,
+      "def": 210,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "10": {
+      "hp": 124,
+      "atk": 26,
+      "def": 300,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "20": {
+      "hp": 211,
+      "atk": 53,
+      "def": 400,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "30": {
+      "hp": 366,
+      "atk": 98,
+      "def": 500,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "40": {
+      "hp": 664,
+      "atk": 155,
+      "def": 600,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "50": {
+      "hp": 1544,
+      "atk": 234,
+      "def": 700,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "60": {
+      "hp": 3678,
+      "atk": 338,
+      "def": 800,
+      "spd": 83.0,
+      "ehr": 0.08,
+      "eres": 0.04
+    },
+    "70": {
+      "hp": 6625,
+      "atk": 436,
+      "def": 900,
+      "spd": 91.3,
+      "ehr": 0.16,
+      "eres": 0.08
+    },
+    "80": {
+      "hp": 10324,
+      "atk": 552,
+      "def": 1000,
+      "spd": 99.6,
+      "ehr": 0.24,
+      "eres": 0.1
+    },
+    "90": {
+      "hp": 16498,
+      "atk": 663,
+      "def": 1100,
+      "spd": 109.56,
+      "ehr": 0.32,
+      "eres": 0.1
+    },
+    "95": {
+      "hp": 20536,
+      "atk": 718,
+      "def": 1150,
+      "spd": 109.56,
+      "ehr": 0.36,
+      "eres": 0.1
+    },
+    "100": {
+      "hp": 25378,
+      "atk": 773,
+      "def": 1200,
+      "spd": 109.56,
+      "ehr": 0.4,
+      "eres": 0.1
+    },
+    "120": {
+      "hp": 25378,
+      "atk": 773,
+      "def": 1200,
+      "spd": 109.56,
+      "ehr": 0.4,
+      "eres": 0.1
+    }
+  },
+  "skills": [
+    {
+      "skill_id": "skill_101202001",
+      "name": "Skill01",
+      "multiplier": 2.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 15.0
+    },
+    {
+      "skill_id": "skill_101202002",
+      "name": "Skill02 (自Buff)",
+      "multiplier": 0.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 10.0,
+      "effects": [
+        {
+          "type": "buff",
+          "stat_type": "ATK",
+          "modifier_type": "PERCENT",
+          "value": 1.0,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "skill_id": "skill_101202003",
+      "name": "Skill03 (自爆)",
+      "multiplier": 5.0,
+      "element": "Fire",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 15.0,
+      "effects": [
+        {
+          "type": "self_destruct"
+        }
+      ]
+    },
+    {
+      "skill_id": "skill_101202004",
+      "name": "PassiveSkillInitiate",
+      "multiplier": 0.0,
+      "element": "Fire",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 0.0
+    },
+    {
+      "skill_id": "skill_101202005",
+      "name": "Skill04 (自Buff)",
+      "multiplier": 0.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 10.0,
+      "effects": [
+        {
+          "type": "buff",
+          "stat_type": "DMG_BONUS",
+          "modifier_type": "PERCENT",
+          "value": 1.0,
+          "duration": 2
+        }
+      ]
+    }
+  ],
+  "ai": {
+    "type": "sequence",
+    "sequence": [
+      "skill_101202001",
+      "skill_101202002",
+      "skill_101202003"
+    ]
+  },
+  "damage_type_resistance": {
+    "Physical": 0.2,
+    "Fire": 0.2,
+    "Ice": 0.2,
+    "Quantum": 0.2,
+    "Imaginary": 0.2
+  }
+}

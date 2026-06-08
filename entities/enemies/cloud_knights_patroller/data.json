@@ -1,0 +1,186 @@
+{
+  "name": "Cloud Knights Patroller",
+  "element": "Wind",
+  "weaknesses": [
+    "Fire",
+    "Wind",
+    "Imaginary"
+  ],
+  "max_toughness": 60.0,
+  "base_res": 0.2,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.2,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "1": {
+      "hp": 119,
+      "atk": 12,
+      "def": 210,
+      "spd": 120.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "10": {
+      "hp": 265,
+      "atk": 26,
+      "def": 300,
+      "spd": 120.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "20": {
+      "hp": 450,
+      "atk": 53,
+      "def": 400,
+      "spd": 120.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "30": {
+      "hp": 780,
+      "atk": 98,
+      "def": 500,
+      "spd": 120.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "40": {
+      "hp": 1417,
+      "atk": 155,
+      "def": 600,
+      "spd": 120.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "50": {
+      "hp": 3294,
+      "atk": 234,
+      "def": 700,
+      "spd": 120.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "60": {
+      "hp": 7845,
+      "atk": 338,
+      "def": 800,
+      "spd": 120.0,
+      "ehr": 0.08,
+      "eres": 0.04
+    },
+    "70": {
+      "hp": 14134,
+      "atk": 436,
+      "def": 900,
+      "spd": 132.0,
+      "ehr": 0.16,
+      "eres": 0.08
+    },
+    "80": {
+      "hp": 22024,
+      "atk": 552,
+      "def": 1000,
+      "spd": 144.0,
+      "ehr": 0.24,
+      "eres": 0.1
+    },
+    "90": {
+      "hp": 35196,
+      "atk": 663,
+      "def": 1100,
+      "spd": 158.4,
+      "ehr": 0.32,
+      "eres": 0.1
+    },
+    "95": {
+      "hp": 43810,
+      "atk": 718,
+      "def": 1150,
+      "spd": 158.4,
+      "ehr": 0.36,
+      "eres": 0.1
+    },
+    "100": {
+      "hp": 54139,
+      "atk": 773,
+      "def": 1200,
+      "spd": 158.4,
+      "ehr": 0.4,
+      "eres": 0.1
+    },
+    "120": {
+      "hp": 54139,
+      "atk": 773,
+      "def": 1200,
+      "spd": 158.4,
+      "ehr": 0.4,
+      "eres": 0.1
+    }
+  },
+  "skills": [
+    {
+      "skill_id": "skill_200201001",
+      "name": "Skill01 (风刃)",
+      "multiplier": 2.5,
+      "element": "Wind",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 15.0,
+      "effects": [
+        {
+          "type": "debuff",
+          "stat_type": "VULNERABILITY",
+          "modifier_type": "PERCENT",
+          "value": 0.25,
+          "base_chance": 1.0,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "skill_id": "skill_200201002",
+      "name": "Skill02 (加防)",
+      "multiplier": 0.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 0.0,
+      "effects": [
+        {
+          "type": "buff",
+          "stat_type": "DEF",
+          "modifier_type": "PERCENT",
+          "value": 0.36,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "skill_id": "skill_200201003",
+      "name": "PassiveSkill01",
+      "multiplier": 0.0,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 0.0
+    },
+    {
+      "skill_id": "skill_200201004",
+      "name": "Skill03 (突刺)",
+      "multiplier": 3.5,
+      "element": "Physical",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 15.0
+    }
+  ],
+  "ai": {
+    "type": "simple"
+  },
+  "damage_type_resistance": {
+    "Physical": 0.2,
+    "Ice": 0.2,
+    "Lightning": 0.2,
+    "Quantum": 0.2
+  }
+}

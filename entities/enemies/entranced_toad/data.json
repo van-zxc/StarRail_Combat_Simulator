@@ -1,0 +1,150 @@
+{
+  "name": "Entranced Ingenium Golden Cloud Toad",
+  "element": "Imaginary",
+  "weaknesses": [
+    "Lightning",
+    "Quantum"
+  ],
+  "max_toughness": 30.0,
+  "base_res": 0.2,
+  "crit_rate": 0.0,
+  "crit_dmg": 0.2,
+  "hit_energy_bucket": 10.0,
+  "level_stats": {
+    "1": {
+      "hp": 67,
+      "atk": 12,
+      "def": 210,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "10": {
+      "hp": 149,
+      "atk": 26,
+      "def": 300,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "20": {
+      "hp": 253,
+      "atk": 53,
+      "def": 400,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "30": {
+      "hp": 439,
+      "atk": 98,
+      "def": 500,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "40": {
+      "hp": 797,
+      "atk": 155,
+      "def": 600,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "50": {
+      "hp": 1853,
+      "atk": 234,
+      "def": 700,
+      "spd": 83.0,
+      "ehr": 0.0,
+      "eres": 0.0
+    },
+    "60": {
+      "hp": 4413,
+      "atk": 338,
+      "def": 800,
+      "spd": 83.0,
+      "ehr": 0.08,
+      "eres": 0.04
+    },
+    "70": {
+      "hp": 7950,
+      "atk": 436,
+      "def": 900,
+      "spd": 91.3,
+      "ehr": 0.16,
+      "eres": 0.08
+    },
+    "80": {
+      "hp": 12389,
+      "atk": 552,
+      "def": 1000,
+      "spd": 99.6,
+      "ehr": 0.24,
+      "eres": 0.1
+    },
+    "90": {
+      "hp": 19798,
+      "atk": 663,
+      "def": 1100,
+      "spd": 109.56,
+      "ehr": 0.32,
+      "eres": 0.1
+    },
+    "95": {
+      "hp": 24643,
+      "atk": 718,
+      "def": 1150,
+      "spd": 109.56,
+      "ehr": 0.36,
+      "eres": 0.1
+    },
+    "100": {
+      "hp": 30453,
+      "atk": 773,
+      "def": 1200,
+      "spd": 109.56,
+      "ehr": 0.4,
+      "eres": 0.1
+    },
+    "120": {
+      "hp": 30453,
+      "atk": 773,
+      "def": 1200,
+      "spd": 109.56,
+      "ehr": 0.4,
+      "eres": 0.1
+    }
+  },
+  "skills": [
+    {
+      "skill_id": "skill_201102001",
+      "name": "Skill01 (虚数弹)",
+      "multiplier": 2.0,
+      "element": "Imaginary",
+      "targeting": "single",
+      "cooldown": 1,
+      "energy_gain": 10.0,
+      "effects": [
+        {
+          "type": "debuff",
+          "stat_type": "DEF",
+          "modifier_type": "PERCENT",
+          "value": -0.25,
+          "base_chance": 1.0,
+          "duration": 2
+        }
+      ]
+    }
+  ],
+  "ai": {
+    "type": "simple"
+  },
+  "damage_type_resistance": {
+    "Physical": 0.2,
+    "Fire": 0.2,
+    "Ice": 0.2,
+    "Wind": 0.2,
+    "Imaginary": 0.2
+  }
+}

@@ -94,3 +94,27 @@ class SummonEffect(SkillEffect):
 class DispelEffect(SkillEffect):
     target: str = "target"
     count: int = 1
+
+
+@dataclass
+class SelfDestructEffect(SkillEffect):
+    """自毁效果：技能释放后 caster 死亡。"""
+    pass
+
+
+@dataclass
+class MarkEffect(SkillEffect):
+    """标记效果：对目标施加烙印，敌人死亡时亡语可触发。"""
+    pass
+
+
+@dataclass
+class DeathrattleEffect(SkillEffect):
+    """亡语效果：死亡时对标记目标释放指定技能。"""
+    trigger_skill_id: str = ""
+
+
+@dataclass
+class ActionDelayEffect(SkillEffect):
+    """行动延迟：推后目标的行动值。"""
+    value: float = 0.0

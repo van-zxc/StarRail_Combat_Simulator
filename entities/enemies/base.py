@@ -96,6 +96,11 @@ class BaseEnemy(Fighter):
         self.damage_type_resistance: dict[str, float] = (
             config.damage_type_resistance if config else {}
         )
+        self.marked_targets: list["Character"] = []
+        self.deathrattle: dict | None = (
+            config.deathrattle if config else None
+        )
+        self._config = config
 
         from core.enums import StatType as ST
         spd_final = int(self.stats.get_total_stat(ST.SPD))
@@ -134,6 +139,9 @@ class BaseEnemy(Fighter):
         self._skills: dict[str, EnemySkill] = {s.skill_id: s for s in config.skills}
         self._ai: EnemyAI = config.ai
 
+        # 存储 config 引用以便延迟初始化被动效果
+        self._config = config
+
         fallback = next(iter(self._skills.values()), None)
         if fallback is None:
             fallback = ES(
@@ -147,6 +155,35 @@ class BaseEnemy(Fighter):
         self._max_energy: float = config.max_energy if config.max_energy is not None else 0.0
 
         self.base_damage = int(stats["atk"])
+
+    def _apply_passive_effects_from_skills(self) -> None:
+        """延迟初始化被动技能效果（CombatEngine 注入 event_bus 后调用）。"""
+        config = self._config
+        if config is None:
+            return
+        from entities.base import StatModifier
+        from entities.enemies.enemy_skill import BuffEffect
+        from entities.enemies.enemy_ai import SequenceAI, PriorityAI
+        ai_sequence: set[str] = set()
+        if isinstance(config.ai, SequenceAI):
+            ai_sequence = set(config.ai._sequence)
+        elif isinstance(config.ai, PriorityAI):
+            ai_sequence = {r.skill_id for r in config.ai._rules}
+        for skill in config.skills:
+            if skill.multiplier != 0:
+                continue
+            if skill.skill_id in ai_sequence:
+                continue
+            for eff in skill.effects:
+                if isinstance(eff, BuffEffect):
+                    mod = StatModifier(
+                        stat_type=eff.stat_type,
+                        modifier_type=eff.modifier_type,
+                        value=eff.value,
+                        source=f"{config.name}_passive",
+                        duration=eff.duration,
+                    )
+                    self.stats.apply_modifier(mod, "refresh")
 
     def _init_from_args(self, name: str, lv: int, hp, speed, base_damage, weaknesses, max_toughness) -> None:
         from starrail_combat import ElementType, EntityStats, StatType
